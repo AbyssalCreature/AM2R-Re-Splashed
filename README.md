@@ -9,7 +9,7 @@ This mod is a complete reskin of all the visuals in AM2R.  It aims to make all t
 
 ## Screenshots
 
-[comment]: <> (TODO: Genericize screenshots to on a server or not @(V\)ariable)
+[comment]: <> (TODO: Genericize screenshots to on a server or not @Variable)
 
 ![ssRes1_0](https://github.com/AbyssalCreature/AM2R-Re-Splashed/assets/77659883/215d25f9-d386-463e-a6dc-8b57dd2b94f4)
 ![ssRes1_3](https://github.com/AbyssalCreature/AM2R-Re-Splashed/assets/77659883/31710d75-7bc8-4bf0-85e7-f443a2f7f7b4)
