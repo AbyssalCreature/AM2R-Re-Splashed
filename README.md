@@ -13,10 +13,11 @@ This mod is a complete reskin of all the visuals in AM2R.  It aims to make all t
 - Community Updates 1.5.5
 - Unofficial Multitroid 1.6.2
 - No-Flash Unofficial Multitroid
-- Party Mode V2
+- Party Mode V2 + Ultra FATE
 
 ## Future Plans for support
 
+- AM2R Multiworld (Archipelago)
 - Community Updates 1.6
 - SA-X Duels
-- The Horde 1.4
+- The Horde 1.4.X
