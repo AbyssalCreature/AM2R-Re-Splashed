@@ -1,0 +1,1 @@
+sfx_fadeout_quick(sndA2WJLoop)

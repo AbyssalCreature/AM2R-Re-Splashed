@@ -1,0 +1,1 @@
+sfx_play(sndAbsorbX)

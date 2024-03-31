@@ -1,0 +1,1 @@
+canfadeout = 1
