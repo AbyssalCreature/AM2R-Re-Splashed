@@ -1,0 +1,1 @@
+enabled = global.gallery[optionid]

@@ -1,0 +1,2 @@
+targetx = x
+targety = y

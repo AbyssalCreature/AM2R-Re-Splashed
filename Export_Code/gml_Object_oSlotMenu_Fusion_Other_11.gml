@@ -1,0 +1,22 @@
+if instance_exists(op[0])
+{
+    with (op[0])
+        instance_destroy()
+}
+if instance_exists(op[1])
+{
+    with (op[1])
+        instance_destroy()
+}
+if instance_exists(op[2])
+{
+    with (op[2])
+        instance_destroy()
+}
+if instance_exists(op[3])
+{
+    with (op[3])
+        instance_destroy()
+}
+fadeout = 1
+active = 0
