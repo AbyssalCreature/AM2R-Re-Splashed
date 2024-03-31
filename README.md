@@ -1,12 +1,16 @@
 # AM2R-Re-Splashed
 
 This mod is a complete reskin of all the visuals in AM2R.  It aims to make all the Areas, UI elements, Map, Suits, Enemies, and Projectiles to be more stylized and more friendly to users who play in dimly lit areas.
+## Trailer
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=QNtEB86wgjs" target="_blank"><img src="https://github.com/AbyssalCreature/AM2R-Re-Splashed/blob/readme-updates/assets/Screenshot%202024-02-19%20223411.png" alt="AM2R Re-Splashed Trailer" width="1080" height="560" border="10" /></a>
 
 ## Screenshots
 
-![ssRes1_0](https://github.com/AbyssalCreature/AM2R-Re-Splashed/assets/77659883/215d25f9-d386-463e-a6dc-8b57dd2b94f4)
-![ssRes1_3](https://github.com/AbyssalCreature/AM2R-Re-Splashed/assets/77659883/31710d75-7bc8-4bf0-85e7-f443a2f7f7b4)
-![ssRes1_9](https://github.com/AbyssalCreature/AM2R-Re-Splashed/assets/77659883/e74b2ffb-ec46-435c-9cd3-e4ad759d2851)
+![First hall](https://github.com/AbyssalCreature/AM2R-Re-Splashed/blob/readme-updates/assets/Screenshot%202024-02-19%20221422.png)
+![Varia](https://github.com/AbyssalCreature/AM2R-Re-Splashed/blob/readme-updates/assets/Screenshot%202024-02-19%20214927.png)
+![Tank](https://github.com/AbyssalCreature/AM2R-Re-Splashed/blob/readme-updates/assets/Screenshot%202024-02-19%20221217.png)
+![Alpha](https://github.com/AbyssalCreature/AM2R-Re-Splashed/blob/readme-updates/assets/Screenshot%202024-02-19%20222053.png)
 
 ## Supported Versions
 
