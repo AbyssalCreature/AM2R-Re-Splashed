@@ -1,0 +1,1 @@
+global.samsAlive = global.samCount
