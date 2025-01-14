@@ -5,9 +5,9 @@ global.waterlevel = 0
 global.watertype = 0
 if (global.lavastate == 8)
     make_liquid(1, 680, 0, 0, 0, 0, 0)
-else if (global.lavastate == 9)
+else if (global.lavastate == 9 && (!instance_exists(oClient)))
     make_liquid(1, 160, 0, 0, 0, 0, 0)
-if (global.lavastate >= 9)
+if (global.lavastate >= 9 && (!instance_exists(oClient)))
 {
     tile_layer_shift(-101, -32, 48)
     tile_layer_shift(-102, -32, 48)

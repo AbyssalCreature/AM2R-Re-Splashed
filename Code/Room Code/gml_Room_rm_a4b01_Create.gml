@@ -5,16 +5,16 @@ global.watertype = 0
 global.floormaterial = 4
 make_escape_sequence_fx(1)
 global.objdeactivate = 0
-if (global.event[203] < 9)
+if (global.event[203] < 9 && (!global.saxmode))
 {
     tile_layer_hide(-101)
-    with (129396)
+    with (129423)
         y -= 240
-    with (129397)
+    with (129424)
         y -= 240
-    with (129399)
+    with (129426)
         y -= 240
-    with (129398)
+    with (129425)
         y -= 240
 }
 else
