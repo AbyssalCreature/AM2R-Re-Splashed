@@ -6,9 +6,9 @@ global.floormaterial = 4
 make_escape_sequence_fx(2)
 if (global.event[203] > 1)
 {
-    with (130853)
+    with (130880)
         instance_destroy()
-    with (130856)
+    with (130883)
         instance_destroy()
     tile_layer_delete(-101)
 }

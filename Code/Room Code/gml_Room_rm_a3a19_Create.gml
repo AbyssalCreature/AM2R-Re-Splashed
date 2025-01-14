@@ -10,7 +10,7 @@ if (oControl.mod_purerandombool == 1 || oControl.mod_splitrandom == 1)
 {
     if (global.maxpbombs < 2)
     {
-        with (118465)
+        with (118492)
             instance_destroy()
     }
 }

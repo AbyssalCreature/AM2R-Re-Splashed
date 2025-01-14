@@ -1,2 +1,9 @@
-link_tile(tlArea5A, 0, 32)
-regentime = -1
+targetroom = 261
+targetx = 16
+targety = 176
+height = 64
+direction = 0
+camstartx = 16
+camstarty = 120
+transitionx = 4
+transitiony = 176
