@@ -1,4 +1,4 @@
-var spr, f, arrPos, arrPosID, arrPosRoom, i, arrDraw, arrID, arrX, arrY, jump_vel, splash, st1, ziptimer, prevzipx;
+var spr, f, arrPos, arrPosID, arrPosRoom, i, arrDraw, arrID, arrX, arrY, jump_vel, splash, st1, ziptimer, prevzipx, firebuttons;
 if global.enablecontrol
     chStepControl()
 if global.movingobj
@@ -2259,7 +2259,8 @@ if (state == JUMPING && statetime > 4 && vjump == 0 && (!kUp) && (!kDown))
 }
 if (state == JUMPING && vjump == 0 && walljumping == 0 && statetime > 4 && justwalljumped == 0)
 {
-    if (((kUp || kDown) && kLeft == 0 && kRight == 0 && novjump == 0 && lockspinjump == 0) || (kFire && kFirePushedSteps == 0 && nofire == 0) || (chargebeam > 0 && (!kFire)) || aimlock)
+        firebuttons = ((kFire && kFirePushedSteps == 0) || (kMissile && kMissilePushedSteps == 0) || (kSelect && kSelectPushedSteps == 0))
+    if (((kUp || kDown) && kLeft == 0 && kRight == 0 && novjump == 0 && lockspinjump == 0) || (kFire && kFirePushedSteps == 0 && nofire == 0) || (global.opmslstyle == 2 && firebuttons && nofire == 0) || (chargebeam > 0 && (!kFire)) || aimlock)
     {
         vjump = 1
         novjump = 10

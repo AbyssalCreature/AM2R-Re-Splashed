@@ -332,6 +332,18 @@ if (global.classicmode == 0 && global.opshowhud)
             else
                 draw_sprite(mslspr, 0, ((0 + xoff) + 1), 4)
         }
+        if (global.opmslstyle == 2)
+        {
+            if (global.currentweapon != 1 || oCharacter.state == 23 || oCharacter.state == 24 || oCharacter.state == 27 || oCharacter.state == 54 || oCharacter.state == 55 || oCharacter.sjball)
+                draw_sprite(mslspr, 0, ((0 + xoff) + 1), 4)
+            if (global.currentweapon == 1 && oCharacter.state != 23 && oCharacter.state != 24 && oCharacter.state != 27 && oCharacter.state != 54 && oCharacter.state != 55 && oCharacter.sjball == 0)
+            {
+                if (oCharacter.armmsl == 0)
+                    draw_sprite(mslspr, 1, ((0 + xoff) + 1), 4)
+                if (oCharacter.armmsl == 1)
+                    draw_sprite(mslspr, 2, ((0 + xoff) + 1), 4)
+            }
+        }
         if (global.maxmissiles >= 100)
             xoff += 45
         else
@@ -360,6 +372,18 @@ if (global.classicmode == 0 && global.opshowhud)
             else
                 draw_sprite(sGUISMissile, 0, (xoff + 1), 4)
         }
+        if (global.opmslstyle == 2)
+        {
+            if (global.currentweapon != 2 || oCharacter.state == 23 || oCharacter.state == 24 || oCharacter.state == 27 || oCharacter.state == 54 || oCharacter.state == 55 || oCharacter.sjball)
+                draw_sprite(sGUISMissile, 0, (xoff + 1), 4)
+            if (global.currentweapon == 2 && oCharacter.state != 23 && oCharacter.state != 24 && oCharacter.state != 27 && oCharacter.state != 54 && oCharacter.state != 55 && oCharacter.sjball == 0)
+            {
+                if (oCharacter.armmsl == 0)
+                    draw_sprite(sGUISMissile, 1, (xoff + 1), 4)
+                if (oCharacter.armmsl == 1)
+                    draw_sprite(sGUISMissile, 2, (xoff + 1), 4)
+            }
+        }
         xoff += 38
     }
     if (global.maxpbombs > 0)
@@ -384,6 +408,18 @@ if (global.classicmode == 0 && global.opshowhud)
                 draw_sprite(sGUIPBomb, 1, (xoff + 1), 4)
             else
                 draw_sprite(sGUIPBomb, 0, (xoff + 1), 4)
+        }
+        if (global.opmslstyle == 2)
+        {
+            if (oCharacter.state != 23 && oCharacter.state != 24 && oCharacter.state != 27 && oCharacter.state != 54 && oCharacter.state != 55 && oCharacter.sjball == 0)
+                draw_sprite(sGUIPBomb, 0, (xoff + 1), 4)
+            if (oCharacter.state == 23 || oCharacter.state == 24 || oCharacter.state == 27 || oCharacter.state == 54 || oCharacter.state == 55 || oCharacter.sjball)
+            {
+                if (oCharacter.armmsl == 0)
+                    draw_sprite(sGUIPBomb, 1, (xoff + 1), 4)
+                if (oCharacter.armmsl == 1)
+                    draw_sprite(sGUIPBomb, 2, (xoff + 1), 4)
+            }
         }
         if global.saxmode
         {
