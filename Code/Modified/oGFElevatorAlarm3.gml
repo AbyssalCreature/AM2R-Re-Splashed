@@ -1,0 +1,1 @@
+saxCooldown = 0

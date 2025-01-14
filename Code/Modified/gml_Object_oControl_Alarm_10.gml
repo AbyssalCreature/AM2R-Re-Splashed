@@ -1,0 +1,1 @@
+global.canConnect = 1

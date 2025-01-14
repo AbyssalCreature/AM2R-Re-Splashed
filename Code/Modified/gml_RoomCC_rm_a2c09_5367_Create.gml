@@ -1,0 +1,1 @@
+regentime = 8
