@@ -1,4 +1,4 @@
-ini_open("config.ini")
+ini_open(((working_directory + "/multitroid/") + "config.ini"))
 ini_write_real("Screen", "Fullscreen", global.opfullscreen)
 ini_write_real("Screen", "Scale", global.opscale)
 ini_write_real("Screen", "VSync", global.opvsync)

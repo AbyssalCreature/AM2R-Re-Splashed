@@ -1,4 +1,8 @@
-if (kFire && kFirePushedSteps == 0 && nofire == 0 && turning == 0 && morphing == 0 && unmorphing == 0 && walljumping == 0 && monster_drain == 0 && (!instance_exists(oEMPNoise)))
+var firebuttons, fired, beamfire;
+firebuttons = ((kFire && kFirePushedSteps == 0) || (kMissile && kMissilePushedSteps == 0) || (kSelect && kSelectPushedSteps == 0))
+fired = ((kFire && kFirePushedSteps == 0) || (firebuttons && global.opmslstyle == 2))
+beamfire = (kFire && kFirePushedSteps == 0 && global.opmslstyle == 2)
+if (fired && nofire == 0 && turning == 0 && morphing == 0 && unmorphing == 0 && walljumping == 0 && monster_drain == 0 && (!instance_exists(oEMPNoise)))
 {
     nofire = 6
     idle = 0
@@ -7,7 +11,7 @@ if (kFire && kFirePushedSteps == 0 && nofire == 0 && turning == 0 && morphing ==
         firing = 60
     if (state == STANDING || state == RUNNING || state == DUCKING || (state == JUMPING && vjump == 1) || (state == GRIP && ((facing == RIGHT && aimdirection != 0) || (facing == LEFT && aimdirection != 1))) || (state == GRABBEDQUEEN && image_index == 2))
     {
-        if ((global.opmslstyle == 0 && armmsl == 0) || (global.opmslstyle == 1 && (global.currentweapon == 0 || global.currentweapon == 3)))
+        if ((global.opmslstyle == 0 && armmsl == 0) || (global.opmslstyle == 1 && (global.currentweapon == 0 || global.currentweapon == 3)) || beamfire)
         {
             if (aimdirection == 0)
                 shoot_beam(0)
@@ -26,8 +30,15 @@ if (kFire && kFirePushedSteps == 0 && nofire == 0 && turning == 0 && morphing ==
             if (aimdirection == 7)
                 shoot_beam(270)
         }
-        if ((global.opmslstyle == 0 && armmsl == 1) || (global.opmslstyle == 1 && (global.currentweapon == 1 || global.currentweapon == 2)))
+        else if ((global.opmslstyle == 0 && armmsl == 1) || (global.opmslstyle == 1 && (global.currentweapon == 1 || global.currentweapon == 2)) || firebuttons)
         {
+            if (global.opmslstyle == 2)
+            {
+                if (kMissile && kMissilePushedSteps == 0)
+                    global.currentweapon = 1
+                else
+                    global.currentweapon = 2
+            }
             if (aimdirection == 0)
                 shoot_missile(0)
             if (aimdirection == 1)
@@ -49,12 +60,15 @@ if (kFire && kFirePushedSteps == 0 && nofire == 0 && turning == 0 && morphing ==
 }
 if (kFire && kFirePushedSteps == 1 && (state == 23 || state == 24 || state == 27 || state == GRABBEDQUEENMORPH || state == GRABBEDQUEENBELLY) && (!instance_exists(oEMPNoise)))
 {
-    if (global.bomb == 1 && instance_number(oBomb) < 3 && ((global.opmslstyle == 0 && armmsl == 0) || (global.opmslstyle == 1 && global.currentweapon < 3)))
+    if (global.bomb == 1 && instance_number(oBomb) < 3 && ((global.opmslstyle == 0 && armmsl == 0) || (global.opmslstyle == 1 && global.currentweapon < 3) || (global.opmslstyle == 2 && global.currentweapon < 3)))
     {
         instance_create(x, (y - 5), oBomb)
         sfx_play(sndBombSet)
     }
-    if (((global.opmslstyle == 0 && armmsl == 1) || (global.opmslstyle == 1 && global.currentweapon == 3)) && global.pbombs > 0 && instance_number(oQueenFinalExplosion) == 0 && state != GRABBEDQUEENMORPH && (!((state == GRABBEDQUEENBELLY && distance_to_point((oQueenFront.x + 81), y) > 4))))
+}
+if (((kFire && kFirePushedSteps == 1) || (kMissile && kMissilePushedSteps == 1 && global.opmslstyle == 2)) && (state == 23 || state == 24 || state == 27 || state == GRABBEDQUEENMORPH || state == GRABBEDQUEENBELLY) && (!instance_exists(oEMPNoise)))
+{
+    if (((global.opmslstyle == 0 && armmsl == 1) || (global.opmslstyle == 1 && global.currentweapon == 3) || (kMissile && kMissilePushedSteps == 1 && global.opmslstyle == 2)) && global.pbombs > 0 && instance_number(oQueenFinalExplosion) == 0 && state != GRABBEDQUEENMORPH && (!((state == GRABBEDQUEENBELLY && distance_to_point((oQueenFront.x + 81), y) > 4))))
     {
         if global.saxmode
         {
@@ -85,7 +99,7 @@ if (kFire && kFirePushedSteps > 15 && chargebeam < 1 && nofire == 0 && sjball ==
 if (chargebeam > 0)
 {
     idle = 0
-    if (facing == 0 || state == IDLE || state == SAVING || state == SAVINGSHIP || state == SAVINGFX || state == SAVINGSHIPFX || state == HURT || state == KNOCKBACK1 || state == KNOCKBACK1_LAND || state == KNOCKBACK2 || state == KNOCKBACK2_LAND || state == GRABBEDGAMMA || state == WATERJET || state == LOCKEDBALL || state == RECOVER || state == A4EXPL || state == ELEVATOR || state == GRABBEDQUEENMORPH || state == GRABBEDQUEENBELLY || (state == GRABBEDQUEEN && image_index < 2) || (global.opmslstyle == 0 && armmsl == 1) || (global.opmslstyle == 1 && (global.currentweapon == 1 || global.currentweapon == 2)) || global.cbeam == 0)
+    if (facing == 0 || state == IDLE || state == SAVING || state == SAVINGSHIP || state == SAVINGFX || state == SAVINGSHIPFX || state == HURT || state == KNOCKBACK1 || state == KNOCKBACK1_LAND || state == KNOCKBACK2 || state == KNOCKBACK2_LAND || state == GRABBEDGAMMA || state == WATERJET || state == LOCKEDBALL || state == RECOVER || state == A4EXPL || state == ELEVATOR || state == GRABBEDQUEENMORPH || state == GRABBEDQUEENBELLY || (state == GRABBEDQUEEN && image_index < 2) || (global.opmslstyle == 0 && armmsl == 1) || (global.opmslstyle == 1 && (global.currentweapon == 1 || global.currentweapon == 2)) || global.cbeam == 0 || (global.opmslstyle == 2 && kSelect && kSelectPushedSteps == 0) || (kMissile && kMissilePushedSteps == 0 && global.opmslstyle == 2))
         chargebeam = 0
     if (!kFire)
     {
