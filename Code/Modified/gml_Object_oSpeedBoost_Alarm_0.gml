@@ -1,1 +1,2 @@
-action_kill_object()
+if (myid == 0)
+    action_kill_object()

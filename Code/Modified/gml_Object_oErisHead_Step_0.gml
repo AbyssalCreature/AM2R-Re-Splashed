@@ -357,3 +357,9 @@ if (state != 100 && state != 0)
 statetime++
 if (cooldown > 0)
     cooldown--
+if (global.event[261] > 0 && (!dead))
+{
+    state = 100
+    statetime = -1
+    dead = 1
+}

@@ -6,7 +6,7 @@ if (global.curropt == optionid)
 }
 draw_set_color(c_black)
 draw_text((x + 1), (y - 3), label)
-draw_set_color(color)
+draw_set_color(c_white)
 if (enabled == 0)
     draw_set_alpha(0.5)
 else

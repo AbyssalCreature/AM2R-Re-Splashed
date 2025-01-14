@@ -3,3 +3,4 @@ image_index = 0
 state = 0
 statetime = 0
 type = 0
+DEPTH = 0

@@ -1,4 +1,4 @@
-if (global.event[303] > 0)
+if (global.event[303] > 0 || (global.saxmode && global.sax))
     instance_destroy()
 else
 {

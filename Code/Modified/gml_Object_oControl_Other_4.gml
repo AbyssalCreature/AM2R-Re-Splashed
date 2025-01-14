@@ -61,3 +61,12 @@ if (room == titleroom && instance_exists(oPressStart))
     if (os_type == os_android)
         os_powersave_enable(1)
 }
+if (room == titleroom)
+{
+    global.mapmarker = 0
+    global.mapmarkerx = 0
+    global.mapmarkery = 0
+    global.mapposx = 3
+    global.mapposy = 3
+    reset_map()
+}

@@ -22,11 +22,13 @@ else
 }
 if oControl.widescreen
 {
-    surf = oControl.widescreen_surface
+    surf = surface_create(surface_get_width(oControl.widescreen_surface), surface_get_height(oControl.widescreen_surface))
+    surface_copy(surf, 0, 0, oControl.widescreen_surface)
     surfoff = 53
 }
 else
 {
-    surf = oControl.screen_surface
+    surf = surface_create(surface_get_width(oControl.screen_surface), surface_get_height(oControl.screen_surface))
+    surface_copy(surf, 0, 0, oControl.screen_surface)
     surfoff = 0
 }

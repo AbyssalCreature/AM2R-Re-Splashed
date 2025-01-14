@@ -1,6 +1,19 @@
 var temp_seed;
 temp_seed = random_get_seed()
 randomize()
+if instance_exists(oClient)
+{
+    if (!is_undefined(oClient.seed))
+    {
+        oControl.seed = oClient.seed
+        random_set_seed(oControl.seed)
+    }
+}
+else
+{
+    oControl.seed = random_get_seed()
+    random_set_seed(oControl.seed)
+}
 if (oControl.mod_usemanualseed == 1)
     random_set_seed(oControl.mod_seed)
 oControl.list_powerbombs = ds_list_create()
@@ -93,3 +106,5 @@ oControl.mod_206 = 206
 oControl.mod_253 = 253
 ds_list_empty(oControl.list_locations)
 random_set_seed(temp_seed)
+ds_list_destroy(oControl.list_powerbombs)
+ds_list_destroy(oControl.list_locations)

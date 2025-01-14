@@ -23,10 +23,10 @@ if (global.mod_gamebeaten == 0)
     op[num_baby].optext = get_text("ExtrasMenu", "Locked")
 if global.shaders_compiled
 {
+    if (oControl.msr_fusionsuit == 0)
+        op[num_MSRfusion].optext = "3D"
     if (oControl.msr_fusionsuit == 1)
-        op[num_MSRfusion].optext = get_text("ExtrasMenu", "MSR")
-    else
-        op[num_MSRfusion].optext = get_text("ExtrasMenu", "Default")
+        op[num_MSRfusion].optext = "2D"
     if (global.mod_fusion_unlocked == 0)
         op[num_MSRfusion].optext = get_text("ExtrasMenu", "Locked")
 }

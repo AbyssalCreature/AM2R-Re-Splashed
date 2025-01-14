@@ -9,6 +9,8 @@ if (myhealth <= shell1hp && prevhealth > shell1hp)
         instance_create(x, y, oDebris)
     deb = instance_create(x, y, oDebris)
     deb.sprite_index = sShirkArmor1
+    if (frozen > 0)
+        deb.sprite_index = sShirkArmor1Frozen
     deb.depth = -4
 }
 if (myhealth <= shell2hp && prevhealth > shell2hp)
@@ -22,6 +24,8 @@ if (myhealth <= shell2hp && prevhealth > shell2hp)
         instance_create(x, y, oDebris)
     deb = instance_create(x, y, oDebris)
     deb.sprite_index = sShirkArmor2
+    if (frozen > 0)
+        deb.sprite_index = sShirkArmor2Frozen
     deb.depth = -4
 }
 if (myhealth <= 0 && prevhealth > 0)

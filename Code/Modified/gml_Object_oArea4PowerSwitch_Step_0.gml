@@ -1,3 +1,5 @@
+if global.spectator
+    exit
 if (state == 1)
 {
     if (statetime == 1)
@@ -28,7 +30,7 @@ if (state == 1)
         global.darkness = 0
         with (oLightEngine)
             event_user(2)
-        with (127890)
+        with (127917)
             lock = 0
         with (oA4PowerBG)
             event_user(0)

@@ -1,4 +1,4 @@
-filename = ("save" + string((global.saveslot + 1)))
+filename = ((working_directory + "/multitroid/save") + string((global.saveslot + 1)))
 file_delete(filename)
 with (oMenuSaveSlot)
 {
@@ -9,5 +9,5 @@ with (oMenuSaveSlot)
     }
 }
 saveslot_flash(global.saveslot)
-file_delete((("random" + string((global.saveslot + 1))) + ".ini"))
-file_delete((("save" + string((global.saveslot + 1))) + ".dat"))
+file_delete((((working_directory + "/multitroid/random") + string((global.saveslot + 1))) + ".ini"))
+file_delete((((working_directory + "/multitroid/save") + string((global.saveslot + 1))) + ".dat"))

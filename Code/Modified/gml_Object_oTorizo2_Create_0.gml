@@ -50,3 +50,4 @@ repeat (18)
     i += 1
 }
 wings = instance_create(x, (y - 65), oTorizoWings)
+dead = 0

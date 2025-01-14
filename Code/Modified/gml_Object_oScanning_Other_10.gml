@@ -1,5 +1,5 @@
 var intro;
-if global.ophudshowlogmsg
+if (global.ophudshowlogmsg && (!global.saxmode))
 {
     global.gotolog = lognumber
     notif = instance_create(0, 0, oNotification)
@@ -12,7 +12,7 @@ if (mode == 0)
 {
     global.log[lognumber] = 1
     global.newlog[lognumber] = 1
-    if global.ophudshowlogmsg
+    if (global.ophudshowlogmsg && (!global.saxmode))
         notif.text1 = get_text("ScanEvents", "NewLog")
     switch lognumber
     {
@@ -51,7 +51,7 @@ if (mode == 1)
 {
     global.log[lognumber] = 2
     global.newlog[lognumber] = 1
-    if global.ophudshowlogmsg
+    if (global.ophudshowlogmsg && (!global.saxmode))
         notif.text1 = get_text("ScanEvents", "UpdateLog")
 }
 instance_destroy()

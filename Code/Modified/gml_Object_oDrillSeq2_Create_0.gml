@@ -5,15 +5,15 @@ alarm[0] = 120
 steps = 0
 view_object[0] = oDrillSeq2
 active = 1
-with (123915)
+with (123942)
     instance_destroy()
-with (123914)
+with (123941)
     instance_destroy()
-with (123916)
+with (123943)
     instance_destroy()
-with (123874)
+with (123901)
     instance_destroy()
-with (123909)
+with (123936)
     y += 16
 advancing = 0
 sfx_play(sndMorphBallSlot)

@@ -45,6 +45,11 @@ if active
         }
         if (global.curropt == 4)
         {
+            instance_create(50, 68, oOptionsMod)
+            instance_destroy()
+        }
+        if (global.curropt == 5)
+        {
             if (instance_exists(oSS_Control) > 0)
             {
                 instance_create(50, 92, oPauseMenuOptions)
@@ -54,6 +59,11 @@ if active
             {
                 save_gameoptions()
                 global.curropt = 4
+                if global.lobbyLocked
+                {
+                    global.spectator = 1
+                    global.spectatorIndex = -1
+                }
                 room_change(1, 0)
             }
         }

@@ -64,3 +64,4 @@ boostspdmult = 1
 boostspddelay = 1
 stepdelayfinal = stepdelay
 use2 = 0
+dead = 0

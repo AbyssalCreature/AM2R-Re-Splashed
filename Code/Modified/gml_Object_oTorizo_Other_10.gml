@@ -9,4 +9,6 @@ if (myhealth <= 0)
     alarm[11] = 300
     mus_fadeout(musTorizoA)
     oMusicV2.bossbgm = 0
+    global.event[152] = 2
+    dead = 1
 }

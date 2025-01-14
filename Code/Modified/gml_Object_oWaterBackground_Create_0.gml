@@ -1,4 +1,4 @@
-BG = 218
+BG = 220
 xratio = 0.1
 xoff = 0
 yratio = 0.1

@@ -7,3 +7,4 @@ link_id = 0
 delay = 0
 tl1_delete_layer = -111
 tl2_delete_layer = -112
+DEPTH = 0

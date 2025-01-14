@@ -107,6 +107,8 @@ monster_drain = 0
 monster_drainfx = 0
 queen_drain = 0
 queen_drainfx = 0
+pbomb_drain = 0
+pbomb_drainfx = 0
 STANDING = 10
 RUNNING = 11
 DUCKING = 12
@@ -245,3 +247,5 @@ makeActive()
 global.enablecontrol = 0
 alarm[3] = 300
 empspark = -4
+multiBall = 0
+global.multiDamageCollision = 0

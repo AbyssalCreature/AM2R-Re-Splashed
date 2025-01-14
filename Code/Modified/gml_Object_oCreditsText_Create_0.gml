@@ -1,52 +1,10 @@
-var arrayIndex, subStr, line, i, j, strLength, nextChar;
-text = (((((((("*Another " + global.monsterStr) + " 2 Remake;;;;;;;;;;;;*Producer;/Milton 'DoctorM64' Guasti;;*Graphic Design;Ramiro Negri=MichaelGabrielR;Jasper=Jack Witty;/Steve 'Sabre230' Rothlisberger;/Kirill '1Eni1' Fevralev;;*Promo Art;/Azima 'Zim' Khan;;*Writing;/James 'Ridley' Hobbs;/Paulo 'Latinlingo' Villalobos;;*Platform Engine Code;/Martin Piecyk;;*Music Composition;/Milton 'DoctorM64' Guasti;/Darren Kerwin;/Torbjørn 'Falcool' Brandrud;;*Debug;Dragondarch=Hemse;/Esteban 'DruidVorse' Criado;/Verneri 'Naatiska' Viljanen;;*Playtesting;Jennifer Potter=Mario Crestanello;Live4Truths=Nommiin;/Torbjørn 'Falcool' Brandrud;/Nicolas 'Skol' Del Negro;Lise Trehjørningen=Gabriel Kaplan;Darren Kerwin=Robert Sephazon;;*Community Management;Dragonheart91=Ammypendent;/Karrde;;*Special Thanks;Nommiin=Tyler Rogers;Kousoru=Infinity's End;Isabelle Amponin=CapCom;/Nathan 'wickedclown' Hess;/The ") + global.monsterStr) + " Community;;;;*Source Code Reconstruction;/YellowAfterlife;;;;*Continued Revisions;;*Development;Gatordile=Lojemiru;/Alex 'Wanderer' Mack;;*Programming;") + global.monsterStr) + "3D=Scooterboot;/Craig Kostelecky;/milesthenerd;;*Art Lead;/Dannon 'Shmegleskimo' Yates;;*Art;ShirtyScarab=Cooper Garvin;/Chris 'Messianic' Oliveira;/ChloePlz;;*Debug;Miepee=EODTex;/Esteban 'DruidVorse' Criado;/Verneri 'Naatiska' Viljanen;/Electrix;;*Localization;Imsu=Diegomg;m3Zz=LPCaiser;Miepee=unknown;fedprod=ReNext;LetsPlayNintendoITA=SadNES cITy e Vecna;Atver=Gponys;DarkEspeon=Vectrex28;R3VOWOOD=Ritinha;LiveLM=pMega0n;peachflavored=Katherine_S2003;PanHooHa=realgard;Mister Bond=joe_urahara;RippeR1692=LudvigNG;/Andréas;;*Special Thanks;Banjo=King Bore;Reaku the Crate=Grom PE;Sylandro=TheKhaosDemon;Iwantdevil=PixHammer;GaptGlitch=Nokbient;Nanassshy=kitronmacaron;/Jean-Samuel Pelletier;/Japanese Community;;;;*Original ") + global.monsterStr) + " II Staff;;*Producer;/Gunpei Yokoi;;*Director;Hiroji Kiyotake=Hiroyuki Kimura;;*Main Programmer;/Takahiro Harada;;*Programmer;Masaru Yamanaka=Masao Yamamoto;/Isao Hirano;;*Graphic Designer;Hiroji Kiyotake=Hiroyuki Kimura;;*Program Assistant;Yuzuru Ogawa=Nobuhiro Ozaki;;*Sound Programmer;/Ryohji Yoshitomi;;*Designer;Makoto Kanoh=Masafumi Sakashita;Tomoyoshi Yamane=Takehiko Hosokawa;/Yasuo Inoue;;*Debug;Masaru Okadaga=Kenji Nishizawa;Hirofumi Matsuoka=Tohru Ohsawa;Kohta Fukui=Keisuke Terasaki;Kenichi Sugino=Hitoshi Yamagami;Katsuya Yamaoe=Yuji Hori;;;;;;;;;;/In Memory of Satoru Iwata;;;*Re-Splashed Mod;/AbyssalCreature;;*Programming;TheyCallMeXander=DodoBirb;PrincessLucina=ssanoo;;*Playtesting;ANXVariable=Ehseezed;Mimolette=Bastion B-56;DruidVorse=aalex87;ShirtyScarab=Lojemiru;Mystical=rm_Steele;/LightSnake;")
-TEXT_ROWS = string_count(";", text)
-X_POS = (room_width / 2)
-WIDE_SPACE = (oControl.widescreen_space / 2)
-SCROLL_SPEED = ((TEXT_ROWS * -0.27) / 120)
-arrayIndex = 0
-subStr = ""
-line = 0
-for (i = 0; i < TEXT_ROWS; i++)
+if global.saxmode
 {
-    for (j = 0; j < 4; j++)
-        textArray[i, j] = ""
+    mus_stop_all()
+    mus_play_once(musSAXEnvironmentalAmbience)
+    room_goto(rm_score)
 }
-strLength = string_length(text)
-for (i = 1; i <= strLength; i++)
-{
-    nextChar = string_char_at(text, i)
-    if (nextChar == "=")
-    {
-        textArray[line, arrayIndex] = subStr
-        subStr = ""
-        arrayIndex = 1
-    }
-    else if (nextChar == ";")
-    {
-        textArray[line, arrayIndex] = subStr
-        subStr = ""
-        arrayIndex = 0
-        line++
-    }
-    else if (nextChar == "/")
-        arrayIndex = 2
-    else if (nextChar == "*")
-        arrayIndex = 3
-    else
-        subStr += nextChar
-}
-textLeft = ""
-textRight = ""
-textCenter = ""
-textHeader = ""
-for (i = 0; i < TEXT_ROWS; i++)
-{
-    textLeft += (textArray[i, 0] + "#")
-    textRight += (textArray[i, 1] + "#")
-    textCenter += (textArray[i, 2] + "#")
-    textHeader += (textArray[i, 3] + "#")
-}
+text = (((((((("Another " + global.monsterStr) + " 2 Remake# # # # # # # # # # # #Producer#Milton 'DoctorM64' Guasti# #Graphic Design#Ramiro Negri#Steve 'Sabre230' Rothlisberger#Jack Witty#Kirill '1Eni1' Fevralev#Jasper#MichaelGabrielR# #Promo Art#Azima 'Zim' Khan# #Writing#James 'Ridley' Hobbs#Paulo 'Latinlingo' Villalobos# #Platform Engine Code#Martin Piecyk# #Music Composition#Milton 'DoctorM64' Guasti#Darren Kerwin#Torbjørn 'Falcool' Brandrud# #Debug#Hemse#Dragondarch#Esteban 'DruidVorse' Criado#Verneri 'Naatiska' Viljanen# #Playtest#Jennifer Potter#Mario Crestanello#Live4Truths#Torbjørn 'Falcool' Brandrud#Lise Trehjørningen#Nommiin#Gabriel Kaplan#Nicolas 'Skol' Del Negro#Darren Kerwin#Robert Sephazon# #Community Management#Dragonheart91#Ammypendent#Karrde# #Special Thanks#Nommiin#Nathan 'wickedclown' Hess#Tyler Rogers#Kousoru#Infinity's End#CapCom#Isabelle Amponin#The ") + global.monsterStr) + " Community# # # # # #Source Code Reconstruction#YellowAfterlife# # #Continued Revisions# #Lead - Former#Gatordile#Alex 'Wanderer' Mack# #Lead#Lojemiru# #Development#Craig Kostelecky#") + global.monsterStr) + "3D# #Art Lead#Dannon 'Shmegleskimo' Yates# #Art#ShirtyScarab#Cooper Garvin#Chris 'Messianic' Oliveira#ChloePlz# #Special Thanks#Banjo, Grom PE,#King Bore, Jean-Samuel Pelletier,#Reaku The Crate, Scooterboot, #Sylandro, TheKhaosDemon, #Unknown, Iwantdevil, #PixHammer, CaptGlitch,#Nokbient, EODTex,#Electrix, gponys,#Japanese Community# # # # # #Original ") + global.monsterStr) + " II Staff# #Producer#Gunpei Yokoi# #Director#Hiroji Kiyotake, Hiroyuki Kimura# #Main Programmer#Takahiro Harada# #Programmer#Masaru Yamanaka, Masao Yamamoto,#Isao Hirano# #Graphic Designer#Hiroji Kiyotake, Hiroyuki Kimura# #Program Assistant#Yuzuru Ogawa, Nobuhiro Ozaki# #Sound Programmer#Ryohji Yoshitomi# #Designer#Makoto Kanoh, Masafumi Sakashita,#Tomoyoshi Yamane, Takehiko Hosokawa,#Yasuo Inoue# #Debug#Masaru Okadaga, Kenji Nishizawa,#Hirofumi Matsuoka, Tohru Ohsawa,#Kohta Fukui, Keisuke Terasaki,#Kenichi Sugino, Hitoshi Yamagami,#Katsuya Yamaoe, Yuji Hori# #Multitroid Mod#milesthenerd, xzackly7#Jes Right, DodoBirb#Mimolette# # Re-Splashed Mod#AbyssalCreature# #Special Thanks#TheyCallMeXander, DodoBirb#Princess Lucina, ssanoo#ANXVariable, Ehseezed#Mimolette, Bastion B-56#DruidVorse, aalex87#ShirtyScarab, Lojemiru#Mystical, rm_Steele#LightSnake# # # # # # # #In Memory of Satoru Iwata")
 yoffset = 0
 fadeout = 0
 canfadeout = 0
@@ -65,3 +23,6 @@ else
 }
 if (os_type == os_android)
     os_powersave_enable(0)
+widespace = (oControl.widescreen * 53)
+if audio_is_playing(oMusicV2.currentbgm)
+    audio_stop_sound(oMusicV2.currentbgm)

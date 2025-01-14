@@ -5,5 +5,5 @@ if (!fadeout)
 }
 else if (image_alpha > 0)
     image_alpha -= 0.02
-else
+if (image_alpha < 0)
     instance_destroy()

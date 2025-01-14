@@ -14,8 +14,8 @@ if (global.event[203] > 0)
 }
 if (global.item[0] == 0 && (global.ptanks == 0 || (global.ptanks == 1 && global.event[203] > 0 && global.event[203] < 9)))
 {
-    with (130658)
+    with (130685)
         instance_destroy()
-    with (130660)
+    with (130687)
         instance_destroy()
 }

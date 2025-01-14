@@ -1,4 +1,4 @@
-if file_exists((working_directory + "\cheats\fusion"))
+if file_exists((working_directory + "/cheats/fusion"))
 {
     if (oControl.mod_fusion == 1)
         oControl.mod_fusion = 0

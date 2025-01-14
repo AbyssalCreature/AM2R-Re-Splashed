@@ -98,3 +98,8 @@ if (state == 100)
     }
     enemy_death()
 }
+if (instance_exists(shield1) && instance_exists(shield2))
+{
+    shield1.fxtimer = fxtimer
+    shield2.fxtimer = fxtimer
+}

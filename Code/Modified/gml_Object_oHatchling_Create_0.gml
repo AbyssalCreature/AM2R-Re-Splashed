@@ -10,3 +10,5 @@ mealtimer = 0
 flash = 0
 chaseX = 0
 alarm1set = 0
+myid = 0
+name = ""

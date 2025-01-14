@@ -6,7 +6,7 @@ if active
     {
         make_explosion1big(272, 160)
         make_explosion1big(304, 160)
-        with (130836)
+        with (130863)
             instance_destroy()
         instance_destroy()
     }

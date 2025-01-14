@@ -21,3 +21,13 @@ if (global.transitiontype == 1)
     else
         event_user(0)
 }
+if (global.spectatorIndex != -1)
+{
+    with (oCharacter)
+    {
+        x = global.targetx
+        y = global.targety
+        oCamera.x = x
+        oCamera.y = y
+    }
+}

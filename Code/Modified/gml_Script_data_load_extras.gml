@@ -6,3 +6,4 @@ global.mod_gamebeaten = 1
 if is_undefined(global.mod_fusion_unlocked)
     global.mod_fusion_unlocked = 0
 ds_list_clear(list)
+ds_list_destroy(list)

@@ -31,7 +31,7 @@ if global.ingame
         intensity = 0
     if (statetime == 1200)
         event_user(0)
-    if (statetime == 1000 && global.lavastate >= 10)
+    if (statetime == 1000 && global.lavastate >= 10 && global.event[303] == 0)
         sfx_play(sndQueenDistant)
     if global.quake
     {

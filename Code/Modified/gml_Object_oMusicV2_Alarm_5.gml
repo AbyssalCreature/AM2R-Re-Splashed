@@ -4,6 +4,8 @@ if ((!sfx_isplaying(musQueenIntro)) && (!sfx_isplaying(musQueen)))
     {
         mus_play(musQueen)
         oMusicV2.bossbgm = 291
+        mus_stop(musQueen2)
+        mus_stop(musQueen3)
     }
 }
 else

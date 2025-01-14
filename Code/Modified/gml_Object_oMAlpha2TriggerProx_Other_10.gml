@@ -1,3 +1,5 @@
+if global.spectator
+    exit
 met = instance_create(x, y, oMAlpha)
 met.facing = facing
 met.myid = myid

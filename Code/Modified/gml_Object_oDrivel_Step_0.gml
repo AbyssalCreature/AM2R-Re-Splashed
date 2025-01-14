@@ -1,5 +1,8 @@
+if (frozen == 1)
+    targety = (y + 8)
 if (frozen == 0)
 {
+    image_speed = ispeed
     if (state == 0)
     {
         hspeed = lerp(hspeed, (0.5 * facing), 0.05)

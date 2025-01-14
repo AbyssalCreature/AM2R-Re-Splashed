@@ -1,15 +1,15 @@
 switch mysprite
 {
-    case 1595:
+    case 1951:
         pal_swap_set(oControl.ArachnusPalette, 1, 0)
         break
-    case 1596:
+    case 1961:
         pal_swap_set(oControl.TorizoPalette, 1, 0)
         break
-    case 1597:
+    case 1957:
         pal_swap_set(oControl.ErisPalette, 1, 0)
         break
-    case 1598:
+    case 1950:
         pal_swap_set(oControl.GenesisPalette, 1, 0)
         break
     default:
@@ -46,6 +46,6 @@ if (!instance_exists(oCoreXShell))
         drawaura = (!drawaura)
     }
 }
-else
+else if (shell.state != 0)
     draw_self()
 shader_reset()

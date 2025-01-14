@@ -48,3 +48,4 @@ else
     global.dmap[43, 24] = 10
 with (oControl)
     event_user(2)
+dead = 0

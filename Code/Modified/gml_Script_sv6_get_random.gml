@@ -98,5 +98,6 @@ oControl.chozomessage = readline()
 oControl.mod_gravity = readline()
 global.gamemode = readline()
 ds_list_clear(list)
+ds_list_destroy(list)
 scr_load_undefined()
 t = 0

@@ -10,5 +10,8 @@ pbeam = 0
 ibeam = 0
 wbeam = 0
 sbeam = 0
-scr = instance_create(x, y, oScreenFlash)
+if (!global.sensitivitymode)
+    scr = instance_create(x, y, oScreenFlash)
 alpha2 = 0
+sax = global.sax
+enemy = 0

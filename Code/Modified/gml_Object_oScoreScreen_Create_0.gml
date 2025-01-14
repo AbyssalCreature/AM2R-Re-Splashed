@@ -1,6 +1,13 @@
 playerx = 350
 playertgtx = -50
-if (oControl.mod_fusion == 1)
+mod_fusion = oControl.mod_fusion
+icebeam = global.ibeam
+saxmode = global.saxmode
+sax = global.sax
+samCount = global.samCountSaved
+monstersleft = global.monstersleft
+hatchling = global.event[304]
+if (mod_fusion == 1)
     playertgtx = 5
 playery = 18
 glow1x = -33
@@ -34,27 +41,28 @@ text4 = get_text("ScoreScreen", "TheLastMonster")
 text5 = get_text("ScoreScreen", "ToBeContinued")
 statetime = 0
 state = 0
+itemstaken = global.itemstaken
 if (global.difficulty == 0)
 {
-    ending = 276
+    ending = 278
     unlock_gallery(0)
 }
 else
 {
     if (global.gametime >= 864000)
     {
-        ending = 276
+        ending = 278
         unlock_gallery(0)
     }
     if (global.gametime >= 432000 && global.gametime < 864000)
     {
-        ending = 277
+        ending = 279
         unlock_gallery(1)
         unlock_gallery(0)
     }
     if (global.gametime < 432000)
     {
-        ending = 278
+        ending = 280
         unlock_gallery(2)
         unlock_gallery(1)
         unlock_gallery(0)

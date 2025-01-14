@@ -4,6 +4,8 @@ if ((!instance_exists(oQueenFireball)) && (!sfx_isplaying(musQueen2)))
     {
         mus_play(musQueen2)
         oMusicV2.bossbgm = 345
+        mus_stop(musQueen)
+        mus_stop(musQueen3)
     }
 }
 else

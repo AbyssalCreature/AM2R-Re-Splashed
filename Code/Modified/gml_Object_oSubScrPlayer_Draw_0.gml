@@ -20,20 +20,24 @@ if (oControl.mod_fusion == 0)
         suitframe = 4
     if (global.hijump == 1)
         suitframe += 1
+    if (oControl.msr_fusionsuit == 0)
+        suitframe += 14
 }
 if (oControl.mod_fusion == 1)
 {
     fusion = "F"
     drawX -= 2
     drawY += 3
+    if (global.currentsuit == 0)
+        suitframe = 6
     if (global.currentsuit == 1)
         suitframe = 7
     if (global.currentsuit == 2)
-        suitframe = 8
-    if (oControl.msr_fusionsuit == 1)
+        suitframe = 10
+    if global.ibeam
+        suitframe = 11
+    if (oControl.msr_fusionsuit == 0)
         suitframe += 2
-    if (global.currentsuit == 0)
-        suitframe = 6
 }
 if global.sbeam
     spazer = "S"
@@ -50,6 +54,8 @@ if (global.currentsuit == 1)
     suit = "V"
 if (global.currentsuit == 2)
     suit = "G"
+if (global.ibeam && oControl.mod_fusion)
+    suit = "O"
 cannon = asset_get_index(((((((("s" + fusion) + suit) + "Cannon") + spazer) + wave) + plasma) + ice))
 draw_sprite_ext(sSubScrPlayer, suitframe, x, y, 1, 1, 0, -1, oSubscreenMenu.ealpha)
 draw_sprite_ext(cannon, 0, (x + drawX), (y + drawY), 1, 1, 0, -1, oSubscreenMenu.ealpha)

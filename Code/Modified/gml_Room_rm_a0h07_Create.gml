@@ -15,12 +15,19 @@ if instance_exists(oBigQuake)
 }
 if (oControl.mod_purerandombool == 1 || oControl.mod_splitrandom == 1 || global.gamemode == 2)
 {
-    with (102598)
+    with (102590)
         instance_destroy()
-    with (102599)
+    with (102591)
         instance_destroy()
-    with (102600)
+    with (102592)
         instance_destroy()
-    with (102601)
+    with (102593)
         instance_destroy()
+}
+with (oBlockSpeed)
+{
+    regentime = 30
+    depth = -112
+    DEPTH = -112
+    tileid = tile_layer_find(-100, x, y)
 }

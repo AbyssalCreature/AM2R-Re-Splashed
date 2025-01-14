@@ -1,1 +1,2 @@
-event_user(0)
+if (!global.spectator)
+    event_user(0)

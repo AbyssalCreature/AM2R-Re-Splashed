@@ -1,3 +1,5 @@
+if global.spectator
+    exit
 if (state == 1)
 {
     if (statetime < 60)

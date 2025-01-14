@@ -5,13 +5,13 @@ alarm[0] = 120
 steps = 0
 view_object[0] = oDrillSeq1
 active = 1
-with (123893)
+with (123920)
     instance_destroy()
-with (123913)
+with (123940)
     instance_destroy()
-with (123892)
+with (123919)
     instance_destroy()
-with (123873)
+with (123900)
     instance_destroy()
 with (oDrillTrigger2)
     active = 0

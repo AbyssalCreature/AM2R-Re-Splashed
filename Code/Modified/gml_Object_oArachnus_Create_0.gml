@@ -47,3 +47,4 @@ image_index = 0
 sprite_index = sArachnusUnmorph
 event_user(1)
 PowerBombImmune = 0
+dead = 0

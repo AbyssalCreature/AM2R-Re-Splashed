@@ -1,8 +1,5 @@
-if (!global.sensitivitymode)
-{
-    xoff = irandom(128)
-    yoff = irandom(128)
-}
+xoff = floor(random(128))
+yoff = floor(random(128))
 image_alpha -= 0.1
 if (image_alpha <= 0)
     instance_destroy()

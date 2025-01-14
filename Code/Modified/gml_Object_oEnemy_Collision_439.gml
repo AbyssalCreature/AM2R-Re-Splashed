@@ -5,6 +5,11 @@ if canbehit
         event_user(0)
         with (other.id)
             event_user(0)
+        if (myhealth <= 0 && frozen)
+        {
+            enemy_death_frozen()
+            global.kills += 1
+        }
     }
     if (!hitbeam)
     {

@@ -510,6 +510,12 @@ if (state == 100)
         with (oTesterEye)
             instance_destroy()
         global.event[200] = 2
+        dead = 1
+        if (instance_exists(oClient) && oClient.connected)
+        {
+            with (oClient)
+                event_user(8)
+        }
         mus_current_fadein()
         instance_destroy()
     }
@@ -565,3 +571,22 @@ if (state != 100)
 if (flashing > 0)
     flashing -= 1
 statetime += 1
+if (global.event[200] > 1 && (!dead))
+{
+    make_explosion3(x, y)
+    repeat (30)
+        instance_create(x, y, oDebris)
+    state = 100
+    statetime = -1
+    alarm[10] = 1
+    alarm[11] = 300
+    with (oTesterShield)
+        event_user(1)
+    visible = false
+    dead = 1
+    if (instance_exists(oClient) && oClient.connected)
+    {
+        with (oClient)
+            event_user(8)
+    }
+}

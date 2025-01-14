@@ -1,3 +1,5 @@
+if global.spectator
+    instance_destroy()
 facing = 1
 myid = 5
 if (global.metdead[5] == 1 || global.event[108] == 1)

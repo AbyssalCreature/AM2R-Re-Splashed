@@ -51,3 +51,4 @@ movespeed = 1
 directrotate = 0
 aim_x = 0
 aim_y = 0
+dead = 0

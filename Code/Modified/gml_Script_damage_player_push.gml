@@ -1,4 +1,6 @@
 var damage_taken;
+if global.spectator
+    exit
 if (global.currentsuit == 0 || argument3 == 1)
     damage_taken = (argument0 * oControl.mod_diffmult)
 if (argument3 == 0)
@@ -25,7 +27,8 @@ if (global.playerhealth > 0)
             {
                 if (state == BALL || state == AIRBALL || state == SPIDERBALL || ((state == SUPERJUMP || state == SJSTART || state == SJEND) && sjball == 1))
                 {
-                    sjball = 1
+                    if (!instance_exists(oClient))
+                        sjball = 1
                     fixedx = 8
                     sball = 0
                     state = HURT

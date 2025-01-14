@@ -1,4 +1,4 @@
-if canbehit
+if (canbehit && (!(((!other.smissile) && global.icemissiles))))
 {
     if (stun == 0 && hitmissileexpl)
         event_user(0)

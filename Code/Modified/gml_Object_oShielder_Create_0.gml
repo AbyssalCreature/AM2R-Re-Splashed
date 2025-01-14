@@ -18,6 +18,7 @@ target = 0
 state = 0
 statetime = 0
 myobj = instance_create(x, y, oShielderShield)
+myobj.frozen = 0
 movedir = 1
 alarm[0] = (60 + random(200))
 firedelay = (200 + random(100))

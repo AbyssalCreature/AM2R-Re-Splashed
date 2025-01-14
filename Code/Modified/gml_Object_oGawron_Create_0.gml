@@ -1,6 +1,6 @@
 with (other.id)
 {
-    action_inherited()
+    event_inherited()
     myhealth = 5
     damage = 8
     hitsound = 62

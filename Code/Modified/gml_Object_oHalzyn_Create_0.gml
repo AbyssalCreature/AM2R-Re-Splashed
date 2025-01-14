@@ -23,3 +23,5 @@ limit_l = (x - 80)
 limit_r = (x + 80)
 glow = 0
 eyeSprite = 1666
+shield1.fxtimer = 0
+shield2.fxtimer = 0

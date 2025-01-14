@@ -16,11 +16,14 @@ if active
     }
     if (oControl.kMenu1 && oControl.kMenu1PushedSteps == 0)
     {
-        sfx_play(sndMenuSel)
         if (global.curropt == 0)
         {
-            global.newgame = 0
-            room_change(15, 0)
+            if (instance_exists(op[0]) && op[0].enabled)
+            {
+                sfx_play(sndMenuSel)
+                global.newgame = 0
+                room_change(15, 0)
+            }
         }
         if (global.curropt == 1 || global.curropt == 2)
             event_user(1)
@@ -62,4 +65,16 @@ if fadeout
         }
         instance_destroy()
     }
+}
+if (started && instance_exists(op[0]))
+{
+    if instance_exists(oClient)
+    {
+        if (global.lobbyLocked || global.saxmode)
+            op[0].enabled = 0
+        else
+            op[0].enabled = 1
+    }
+    else
+        op[0].enabled = 1
 }

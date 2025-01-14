@@ -9,7 +9,6 @@ myhealth[2] = 1
 damage = 40
 missiledamage = 1
 superdamage = 2
-image_alpha = 0
 gravity = 0
 gravity_direction = 270
 state = 0

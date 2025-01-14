@@ -1,12 +1,18 @@
 var temp_seed, randpb, list_locations;
 temp_seed = random_get_seed()
 randomize()
-oControl.seed = random_get_seed()
-random_set_seed(oControl.seed)
-if (oControl.mod_usemanualseed == 1)
+if instance_exists(oClient)
 {
-    random_set_seed(oControl.mod_seed)
-    oControl.seed = oControl.mod_seed
+    if (!is_undefined(oClient.seed))
+    {
+        oControl.seed = oClient.seed
+        random_set_seed(oControl.seed)
+    }
+}
+else
+{
+    oControl.seed = random_get_seed()
+    random_set_seed(oControl.seed)
 }
 randpb = argument0
 list_locations = ds_list_create()
@@ -186,4 +192,5 @@ ds_list_delete(list_locations, (ds_list_size(list_locations) - 1))
 oControl.mod_206 = 206
 oControl.mod_253 = 253
 ds_list_empty(list_locations)
+ds_list_destroy(list_locations)
 random_set_seed(temp_seed)

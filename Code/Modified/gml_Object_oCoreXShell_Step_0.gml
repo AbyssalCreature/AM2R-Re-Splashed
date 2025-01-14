@@ -34,14 +34,11 @@ if (state == 0)
             }
         }
     }
-    if (statetime >= 60 && statetime <= 80 && image_alpha < 1)
-        image_alpha += 0.05
     if (statetime == 80)
     {
         state = 1
         statetime = 0
         alarm[0] = 15
-        image_alpha = 1
     }
     image_index = 0
 }
@@ -99,6 +96,11 @@ if (state == 100)
         }
         event_user(0)
         event_user(1)
+        if (instance_exists(oClient) && oClient.connected)
+        {
+            with (oClient)
+                event_user(8)
+        }
         instance_destroy()
     }
 }

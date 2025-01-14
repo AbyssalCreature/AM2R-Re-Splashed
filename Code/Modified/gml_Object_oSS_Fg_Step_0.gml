@@ -6,7 +6,18 @@ if fadein
         fadein = 0
 }
 if (active && (!fadein) && oControl.kStart && oControl.kStartPushedSteps == 0)
-    event_user(0)
+{
+    if instance_exists(oOptionsMod)
+    {
+        if oOptionsMod.editing
+        {
+        }
+        else
+            event_user(0)
+    }
+    else
+        event_user(0)
+}
 if fadeout
     rectoffset += 2
 if (ealpha < 1 && fadeout == 0)
@@ -33,3 +44,11 @@ if (oControl.kMissile && oControl.kSelectPushedSteps == 0 && (!missilepressed))
 }
 if (missilepressed && (!oControl.kMissile))
     missilepressed = 0
+if (global.saxmode && global.enemyNearby)
+{
+    if (global.sax || (!global.spectator))
+    {
+        fadeout = 1
+        active = 0
+    }
+}

@@ -6,3 +6,5 @@ flame = instance_create(x, y, oMissileFlame)
 flame.image_angle = image_angle
 if smissile
     flame.sprite_index = sSMissileFlame
+if icemissiles
+    flame.sprite_index = sIceMissileFlame

@@ -4,6 +4,8 @@ if collision_line((x + 8), (y - 8), (x + 8), (y - 32), oSolid, false, true)
     global.SuitChange = 0
 if (!(collision_point((x + 8), (y + 8), oSolid, 0, 1)))
     global.SuitChange = 0
+if global.saxmode
+    global.SuitChange = 0
 global.SuitChangeX = x
 global.SuitChangeY = y
 global.SuitChangeGravity = 0
@@ -11,4 +13,10 @@ if active
 {
     with (oCharacter)
         alarm[1] = 1
+    if (instance_exists(oClient) && oClient.connected)
+    {
+        popup_text(((get_text("Items", "VariaSuit") + " ") + get_text("GlobalOptions", "Enabled")))
+        with (oClient)
+            event_user(8)
+    }
 }

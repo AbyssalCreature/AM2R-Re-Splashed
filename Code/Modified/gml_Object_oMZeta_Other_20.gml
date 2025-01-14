@@ -18,6 +18,6 @@ if surface_exists(surf)
             draw_sprite_ext(fleg_spr, fleg_frame, body_x, surf_y, facing, 1, 0, -1, 1)
     }
     else
-        draw_sprite_ext(sMZetaBlur, -1, body_x, body_y, facing, 1, 0, -1, 1)
+        draw_sprite_ext(ZetaBlurSprite, -1, body_x, body_y, facing, 1, 0, -1, 1)
     surface_reset_target()
 }

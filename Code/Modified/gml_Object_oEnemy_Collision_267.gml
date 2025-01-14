@@ -10,7 +10,7 @@ if (state == 100 || other.dash >= 29)
     dodamage = 0
 if (other.inwater == 1 && other.state == 15 && other.vjump == 0 && global.screwattack == 1 && global.currentsuit != 2)
     dodamage = 1
-if (hitpseudoscrew == 1 && other.chargebeam >= 1 && other.state == 15 && other.vjump == 0 && global.screwattack == 0 && other.speedboost == 0)
+if (hitpseudoscrew == 1 && other.chargebeam >= 1 && other.state == 15 && other.vjump == 0 && global.screwattack == 0)
 {
     event_user(0)
     if (myhealth <= 0)

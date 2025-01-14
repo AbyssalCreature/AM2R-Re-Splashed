@@ -19,3 +19,4 @@ targety = (oCharacter.y - 20)
 parent = -1
 randomx = irandom(room_width)
 randomy = irandom(room_height)
+ispeed = image_speed

@@ -87,3 +87,15 @@ targety = 0
 alarm[3] = 1
 alarm[9] = 1
 scan_log(14, get_text("ScanEvents", "ScanBioform"), 180, 0)
+dead = 0
+if instance_exists(oClient)
+{
+}
+myposx = floor((x / 320))
+myposy = floor(((y - 8) / 240))
+mapposx = (myposx + global.mapoffsetx)
+mapposy = (myposy + global.mapoffsety)
+if (oControl.ZetaBlur != -1 && oControl.mod_fusion == 1)
+    ZetaBlurSprite = oControl.ZetaBlur
+else
+    ZetaBlurSprite = 595

@@ -13,9 +13,9 @@ if (random(100) < argument0)
         pickup = irandom(4)
     if (pickup == 0)
     {
-        if ((global.playerhealth < global.maxhealth && instance_number(oHPickup) < 6) || (oControl.mod_fusion == 1 && spawnX == 1 && canbeX && instance_number(oHPickup) < 6))
+        if ((global.playerhealth < global.maxhealth && instance_number(oHPickup) < 6) || ((oControl.mod_fusion == 1 || global.sax) && spawnX == 1 && canbeX && instance_number(oHPickup) < 6))
         {
-            if (oControl.mod_fusion == 1 && canbeX == 1)
+            if ((oControl.mod_fusion == 1 || global.sax) && canbeX == 1)
                 xParasite = instance_create(xx, yy, oHXPickup)
             else
                 instance_create(xx, yy, oHPickup)
@@ -25,9 +25,9 @@ if (random(100) < argument0)
     }
     if (pickup == 1)
     {
-        if ((global.playerhealth < global.maxhealth && instance_number(oHPickupBig) < 3) || (oControl.mod_fusion == 1 && spawnX == 1 && canbeX && instance_number(oHPickupBig) < 3))
+        if ((global.playerhealth < global.maxhealth && instance_number(oHPickupBig) < 3) || ((oControl.mod_fusion == 1 || global.sax) && spawnX == 1 && canbeX && instance_number(oHPickupBig) < 3))
         {
-            if (oControl.mod_fusion == 1 && canbeX == 1)
+            if ((oControl.mod_fusion == 1 || global.sax) && canbeX == 1)
                 xParasite = instance_create(xx, yy, oHXPickupBig)
             else
                 instance_create(xx, yy, oHPickupBig)
@@ -37,9 +37,9 @@ if (random(100) < argument0)
     }
     if (pickup == 2)
     {
-        if ((global.missiles < global.maxmissiles && global.maxmissiles > 0 && instance_number(oMPickup) < 8) || (oControl.mod_fusion == 1 && spawnX == 1 && canbeX && instance_number(oMPickup) < 8))
+        if ((global.missiles < global.maxmissiles && global.maxmissiles > 0 && instance_number(oMPickup) < 8) || ((oControl.mod_fusion == 1 || global.sax) && spawnX == 1 && canbeX && instance_number(oMPickup) < 8))
         {
-            if (oControl.mod_fusion == 1 && canbeX == 1)
+            if ((oControl.mod_fusion == 1 || global.sax) && canbeX == 1)
                 xParasite = instance_create(xx, yy, oMXPickup)
             else
                 instance_create(xx, yy, oMPickup)
@@ -51,7 +51,7 @@ if (random(100) < argument0)
     {
         if (global.smissiles < global.maxsmissiles && global.maxsmissiles > 0 && instance_number(oSMPickup) < 2)
         {
-            if (oControl.mod_fusion == 1 && canbeX == 1)
+            if ((oControl.mod_fusion == 1 || global.sax) && canbeX == 1)
                 xParasite = instance_create(xx, yy, oSMXPickup)
             else
                 instance_create(xx, yy, oSMPickup)
@@ -63,13 +63,13 @@ if (random(100) < argument0)
     {
         if (global.pbombs < global.maxpbombs && global.maxpbombs > 0 && instance_number(oPBPickup) < 2)
         {
-            if (oControl.mod_fusion == 1 && canbeX == 1)
+            if ((oControl.mod_fusion == 1 || global.sax) && canbeX == 1)
                 xParasite = instance_create(xx, yy, oPBXPickup)
             else
                 instance_create(xx, yy, oPBPickup)
         }
     }
-    if (canbeX == 1 && instance_exists(xParasite) && oControl.mod_fusion == 1)
+    if (canbeX == 1 && instance_exists(xParasite) && (oControl.mod_fusion == 1 || global.sax))
     {
         if (object_index == oEnemyFrozen)
         {

@@ -526,3 +526,5 @@ sin_timer += 0.06
 if (sin_timer > 99999999)
     sin_timer = 0
 statetime += 1
+if (instance_exists(oClient) && global.saxmode && phase != 5)
+    global.pbombCooldown = 0

@@ -1,3 +1,4 @@
+var greydoor;
 if (open == 1)
 {
     if (image_index < (sprite_get_number(sprite_index) - 1))
@@ -27,4 +28,62 @@ if (open == 0)
         if (hlalpha > 1)
             hlalpha = 1
     }
+}
+if (room == rm_a7b05)
+{
+    if (instance_number(oMonster) == 0)
+        event_user(3)
+}
+if (room == rm_a7b06)
+{
+    if (instance_number(oMonster) == 0)
+        event_user(3)
+}
+if (room == rm_a7b06A)
+{
+    if (instance_number(oMonster) == 0)
+        event_user(3)
+}
+if (room == rm_a7b07)
+{
+    if (instance_number(oMonster) == 0)
+        event_user(3)
+}
+if (room == rm_a7b08)
+{
+    if (instance_number(oMonster) == 0)
+        event_user(3)
+}
+if (room == rm_a7b08A)
+{
+    if (instance_number(oMonster) == 0)
+        event_user(3)
+}
+if (event > -1)
+{
+    if (event == 151)
+    {
+        if (global.event[151] >= 3)
+        {
+            if (lock == 1 || lock == 2 || lock == 3)
+            {
+                lock = 0
+                open = 1
+            }
+        }
+    }
+    else if (global.event[event] > 0)
+    {
+        if (lock == 1 || lock == 2 || lock == 3)
+        {
+            lock = 0
+            open = 1
+        }
+    }
+}
+if (global.spectator && instance_exists(oCharacter) && distance_to_object(oCharacter) < 50 && room != rm_a2a03 && id != 114272 && room != rm_a4a06 && room != rm_a4a08 && room != rm_a5b02 && room != rm_a8a13)
+{
+    greydoor = (global.saxmode && global.sax && lock == 4)
+    if ((!open) && (!greydoor))
+        open = 1
 }

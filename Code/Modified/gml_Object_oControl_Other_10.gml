@@ -1,3 +1,8 @@
+if (global.saxmode && global.enemyNearby)
+{
+    if (global.sax || (!global.spectator))
+        exit
+}
 if (global.ingame == 1 && global.enablecontrol == 1 && room != rm_transition && ((!keyboard_check(vk_alt)) || os_type == os_linux))
 {
     event_user(3)

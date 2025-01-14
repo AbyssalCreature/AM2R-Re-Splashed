@@ -8,6 +8,7 @@ else
     omega_body = 617
 makeActive()
 setCollisionBounds(-10, -30, 10, 46)
+cam = undefined
 myhealth = 350
 myhealth = global.mod_omegahealth
 flashing = 0
@@ -113,3 +114,11 @@ alarm[9] = 1
 dmg = 0
 flashtime = 0
 laststate = 0
+dead = 0
+if instance_exists(oClient)
+{
+}
+myposx = floor((x / 320))
+myposy = floor(((y - 8) / 240))
+mapposx = (myposx + global.mapoffsetx)
+mapposy = (myposy + global.mapoffsety)

@@ -14,6 +14,8 @@ if (CollisionBottom == noone)
     CollisionBottom = collision_line((x - 8), (y + 7), (x + 8), (y + 7), oEnemySolid, true, true)
 if (active == 1 && frozen == 0)
 {
+    if (image_speed == 0)
+        image_speed = 0.25
     if (state == 0)
     {
         accelx = 0.02

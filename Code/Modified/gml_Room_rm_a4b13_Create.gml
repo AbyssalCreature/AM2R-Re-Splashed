@@ -14,9 +14,9 @@ if (global.event[203] > 0)
 }
 if (global.event[203] > 1)
 {
-    with (130804)
+    with (130831)
         instance_destroy()
-    with (130813)
+    with (130840)
         instance_destroy()
     tile_layer_delete(-101)
 }

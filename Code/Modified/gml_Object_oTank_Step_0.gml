@@ -49,6 +49,11 @@ if (state == 100)
             event_user(1)
         alarm[10] = 1
         global.event[203] = 2
+        if instance_exists(oTankCore)
+        {
+            if (!oTankCore.dead)
+                oTankCore.dead = 1
+        }
     }
     if (statetime == 240)
     {

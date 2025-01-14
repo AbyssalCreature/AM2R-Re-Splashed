@@ -1,13 +1,23 @@
 if (state == 0)
 {
     draw_background(bgScoreScreenBG, (bgx - (oControl.widescreen_space / 2)), bgy)
-    if (oControl.mod_fusion == 1)
-        draw_background(bgScoreScreenPlayer_fusion, playerx, playery)
+    if ((mod_fusion == 1 && (!instance_exists(oClient))) || (instance_exists(oClient) && saxmode && text2a == 0))
+    {
+        if (saxmode && (!sax) && icebeam)
+            draw_background(bgScoreScreenPlayer_fusion_omega, playerx, playery)
+        else
+            draw_background(bgScoreScreenPlayer_fusion, playerx, playery)
+    }
     else
         draw_background(bgScoreScreenPlayer, playerx, playery)
     draw_set_blend_mode(bm_add)
-    if (oControl.mod_fusion == 1)
-        draw_background_ext(bgScoreScreenPlayerGlow4, glow4x, glow4y, 1, 1, 0, -1, glow_alpha)
+    if ((mod_fusion == 1 && (!instance_exists(oClient))) || (instance_exists(oClient) && saxmode && text2a == 0))
+    {
+        if (saxmode && (!sax) && icebeam)
+            draw_background_ext(bgScoreScreenPlayerGlow5, glow4x, glow4y, 1, 1, 0, -1, glow_alpha)
+        else
+            draw_background_ext(bgScoreScreenPlayerGlow4, glow4x, glow4y, 1, 1, 0, -1, glow_alpha)
+    }
     else
     {
         draw_background_ext(bgScoreScreenPlayerGlow1, glow1x, glow1y, 1, 1, 0, -1, glow_alpha)

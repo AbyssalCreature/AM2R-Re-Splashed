@@ -10,3 +10,4 @@ if (room != rm_a3h04)
     event_user(1)
 else
     alarm[2] = 1
+depth = -100

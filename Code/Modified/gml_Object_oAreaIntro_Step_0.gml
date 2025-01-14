@@ -1,14 +1,15 @@
-var _temp_local_var_2;
+var imageindex;
+imageindex = floor(image_index)
 if (state == 0 || (!global.ingame) || room == rm_transition)
 {
     image_speed = 0
     exit
 }
-else if (pause[floor(image_index)] > 0)
+else if (pause[imageindex] > 0)
 {
     image_speed = 0
-    image_index = floor(image_index)
-    pause[_temp_local_var_2]--
+    image_index = imageindex
+    pause[imageindex]--
 }
 else
     image_speed = 0.25

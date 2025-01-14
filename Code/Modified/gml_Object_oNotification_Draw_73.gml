@@ -1,10 +1,5 @@
-if oControl.widescreen
-{
-    if surface_exists(oControl.widescreen_surface)
-        surface_set_target(oControl.widescreen_surface)
-}
-else if surface_exists(application_surface)
-    surface_set_target(application_surface)
+if surface_exists(oControl.gui_surface)
+    surface_set_target(oControl.gui_surface)
 vx = 0
 vy = offset
 draw_background_ext(bgNotification, vx, (vy + 212), 1, 1, 0, -1, 0.7)

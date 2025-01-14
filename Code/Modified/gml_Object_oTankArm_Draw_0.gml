@@ -1,5 +1,3 @@
-if (oControl.mod_fusion == 1)
-    pal_swap_set(oControl.TankPalette, 1, 0)
 draw_sprite_ext(sTankArm, draw_forearm, x, y, 1, 1, aangle, -1, 1)
 draw_sprite(sprite_index, -1, x, y)
 if flashing
@@ -13,4 +11,3 @@ if flashing
     }
     draw_set_blend_mode(bm_normal)
 }
-shader_reset()

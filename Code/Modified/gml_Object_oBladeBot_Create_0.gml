@@ -24,3 +24,4 @@ direction = 0
 speed = 4
 alarm[0] = 1
 col_edge = 0
+ispeed = image_speed

@@ -1,5 +1,5 @@
 var canride;
-if collision_line((x - 9), (y - 2), (x + 9), (y - 2), oCharacter, false, true)
+if (collision_line((x - 9), (y - 2), (x + 9), (y - 2), oCharacter, false, true) && global.warpPipeCooldown == 0)
     canride = 1
 else
     canride = 0

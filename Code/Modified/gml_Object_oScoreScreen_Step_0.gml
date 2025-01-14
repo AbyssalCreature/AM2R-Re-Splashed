@@ -1,4 +1,16 @@
 var j;
+if saxmode
+{
+    text1 = get_text("ScoreScreen", "SaxResults")
+    text1a = get_text("ScoreScreen", "SaxTeamSaxWinner")
+    text2 = get_text("ScoreScreen", "SaxMetroidCount")
+    text2a = string(monstersleft)
+    if (hatchling != 0)
+        text2a = 0
+    text3 = get_text("ScoreScreen", "SaxRoundOver")
+    if (text2a == 0)
+        text1a = get_text("ScoreScreen", "SaxTeamFusionWinner")
+}
 if (state == 0)
 {
     if (playerx != playertgtx)
@@ -89,7 +101,11 @@ if (state == 2)
     if (statetime == 600)
         fadeout = 1
     if (statetime == 900)
+    {
+        mus_fadeout(musCredits)
+        mus_fadeout(musSAXEnvironmentalAmbience)
         event_user(0)
+    }
     if fadeout
     {
         if (ralpha < 1)

@@ -1,5 +1,8 @@
 if (oControl.mod_fusion == 1 || oControl.MonsterPalettesFusionOnly == 0)
-    pal_swap_set(oControl.GammaPalette, 1, 0)
+{
+    if (global.shaders_compiled && os_type != os_android)
+        pal_swap_set(oControl.GammaPalette, 1, 0)
+}
 alpha2 = (image_index - floor(image_index))
 alpha1 = (1 - alpha2)
 if (state == 2)

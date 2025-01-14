@@ -30,3 +30,4 @@ if oControl.mod_insanitymode
     mycolor = make_color_rgb(255, 36, 36)
 else
     mycolor = make_color_rgb(2, 207, 118)
+started = 0

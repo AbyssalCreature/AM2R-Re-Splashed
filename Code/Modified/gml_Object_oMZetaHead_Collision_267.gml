@@ -1,11 +1,14 @@
-var pushdir;
+var pushdir, damageToDeal;
 if (other.x < x)
     pushdir = -1
 else
     pushdir = 1
 if (other.invincible == 0)
 {
-    oMZeta.damagedealt += oMZeta.damage
+    damageToDeal = oMZeta.damage
+    if global.sax
+        damageToDeal = (damageToDeal * 2)
+    oMZeta.damagedealt += damageToDeal
     if (oMZeta.blur == 1)
     {
         with (oMZeta)
@@ -13,8 +16,8 @@ if (other.invincible == 0)
             if (statetime < 17)
                 statetime = 17
         }
-        damage_player_push(oMZeta.damage, pushdir, 90, 0, 3.5)
+        damage_player_push(damageToDeal, pushdir, 90, 0, 3.5)
     }
     else
-        damage_player(oMZeta.damage, oMZeta.hpush, oMZeta.vpush, 0, 0)
+        damage_player(damageToDeal, oMZeta.hpush, oMZeta.vpush, 0, 0)
 }

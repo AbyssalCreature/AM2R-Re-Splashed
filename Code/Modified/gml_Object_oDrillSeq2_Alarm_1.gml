@@ -6,5 +6,6 @@ with (oCharacter)
     morphing = 0
     turning = 0
 }
-immersion_stop()
+if (os_type == os_android)
+    immersion_stop()
 instance_destroy()

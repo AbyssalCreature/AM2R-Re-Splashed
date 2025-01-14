@@ -11,7 +11,9 @@ if (walljumping == 1)
     walljumping = 0
     if (aimlock == 0)
         canturn = 1
-    yVel = (-6 + ((inwater && global.currentsuit != 2) * 1.5))
+    yVel = -6
+    if (inwater && global.currentsuit != 2)
+        yVel += 1.5
     if (facing == LEFT)
     {
         xAcc = -2
@@ -48,17 +50,18 @@ if (state == SUPERJUMP && sjdir == 0)
     image_index = 1
 if (state == HURT)
 {
-    if (sjball == 0)
+    if (sjball == 0 || multiBall == 0)
     {
         state = JUMPING
         vjump = 1
     }
-    if (sjball == 1)
+    if (sjball == 1 || multiBall == 2)
         state = AIRBALL
     statetime = 20
     if (aimlock == 0)
         canturn = 1
     sjball = 0
+    multiBall = 0
     cmhurt = 20
 }
 if (state == IDLE && facing != 0)

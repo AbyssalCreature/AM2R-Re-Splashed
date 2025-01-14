@@ -1,2 +1,2 @@
-link_tile(tlArea5A, 112, 0)
+link_tile(tlArea5A, 80, 0)
 regentime = -1

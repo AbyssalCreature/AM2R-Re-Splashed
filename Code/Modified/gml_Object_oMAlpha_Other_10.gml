@@ -33,6 +33,7 @@ if (myhealth <= 0)
     global.dmap[mapposx, mapposy] = 11
     with (oControl)
         event_user(2)
+    dead = 1
 }
 flashing = 1
 canbehit = 0

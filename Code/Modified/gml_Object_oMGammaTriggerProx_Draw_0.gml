@@ -1,5 +1,8 @@
 if (oControl.mod_fusion == 1 || oControl.MonsterPalettesFusionOnly == 0)
-    pal_swap_set(oControl.GammaPalette, 1, 0)
+{
+    if (global.shaders_compiled && os_type != os_android)
+        pal_swap_set(oControl.GammaPalette, 1, 0)
+}
 draw_sprite_ext(sMGammaLegBA1, -1, (x + legba1x), (y + legba1y), facing, 1, 0, -1, 1)
 draw_sprite_ext(sMGammaLegBA2, -1, ((x + legba1x) + legba2x), ((y + legba1y) + legba2y), facing, 1, 0, -1, 1)
 draw_sprite_ext(sMGammaLegBB1, -1, (x + legbb1x), (y + legbb1y), facing, 1, 0, -1, 1)

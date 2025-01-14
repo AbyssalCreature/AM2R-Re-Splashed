@@ -11,6 +11,7 @@ instance_create(x, y, oScreenFlash)
 sfx_play(sndEDeath1)
 sfx_play(sndMissileExpl)
 global.event[103] = x
+dead = 1
 if (oControl.mod_fusion == 0)
 {
     temp_randitem = scr_itemsopen(oControl.mod_jumpball)

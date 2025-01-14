@@ -1,4 +1,4 @@
-if (state == 2 && isCollisionBottom(1))
+if (state == 2 && isCollisionBottom(1) && frozen == 0)
 {
     if ((oCharacter.y - 20) > y)
         yVel = -3

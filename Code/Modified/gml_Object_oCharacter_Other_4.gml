@@ -1,5 +1,6 @@
 if (room != rm_transition)
 {
+    sfx_stop(sndStoneLoop)
     x = (global.targetx + global.offsetx)
     y = (global.targety + global.offsety)
     if (global.event[304] == 1)

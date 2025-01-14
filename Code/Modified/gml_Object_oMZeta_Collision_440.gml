@@ -1,6 +1,6 @@
 if (myhealth > 0)
 {
-    if (flashing == 0)
+    if (flashing == 0 && (!global.spectator))
     {
         event_user(0)
         with (other.id)

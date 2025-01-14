@@ -1,6 +1,6 @@
-with (147732)
+with (147760)
     instance_destroy()
-with (147727)
+with (147755)
     instance_destroy()
 tile_layer_delete(-102)
 oQueen.phase = 2

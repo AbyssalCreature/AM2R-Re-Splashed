@@ -1,4 +1,6 @@
 var dist, dist2, spd;
+if (global.event[101] >= eventno)
+    instance_destroy()
 if (stun > 0)
     stun -= 1
 if (flashing > 0)
