@@ -250,8 +250,8 @@
       "x": 0,
       "y": 0,
       "object_definition": "oBackground",
-      "instance_id": 108240,
-      "creation_code": "gml_RoomCC_rm_a1h10_4373_Create",
+      "instance_id": 108267,
+      "creation_code": "gml_RoomCC_rm_a1h10_4525_Create",
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295,
@@ -264,7 +264,7 @@
       "x": 224,
       "y": 144,
       "object_definition": "oSolid1",
-      "instance_id": 108241,
+      "instance_id": 108268,
       "creation_code": null,
       "scale_x": 6,
       "scale_y": 3,
@@ -278,7 +278,7 @@
       "x": 272,
       "y": 32,
       "object_definition": "oSolid1",
-      "instance_id": 108242,
+      "instance_id": 108269,
       "creation_code": null,
       "scale_x": 3,
       "scale_y": 3,
@@ -292,7 +292,7 @@
       "x": 64,
       "y": 128,
       "object_definition": "oSolid1",
-      "instance_id": 108243,
+      "instance_id": 108270,
       "creation_code": null,
       "scale_x": 3,
       "scale_y": 2,
@@ -306,7 +306,7 @@
       "x": 32,
       "y": 64,
       "object_definition": "oSolid1",
-      "instance_id": 108244,
+      "instance_id": 108271,
       "creation_code": null,
       "scale_x": 1,
       "scale_y": 5,
@@ -320,7 +320,7 @@
       "x": 48,
       "y": 128,
       "object_definition": "oSolid1",
-      "instance_id": 108245,
+      "instance_id": 108272,
       "creation_code": null,
       "scale_x": 1,
       "scale_y": 1,
@@ -334,7 +334,7 @@
       "x": 112,
       "y": 144,
       "object_definition": "oSolid1",
-      "instance_id": 108246,
+      "instance_id": 108273,
       "creation_code": null,
       "scale_x": 2,
       "scale_y": 1,
@@ -348,7 +348,7 @@
       "x": 128,
       "y": 160,
       "object_definition": "oSolid1",
-      "instance_id": 108247,
+      "instance_id": 108274,
       "creation_code": null,
       "scale_x": 3,
       "scale_y": 1,
@@ -362,7 +362,7 @@
       "x": 160,
       "y": 176,
       "object_definition": "oSolid1",
-      "instance_id": 108248,
+      "instance_id": 108275,
       "creation_code": null,
       "scale_x": 4,
       "scale_y": 1,
@@ -376,7 +376,7 @@
       "x": 32,
       "y": 48,
       "object_definition": "oSolid1",
-      "instance_id": 108249,
+      "instance_id": 108276,
       "creation_code": null,
       "scale_x": 7,
       "scale_y": 1,
@@ -390,7 +390,7 @@
       "x": 128,
       "y": 32,
       "object_definition": "oSolid1",
-      "instance_id": 108250,
+      "instance_id": 108277,
       "creation_code": null,
       "scale_x": 9,
       "scale_y": 1,
@@ -404,7 +404,7 @@
       "x": 64,
       "y": 112,
       "object_definition": "oSlope1",
-      "instance_id": 108251,
+      "instance_id": 108278,
       "creation_code": null,
       "scale_x": 1,
       "scale_y": 1,
@@ -418,7 +418,7 @@
       "x": 80,
       "y": 112,
       "object_definition": "oSlope2",
-      "instance_id": 108252,
+      "instance_id": 108279,
       "creation_code": null,
       "scale_x": 1,
       "scale_y": 1,
@@ -432,7 +432,7 @@
       "x": 144,
       "y": 144,
       "object_definition": "oSlope2",
-      "instance_id": 108253,
+      "instance_id": 108280,
       "creation_code": null,
       "scale_x": 1,
       "scale_y": 1,
@@ -446,7 +446,7 @@
       "x": 176,
       "y": 160,
       "object_definition": "oSlope2B",
-      "instance_id": 108254,
+      "instance_id": 108281,
       "creation_code": null,
       "scale_x": 1,
       "scale_y": 1,
@@ -460,8 +460,8 @@
       "x": 96,
       "y": 128,
       "object_definition": "oItemPBombTank",
-      "instance_id": 108255,
-      "creation_code": "gml_RoomCC_rm_a1h10_4374_Create",
+      "instance_id": 108282,
+      "creation_code": "gml_RoomCC_rm_a1h10_4526_Create",
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295,
@@ -474,7 +474,7 @@
       "x": 296,
       "y": 80,
       "object_definition": "oDoor",
-      "instance_id": 108256,
+      "instance_id": 108283,
       "creation_code": null,
       "scale_x": -1,
       "scale_y": 1,
@@ -488,8 +488,8 @@
       "x": 320,
       "y": 144,
       "object_definition": "oGotoRoom",
-      "instance_id": 108257,
-      "creation_code": "gml_RoomCC_rm_a1h10_4375_Create",
+      "instance_id": 108284,
+      "creation_code": "gml_RoomCC_rm_a1h10_4527_Create",
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295,
@@ -502,7 +502,7 @@
       "x": 320,
       "y": 144,
       "object_definition": "oSolid4x1",
-      "instance_id": 108258,
+      "instance_id": 108285,
       "creation_code": null,
       "scale_x": 1,
       "scale_y": 1,
@@ -516,7 +516,7 @@
       "x": 320,
       "y": 64,
       "object_definition": "oSolid4x1",
-      "instance_id": 108259,
+      "instance_id": 108286,
       "creation_code": null,
       "scale_x": 1,
       "scale_y": 1,
@@ -539,7 +539,7 @@
       "width": 64,
       "height": 48,
       "tile_depth": -90,
-      "instance_id": 10026700,
+      "instance_id": 10026772,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -555,7 +555,7 @@
       "width": 16,
       "height": 80,
       "tile_depth": -100,
-      "instance_id": 10026701,
+      "instance_id": 10026773,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -571,7 +571,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026702,
+      "instance_id": 10026774,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -587,7 +587,7 @@
       "width": 32,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026703,
+      "instance_id": 10026775,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -603,7 +603,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026704,
+      "instance_id": 10026776,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -619,7 +619,7 @@
       "width": 16,
       "height": 48,
       "tile_depth": -100,
-      "instance_id": 10026705,
+      "instance_id": 10026777,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -635,7 +635,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026706,
+      "instance_id": 10026778,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -651,7 +651,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026707,
+      "instance_id": 10026779,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -667,7 +667,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026708,
+      "instance_id": 10026780,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -683,7 +683,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026709,
+      "instance_id": 10026781,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -699,7 +699,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026710,
+      "instance_id": 10026782,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -715,7 +715,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026711,
+      "instance_id": 10026783,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -731,7 +731,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026712,
+      "instance_id": 10026784,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -747,7 +747,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026713,
+      "instance_id": 10026785,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -763,7 +763,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026714,
+      "instance_id": 10026786,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -779,7 +779,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026715,
+      "instance_id": 10026787,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -795,7 +795,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026716,
+      "instance_id": 10026788,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -811,7 +811,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026717,
+      "instance_id": 10026789,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -827,7 +827,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026718,
+      "instance_id": 10026790,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -843,7 +843,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026719,
+      "instance_id": 10026791,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -859,7 +859,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026720,
+      "instance_id": 10026792,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -875,7 +875,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026721,
+      "instance_id": 10026793,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -891,7 +891,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026722,
+      "instance_id": 10026794,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -907,7 +907,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026723,
+      "instance_id": 10026795,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -923,7 +923,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026724,
+      "instance_id": 10026796,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -939,7 +939,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026725,
+      "instance_id": 10026797,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -955,7 +955,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026726,
+      "instance_id": 10026798,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -971,7 +971,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026727,
+      "instance_id": 10026799,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -987,7 +987,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026728,
+      "instance_id": 10026800,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1003,7 +1003,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026729,
+      "instance_id": 10026801,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1019,7 +1019,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026730,
+      "instance_id": 10026802,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1035,7 +1035,7 @@
       "width": 32,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026731,
+      "instance_id": 10026803,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1051,7 +1051,7 @@
       "width": 32,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026732,
+      "instance_id": 10026804,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1067,7 +1067,7 @@
       "width": 32,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026733,
+      "instance_id": 10026805,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1083,7 +1083,7 @@
       "width": 32,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026734,
+      "instance_id": 10026806,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1099,7 +1099,7 @@
       "width": 32,
       "height": 48,
       "tile_depth": -100,
-      "instance_id": 10026735,
+      "instance_id": 10026807,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1115,7 +1115,7 @@
       "width": 32,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026736,
+      "instance_id": 10026808,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1131,7 +1131,7 @@
       "width": 32,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026737,
+      "instance_id": 10026809,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1147,7 +1147,7 @@
       "width": 16,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026738,
+      "instance_id": 10026810,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1163,7 +1163,7 @@
       "width": 16,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026739,
+      "instance_id": 10026811,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1179,7 +1179,7 @@
       "width": 32,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026740,
+      "instance_id": 10026812,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1195,7 +1195,7 @@
       "width": 32,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026741,
+      "instance_id": 10026813,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1211,7 +1211,7 @@
       "width": 32,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026742,
+      "instance_id": 10026814,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1227,7 +1227,7 @@
       "width": 32,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026743,
+      "instance_id": 10026815,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1243,7 +1243,7 @@
       "width": 32,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026744,
+      "instance_id": 10026816,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1259,7 +1259,7 @@
       "width": 32,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026745,
+      "instance_id": 10026817,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1275,7 +1275,7 @@
       "width": 16,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026746,
+      "instance_id": 10026818,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1291,7 +1291,7 @@
       "width": 16,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026747,
+      "instance_id": 10026819,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1307,7 +1307,7 @@
       "width": 16,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026748,
+      "instance_id": 10026820,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1323,7 +1323,7 @@
       "width": 16,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026749,
+      "instance_id": 10026821,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1339,7 +1339,7 @@
       "width": 16,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026750,
+      "instance_id": 10026822,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1355,7 +1355,7 @@
       "width": 16,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026751,
+      "instance_id": 10026823,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1371,7 +1371,7 @@
       "width": 16,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026752,
+      "instance_id": 10026824,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1387,7 +1387,7 @@
       "width": 32,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026753,
+      "instance_id": 10026825,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1403,7 +1403,7 @@
       "width": 80,
       "height": 64,
       "tile_depth": -100,
-      "instance_id": 10026754,
+      "instance_id": 10026826,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1419,7 +1419,7 @@
       "width": 80,
       "height": 64,
       "tile_depth": -100,
-      "instance_id": 10026755,
+      "instance_id": 10026827,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1435,7 +1435,7 @@
       "width": 80,
       "height": 64,
       "tile_depth": -100,
-      "instance_id": 10026756,
+      "instance_id": 10026828,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1451,7 +1451,7 @@
       "width": 80,
       "height": 64,
       "tile_depth": -100,
-      "instance_id": 10026757,
+      "instance_id": 10026829,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1467,7 +1467,7 @@
       "width": 80,
       "height": 64,
       "tile_depth": -100,
-      "instance_id": 10026758,
+      "instance_id": 10026830,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1483,7 +1483,7 @@
       "width": 48,
       "height": 48,
       "tile_depth": -100,
-      "instance_id": 10026759,
+      "instance_id": 10026831,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1499,7 +1499,7 @@
       "width": 48,
       "height": 48,
       "tile_depth": -100,
-      "instance_id": 10026760,
+      "instance_id": 10026832,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1515,7 +1515,7 @@
       "width": 48,
       "height": 48,
       "tile_depth": -100,
-      "instance_id": 10026761,
+      "instance_id": 10026833,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1531,7 +1531,7 @@
       "width": 48,
       "height": 48,
       "tile_depth": -100,
-      "instance_id": 10026762,
+      "instance_id": 10026834,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1547,7 +1547,7 @@
       "width": 48,
       "height": 48,
       "tile_depth": -100,
-      "instance_id": 10026763,
+      "instance_id": 10026835,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1563,7 +1563,7 @@
       "width": 32,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026764,
+      "instance_id": 10026836,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1579,7 +1579,7 @@
       "width": 32,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026765,
+      "instance_id": 10026837,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1595,7 +1595,7 @@
       "width": 32,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026766,
+      "instance_id": 10026838,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1611,7 +1611,7 @@
       "width": 32,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026767,
+      "instance_id": 10026839,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1627,7 +1627,7 @@
       "width": 32,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026768,
+      "instance_id": 10026840,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1643,7 +1643,7 @@
       "width": 32,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026769,
+      "instance_id": 10026841,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1659,7 +1659,7 @@
       "width": 32,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026770,
+      "instance_id": 10026842,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1675,7 +1675,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026771,
+      "instance_id": 10026843,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1691,7 +1691,7 @@
       "width": 32,
       "height": 64,
       "tile_depth": -100,
-      "instance_id": 10026772,
+      "instance_id": 10026844,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1707,7 +1707,7 @@
       "width": 32,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026773,
+      "instance_id": 10026845,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1723,7 +1723,7 @@
       "width": 32,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026774,
+      "instance_id": 10026846,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1739,7 +1739,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026775,
+      "instance_id": 10026847,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1755,7 +1755,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026776,
+      "instance_id": 10026848,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1771,7 +1771,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026777,
+      "instance_id": 10026849,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1787,7 +1787,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026778,
+      "instance_id": 10026850,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1803,7 +1803,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026779,
+      "instance_id": 10026851,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1819,7 +1819,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026780,
+      "instance_id": 10026852,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1835,7 +1835,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026781,
+      "instance_id": 10026853,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1851,7 +1851,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026782,
+      "instance_id": 10026854,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1867,7 +1867,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026783,
+      "instance_id": 10026855,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1883,7 +1883,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026784,
+      "instance_id": 10026856,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1899,7 +1899,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026785,
+      "instance_id": 10026857,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1915,7 +1915,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026786,
+      "instance_id": 10026858,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1931,7 +1931,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026787,
+      "instance_id": 10026859,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1947,7 +1947,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026788,
+      "instance_id": 10026860,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1963,7 +1963,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026789,
+      "instance_id": 10026861,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1979,7 +1979,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026790,
+      "instance_id": 10026862,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -1995,7 +1995,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026791,
+      "instance_id": 10026863,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2011,7 +2011,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026792,
+      "instance_id": 10026864,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2027,7 +2027,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026793,
+      "instance_id": 10026865,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2043,7 +2043,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026794,
+      "instance_id": 10026866,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2059,7 +2059,7 @@
       "width": 32,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026795,
+      "instance_id": 10026867,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2075,7 +2075,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026796,
+      "instance_id": 10026868,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2091,7 +2091,7 @@
       "width": 16,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026797,
+      "instance_id": 10026869,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2107,7 +2107,7 @@
       "width": 16,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026798,
+      "instance_id": 10026870,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2123,7 +2123,7 @@
       "width": 16,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026799,
+      "instance_id": 10026871,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2139,7 +2139,7 @@
       "width": 16,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026800,
+      "instance_id": 10026872,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2155,7 +2155,7 @@
       "width": 16,
       "height": 32,
       "tile_depth": -100,
-      "instance_id": 10026801,
+      "instance_id": 10026873,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2171,7 +2171,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026802,
+      "instance_id": 10026874,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2187,7 +2187,7 @@
       "width": 64,
       "height": 64,
       "tile_depth": -100,
-      "instance_id": 10026803,
+      "instance_id": 10026875,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2203,7 +2203,7 @@
       "width": 64,
       "height": 64,
       "tile_depth": -100,
-      "instance_id": 10026804,
+      "instance_id": 10026876,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2219,7 +2219,7 @@
       "width": 64,
       "height": 64,
       "tile_depth": -100,
-      "instance_id": 10026805,
+      "instance_id": 10026877,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2235,7 +2235,7 @@
       "width": 64,
       "height": 48,
       "tile_depth": -100,
-      "instance_id": 10026806,
+      "instance_id": 10026878,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2251,7 +2251,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026807,
+      "instance_id": 10026879,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2267,7 +2267,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026808,
+      "instance_id": 10026880,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2283,7 +2283,7 @@
       "width": 32,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026809,
+      "instance_id": 10026881,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2299,7 +2299,7 @@
       "width": 32,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026810,
+      "instance_id": 10026882,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2315,7 +2315,7 @@
       "width": 16,
       "height": 64,
       "tile_depth": -100,
-      "instance_id": 10026811,
+      "instance_id": 10026883,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2331,7 +2331,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026812,
+      "instance_id": 10026884,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2347,7 +2347,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026813,
+      "instance_id": 10026885,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2363,7 +2363,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026814,
+      "instance_id": 10026886,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2379,7 +2379,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026815,
+      "instance_id": 10026887,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2395,7 +2395,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026816,
+      "instance_id": 10026888,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2411,7 +2411,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026817,
+      "instance_id": 10026889,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2427,7 +2427,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026818,
+      "instance_id": 10026890,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2443,7 +2443,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026819,
+      "instance_id": 10026891,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2459,7 +2459,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026820,
+      "instance_id": 10026892,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2475,7 +2475,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -100,
-      "instance_id": 10026821,
+      "instance_id": 10026893,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2491,7 +2491,7 @@
       "width": 32,
       "height": 16,
       "tile_depth": -102,
-      "instance_id": 10026822,
+      "instance_id": 10026894,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2507,7 +2507,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -102,
-      "instance_id": 10026823,
+      "instance_id": 10026895,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2523,7 +2523,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -102,
-      "instance_id": 10026824,
+      "instance_id": 10026896,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
@@ -2539,7 +2539,7 @@
       "width": 16,
       "height": 16,
       "tile_depth": -102,
-      "instance_id": 10026825,
+      "instance_id": 10026897,
       "scale_x": 1,
       "scale_y": 1,
       "color": 4294967295
