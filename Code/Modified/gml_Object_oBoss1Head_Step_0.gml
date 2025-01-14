@@ -201,12 +201,18 @@ if (state == 100)
             event_user(0)
         with (block2)
             event_user(0)
-        with (107633)
+        with (107659)
             instance_destroy()
         global.event[51] = 1
         mus_fadeout(musAncientGuardian)
         oMusicV2.bossbgm = 0
         mus_current_fadein()
+        dead = 1
+        if (instance_exists(oClient) && oClient.connected)
+        {
+            with (oClient)
+                event_user(8)
+        }
     }
     if (statetime == 250)
     {
@@ -240,3 +246,29 @@ else
     fxtimer = 0
 if (flashing > 0)
     flashing -= 1
+if (global.event[51] > 0 && (!dead))
+{
+    state = 100
+    sfx_play(sndBoss1Death)
+    with (wall1)
+        instance_destroy()
+    with (wall2)
+        instance_destroy()
+    with (wheel)
+        instance_destroy()
+    with (block1)
+        event_user(0)
+    with (block2)
+        event_user(0)
+    with (107659)
+        instance_destroy()
+    mus_fadeout(musAncientGuardian)
+    oMusicV2.bossbgm = 0
+    mus_current_fadein()
+    dead = 1
+    if (instance_exists(oClient) && oClient.connected)
+    {
+        with (oClient)
+            event_user(8)
+    }
+}

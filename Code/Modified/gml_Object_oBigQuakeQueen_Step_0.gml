@@ -18,7 +18,7 @@ if global.ingame
         intensity = 7
     if (statetime == 190)
         intensity = 9
-    if (statetime == 340)
+    if (statetime == 340 && global.event[303] == 0)
         sfx_play(sndQueenIntro)
     if (statetime == 250)
     {

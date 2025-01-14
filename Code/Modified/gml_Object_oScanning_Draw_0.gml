@@ -1,4 +1,4 @@
-if global.ophudshowlogmsg
+if (global.ophudshowlogmsg && (!global.saxmode))
 {
     draw_background_ext(bgNotification, (((view_xview[0] + xoffset) - 40) - (53 * oControl.widescreen)), ((view_yview[0] + yoffset) - 4), 1, 1, 0, -1, (image_alpha * 0.7))
     draw_sprite_ext(sprite_index, -1, ((view_xview[0] + xoffset) - (53 * oControl.widescreen)), (view_yview[0] + yoffset), 1, 1, 0, -1, image_alpha)

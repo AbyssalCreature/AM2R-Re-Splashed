@@ -15,7 +15,7 @@ if (statetime > 520)
         image_alpha += 0.05
 }
 if (statetime == 700)
-    vspeed = SCROLL_SPEED
-if (y <= ((ystart + 8) - (TEXT_ROWS * 12)))
-    vspeed = 0
-statetime++
+    vspeed = -0.34
+statetime += 1
+if audio_is_playing(oMusicV2.currentbgm)
+    audio_stop_sound(oMusicV2.currentbgm)

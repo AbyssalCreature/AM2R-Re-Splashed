@@ -11,5 +11,4 @@ if spark_fadeout
     if (spark_alpha > 0)
         spark_alpha -= 0.02
 }
-if (!global.sensitivitymode)
-    alpha2 = (!alpha2)
+alpha2 = (!alpha2)

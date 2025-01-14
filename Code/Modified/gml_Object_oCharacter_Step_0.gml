@@ -61,3 +61,5 @@ if instance_exists(empspark)
         empspark.y = (y + aspr2y)
     }
 }
+if (lastSpriteIndex != sprite_index)
+    lastSpriteIndex = sprite_index

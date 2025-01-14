@@ -23,7 +23,7 @@ if (room == rm_a4b12)
     instance_create(304, 144, oSolid1)
     instance_create(304, 160, oSolid1)
     instance_create(304, 176, oSolid1)
-    with (130778)
+    with (130805)
         instance_destroy()
 }
 if (room == initroom)

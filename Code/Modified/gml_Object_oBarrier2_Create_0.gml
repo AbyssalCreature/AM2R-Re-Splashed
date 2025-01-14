@@ -6,3 +6,4 @@ fxtimer = 0
 image_speed = 0.1
 alarm[0] = 60
 wiggle = 0
+justfrozen = 0

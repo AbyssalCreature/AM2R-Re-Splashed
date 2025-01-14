@@ -234,3 +234,9 @@ if turning
     }
 }
 statetime += 1
+if (global.event[307] > 0 && (!dead))
+{
+    hp = 0
+    event_user(1)
+    dead = 1
+}

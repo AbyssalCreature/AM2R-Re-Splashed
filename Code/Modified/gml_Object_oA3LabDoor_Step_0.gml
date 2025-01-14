@@ -1,3 +1,4 @@
+var myblockoffset;
 if (distance_to_object(oCharacter) < 80)
     active = 1
 else
@@ -24,7 +25,10 @@ if (state == 2)
     if (active == 0)
     {
         state = 3
-        myblock = instance_create((x - (facing == -1 * 16)), y, oSolid1x4)
+        myblockoffset = 0
+        if (facing == -1)
+            myblockoffset = 16
+        myblock = instance_create((x - myblockoffset), y, oSolid1x4)
         sfx_play(sndDoorClose)
     }
 }

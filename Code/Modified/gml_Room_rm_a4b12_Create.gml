@@ -15,7 +15,7 @@ if (global.event[203] < 7)
     tile_layer_hide(-101)
 else
 {
-    with (130778)
+    with (130805)
         instance_destroy()
 }
 global.save_room = 16

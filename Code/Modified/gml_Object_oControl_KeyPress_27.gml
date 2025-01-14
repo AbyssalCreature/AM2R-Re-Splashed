@@ -1,3 +1,5 @@
+if (global.saxmode && global.enemyNearby)
+    exit
 if (global.ingame == 1 && global.enablecontrol == 1 && room != rm_transition)
 {
     event_user(3)

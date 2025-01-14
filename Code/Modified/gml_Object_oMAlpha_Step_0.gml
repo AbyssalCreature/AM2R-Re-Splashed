@@ -14,7 +14,7 @@ if (active == 1)
         {
             targetx = oCharacter.x
             targety = (oCharacter.y - 24)
-            if (shell.hitting && hitandrun)
+            if (instance_exists(shell) && shell.hitting && hitandrun)
             {
                 xVel = 0
                 yVel = 0
@@ -281,7 +281,7 @@ if (active == 1)
 }
 if (state == 100)
 {
-    if (statetime == 1)
+    if (statetime == 1 && instance_exists(shell))
     {
         damagedealt += shell.damagedealt
         with (shell)
@@ -308,3 +308,31 @@ if (fxtimer < 5)
     fxtimer += 1
 else
     fxtimer = 0
+if (global.metdead[myid] == 1 && (!dead))
+{
+    myhealth = 0
+    state = 100
+    statetime = 0
+    alarm[10] = 1
+    alarm[11] = 160
+    flashtime = 180
+    turndelay = 180
+    PlaySoundMono(deathsound)
+    check_areaclear()
+    global.monstersalive -= 1
+    if (global.monstersalive < 0)
+        global.monstersalive = 0
+    if (global.monstersalive == 0)
+    {
+        mus_fadeout(musAlphaFight)
+        oMusicV2.bossbgm = 0
+    }
+    with (oMAlpha)
+        event_user(2)
+    global.dmap[mapposx, mapposy] = 11
+    with (oControl)
+        event_user(2)
+    dead = 1
+    xVel = 0
+    yVel = 0
+}

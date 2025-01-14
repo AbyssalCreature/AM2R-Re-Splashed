@@ -29,6 +29,8 @@ if (active && oControl.kMenu2 && oControl.kMenu2PushedSteps == 0 && instance_num
             active = 0
         with (oOptionsExtras)
             active = 0
+        with (oOptionsMod)
+            active = 0
     }
     if (global.ssmode == 2)
     {

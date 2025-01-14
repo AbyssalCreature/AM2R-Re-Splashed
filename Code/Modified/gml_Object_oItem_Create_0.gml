@@ -7,3 +7,4 @@ itemtype = 0
 itemid = 0
 text1 = ""
 text2 = ""
+collected = 0

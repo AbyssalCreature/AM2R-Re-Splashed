@@ -1,5 +1,5 @@
 tile_layer_delete(-101)
-with (130839)
+with (130866)
     instance_destroy()
 repeat (10)
     make_explosion1big((48 + random(64)), random(192))
@@ -17,7 +17,7 @@ expl.expl_spd = 3
 expl.width = 64
 expl.height = 128
 make_explosion1big(272, 32)
-with (130838)
+with (130865)
     y -= 240
 global.event[203] = 8
 sfx_play(sndA4Expl)

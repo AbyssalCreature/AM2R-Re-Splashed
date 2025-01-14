@@ -19,3 +19,6 @@ if (oControl.debug > 0)
         y = (oMGamma.y + 16)
     }
 }
+sax = 0
+myid = 0
+icemissiles = global.icemissiles

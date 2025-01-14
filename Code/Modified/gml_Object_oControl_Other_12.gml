@@ -1,3 +1,7 @@
+if (global.mapposx < 2)
+    global.mapposx = 2
+if (global.mapposy < 2)
+    global.mapposy = 2
 m1 = string(global.map[global.mapposx, global.mapposy])
 m2 = string(global.map[(global.mapposx - 2), (global.mapposy - 1)])
 m3 = string(global.map[(global.mapposx - 1), (global.mapposy - 1)])

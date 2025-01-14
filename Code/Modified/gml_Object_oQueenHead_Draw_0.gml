@@ -1,6 +1,9 @@
 var i, soff_x, soff_y;
 if (oControl.mod_fusion == 1 || oControl.MonsterPalettesFusionOnly == 0)
-    pal_swap_set(oControl.QueenPalette, 1, 0)
+{
+    if (global.shaders_compiled && os_type != os_android)
+        pal_swap_set(oControl.QueenPalette, 1, 0)
+}
 draw_set_blend_mode(bm_add)
 draw_sprite_ext(sQueenMouthGlow, -1, x, y, 1, 1, 0, -1, jawglowalpha)
 draw_set_blend_mode(bm_normal)

@@ -9,6 +9,8 @@ alarm[0] = 2
 active = 0
 alarm[1] = 5
 state = 0
+marker = oTestKeys
+camera = oTestKeys
 if (global.mapmarker == 1)
 {
     state = 2

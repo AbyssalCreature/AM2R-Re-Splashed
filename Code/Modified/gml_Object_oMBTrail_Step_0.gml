@@ -24,41 +24,37 @@ if (oCharacter.state == 23 || oCharacter.state == 24)
     sy[0] = y
     x = oCharacter.x
     y = oCharacter.y
-    switch oControl.mod_fusion
+    if oControl.mod_fusion
     {
-        case 1:
-            if (oControl.msr_fusionsuit == 1)
-            {
-                if (global.currentsuit == 0)
-                    image_blend = make_color_rgb(oControl.Trail_P_R_F_SR, oControl.Trail_P_G_F_SR, oControl.Trail_P_B_F_SR)
-            }
-            else if (global.currentsuit == 0)
-                image_blend = make_color_rgb(oControl.Trail_P_R_F, oControl.Trail_P_G_F, oControl.Trail_P_B_F)
-            if (oControl.msr_fusionsuit == 1)
-            {
-                if (global.currentsuit == 1)
-                    image_blend = make_color_rgb(oControl.Trail_V_R_F_SR, oControl.Trail_V_G_F_SR, oControl.Trail_V_B_F_SR)
-            }
-            else if (global.currentsuit == 1)
-                image_blend = make_color_rgb(oControl.Trail_V_R_F, oControl.Trail_V_G_F, oControl.Trail_V_B_F)
-            if (oControl.msr_fusionsuit == 1)
-            {
-                if (global.currentsuit == 2)
-                    image_blend = make_color_rgb(oControl.Trail_G_R_F_SR, oControl.Trail_G_G_F_SR, oControl.Trail_G_B_F_SR)
-            }
-            else if (global.currentsuit == 2)
-                image_blend = make_color_rgb(oControl.Trail_G_R_F, oControl.Trail_G_G_F, oControl.Trail_G_B_F)
-            break
-        default:
+        if (oControl.msr_fusionsuit == 1)
+        {
             if (global.currentsuit == 0)
-                image_blend = make_color_rgb(oControl.Trail_P_R, oControl.Trail_P_G, oControl.Trail_P_B)
+                image_blend = make_color_rgb(oControl.Trail_P_R_F_SR, oControl.Trail_P_G_F_SR, oControl.Trail_P_B_F_SR)
             if (global.currentsuit == 1)
-                image_blend = make_color_rgb(oControl.Trail_V_R, oControl.Trail_V_G, oControl.Trail_V_B)
+                image_blend = make_color_rgb(oControl.Trail_V_R_F_SR, oControl.Trail_V_G_F_SR, oControl.Trail_V_B_F_SR)
             if (global.currentsuit == 2)
-                image_blend = make_color_rgb(oControl.Trail_G_R, oControl.Trail_G_G, oControl.Trail_G_B)
-            break
+                image_blend = make_color_rgb(oControl.Trail_G_R_F_SR, oControl.Trail_G_G_F_SR, oControl.Trail_G_B_F_SR)
+            if global.ibeam
+                image_blend = make_color_rgb(255, 189, 0)
+        }
+        else if global.ibeam
+            image_blend = make_color_rgb(oControl.Trail_O_R_F, oControl.Trail_O_G_F, oControl.Trail_O_B_F)
+        else if (global.currentsuit == 0)
+            image_blend = make_color_rgb(oControl.Trail_P_R_F, oControl.Trail_P_G_F, oControl.Trail_P_B_F)
+        else if (global.currentsuit == 1)
+            image_blend = make_color_rgb(oControl.Trail_V_R_F, oControl.Trail_V_G_F, oControl.Trail_V_B_F)
+        else if (global.currentsuit == 2)
+            image_blend = make_color_rgb(oControl.Trail_G_R_F, oControl.Trail_G_G_F, oControl.Trail_G_B_F)
     }
-
+    else
+    {
+        if (global.currentsuit == 0)
+            image_blend = make_color_rgb(oControl.Trail_P_R, oControl.Trail_P_G, oControl.Trail_P_B)
+        if (global.currentsuit == 1)
+            image_blend = make_color_rgb(oControl.Trail_V_R, oControl.Trail_V_G, oControl.Trail_V_B)
+        if (global.currentsuit == 2)
+            image_blend = make_color_rgb(oControl.Trail_G_R, oControl.Trail_G_G, oControl.Trail_G_B)
+    }
 }
 else
     instance_destroy()

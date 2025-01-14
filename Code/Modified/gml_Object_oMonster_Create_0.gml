@@ -45,3 +45,4 @@ spark1 = -4
 spark2 = -4
 spark3 = -4
 outside = 0
+dead = 0

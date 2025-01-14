@@ -10,6 +10,7 @@ if (hp <= 0)
         oMusicV2.bossbgm = 0
     }
     global.event[307] = 1
+    dead = 1
 }
 else
     sfx_play(sndGenesisHit)

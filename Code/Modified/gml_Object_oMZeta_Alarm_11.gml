@@ -12,7 +12,7 @@ instance_create(x, y, oScreenFlash)
 sfx_play(sndMAlphaExpl)
 sfx_play(sndMissileExpl)
 mus_current_fadein()
-if (oControl.mod_insanitymode == 0 || (global.difficulty < 2 && oControl.mod_insanitymode == 1))
+if ((oControl.mod_insanitymode == 0 || (global.difficulty < 2 && oControl.mod_insanitymode == 1)) && (!global.spectator))
 {
     if (damagedealt > givebackhp)
         damagedealt = givebackhp

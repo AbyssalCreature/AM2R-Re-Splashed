@@ -7,7 +7,7 @@ if global.event[51]
 {
     tile_layer_shift(-99, -32, 0)
     tile_layer_shift(-98, 32, 0)
-    with (107633)
+    with (107659)
         instance_destroy()
 }
 mus_change(musCaveAmbience)

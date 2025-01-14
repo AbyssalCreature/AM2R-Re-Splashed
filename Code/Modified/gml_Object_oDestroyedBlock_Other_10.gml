@@ -20,4 +20,9 @@ block.material = 0
 block.delay = delay
 block.link_id = link_id
 block.visible = true
+if (DEPTH != 0)
+{
+    block.depth = DEPTH
+    block.DEPTH = DEPTH
+}
 instance_destroy()

@@ -1,21 +1,26 @@
-if (distance_to_object(oCharacter) < 80)
+if (frozen == 0)
 {
-    alarm[3] = 20
-    if instance_exists(lure)
+    if (distance_to_object(oCharacter) < 80)
     {
-        lure.image_index = 0
-        switch image_angle
+        alarm[3] = 20
+        if instance_exists(lure)
         {
-            case 270:
-            case 90:
-                lure.sprite_index = skorp_get_lure(sSkorpLureUpV)
-                break
-            default:
-                lure.sprite_index = skorp_get_lure(sSkorpLureV)
-                break
-        }
+            lure.image_index = 0
+            switch image_angle
+            {
+                case 270:
+                case 90:
+                    lure.sprite_index = skorp_get_lure(sSkorpLureUpV)
+                    break
+                default:
+                    lure.sprite_index = skorp_get_lure(sSkorpLureV)
+                    break
+            }
 
+        }
     }
+    else
+        alarm[0] = 10
 }
 else
-    alarm[0] = 10
+    alarm[1] = 10

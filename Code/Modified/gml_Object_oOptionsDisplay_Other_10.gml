@@ -1,84 +1,86 @@
-var i, author2text;
+var i;
+y -= 8
+sep = 16
 i = 1
-op[50] = instance_create(x, y, oMenuLabel)
+op[50] = instance_create(x, (y * i), oMenuLabel)
 op[50].text = get_text("OptionsDisplay", "Title_Display")
-if (os_type != os_android)
+op[0] = instance_create(x, (y + (sep * i)), oOptionLR)
+op[0].label = get_text("OptionsDisplay", "Fullscreen")
+op[0].optionid = 0
+i++
+if (os_type == os_android)
+    op[0].label = get_text("OptionsDisplay", "VSync")
+op[1] = instance_create(x, (y + (sep * i)), oOptionLR)
+if global.opfullscreen
+    op[1].label = get_text("OptionsDisplay", "DisplayScale")
+else
+    op[1].label = get_text("OptionsDisplay", "WindowSize")
+op[1].optionid = 1
+if (os_type == os_android)
 {
-    op[opFullscreen] = instance_create(x, (y + (SPACER * i)), oOptionLR)
-    op[opFullscreen].label = get_text("OptionsDisplay", "Fullscreen")
-    op[opFullscreen].optionid = opFullscreen
-    i++
-    op[opScale] = instance_create(x, (y + (SPACER * i)), oOptionLR)
-    if global.opfullscreen
-        op[opScale].label = get_text("OptionsDisplay", "DisplayScale")
-    else
-        op[opScale].label = get_text("OptionsDisplay", "WindowSize")
-    op[opScale].optionid = opScale
-    i++
+    op[1].visible = false
+    global.canedit[1] = 0
 }
-op[opVSync] = instance_create(x, (y + (SPACER * i)), oOptionLR)
-op[opVSync].label = get_text("OptionsDisplay", "VSync")
-op[opVSync].optionid = opVSync
 i++
-op[opSensitivity] = instance_create(x, (y + (SPACER * i)), oOptionLR)
-op[opSensitivity].label = get_text("Misc", "SensitivityMode")
-op[opSensitivity].optionid = opSensitivity
+op[2] = instance_create(x, (y + (sep * i)), oOptionLR)
+op[2].label = get_text("OptionsDisplay", "VSync")
+op[2].optionid = 2
+if (os_type == os_android)
+{
+    op[2].visible = false
+    global.canedit[2] = 0
+    i = 1
+}
 i++
-op[opWidescreen] = instance_create(x, (y + (SPACER * i)), oOptionLR)
-op[opWidescreen].label = get_text("Misc", "Widescreen")
-op[opWidescreen].optionid = opWidescreen
+op[10] = instance_create(x, (y + (sep * i)), oOptionLR)
+op[10].label = get_text("Misc", "SensitivityMode")
+op[10].optionid = 10
 i++
-op[51] = instance_create(x, (y + (SPACER * i)), oMenuLabel)
+op[11] = instance_create(x, (y + (sep * i)), oOptionLR)
+op[11].label = get_text("Misc", "Widescreen")
+op[11].optionid = 11
+i++
+op[51] = instance_create(x, (y + (sep * i)), oMenuLabel)
 op[51].text = get_text("OptionsDisplay", "Title_HUD")
 i++
-op[opShowHUD] = instance_create(x, (y + (SPACER * i)), oOptionLR)
-op[opShowHUD].label = get_text("OptionsDisplay", "HUDDisplay")
-op[opShowHUD].optionid = opShowHUD
+op[3] = instance_create(x, (y + (sep * i)), oOptionLR)
+op[3].label = get_text("OptionsDisplay", "HUDDisplay")
+op[3].optionid = 3
 i++
-op[opShowMap] = instance_create(x, (y + (SPACER * i)), oOptionLR)
-op[opShowMap].label = get_text("OptionsDisplay", "HUDMap")
-op[opShowMap].optionid = opShowMap
+op[4] = instance_create(x, (y + (sep * i)), oOptionLR)
+op[4].label = get_text("OptionsDisplay", "HUDMap")
+op[4].optionid = 4
 i++
-op[opCounterStyle] = instance_create(x, (y + (SPACER * i)), oOptionLR)
-op[opCounterStyle].label = get_text("OptionsDisplay", "MonsterCounter")
-op[opCounterStyle].optionid = opCounterStyle
+op[5] = instance_create(x, (y + (sep * i)), oOptionLR)
+op[5].label = get_text("OptionsDisplay", "MonsterCounter")
+op[5].optionid = 5
 i++
-op[52] = instance_create(x, (y + (SPACER * i)), oMenuLabel)
+op[52] = instance_create(x, (y + (sep * i)), oMenuLabel)
 op[52].text = get_text("OptionsDisplay", "Title_Notifications")
 i++
-op[opShowHints] = instance_create(x, (y + (SPACER * i)), oOptionLR)
-op[opShowHints].label = get_text("OptionsDisplay", "Hints")
-op[opShowHints].optionid = opShowHints
+op[6] = instance_create(x, (y + (sep * i)), oOptionLR)
+op[6].label = get_text("OptionsDisplay", "Hints")
+op[6].optionid = 6
 i++
-if buttonsEnabled
+op[7] = instance_create(x, (y + (sep * i)), oOptionLR)
+op[7].label = get_text("ExtrasMenu", "Controller")
+op[7].optionid = 7
+if ((os_type != os_android && (!gamepad_is_connected(global.gamepadIndex))) || (os_type == os_android && ((!global.joydetected) || global.compatibilitymode)) || (os_type == os_android && global.compatibilitymode))
 {
-    op[opButtonType] = instance_create(x, (y + (SPACER * i)), oOptionLR)
-    op[opButtonType].label = get_text("ExtrasMenu", "Controller")
-    op[opButtonType].optionid = opButtonType
-    i++
+    op[7].visible = false
+    global.canedit[7] = 0
 }
-op[opShowScans] = instance_create(x, (y + (SPACER * i)), oOptionLR)
-op[opShowScans].label = get_text("OptionsDisplay", "ScanNotifications")
-op[opShowScans].optionid = opShowScans
+else
+    i++
+op[8] = instance_create(x, (y + (sep * i)), oOptionLR)
+op[8].label = get_text("OptionsDisplay", "ScanNotifications")
+op[8].optionid = 8
 i++
-op[opLanguage] = instance_create(x, (y + (SPACER * i)), oOptionLR)
-op[opLanguage].label = get_text("OptionsDisplay", "Language")
-op[opLanguage].optionid = opLanguage
+op[9] = instance_create(x, (y + (sep * i)), oOptionLR)
+op[9].label = get_text("OptionsDisplay", "Language")
+op[9].optionid = 9
 i++
-op[53] = instance_create(x, (y + (SPACER * i)), oPauseOption)
-op[53].label = ((get_text("OptionsDisplay", "Author") + " ") + langAuthor[global.currentlanguage])
-op[53].optionid = 53
-op[53].canEdit = 0
-op[53].color = 8421504
-i++
-author2text = get_text("OptionsDisplay", "Author")
-op[54] = instance_create((x + 8), (y + (SPACER * i)), oPauseOption)
-op[54].label = langAuthor2[global.currentlanguage]
-op[54].optionid = 54
-op[54].canEdit = 0
-op[54].color = 8421504
-i++
-op[menuSize] = instance_create(x, (y + (SPACER * i)), oPauseOption)
-op[menuSize].optionid = menuSize
-op[menuSize].label = get_text("GlobalOptions", "Exit")
+op[12] = instance_create(x, (y + (sep * i)), oPauseOption)
+op[12].optionid = 12
+op[12].label = get_text("GlobalOptions", "Exit")
 event_user(2)

@@ -1,5 +1,8 @@
 if (oControl.mod_fusion == 1 || oControl.MonsterPalettesFusionOnly == 0)
-    pal_swap_set(oControl.AlphaPalette, 1, 0)
+{
+    if (global.shaders_compiled && os_type != os_android)
+        pal_swap_set(oControl.AlphaPalette, 1, 0)
+}
 if (!flashing)
     draw_sprite_ext(sprite_index, -1, x, y, facing, 1, image_angle, -1, 1)
 if flashing

@@ -1,2 +1,2 @@
-if (oControl.mod_randomgamebool == 1 && global.item[8] == 0)
-    instance_destroy()
+link_tile(tlArea5A, 32, 208)
+regentime = -1

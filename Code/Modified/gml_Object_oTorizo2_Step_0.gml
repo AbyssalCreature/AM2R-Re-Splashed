@@ -403,3 +403,25 @@ else
 if (flashing > 0)
     flashing -= 1
 dist = distance_to_point(oCharacter.x, (oCharacter.y - 20))
+if (global.event[152] >= 3 && (!dead))
+{
+    flashing = 5
+    fxtimer = 0
+    PlaySoundMono(sndTorizoHit)
+    state = 100
+    statetime = -1
+    alarm[10] = 1
+    alarm[11] = 300
+    with (oTorizoEgg)
+        event_user(1)
+    with (oTorizoGhost)
+        event_user(1)
+    if (oControl.mod_fusion == 0)
+    {
+        with (oTorizoSpikes)
+            event_user(0)
+        mus_fadeout(musTorizoB)
+        oMusicV2.bossbgm = 0
+    }
+    dead = 1
+}

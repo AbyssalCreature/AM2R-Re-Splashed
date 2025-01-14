@@ -23,6 +23,14 @@ j = 0
 while (i < num_attempts && j < num_spawn)
 {
     i++
+    while 1
+    {
+        choice = irandom((instance_number(oSolid) - 1))
+        if (ds_list_find_index(list, choice) == -1)
+            break
+        else
+            continue
+    }
     ds_list_add(list, choice)
     inst = instance_find(oSolid, choice)
     if instance_exists(inst)

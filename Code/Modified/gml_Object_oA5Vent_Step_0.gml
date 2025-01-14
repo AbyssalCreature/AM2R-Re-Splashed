@@ -5,4 +5,3 @@ if open
 }
 else if (image_index > 0)
     image_index -= 0.1
-image_index = clamp(image_index, 0, 2)

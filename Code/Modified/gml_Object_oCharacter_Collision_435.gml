@@ -25,3 +25,18 @@ if ((state == BALL || state == AIRBALL || state == SPIDERBALL) && other.image_in
     }
     fixedy = 20
 }
+if (other.sax != global.sax)
+{
+    if (global.playerFreeze > 0)
+        other.damage /= 2
+    other.damage = 8
+    event_user(3)
+    if (!global.spectator)
+        global.showHealthIndicatorsTimer = 900
+    global.otherID = other.myid
+    if instance_exists(oClient)
+    {
+        with (oClient)
+            event_user(2)
+    }
+}

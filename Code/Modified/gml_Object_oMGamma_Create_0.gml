@@ -63,3 +63,11 @@ inwater = 0
 speedmulti = 1
 targetx = x
 targety = y
+dead = 0
+if instance_exists(oClient)
+{
+}
+myposx = floor((x / 320))
+myposy = floor(((y - 8) / 240))
+mapposx = (myposx + global.mapoffsetx)
+mapposy = (myposy + global.mapoffsety)

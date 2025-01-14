@@ -1,5 +1,5 @@
 var canride;
-if collision_line((x - 9), (y - 2), (x + 9), (y - 2), oCharacter, false, true)
+if (collision_line((x - 9), (y - 2), (x + 9), (y - 2), oCharacter, false, true) && active)
     canride = 1
 else
     canride = 0
@@ -40,8 +40,13 @@ if (state == 1)
         }
         state = 0
         statetime = 0
-        active = 0
-        alarm[1] = 60
+        if global.saxmode
+        {
+            active = 0
+            alarm[1] = 60
+        }
+        else
+            active = 1
         sfx_stop(sndElevatorLoop)
         event_user(0)
     }

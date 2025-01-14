@@ -1,3 +1,4 @@
+var setIFrames;
 if (fadedone >= 1 && room != rm_transition && room != rm_subscreen && room != itemroom && room != rm_death)
 {
     global.transitiontype = 0
@@ -11,7 +12,7 @@ if (!init)
         touch_keys()
     else
         check_keys()
-    if (room != rm_transition)
+    if (room != rm_transition && (!global.CONSOLE) && global.playerFreeze == 0)
         global_control()
     if (kExit && global.opexitkeyenable)
         game_end()
@@ -125,3 +126,139 @@ if os_is_paused()
     keyboard_clear(vk_alt)
 if (instance_exists(oCharacter) && mod_IGT && (!instance_exists(oIGT)))
     instance_create(0, 0, oIGT)
+switch palette
+{
+    case 0:
+        if (MultitroidPalette != MultitroidPaletteDefault)
+            MultitroidPalette = MultitroidPaletteDefault
+        if (MultitroidPaletteFusion != MultitroidPaletteFusionDefault)
+            MultitroidPaletteFusion = MultitroidPaletteFusionDefault
+        if (SpiderballPalette != SpiderballPaletteDefault)
+            SpiderballPalette = SpiderballPaletteDefault
+        if (MultitroidBabyPalette != MultitroidBabyPaletteDefault)
+            MultitroidBabyPalette = MultitroidBabyPaletteDefault
+        if (MultitroidIcon != MultitroidIconDefault)
+            MultitroidIcon = MultitroidIconDefault
+        if (MultitroidIconDark != MultitroidIconDarkDefault)
+            MultitroidIconDark = MultitroidIconDarkDefault
+        if (MultitroidMapIcon != MultitroidMapIconDefault)
+            MultitroidMapIcon = MultitroidMapIconDefault
+        break
+    case 1:
+        if (MultitroidPalette != MultitroidPaletteColor)
+            MultitroidPalette = MultitroidPaletteColor
+        if (MultitroidPaletteFusion != MultitroidPaletteFusionColor)
+            MultitroidPaletteFusion = MultitroidPaletteFusionColor
+        if (SpiderballPalette != SpiderballPaletteColor)
+            SpiderballPalette = SpiderballPaletteColor
+        if (MultitroidBabyPalette != MultitroidBabyPaletteColor)
+            MultitroidBabyPalette = MultitroidBabyPaletteColor
+        if (MultitroidIcon != MultitroidIconColor)
+            MultitroidIcon = MultitroidIconColor
+        if (MultitroidIconDark != MultitroidIconDarkColor)
+            MultitroidIconDark = MultitroidIconDarkColor
+        if (MultitroidMapIcon != MultitroidMapIconColor)
+            MultitroidMapIcon = MultitroidMapIconColor
+        break
+    case 2:
+        if (MultitroidPalette != MultitroidPaletteCustom)
+            MultitroidPalette = MultitroidPaletteCustom
+        if (MultitroidPaletteFusion != MultitroidPaletteFusionCustom)
+            MultitroidPaletteFusion = MultitroidPaletteFusionCustom
+        if (SpiderballPalette != SpiderballPaletteCustom)
+            SpiderballPalette = SpiderballPaletteCustom
+        if (MultitroidBabyPalette != MultitroidBabyPaletteCustom)
+            MultitroidBabyPalette = MultitroidBabyPaletteCustom
+        if (MultitroidIcon != MultitroidIconCustom)
+            MultitroidIcon = MultitroidIconCustom
+        if (MultitroidIconDark != MultitroidIconDarkCustom)
+            MultitroidIconDark = MultitroidIconDarkCustom
+        if (MultitroidMapIcon != MultitroidMapIconCustom)
+            MultitroidMapIcon = MultitroidMapIconCustom
+        break
+    case 3:
+        if (MultitroidPalette != 66)
+            MultitroidPalette = 66
+        if (MultitroidPaletteFusion != 66)
+            MultitroidPaletteFusion = 66
+        if (SpiderballPalette != 66)
+            SpiderballPalette = 66
+        if (MultitroidBabyPalette != 66)
+            MultitroidBabyPalette = 66
+        break
+}
+
+global.scannerSpeed--
+if (global.scannerSpeed <= 0)
+{
+    global.scannerSpeed = global.scannerSpeedMax
+    global.scannerIndex++
+    switch global.scannerSprite
+    {
+        case 1882:
+            if (global.scannerIndex > 3)
+                global.scannerIndex = 0
+            break
+        default:
+            if (global.scannerIndex > 4)
+                global.scannerIndex = 0
+            break
+    }
+
+}
+if (global.showHealthIndicatorsTimer == 1)
+    global.saveStationCooldown = 1200
+if (global.showHealthIndicatorsTimer > 0)
+{
+    global.showHealthIndicatorsTimer--
+    global.showHealthIndicators = 1
+}
+else
+    global.showHealthIndicators = 0
+if (global.escapeTimer > 0)
+    global.escapeTimer--
+if (global.pbombCooldown < 600)
+    global.pbombCooldown++
+if (global.item[0] == 1 || (global.showHealthIndicators && global.saxmode))
+    global.pbombCooldownMax = 600
+else
+    global.pbombCooldownMax = 300
+setIFrames = 0
+if (global.playerFreeze == 1)
+    setIFrames = 1
+if (global.playerFreeze > 0)
+    global.playerFreeze--
+if (global.playerFreeze == 0)
+{
+    global.frozenNormally = 0
+    global.frozenByRollback = 0
+}
+if setIFrames
+{
+    if instance_exists(oCharacter)
+        oCharacter.invincible = 180
+}
+if (global.fxtimer < 5)
+    global.fxtimer += 1
+else
+    global.fxtimer = 0
+if (global.saxmode && (!global.sax))
+    global.icemissiles = 1
+else
+    global.icemissiles = 0
+if global.saxmode
+    global.event[176] = 1
+if (global.reformTimer > 0 && global.spectator && global.sax)
+    global.reformTimer--
+if (!global.spectator)
+    global.reformTimer = 1200
+if (global.playerMapPosTimer == 1)
+    global.mapmarker = 0
+if (global.playerMapPosTimer > 0)
+    global.playerMapPosTimer--
+if (global.warpPipeCooldown > 0)
+    global.warpPipeCooldown--
+if (global.saveStationCooldown > 0)
+    global.saveStationCooldown--
+if (!instance_exists(oClient))
+    global.experimental = 0

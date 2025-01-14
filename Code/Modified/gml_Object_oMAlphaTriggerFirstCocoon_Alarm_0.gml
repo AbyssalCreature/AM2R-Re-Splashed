@@ -12,7 +12,7 @@ repeat (8)
     mytrail.image_alpha = 1
     mytrail.fadespeed = 0.02
     mytrail.additive = 0
-    mytrail.image_xscale = (1 - (random(2) < 1 * 2))
+    mytrail.image_xscale = choose(-1, 1)
     mytrail.vspeed = (-2 - random(5))
     mytrail.hspeed = (-2 + random(4))
     mytrail.gravity = 0.2

@@ -8,7 +8,7 @@ if (global.event[203] < 8)
 else
 {
     tile_layer_delete(-101)
-    with (130839)
+    with (130866)
         instance_destroy()
 }
 make_escape_sequence_fx(2)

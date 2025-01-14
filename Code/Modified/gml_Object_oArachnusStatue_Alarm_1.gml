@@ -1,16 +1,16 @@
-if instance_exists(110423)
+if instance_exists(110450)
 {
-    with (110423)
+    with (110450)
         instance_destroy()
 }
-if instance_exists(110422)
+if instance_exists(110449)
 {
-    with (110422)
+    with (110449)
         instance_destroy()
 }
-if instance_exists(110424)
+if instance_exists(110451)
 {
-    with (110424)
+    with (110451)
         instance_destroy()
 }
 instance_create(x, (y - 20), oArachnusIntro)

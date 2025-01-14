@@ -27,3 +27,5 @@ if instance_exists(oAreaIntro)
     with (oAreaIntro)
         instance_destroy()
 }
+if (instance_exists(oClient) && global.saxmode)
+    global.samCountSaved = global.samCount

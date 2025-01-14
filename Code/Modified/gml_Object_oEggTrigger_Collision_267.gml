@@ -13,7 +13,7 @@ if (active == 0)
         scan.ammount = 9
         if (global.difficulty == 2)
             scan.ammount = 16
-        if (oControl.mod_fusion == 1)
+        if (oControl.mod_fusion == 1 || global.saxmode)
             scan.ammount = 21
         if (oControl.mod_monstersextreme == 1)
             scan.ammount = 47

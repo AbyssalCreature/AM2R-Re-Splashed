@@ -1,4 +1,6 @@
 var damage_taken;
+if global.spectator
+    exit
 if (global.currentsuit == 0 || argument3 == 1)
     damage_taken = (argument0 * oControl.mod_diffmult)
 if (argument3 == 0)

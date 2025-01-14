@@ -1,5 +1,3 @@
-if (oControl.mod_fusion == 1)
-    pal_swap_set(oControl.TorizoPalette, 1, 0)
 if (state == 0)
 {
     draw_sprite_ext(sTorizoWingsC, image_index, (x + (offset1 * tf)), y, (1 * oTorizo2.facing), 1, 0, -1, 1)
@@ -20,4 +18,3 @@ if (state == 1)
     if (spr_set == 0)
         draw_sprite_ext(sTorizoWingsC, 6, (x - (offset0 * tf)), y, (-1 * oTorizo2.facing), 1, 0, -1, 1)
 }
-shader_reset()

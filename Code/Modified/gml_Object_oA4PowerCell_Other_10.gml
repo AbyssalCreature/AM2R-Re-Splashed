@@ -7,6 +7,6 @@ repeat (10)
     expl.additive = 0
     expl.sprite_index = sExplSmoke
     expl.depth = -90
-    expl.image_xscale = (1 - (2 * random(2) < 1))
+    expl.image_xscale = choose(-1, 1)
 }
 instance_create(0, 0, oA4EscapeControl)

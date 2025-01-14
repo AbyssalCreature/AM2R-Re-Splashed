@@ -1,3 +1,5 @@
+if global.spectator
+    exit
 if (global.item[oControl.mod_50] == 1)
 {
     with (oDoor)

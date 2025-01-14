@@ -1,4 +1,7 @@
 expl = instance_create(round(x), round(y), oMissileExpl)
+expl.sax = sax
+expl.myid = myid
+expl.icemissiles = icemissiles
 if (smissile == 0)
 {
     expl.sprite_index = sMissileExpl
@@ -6,10 +9,20 @@ if (smissile == 0)
     expl.image_yscale = 0.6
     expl.damage = 5
     expl.smissile = 0
-    PlaySoundMono(sndMissileExpl)
+    if (!icemissiles)
+        PlaySoundMono(sndMissileExpl)
     light = instance_create(x, y, oFadeLight32)
     light.fadespeed = 0.1
     light.alarm[0] = 10
+    if icemissiles
+    {
+        expl.sprite_index = sTesterIceSpark
+        expl.image_xscale = 1
+        expl.image_yscale = 1
+        expl.image_speed = 0.3
+        PlaySoundMono(sndMissileExpl)
+        PlaySoundMono(sndIceBeamHit)
+    }
 }
 if smissile
 {

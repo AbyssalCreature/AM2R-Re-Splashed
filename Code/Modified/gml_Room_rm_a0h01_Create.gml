@@ -5,7 +5,7 @@ global.watertype = 0
 global.save_room = 0
 global.floormaterial = 2
 load_timeofday_bgs(global.timeofday)
-if (global.event[304] == 0)
+if (global.event[304] == 0 || instance_exists(oClient))
 {
     oMusicV2.currentbgm = mus_get_main_song()
     tile_layer_delete(-119)

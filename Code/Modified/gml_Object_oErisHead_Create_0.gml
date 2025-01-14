@@ -55,3 +55,4 @@ for (i = bodylength; i >= 0; i--)
 }
 alarm[0] = 1
 alarm[1] = 120
+dead = 0

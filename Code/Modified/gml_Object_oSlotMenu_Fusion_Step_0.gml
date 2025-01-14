@@ -62,6 +62,11 @@ if active
                 instance_destroy()
         }
         mus_fadeout(musTitle)
+        if global.lobbyLocked
+        {
+            global.spectator = 1
+            global.spectatorIndex = -1
+        }
         room_change(14, 0)
     }
     if (oControl.kMenu2 && oControl.kMenu2PushedSteps == 0)

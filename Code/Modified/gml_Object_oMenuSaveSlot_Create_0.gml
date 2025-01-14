@@ -9,7 +9,7 @@ modeindex = 0
 if oControl.mod_insanitymode
 {
     mycolor = make_color_rgb(255, 36, 36)
-    myslotbg = 323
+    myslotbg = 327
     myslot = 1525
     myslotb = 1526
     myslotc = 1527
@@ -23,6 +23,6 @@ else
     myslotc = 489
 }
 if (oControl.mod_monstersextremecheck == 1)
-    meticon = 324
+    meticon = 328
 else
     meticon = 129

@@ -12,6 +12,8 @@ if (myhealth <= 140 && prevhealth > 140)
         instance_create(x, y, oDebris)
     deb = instance_create(x, y, oDebris)
     deb.sprite_index = sGunzooArmor1
+    if (frozen > 0)
+        deb.sprite_index = sGunzooArmor1Frozen
     deb.depth = -4
     phase = 1
 }
@@ -26,6 +28,8 @@ if (myhealth <= 70 && prevhealth > 70)
         instance_create(x, y, oDebris)
     deb = instance_create(x, y, oDebris)
     deb.sprite_index = sGunzooArmor1
+    if (frozen > 0)
+        deb.sprite_index = sGunzooArmor1Frozen
     deb.depth = -4
     phase = 2
 }

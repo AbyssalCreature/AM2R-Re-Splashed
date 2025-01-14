@@ -1,268 +1,272 @@
+var itemvalue;
 switch argument0
 {
     case 0:
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_bombs
+        break
     case 2:
-        oControl.mod_bombs = oControl.mod_spider
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_spider
+        break
     case 3:
-        oControl.mod_bombs = oControl.mod_jumpball
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_jumpball
+        break
     case 4:
-        oControl.mod_bombs = oControl.mod_hijump
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_hijump
+        break
     case 5:
-        oControl.mod_bombs = oControl.mod_varia
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_varia
+        break
     case 6:
-        oControl.mod_bombs = oControl.mod_spacejump
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_spacejump
+        break
     case 7:
-        oControl.mod_bombs = oControl.mod_speedbooster
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_speedbooster
+        break
     case 8:
-        oControl.mod_bombs = oControl.mod_screwattack
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_screwattack
+        break
     case 9:
-        oControl.mod_bombs = oControl.mod_gravity
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_gravity
+        break
     case 10:
-        oControl.mod_bombs = oControl.mod_charge
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_charge
+        break
     case 11:
-        oControl.mod_bombs = oControl.mod_ice
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_ice
+        break
     case 12:
-        oControl.mod_bombs = oControl.mod_wave
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_wave
+        break
     case 13:
-        oControl.mod_bombs = oControl.mod_spazer
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_spazer
+        break
     case 14:
-        oControl.mod_bombs = oControl.mod_plasma
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_plasma
+        break
     case 52:
-        oControl.mod_bombs = oControl.mod_52
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_52
+        break
     case 53:
-        oControl.mod_bombs = oControl.mod_53
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_53
+        break
     case 54:
-        oControl.mod_bombs = oControl.mod_54
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_54
+        break
     case 55:
-        oControl.mod_bombs = oControl.mod_55
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_55
+        break
     case 56:
-        oControl.mod_bombs = oControl.mod_56
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_56
+        break
     case 57:
-        oControl.mod_bombs = oControl.mod_57
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_57
+        break
     case 60:
-        oControl.mod_bombs = oControl.mod_60
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_60
+        break
     case 100:
-        oControl.mod_bombs = oControl.mod_100
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_100
+        break
     case 101:
-        oControl.mod_bombs = oControl.mod_101
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_101
+        break
     case 102:
-        oControl.mod_bombs = oControl.mod_102
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_102
+        break
     case 104:
-        oControl.mod_bombs = oControl.mod_104
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_104
+        break
     case 105:
-        oControl.mod_bombs = oControl.mod_105
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_105
+        break
     case 106:
-        oControl.mod_bombs = oControl.mod_106
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_106
+        break
     case 107:
-        oControl.mod_bombs = oControl.mod_107
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_107
+        break
     case 109:
-        oControl.mod_bombs = oControl.mod_109
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_109
+        break
     case 111:
-        oControl.mod_bombs = oControl.mod_111
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_111
+        break
     case 150:
-        oControl.mod_bombs = oControl.mod_150
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_150
+        break
     case 151:
-        oControl.mod_bombs = oControl.mod_151
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_151
+        break
     case 152:
-        oControl.mod_bombs = oControl.mod_152
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_152
+        break
     case 153:
-        oControl.mod_bombs = oControl.mod_153
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_153
+        break
     case 154:
-        oControl.mod_bombs = oControl.mod_154
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_154
+        break
     case 155:
-        oControl.mod_bombs = oControl.mod_155
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_155
+        break
     case 156:
-        oControl.mod_bombs = oControl.mod_156
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_156
+        break
     case 159:
-        oControl.mod_bombs = oControl.mod_159
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_159
+        break
     case 161:
-        oControl.mod_bombs = oControl.mod_161
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_161
+        break
     case 163:
-        oControl.mod_bombs = oControl.mod_163
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_163
+        break
     case 202:
-        oControl.mod_bombs = oControl.mod_202
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_202
+        break
     case 203:
-        oControl.mod_bombs = oControl.mod_203
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_203
+        break
     case 204:
-        oControl.mod_bombs = oControl.mod_204
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_204
+        break
     case 205:
-        oControl.mod_bombs = oControl.mod_205
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_205
+        break
     case 208:
-        oControl.mod_bombs = oControl.mod_208
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_208
+        break
     case 210:
-        oControl.mod_bombs = oControl.mod_210
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_210
+        break
     case 211:
-        oControl.mod_bombs = oControl.mod_211
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_211
+        break
     case 214:
-        oControl.mod_bombs = oControl.mod_214
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_214
+        break
     case 250:
-        oControl.mod_bombs = oControl.mod_250
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_250
+        break
     case 252:
-        oControl.mod_bombs = oControl.mod_252
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_252
+        break
     case 255:
-        oControl.mod_bombs = oControl.mod_255
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_255
+        break
     case 257:
-        oControl.mod_bombs = oControl.mod_257
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_257
+        break
     case 259:
-        oControl.mod_bombs = oControl.mod_259
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_259
+        break
     case 303:
-        oControl.mod_bombs = oControl.mod_303
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_303
+        break
     case 304:
-        oControl.mod_bombs = oControl.mod_304
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_304
+        break
     case 307:
-        oControl.mod_bombs = oControl.mod_307
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_307
+        break
     case 308:
-        oControl.mod_bombs = oControl.mod_308
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_308
+        break
     case 309:
-        oControl.mod_bombs = oControl.mod_309
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_309
+        break
     case 51:
-        oControl.mod_bombs = oControl.mod_51
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_51
+        break
     case 110:
-        oControl.mod_bombs = oControl.mod_110
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_110
+        break
     case 162:
-        oControl.mod_bombs = oControl.mod_162
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_162
+        break
     case 206:
-        oControl.mod_bombs = oControl.mod_206
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_206
+        break
     case 207:
-        oControl.mod_bombs = oControl.mod_207
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_207
+        break
     case 209:
-        oControl.mod_bombs = oControl.mod_209
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_209
+        break
     case 215:
-        oControl.mod_bombs = oControl.mod_215
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_215
+        break
     case 256:
-        oControl.mod_bombs = oControl.mod_256
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_256
+        break
     case 300:
-        oControl.mod_bombs = oControl.mod_300
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_300
+        break
     case 305:
-        oControl.mod_bombs = oControl.mod_305
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_305
+        break
     case 50:
-        oControl.mod_bombs = oControl.mod_50
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_50
+        break
     case 103:
-        oControl.mod_bombs = oControl.mod_103
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_103
+        break
     case 108:
-        oControl.mod_bombs = oControl.mod_108
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_108
+        break
     case 157:
-        oControl.mod_bombs = oControl.mod_157
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_157
+        break
     case 158:
-        oControl.mod_bombs = oControl.mod_158
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_158
+        break
     case 200:
-        oControl.mod_bombs = oControl.mod_200
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_200
+        break
     case 201:
-        oControl.mod_bombs = oControl.mod_201
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_201
+        break
     case 251:
-        oControl.mod_bombs = oControl.mod_251
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_251
+        break
     case 254:
-        oControl.mod_bombs = oControl.mod_254
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_254
+        break
     case 306:
-        oControl.mod_bombs = oControl.mod_306
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_306
+        break
     case 58:
-        oControl.mod_bombs = oControl.mod_58
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_58
+        break
     case 59:
-        oControl.mod_bombs = oControl.mod_59
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_59
+        break
     case 112:
-        oControl.mod_bombs = oControl.mod_112
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_112
+        break
     case 160:
-        oControl.mod_bombs = oControl.mod_160
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_160
+        break
     case 212:
-        oControl.mod_bombs = oControl.mod_212
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_212
+        break
     case 213:
-        oControl.mod_bombs = oControl.mod_213
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_213
+        break
     case 253:
-        oControl.mod_bombs = oControl.mod_253
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_253
+        break
     case 258:
-        oControl.mod_bombs = oControl.mod_258
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_258
+        break
     case 301:
-        oControl.mod_bombs = oControl.mod_301
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_301
+        break
     case 302:
-        oControl.mod_bombs = oControl.mod_302
-        return oControl.mod_bombs;
+        itemvalue = oControl.mod_302
+        break
+    default:
+        itemvalue = argument0
 }
 
-return argument0;
+return itemvalue;

@@ -130,10 +130,10 @@ with (oItem)
 }
 with (oDoor)
 {
-    draw_sprite_ext(sLight0, -1, (x - view_xview[widescreen]), ((y + 32) - view_yview[widescreen]), 1, 0.4, 0, c_white, 1)
-    draw_sprite_ext(sLight0, -1, (x - view_xview[widescreen]), ((y + 32) - view_yview[widescreen]), -1, 0.4, 0, c_white, 1)
-    draw_sprite_ext(sLight0, -1, (x - view_xview[widescreen]), ((y + 32) - view_yview[widescreen]), 1, -0.4, 0, c_white, 1)
-    draw_sprite_ext(sLight0, -1, (x - view_xview[widescreen]), ((y + 32) - view_yview[widescreen]), -1, -0.4, 0, c_white, 1)
+    draw_sprite_ext(sLight0, -1, (x - view_xview[widescreen]), ((y + 32) - view_yview[widescreen]), 0.55, 0.85, 0, c_white, 1)
+    draw_sprite_ext(sLight0, -1, (x - view_xview[widescreen]), ((y + 32) - view_yview[widescreen]), -0.55, 0.85, 0, c_white, 1)
+    draw_sprite_ext(sLight0, -1, (x - view_xview[widescreen]), ((y + 32) - view_yview[widescreen]), 0.55, -0.85, 0, c_white, 1)
+    draw_sprite_ext(sLight0, -1, (x - view_xview[widescreen]), ((y + 32) - view_yview[widescreen]), -0.55, -0.85, 0, c_white, 1)
 }
 with (oMOmegaFlame)
 {

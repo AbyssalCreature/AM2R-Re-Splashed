@@ -1,5 +1,8 @@
 if (oControl.mod_fusion == 1 || oControl.MonsterPalettesFusionOnly == 0)
-    pal_swap_set(oControl.QueenPalette, 2, 0)
+{
+    if (global.shaders_compiled && os_type != os_android)
+        pal_swap_set(oControl.QueenPalette, 2, 0)
+}
 if (!flashing)
     draw_sprite(spr_foot, -1, x, y)
 else

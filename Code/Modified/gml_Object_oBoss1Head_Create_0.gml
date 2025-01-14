@@ -33,3 +33,4 @@ wall2 = instance_create(288, 80, oSolid2x2)
 wall2.image_yscale = 3
 wheel = instance_create(x, y, oBoss1Wheel)
 sparkcounter = 0
+dead = 0

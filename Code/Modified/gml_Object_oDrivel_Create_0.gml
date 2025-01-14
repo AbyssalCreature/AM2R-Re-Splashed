@@ -17,5 +17,6 @@ limit_l = (x - 80)
 limit_r = (x + 80)
 targety = (y + 8)
 image_speed = 0.2
+ispeed = image_speed
 if (global.difficulty >= 2)
     alarm[0] = 60

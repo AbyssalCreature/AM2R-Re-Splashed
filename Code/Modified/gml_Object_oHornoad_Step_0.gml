@@ -52,13 +52,16 @@ if (frozen == 0)
     image_speed = 0.2
 else
     image_speed = 0
-if (state == 1)
-    sprite_index = sHornoadIdle
-if (state == 2)
-    sprite_index = sHornoadShake
-if (state == 3)
-    sprite_index = sHornoadTurn
-if (state == 4)
-    sprite_index = sHornoadJump
-if (state == 5)
-    sprite_index = sHornoadAttack
+if (frozen == 0)
+{
+    if (state == 1)
+        sprite_index = sHornoadIdle
+    if (state == 2)
+        sprite_index = sHornoadShake
+    if (state == 3)
+        sprite_index = sHornoadTurn
+    if (state == 4)
+        sprite_index = sHornoadJump
+    if (state == 5)
+        sprite_index = sHornoadAttack
+}

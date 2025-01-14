@@ -1,5 +1,8 @@
 if (oControl.mod_fusion == 1 || oControl.MonsterPalettesFusionOnly == 0)
-    pal_swap_set(oControl.QueenPalette, 1, 0)
+{
+    if (global.shaders_compiled && os_type != os_android)
+        pal_swap_set(oControl.QueenPalette, 1, 0)
+}
 draw_sprite_ext(sQueenBelly, -1, x, y, 1, 1, image_angle, -1, 0.5)
 if (!flashing)
     draw_sprite_ext(sQueenRibs, -1, x, y, 1, 1, image_angle, -1, 1)

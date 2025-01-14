@@ -28,7 +28,9 @@ if (frozen == 0)
         if (state == 3)
         {
             xVel *= 0.9
-            image_angle = (point_direction(x, y, oCharacter.x, (oCharacter.y - 16)) + (180 * facing == -1))
+            image_angle = point_direction(x, y, oCharacter.x, (oCharacter.y - 16))
+            if (facing == -1)
+                image_angle += 180
             if (y > (oCharacter.y - 26))
                 yVel = -2
             if (y < (oCharacter.y - 26))

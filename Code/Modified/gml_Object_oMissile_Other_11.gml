@@ -5,6 +5,8 @@ rspark.depth = -120
 rmsl = instance_create(x, y, oRMissile)
 if smissile
     rmsl.sprite_index = sSMissile
+if ((!smissile) && icemissiles)
+    rmsl.sprite_index = sIceMissile
 rmsl.direction = ((direction + 190) - random(20))
 if (direction != 90)
 {

@@ -1,8 +1,19 @@
 var temp_seed, percent33, checkcounter, shuff;
 temp_seed = random_get_seed()
 randomize()
-oControl.seed = random_get_seed()
-random_set_seed(oControl.seed)
+if instance_exists(oClient)
+{
+    if (!is_undefined(oClient.seed))
+    {
+        oControl.seed = oClient.seed
+        random_set_seed(oControl.seed)
+    }
+}
+else
+{
+    oControl.seed = random_get_seed()
+    random_set_seed(oControl.seed)
+}
 if (oControl.mod_usemanualseed == 1)
 {
     random_set_seed(oControl.mod_seed)
@@ -345,7 +356,10 @@ oControl.mod_253 = 253
 ds_list_destroy(oControl.list_bombs)
 ds_list_destroy(oControl.list_powerbombs)
 ds_list_destroy(oControl.list_speedbooster)
+ds_list_destroy(oControl.list_spacejump)
+ds_list_destroy(oControl.list_torizo)
 ds_list_destroy(oControl.list_genesis)
+ds_list_destroy(oControl.list_ibeam)
 ds_list_destroy(oControl.list_jumpball)
 ds_list_destroy(oControl.list_33percent)
 ds_list_destroy(oControl.list_locations)

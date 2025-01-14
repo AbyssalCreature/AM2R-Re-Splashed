@@ -14,7 +14,7 @@ if (enabled == 0 && image_index > 0.2)
     image_index -= 0.5
 if (saveenabled == 1 && cansave == 1 && (oCharacter.state == 10 || oCharacter.state == 12) && oCharacter.statetime >= 10)
 {
-    if (oControl.mod_insanitymode == 1 && global.event[304] == 0)
+    if ((oControl.mod_insanitymode == 1 && global.event[304] == 0) || (global.enemyNearby && global.saxmode && global.event[304] == 0) || (global.sax && global.saxmode) || global.saveStationCooldown > 0)
         exit
     global.savexpos = (x + 16)
     global.start_room = 21

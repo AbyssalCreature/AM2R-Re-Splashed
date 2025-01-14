@@ -2,7 +2,7 @@ if flipx
     image_xscale = facing
 else
     image_xscale = 1
-if frozen
+if (frozen > 0)
     myspr = frozenspr
 else
     myspr = sprite_index

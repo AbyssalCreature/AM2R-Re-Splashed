@@ -19,4 +19,6 @@ if (myhealth <= 0)
         mus_fadeout(musTorizoB)
         oMusicV2.bossbgm = 0
     }
+    global.event[152] = 3
+    dead = 1
 }

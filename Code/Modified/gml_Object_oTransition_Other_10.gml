@@ -1,3 +1,4 @@
+var f, arrPos, arrPosRoom;
 if instance_exists(oCharacter)
 {
     oCharacter.x = -100
@@ -18,4 +19,25 @@ if (global.widescreen_enabled != oControl.widescreen && oControl.widescreen_swit
     }
     oControl.widescreen_switch = 0
 }
-room_goto(global.targetroom)
+if ((!instance_exists(oClient)) && global.targetroom == rm_transition)
+    global.targetroom = global.lastroom
+if (instance_exists(oClient) && ds_list_size(oClient.posData) == 0 && global.targetroom == rm_transition)
+    global.targetroom = global.lastroom
+if (global.spectatorIndex != -1 && global.targetroom == rm_transition)
+{
+    if instance_exists(oClient)
+    {
+        if (ds_list_size(oClient.posData) > 0)
+        {
+            for (f = 0; f < ds_list_size(oClient.posData); f++)
+            {
+                arrPos = ds_list_find_value(oClient.posData, f)
+                arrPosRoom = arrPos[4]
+                if (f == global.spectatorIndex)
+                    global.targetroom = arrPosRoom
+            }
+        }
+    }
+}
+if (global.targetroom != rm_transition)
+    room_goto(global.targetroom)

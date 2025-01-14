@@ -176,3 +176,11 @@ if (global.curropt < 14)
     oSubScrPlayer.targety = 52
 else
     oSubScrPlayer.targety = -13
+if (global.saxmode && global.enemyNearby)
+{
+    if (global.sax || (!global.spectator))
+    {
+        fadeout = 1
+        active = 0
+    }
+}

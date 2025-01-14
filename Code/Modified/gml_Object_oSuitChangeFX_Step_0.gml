@@ -32,6 +32,7 @@ if (state == 3)
             with (oFakeItemBall)
                 instance_destroy()
         }
+        instance_create(x, y, oSuitChangeFX2)
         if (global.SuitChangeGravity == 0)
             scr_variasuitswap()
         else

@@ -1,9 +1,2 @@
-if (oControl.mod_randomgamebool == 1)
-{
-    if (oControl.mod_septoggs_bombjumps_easy == 0 && global.item[0] == 1)
-        xstart = -500
-    else if scr_septoggs_2468()
-        xstart = -500
-}
-else
-    xstart = -500
+link_tile(tlArea5A, 80, 208)
+regentime = -1

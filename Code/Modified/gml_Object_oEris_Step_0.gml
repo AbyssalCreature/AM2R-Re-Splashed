@@ -301,12 +301,16 @@ if (state == 100)
         instance_create(x, y, oScreenFlash)
         sfx_play(sndMissileExpl)
         global.event[261] = 1
+        dead = 1
+        if (instance_exists(oClient) && oClient.connected)
+        {
+            with (oClient)
+                event_user(8)
+        }
         if (oControl.mod_fusion == 0)
         {
             with (oDoorA5)
                 event_user(3)
-            mus_fadeout(musEris)
-            oMusicV2.bossbgm = 0
             mus_current_fadein()
         }
         else
@@ -361,4 +365,16 @@ if use2
 {
     event_user(2)
     use2 = 0
+}
+if (global.event[261] > 0 && (!dead))
+{
+    state = 100
+    statetime = -1
+    dead = 1
+    if (instance_exists(oClient) && oClient.connected)
+    {
+        with (oClient)
+            event_user(8)
+    }
+    sfx_stop_loops()
 }

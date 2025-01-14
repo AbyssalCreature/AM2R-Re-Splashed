@@ -428,7 +428,7 @@ if (state == 90)
         myhealth -= 1
         shaking = 1
         angry = 0
-        if (myhealth == 0)
+        if (myhealth <= 0)
         {
             with (oArachnusFireball3)
                 instance_destroy()
@@ -462,7 +462,7 @@ if (state == 90)
             with (spike_R2)
                 active = 0
         }
-        if (myhealth == 0)
+        if (myhealth <= 0)
         {
             with (spike_L1)
                 active = 0
@@ -503,4 +503,13 @@ if PowerBombImmune
 {
     if (!instance_exists(oPBombExpl))
         PowerBombImmune = 0
+}
+if (global.event[103] > 0 && (!dead))
+{
+    myhealth = 0
+    state = 90
+    statetime = -1
+    dead = 1
+    with (oArachnusSpikes)
+        instance_destroy()
 }

@@ -29,6 +29,8 @@ if (global.ssmode == 3)
         active = 0
     with (oOptionsExtras)
         active = 0
+    with (oOptionsMod)
+        active = 0
 }
 if (global.ssmode == 2)
 {

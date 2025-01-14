@@ -35,15 +35,15 @@ if (state == 0)
     head_yoff = 0
     head_follow = 1
     xVel = 0
-    if (point_distance(x, y, oCharacter.x, y) < (160 + (oControl.widescreen_space / 2)))
+    if (point_distance(x, y, oCharacter.x, y) < (160 + (oControl.widescreen_space / 2)) && (!global.spectator))
         event_user(1)
-    if instance_exists(oMissile)
+    if (instance_exists(oMissile) && (!global.spectator))
     {
         msl = instance_nearest(x, y, oMissile)
         if (distance_to_object(msl) < 60)
             event_user(1)
     }
-    if instance_exists(oBeam)
+    if (instance_exists(oBeam) && (!global.spectator))
     {
         msl = instance_nearest(x, y, oBeam)
         if (distance_to_object(msl) < 60)
@@ -1046,7 +1046,7 @@ if (state == 50)
     }
     if (statetime > 100)
         body_frame = anim_frame(sMZeta_Body, body_frame, -0.2)
-    if (statetime == 200)
+    if (statetime == 200 && (!global.spectator))
     {
         event_user(1)
         statetime = -1
@@ -1074,10 +1074,14 @@ if (state == 100)
         xVel = 0
         yVel = 0
         blur = 0
-        sfx_play(sndMZetaDeath)
+        if (!global.spectator)
+            sfx_play(sndMZetaDeath)
         roaring = 100
-        with (cam)
-            instance_destroy()
+        if instance_exists(oObjectCamera)
+        {
+            with (cam)
+                instance_destroy()
+        }
     }
     if (statetime < 30)
     {
@@ -1194,3 +1198,27 @@ if (noswipe > 0)
 if (roaring > 0)
     roaring -= 1
 moveTo(xVel, yVel)
+if (global.metdead[myid] == 1 && (!dead))
+{
+    myhealth = 0
+    state = 100
+    statetime = 0
+    alarm[10] = 1
+    if global.spectator
+        alarm[11] = 10
+    else
+        alarm[11] = 160
+    with (body_obj)
+        instance_destroy()
+    with (head_obj)
+        instance_destroy()
+    with (mask_obj)
+        instance_destroy()
+    mus_fadeout(musZetaFight)
+    oMusicV2.bossbgm = 0
+    check_areaclear()
+    global.dmap[mapposx, mapposy] = 11
+    with (oControl)
+        event_user(2)
+    dead = 1
+}

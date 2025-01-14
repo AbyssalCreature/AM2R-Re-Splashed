@@ -2,6 +2,7 @@ action_inherited()
 enemy_active_check(20)
 if (active == 1 && frozen == 0)
 {
+    image_speed = ispeed
     if (state == 0)
     {
         if (statetime < 11)
@@ -52,6 +53,8 @@ if (active == 1 && frozen == 0)
         speed = min(12, speed)
     }
 }
+else
+    speed = 0
 if (state == 100)
     enemy_death()
 if (y > global.waterlevel && global.waterlevel != 0)

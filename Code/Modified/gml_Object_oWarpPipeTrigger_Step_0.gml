@@ -47,6 +47,8 @@ if (state == 1)
         global.offsety = 0
         oCharacter.x = 0
         oCharacter.y = 0
+        if global.saxmode
+            global.warpPipeCooldown = 360
         room_change(targetroom, 0)
         Mute_Loops()
     }
@@ -71,6 +73,12 @@ if (state == 2)
     }
     if (statetime == 72)
         depth = 90
+    if (statetime == 89)
+    {
+        door_open = 0
+        sfx_stop(sndA5WarpDoor)
+        sfx_play(sndA5WarpDoor)
+    }
     if (statetime == 90)
     {
         with (oCharacter)
@@ -97,7 +105,7 @@ if (state == 0)
 {
     if (door_open == 0)
     {
-        if (point_distance((x + 8), (y + 16), oCharacter.x, oCharacter.y) < 40)
+        if (point_distance((x + 8), (y + 16), oCharacter.x, oCharacter.y) < 40 && global.warpPipeCooldown <= 26 && (!global.spectator))
         {
             door_open = 1
             sfx_stop(sndA5WarpDoor)

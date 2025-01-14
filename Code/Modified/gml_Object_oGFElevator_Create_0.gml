@@ -12,3 +12,4 @@ target_x = x
 target_y = y
 target_room = room
 alarm[0] = 1
+saxCooldown = 0

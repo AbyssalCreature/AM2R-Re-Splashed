@@ -1,8 +1,19 @@
 var temp_seed, list;
 temp_seed = random_get_seed()
 randomize()
-oControl.seed = random_get_seed()
-random_set_seed(oControl.seed)
+if instance_exists(oClient)
+{
+    if (!is_undefined(oClient.seed))
+    {
+        oControl.seed = oClient.seed
+        random_set_seed(oControl.seed)
+    }
+}
+else
+{
+    oControl.seed = random_get_seed()
+    random_set_seed(oControl.seed)
+}
 if (oControl.mod_usemanualseed == 1)
 {
     random_set_seed(oControl.mod_seed)
@@ -40,4 +51,5 @@ ds_list_delete(list, (ds_list_size(list) - 1))
 oControl.mod_gravity = ds_list_find_value(list, (ds_list_size(list) - 1))
 ds_list_delete(list, (ds_list_size(list) - 1))
 ds_list_empty(list)
+ds_list_destroy(list)
 random_set_seed(temp_seed)

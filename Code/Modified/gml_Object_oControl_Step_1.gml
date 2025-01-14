@@ -33,3 +33,7 @@ else
     widescreen_space = 0
     view_visible[1] = false
 }
+if global.saxmode
+    global.grayMap = 1
+else
+    global.grayMap = 0

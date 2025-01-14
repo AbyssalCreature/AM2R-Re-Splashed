@@ -28,3 +28,4 @@ walkspeed = 0.3
 image_index_last = 0
 proj_damage = 0
 scan_log(34, get_text("ScanEvents", "ScanMechanism"), 180, 0)
+dead = 0

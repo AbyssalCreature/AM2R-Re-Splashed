@@ -1,6 +1,6 @@
-with (147733)
+with (147761)
     instance_destroy()
-with (147721)
+with (147749)
     instance_destroy()
 tile_layer_delete(-103)
 tile_layer_show(-98)

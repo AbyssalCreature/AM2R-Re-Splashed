@@ -14,19 +14,19 @@ if (global.event[203] > 0)
 }
 if (oControl.mod_randomgamebool == 1 && global.item[7] == 0)
 {
-    with (131290)
+    with (131317)
         instance_destroy()
-    with (131291)
+    with (131318)
         instance_destroy()
-    with (131292)
+    with (131319)
         instance_destroy()
 }
 else
 {
-    with (131351)
+    with (131378)
         instance_destroy()
-    with (131352)
+    with (131379)
         instance_destroy()
-    with (131353)
+    with (131380)
         instance_destroy()
 }

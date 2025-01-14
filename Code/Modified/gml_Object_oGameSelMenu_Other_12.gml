@@ -1,8 +1,12 @@
-var detail;
+var etanks, mtanks, stanks, ptanks, detail;
+etanks = global.etanks
+mtanks = global.mtanks
+stanks = global.stanks
+ptanks = global.ptanks
 j = 0
 repeat (3)
 {
-    filename = ("save" + string((j + 1)))
+    filename = ((working_directory + "/multitroid/save") + string((j + 1)))
     if file_exists(filename)
     {
         detail = sv6_load_details(filename)
@@ -33,3 +37,11 @@ repeat (3)
     j += 1
 }
 scr_default_global_items()
+if instance_exists(oClient)
+{
+    update_variables("replaceglobalvars")
+    global.etanks = etanks
+    global.mtanks = mtanks
+    global.stanks = stanks
+    global.ptanks = ptanks
+}

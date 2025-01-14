@@ -1,14 +1,16 @@
+if global.spectator
+    exit
 if global.item[scr_itemchange(6)]
 {
     with (oTorizoStatue)
         event_user(0)
     with (oDoor)
         event_user(0)
-    with (115253)
+    with (115280)
         instance_destroy()
-    with (115240)
+    with (115267)
         instance_destroy()
-    with (115241)
+    with (115268)
         instance_destroy()
     mus_current_fadeout()
     global.event[152] = 1

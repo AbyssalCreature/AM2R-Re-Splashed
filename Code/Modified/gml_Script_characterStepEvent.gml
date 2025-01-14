@@ -1,8 +1,373 @@
-var jump_vel, splash;
+var spr, f, arrPos, arrPosID, arrPosRoom, i, arrDraw, arrID, arrX, arrY, jump_vel, splash, st1, ziptimer, prevzipx;
 if global.enablecontrol
     chStepControl()
 if global.movingobj
     chStepMovingCheck()
+if (global.saxmode && global.countdowncontrol > 0)
+{
+    xVel = 0
+    yVel = 0
+    chStepSetSprite()
+    exit
+}
+if (global.playerhealth <= 0 && global.sax && oCharacter.sprite_index != sCoreXSAX && oCharacter.sprite_index != sCoreXSAXSpawn)
+    global.playerhealth = 1
+if (global.saxmode && global.sax && global.playerhealth == 1 && (!global.spectator) && global.lobbyLocked)
+{
+    if (!global.mosaic)
+    {
+        global.mosaic = 1
+        mosaicTime = 0
+    }
+    if global.mosaic
+    {
+        invincible = 1
+        if (mosaicTime == 0)
+        {
+            sfx_play(sndXMorph1)
+            global.playerFreeze = 1
+            global.canScrewMulti = 0
+            sprite_index = sCoreXSAXSpawn
+            Mute_Loops()
+            image_speed = 0.18
+            image_index = 0
+        }
+        if (mosaicTime == 40)
+        {
+            global.mosaic = 0
+            global.spectator = 1
+            global.spectatorIndex = -1
+            global.reformTimer = 1200
+            invincible = 240
+            mosaicTime = 0
+            sprite_index = sCoreXSAX
+        }
+        mosaicTime++
+    }
+    xVel = 0
+    yVel = 0
+    exit
+}
+if global.spectator
+{
+    if global.reform
+    {
+        invincible = 1
+        if (reformTime == 0)
+        {
+            sfx_play(sndXMorph1)
+            image_speed = 0
+            global.playerFreeze = 1
+        }
+        if (reformTime < 40)
+        {
+            sizeX += 0.18
+            sizeY += 0.12
+        }
+        if (reformTime == 40)
+        {
+            if (global.currentsuit == 0)
+                spr = sMorphBall
+            if (global.currentsuit == 1)
+                spr = sVMorphBall
+            if (global.currentsuit == 2)
+                spr = 881
+            sprite_index = spr
+        }
+        if (reformTime >= 40 && reformTime < 80)
+        {
+            sizeX -= 0.18
+            sizeY -= 0.12
+        }
+        if (reformTime == 80)
+        {
+            global.reform = 0
+            global.spectator = 0
+            global.playerhealth = 50
+            invincible = 120
+            reformTime = 0
+        }
+        reformTime++
+        xVel = 0
+        yVel = 0
+        exit
+    }
+    if (invincible > 0)
+        invincible--
+    if (onfire > 0)
+        onfire--
+    canrun = 1
+    if (global.spectatorIndex == -1)
+    {
+        visible = true
+        if (xVel == 0 && yVel == 0)
+            coreIdle++
+        else
+            coreIdle = 0
+        if (coreIdle > 60)
+        {
+            timer_x++
+            if (timer_x > ((2 * pi) / frequency_x))
+                timer_x -= ((2 * pi) / frequency_x)
+            timer_y++
+            if (timer_y > ((2 * pi) / frequency_y))
+                timer_y -= ((2 * pi) / frequency_y)
+            xx = (sin((timer_x * frequency_x)) * amplitude_x)
+            yy = (sin((timer_y * frequency_y)) * amplitude_y)
+            moveTo(xx, yy)
+        }
+        maxSpectatorLeftSpeed = 0
+        maxSpectatorRightSpeed = 0
+        maxSpectatorUpSpeed = 0
+        maxSpectatorDownSpeed = 0
+        state = BALL
+        setCollisionBounds(-6, -11, 6, 0)
+        aspr1 = 66
+        aspr2 = 66
+        if instance_exists(oMBTrail)
+        {
+            with (oMBTrail)
+                instance_destroy()
+        }
+        if (!global.sax)
+        {
+            sprite_index = sMonitoad
+            image_speed = 0.25
+            maxSpectatorLeftSpeed = -4
+            maxSpectatorRightSpeed = 4
+            maxSpectatorUpSpeed = -4
+            maxSpectatorDownSpeed = 4
+        }
+        if global.sax
+        {
+            sprite_index = sCoreXSAX
+            image_speed = 0.16
+            maxSpectatorLeftSpeed = -2.5
+            maxSpectatorRightSpeed = 2.5
+            maxSpectatorUpSpeed = -2.5
+            maxSpectatorDownSpeed = 2.5
+            if (invincible > 0)
+            {
+                maxSpectatorLeftSpeed = -4
+                maxSpectatorRightSpeed = 4
+                maxSpectatorUpSpeed = -4
+                maxSpectatorDownSpeed = 4
+            }
+        }
+        if (kLeft > 0)
+            xVel -= 0.1
+        if (kRight > 0)
+            xVel += 0.1
+        if (kUp > 0)
+            yVel -= 0.1
+        if (kDown > 0)
+            yVel += 0.1
+        if (xVel < maxSpectatorLeftSpeed)
+            xVel = maxSpectatorLeftSpeed
+        if (xVel > maxSpectatorRightSpeed)
+            xVel = maxSpectatorRightSpeed
+        if (yVel < maxSpectatorUpSpeed)
+            yVel = maxSpectatorUpSpeed
+        if (yVel > maxSpectatorDownSpeed)
+            yVel = maxSpectatorDownSpeed
+        if (kLeft == 0 && kRight == 0)
+        {
+            if (xVel > 0)
+                xVel -= 0.1
+            if (xVel < 0)
+                xVel += 0.1
+        }
+        if (kUp == 0 && kDown == 0)
+        {
+            if (yVel > 0)
+                yVel -= 0.1
+            if (yVel < 0)
+                yVel += 0.1
+        }
+        if (!global.enablecontrol)
+        {
+            xVel = 0
+            yVel = 0
+        }
+        moveTo(xVel, yVel)
+    }
+    else
+        visible = false
+    if global.beingAbsorbed
+    {
+        if (absorbTime == 1)
+        {
+            targetAbsorbX = global.absorbRelativeX
+            targetAbsorbY = global.absorbRelativeY
+            relativeSpriteHeight = global.absorbSpriteHeight
+            relativeX = (x - global.absorbRelativeX)
+            relativeY = (y - (global.absorbRelativeY - relativeSpriteHeight))
+            PlaySoundMono(sndAbsorbX)
+            with (instance_create(relativeX, (relativeY - relativeSpriteHeight), oAbsorbX))
+                core = 1
+            global.enablecontrol = 0
+            speedmultiplier = 0
+            speedmultiresettimer = 10000
+            kLeft = 0
+            kRight = 0
+            kUp = 0
+            kDown = 0
+            kJump = 0
+            kJumpPressed = 0
+            kRun = 0
+            kAim = 0
+            kFire = 0
+            kMissile = 0
+            charge = 0
+            Mute_Loops()
+            with (oFXTrail)
+            {
+                if (sprite_index == sScrewSpark)
+                    visible = false
+            }
+        }
+        if (absorbTime == 2)
+        {
+            image_xscale = 1
+            image_xscale = 1
+            with (oCharacter)
+            {
+                speedmultiplier = 0
+                speedmultiresettimer = 10000
+                sfx_stop(sndCoreXIdle)
+            }
+        }
+        if (absorbTime > 2 && global.beingAbsorbed)
+        {
+            if ((!global.absorbDone) && (!(approximatelyZero(abs((x - targetAbsorbX))))) && (!(approximatelyZero(abs((y - targetAbsorbY))))))
+            {
+                x = round(lerp(x, targetAbsorbX, 0.1))
+                y = round(lerp(y, (targetAbsorbY - relativeSpriteHeight), 0.1))
+            }
+            if (image_xscale > 0 && (!global.absorbDone))
+            {
+                image_xscale -= 0.0225
+                image_yscale -= 0.0225
+            }
+            if global.absorbDone
+            {
+                image_xscale -= 0
+                image_yscale -= 0
+            }
+            if (image_xscale <= 0 && (!global.absorbDone))
+            {
+                with (oCharacter)
+                    speedmultiresettimer = 0
+                global.enablecontrol = 1
+                global.absorbDone = 1
+                absorbTime = 0
+                global.playerhealth = -1
+                global.spectator = 0
+                if (global.playerhealth <= 0)
+                {
+                    with (oControl)
+                        event_user(1)
+                }
+            }
+        }
+        absorbTime++
+    }
+    if (!global.sax)
+    {
+        if (kJump && kJumpPushedSteps == 0 && spectatorSwapTimer == 0)
+        {
+            if instance_exists(oClient)
+            {
+                if (ds_list_size(oClient.posData) > 0)
+                {
+                    global.spectatorIndex++
+                    spectatorSwapTimer = 30
+                    if (global.spectatorIndex > (ds_list_size(oClient.posData) - 1))
+                        global.spectatorIndex = -1
+                }
+                else
+                    global.spectatorIndex = -1
+            }
+        }
+        if (kFire && kFirePushedSteps == 0 && spectatorSwapTimer == 0)
+            global.spectatorIndex = -1
+        if (global.spectatorIndex != -1)
+        {
+            if instance_exists(oClient)
+            {
+                if (ds_list_size(oClient.posData) > 0)
+                {
+                    for (f = 0; f < ds_list_size(oClient.posData); f++)
+                    {
+                        arrPos = ds_list_find_value(oClient.posData, f)
+                        arrPosID = arrPos[0]
+                        arrPosRoom = arrPos[4]
+                        if (f == global.spectatorIndex)
+                        {
+                            if (global.ingame && room != arrPosRoom && room != rm_transition && arrPosRoom != titleroom && arrPosRoom != gameoverroom && arrPosRoom != rm_credits && arrPosRoom != rm_gallery && arrPosRoom != rm_options && arrPosRoom != optionsroom && arrPosRoom != quitroom && arrPosRoom != subscreenroom && arrPosRoom != itemroom && arrPosRoom != maproom && arrPosRoom != introroom && arrPosRoom != gameintroroom && arrPosRoom != rm_loading && arrPosRoom != rm_subscreen && arrPosRoom != rm_death && arrPosRoom != rm_controller && arrPosRoom != rm_score && (arrPosRoom == rm_transition || string_count("rm_a", room_get_name(arrPosRoom)) > 0))
+                            {
+                                if instance_exists(oGotoRoom)
+                                {
+                                    gotoRoom = instance_nearest(x, y, oGotoRoom)
+                                    if (gotoRoom.direction == 0 || gotoRoom.direction == 180)
+                                    {
+                                        global.offsety = (y - gotoRoom.y)
+                                        global.offsetx = 0
+                                    }
+                                    if (gotoRoom.direction == 90 || gotoRoom.direction == 270)
+                                    {
+                                        global.offsetx = (x - gotoRoom.x)
+                                        global.offsety = 0
+                                    }
+                                    global.targetx = gotoRoom.targetx
+                                    global.targety = gotoRoom.targety
+                                    global.transitionx = (gotoRoom.transitionx + global.offsetx)
+                                    global.transitiony = (gotoRoom.transitiony + global.offsety)
+                                    global.camstartx = gotoRoom.camstartx
+                                    global.camstarty = gotoRoom.camstarty
+                                    oCamera.x = global.camstartx
+                                    oCamera.y = global.camstarty
+                                    room_change(arrPosRoom, 1)
+                                }
+                            }
+                            if (ds_list_size(oClient.roomListData) > 0)
+                            {
+                                for (i = 0; i < ds_list_size(oClient.roomListData); i++)
+                                {
+                                    arrDraw = ds_list_find_value(oClient.roomListData, i)
+                                    arrID = arrDraw[0]
+                                    arrX = arrDraw[1]
+                                    arrY = arrDraw[2]
+                                    if (arrPosID == arrID)
+                                    {
+                                        x = arrX
+                                        y = arrY
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    else if global.sax
+        global.spectatorIndex = -1
+    if global.sax
+    {
+        if global.spectator
+        {
+            if (kJump && kJumpPushedSteps == 0 && global.reformTimer == 0 && (!global.reform))
+            {
+                global.reform = 1
+                reformTime = 0
+            }
+        }
+    }
+    if (spectatorSwapTimer > 0)
+        spectatorSwapTimer--
+    exit
+}
 if (isCollisionBottom(1) || isCollisionPlatformBottom(1))
     collision_bottom = 1
 else
@@ -305,16 +670,26 @@ if platformCharacterIs(IN_AIR)
     }
     if walljumping
     {
+        ziptimer = 8000
+        prevzipx = x
         if (facing == LEFT)
         {
-            while (isCollisionRight(1) == 0)
+            while (isCollisionRight(1) == 0 && ziptimer > 0)
+            {
                 x += 1
+                ziptimer -= 1
+            }
         }
         if (facing == RIGHT)
         {
-            while (isCollisionLeft(1) == 0)
+            while (isCollisionLeft(1) == 0 && ziptimer > 0)
+            {
                 x -= 1
+                ziptimer -= 1
+            }
         }
+        if (ziptimer == 0)
+            x = prevzipx
     }
     if (kJump && kJumpPushedSteps == 0 && vjump == 1 && aimdirection != 6 && aimdirection != 7 && novjump == 0 && state != AIRBALL && aimlock == 0 && monster_drain == 0)
     {
@@ -347,10 +722,15 @@ if platformCharacterIs(IN_AIR)
     }
     if (yVel < 0 && state == AIRBALL)
     {
+        st1 = 1
+        if (statetime < 4)
+            st1 = 2
+        if (statetime < 2)
+            st1 = 3
         if (isCollisionUpRight() == 1 && kRight == 0)
-            x -= ((1 + statetime < 2) + statetime < 4)
+            x -= st1
         if (isCollisionUpLeft() == 1 && kLeft == 0)
-            x += ((1 + statetime < 2) + statetime < 4)
+            x += st1
     }
     if (vjump == 0 && dash == 0 && state != AIRBALL)
     {
@@ -1145,13 +1525,18 @@ if (state == SAVINGFX)
     if (statetime == 1)
     {
         sfx_play(sndSave)
-        instance_create(x, y, oSaveFX)
-        instance_create(x, y, oSaveSparks)
+        if (!instance_exists(oClient))
+        {
+            instance_create(x, y, oSaveFX)
+            instance_create(x, y, oSaveSparks)
+        }
         popup_text(get_text("Notifications", "GameSaved"))
-        save_game(("save" + string((global.saveslot + 1))))
+        save_game(((working_directory + "/multitroid/save") + string((global.saveslot + 1))))
         refill_heath_ammo()
     }
-    if (statetime == 230)
+    if (statetime == 6 && instance_exists(oClient))
+        state = IDLE
+    if (statetime == 230 && (!instance_exists(oClient)))
         state = IDLE
 }
 if (state == SAVINGSHIP)
@@ -1184,8 +1569,15 @@ if (state == SAVINGSHIP)
     }
     else
     {
+        global.enablecontrol = 0
+        if (statetime == 5)
+        {
+            global.enablecontrol = 0
+            global.event[308] = 1
+        }
         if (statetime == 120)
         {
+            global.event[308] = 2
             with (oSaveShip)
                 instance_destroy()
             with (oHatchling)
@@ -1200,11 +1592,13 @@ if (state == SAVINGSHIP)
         }
         if (statetime == 420)
         {
+            global.event[308] = 3
             instance_create(0, 0, oFinalFadeout)
             mus_fadeout(musHatchling)
         }
         if (statetime == 760)
         {
+            global.event[308] = 4
             remove_persistent_objects()
             sfx_stop_all()
             global.vibL = 0
@@ -1226,7 +1620,7 @@ if (state == SAVINGSHIPFX)
     if (statetime == 1)
     {
         sfx_play(sndSave)
-        save_game(("save" + string((global.saveslot + 1))))
+        save_game(((working_directory + "/multitroid/save") + string((global.saveslot + 1))))
         refill_heath_ammo()
         popup_text(get_text("Notifications", "GameSaved"))
     }
@@ -1305,7 +1699,14 @@ if (state == GFELEVATOR)
                 with (ele_fx)
                     instance_destroy()
                 with (oGFElevator)
+                {
+                    if global.saxmode
+                    {
+                        saxCooldown = 1
+                        global.warpPipeCooldown = 180
+                    }
                     event_user(1)
+                }
             }
         }
     }
@@ -2265,6 +2666,7 @@ if (state == GRABBEDQUEEN)
         x = round(x)
         y = round(y)
         aimlock = 0
+        canbehit = 1
     }
 }
 if (state == GRABBEDQUEENMORPH)
@@ -2285,6 +2687,7 @@ if (state == GRABBEDQUEENMORPH)
         statetime = 0
         x = round(x)
         y = round(y)
+        canbehit = 1
     }
 }
 if (state == GRABBEDQUEENBELLY)
@@ -2310,6 +2713,7 @@ if (state == GRABBEDQUEENBELLY)
             x = round(x)
             y = round(y)
             queen_drain = 0
+            canbehit = 1
         }
     }
     if (!instance_exists(oQueen))
@@ -2958,6 +3362,31 @@ if (monster_drain > 0)
         else
             global.playerhealth -= (global.mod_monstersdrainGS * 4)
     }
+    if global.sax
+    {
+        if (global.currentsuit == 0 && oControl.mod_monstersextreme == 0)
+            global.playerhealth -= (global.mod_monstersdrainPS * 2)
+        else if (global.currentsuit == 0 && oControl.mod_monstersextreme != 0)
+            global.playerhealth -= (global.mod_monstersdrainPS * 4)
+        if (global.currentsuit == 1 && oControl.mod_monstersextreme == 0)
+            global.playerhealth -= (global.mod_monstersdrainVS * 2)
+        else if (global.currentsuit == 1 && oControl.mod_monstersextreme != 0)
+            global.playerhealth -= (global.mod_monstersdrainVS * 4)
+        if (global.currentsuit == 2 && oControl.mod_monstersextreme == 0)
+        {
+            if (global.item[5] == 0)
+                global.playerhealth -= (global.mod_monstersdrainVS * 2)
+            else
+                global.playerhealth -= (global.mod_monstersdrainGS * 2)
+        }
+        else if (global.currentsuit == 2 && oControl.mod_monstersextreme != 0)
+        {
+            if (global.item[5] == 0)
+                global.playerhealth -= (global.mod_monstersdrainVS * 4)
+            else
+                global.playerhealth -= (global.mod_monstersdrainGS * 4)
+        }
+    }
     if (global.playerhealth <= 0)
     {
         with (oControl)
@@ -2990,6 +3419,33 @@ if (queen_drain > 0)
 }
 else
     queen_drainfx = 0
+if (pbomb_drain > 0)
+{
+    pbomb_drain -= 1
+    if (global.currentsuit == 0)
+        global.playerhealth -= (0.66 * oControl.mod_diffmult)
+    if (global.currentsuit == 1)
+        global.playerhealth -= (0.5 * oControl.mod_diffmult)
+    if (global.currentsuit == 2)
+    {
+        if (global.item[5] == 0)
+            global.playerhealth -= (0.5 * oControl.mod_diffmult)
+        else
+            global.playerhealth -= (0.35 * oControl.mod_diffmult)
+    }
+    if (global.playerhealth <= 0)
+    {
+        with (oControl)
+            event_user(1)
+    }
+    if (pbomb_drainfx == 0)
+    {
+        sfx_loop(sndDrainLoop)
+        pbomb_drainfx = 1
+    }
+}
+else
+    pbomb_drainfx = 0
 if (state != BALL && state != AIRBALL && state != SPIDERBALL && state != SUPERJUMP)
     setCollisionBounds(-6, -27, 6, 0)
 if (state == BALL)
@@ -3038,6 +3494,7 @@ if (y > global.waterlevel && global.waterlevel != 0)
                 yVel *= 0.5
         }
         sfx_stop(spinjump_sound)
+        inwater = 1
         SetSpinJumpSound()
     }
     inwater = 1
@@ -3052,6 +3509,7 @@ else
             sfx_play(sndWaterExit)
         }
         sfx_stop(spinjump_sound)
+        inwater = 0
         SetSpinJumpSound()
     }
     inwater = 0
@@ -3165,7 +3623,10 @@ if (footstep == 0)
     {
         if ((abs(image_index) >= 4 && abs(image_index) < 4.9) || (abs(image_index) >= 9 && abs(image_index) < 9.9))
         {
-            PlayFootstep(get_floor_material())
+            if (!global.sax)
+                PlayFootstep(get_floor_material())
+            else
+                PlayFootstepSAX(get_floor_material())
             if (inwater == 0 && waterfall == 0 && monster_drain == 0)
                 footstep = 5
             else
@@ -3216,7 +3677,7 @@ if (sfx_isplaying(sndLavaLoop) && floor(burning) == 0)
     sfx_stop(sndLavaLoop)
 if (sfx_isplaying(sndPlantLoop) && floor(plantdrainfx) == 0)
     sfx_stop(sndPlantLoop)
-if (sfx_isplaying(sndDrainLoop) && floor(monster_drainfx) == 0 && floor(queen_drainfx) == 0)
+if (sfx_isplaying(sndDrainLoop) && floor(monster_drainfx) == 0 && floor(queen_drainfx) == 0 && floor(pbomb_drainfx) == 0)
     sfx_stop(sndDrainLoop)
 if (dash > 0 && xVel == 0)
     dash = 0
@@ -3283,5 +3744,14 @@ if (onfire > 0)
 if (ballbounce > 0)
     ballbounce -= 1
 statetime += 1
-if (state != IDLE && state != SAVING && state != SAVINGFX && state != SAVINGSHIP && state != SAVINGSHIPFX)
+if (!global.saxmode)
+{
+    if (state != IDLE && state != SAVING && state != SAVINGFX && state != SAVINGSHIP && state != SAVINGSHIPFX)
+        global.gametime += 1
+}
+else if (global.damageMult == 2)
     global.gametime += 1
+if ((!inwater) || global.currentsuit == 2)
+    global.canScrewMulti = 1
+else
+    global.canScrewMulti = 0

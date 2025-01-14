@@ -1,5 +1,7 @@
+shield1.frozen = frozen
 if (frozen == 0)
 {
+    image_speed = ispeed
     if (state == 0)
     {
         hspeed = lerp(hspeed, (0.5 * facing), 0.05)

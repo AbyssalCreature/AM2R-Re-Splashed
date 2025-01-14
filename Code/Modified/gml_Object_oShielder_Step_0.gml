@@ -1,6 +1,13 @@
 action_inherited()
 enemy_active_check(70)
 enemy_target_check(firerange, 1)
+if (frozen == 0)
+{
+    if instance_exists(myobj)
+        myobj.frozen = 0
+}
+else if instance_exists(myobj)
+    myobj.frozen = 1
 if (active == 1 && stun == 0 && frozen == 0 && state != 100)
 {
     if (state == 0)

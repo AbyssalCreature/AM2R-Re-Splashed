@@ -8,6 +8,7 @@ repeat (8)
     j += 1
 }
 ds_list_clear(list)
+ds_list_destroy(list)
 for (i = 0; i < 8; i += 1)
 {
     if (global.trooperlog[i] == undefined)

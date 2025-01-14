@@ -23,3 +23,8 @@ if instance_exists(op5)
     with (op5)
         instance_destroy()
 }
+if instance_exists(op6)
+{
+    with (op6)
+        instance_destroy()
+}

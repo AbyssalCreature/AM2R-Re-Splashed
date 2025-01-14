@@ -32,15 +32,15 @@ if (state == 0)
     barm_frame = 0
     yoff = 0
     head_follow = 1
-    if (point_distance(x, y, oCharacter.x, y) < (160 + (oControl.widescreen_space / 2)))
+    if (point_distance(x, y, oCharacter.x, y) < (160 + (oControl.widescreen_space / 2)) && (!global.spectator))
         event_user(1)
-    if instance_exists(oMissile)
+    if (instance_exists(oMissile) && (!global.spectator))
     {
         msl = instance_nearest(x, y, oMissile)
         if (distance_to_object(msl) < 60)
             event_user(1)
     }
-    if instance_exists(oBeam)
+    if (instance_exists(oBeam) && (!global.spectator))
     {
         msl = instance_nearest(x, y, oBeam)
         if (distance_to_object(msl) < 60)
@@ -1152,7 +1152,7 @@ if (state == 50)
         if (floor(fleg_frame) == 9)
             yoff = 18
     }
-    if (statetime > 290)
+    if (statetime > 290 && (!global.spectator))
     {
         event_user(1)
         with (oEventCamera2)
@@ -1184,7 +1184,8 @@ if (state == 100)
         head_xoff = 0
         xVel = 0
         yVel = 0
-        sfx_play(sndMOmegaDeath)
+        if (!global.spectator)
+            sfx_play(sndMOmegaDeath)
         roaring = 160
         eyes_close = 5000
         if instance_exists(grab_obj)
@@ -1192,8 +1193,11 @@ if (state == 100)
             with (grab_obj)
                 instance_destroy()
         }
-        with (cam)
-            instance_destroy()
+        if instance_exists(oObjectCamera)
+        {
+            with (cam)
+                instance_destroy()
+        }
     }
     if (statetime < 30)
     {
@@ -1279,3 +1283,22 @@ else if (eyes_frame < 4)
 if (target_mode == 1 && distance_to_point(targetx, targety) < 32)
     target_mode = 0
 moveTo(xVel, yVel)
+if (global.metdead[myid] == 1 && (!dead))
+{
+    myhealth = 0
+    state = 100
+    statetime = 0
+    alarm[10] = 1
+    if global.spectator
+        alarm[11] = 10
+    else
+        alarm[11] = 160
+    event_user(2)
+    mus_fadeout(musOmegaFight)
+    oMusicV2.bossbgm = 0
+    check_areaclear()
+    global.dmap[mapposx, mapposy] = 11
+    with (oControl)
+        event_user(2)
+    dead = 1
+}

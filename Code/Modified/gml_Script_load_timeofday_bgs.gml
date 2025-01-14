@@ -4,15 +4,15 @@ if (argument0 == 0)
     {
         with (oBackground)
         {
-            bgid[0] = 175
+            bgid[0] = 177
             if oControl.widescreen
-                bgid[0] = 325
-            bgid[1] = 178
-            bgid[2] = 178
-            bgid[3] = 178
-            bgid[4] = 178
+                bgid[0] = 329
+            bgid[1] = 180
+            bgid[2] = 180
+            bgid[3] = 180
+            bgid[4] = 180
             if oControl.widescreen
-                bgid[5] = 178
+                bgid[5] = 180
         }
         with (oShip1)
             sprite_index = sShip
@@ -27,10 +27,10 @@ if (argument0 == 0)
     {
         with (oBackground)
         {
-            bgid[0] = 175
+            bgid[0] = 177
             if oControl.widescreen
-                bgid[0] = 325
-            bgid[1] = 192
+                bgid[0] = 329
+            bgid[1] = 194
         }
     }
 }
@@ -40,15 +40,15 @@ if (argument0 == 1)
     {
         with (oBackground)
         {
-            bgid[0] = 177
+            bgid[0] = 179
             if oControl.widescreen
-                bgid[0] = 326
-            bgid[1] = 180
-            bgid[2] = 180
-            bgid[3] = 180
-            bgid[4] = 180
+                bgid[0] = 330
+            bgid[1] = 182
+            bgid[2] = 182
+            bgid[3] = 182
+            bgid[4] = 182
             if oControl.widescreen
-                bgid[5] = 180
+                bgid[5] = 182
         }
         with (oShip1)
             sprite_index = sShip
@@ -63,10 +63,10 @@ if (argument0 == 1)
     {
         with (oBackground)
         {
-            bgid[0] = 177
+            bgid[0] = 179
             if oControl.widescreen
-                bgid[0] = 326
-            bgid[1] = 193
+                bgid[0] = 330
+            bgid[1] = 195
         }
     }
 }
@@ -76,15 +76,15 @@ if (argument0 == 2)
     {
         with (oBackground)
         {
-            bgid[0] = 176
+            bgid[0] = 178
             if oControl.widescreen
-                bgid[0] = 327
-            bgid[1] = 179
-            bgid[2] = 179
-            bgid[3] = 179
-            bgid[4] = 179
+                bgid[0] = 331
+            bgid[1] = 181
+            bgid[2] = 181
+            bgid[3] = 181
+            bgid[4] = 181
             if oControl.widescreen
-                bgid[5] = 179
+                bgid[5] = 181
         }
         with (oShip1)
             sprite_index = sShipNight
@@ -99,10 +99,10 @@ if (argument0 == 2)
     {
         with (oBackground)
         {
-            bgid[0] = 176
+            bgid[0] = 178
             if oControl.widescreen
-                bgid[0] = 327
-            bgid[1] = 194
+                bgid[0] = 331
+            bgid[1] = 196
         }
     }
 }

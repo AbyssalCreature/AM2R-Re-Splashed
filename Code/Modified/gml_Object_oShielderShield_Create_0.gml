@@ -9,3 +9,5 @@ hpush = 5
 vpush = -3
 center_x = 0
 center_y = 0
+myspr = sprite_index
+frozenspr = 416

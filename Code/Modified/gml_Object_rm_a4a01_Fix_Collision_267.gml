@@ -1,10 +1,10 @@
 if (global.screwattack == 0)
 {
-    with (112039)
+    with (112066)
         y += 50
-    with (112040)
+    with (112067)
         y += 50
-    with (112041)
+    with (112068)
         y += 50
     instance_create(48, 320, oBlockSpeed)
     instance_create(48, 336, oBlockSpeed)

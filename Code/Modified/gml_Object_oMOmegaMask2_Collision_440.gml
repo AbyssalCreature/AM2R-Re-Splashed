@@ -1,6 +1,6 @@
 if (oMOmega.myhealth > 0)
 {
-    if (oMOmega.flashing == 0)
+    if (oMOmega.flashing == 0 && (!global.spectator))
     {
         with (oMOmega)
         {

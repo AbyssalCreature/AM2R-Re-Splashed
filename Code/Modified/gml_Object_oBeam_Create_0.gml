@@ -5,3 +5,5 @@ else
 time = 0
 dohit = 1
 smissile = 0
+sax = 0
+myid = 0

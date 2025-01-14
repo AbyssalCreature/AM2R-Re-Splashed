@@ -12,7 +12,7 @@ if (sparkcounter == 0)
         event_user(0)
     with (block2)
         event_user(0)
-    with (107633)
+    with (107659)
         instance_destroy()
     global.event[51] = 1
     mus_fadeout(musAncientGuardian)

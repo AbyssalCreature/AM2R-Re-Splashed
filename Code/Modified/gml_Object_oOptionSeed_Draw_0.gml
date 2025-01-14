@@ -17,7 +17,7 @@ draw_set_alpha(1)
 draw_set_color(c_black)
 draw_text((x + 1), (y - 3), label)
 voff = 0
-for (i = 0; i < string_length(optext); i++)
+for (i = 0; i < (string_length(optext) - 1); i++)
 {
     str = string_char_at(optext, (i + 1))
     draw_text(((((x + textoffset) + (i * 7)) - (4 * voff)) + 1), (y - 3), str)
