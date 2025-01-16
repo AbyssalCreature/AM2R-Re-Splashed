@@ -14,14 +14,13 @@ This mod is a complete reskin of all the visuals in AM2R.  It aims to make all t
 
 ## Supported Versions
 
-- Community Updates 1.5.5
-- Unofficial Multitroid 1.6.2
-- AM2R Multiworld (Archipelago)
+- Community Updates v1.5.5 (v1.0.0 of Re-Splashed, deprecated)
+- Unofficial Multitroid v1.6.2 (v1.0.0 of Re-Splashed, deprecated)
+- AM2R Multiworld (Archipelago) v1.1 (v1.0.0 of Re-Splashed, deprecated, ToBeUpdated)
+- Unofficial Multitroid-U (UM-U) v1.8.1 (v1.1.0 of Re-Splashed)
 
 ## Future Plans for support
 
-- No-Flash Unofficial Multitroid
 - Party Mode V2 + Ultra FATE
-- Community Updates 1.6
 - SA-X Duels
 - The Horde 1.4.X
