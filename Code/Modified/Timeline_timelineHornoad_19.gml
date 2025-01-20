@@ -1,1 +1,0 @@
-oEndingMonsterEgg.xBite = 1
