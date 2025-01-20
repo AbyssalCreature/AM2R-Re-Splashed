@@ -1,5 +1,0 @@
-draw_background(bgOptions, view_xview[0], view_yview[0])
-draw_background_ext(bg_SubScrFX, view_xview[0], view_yview[0], 1, 1, 0, -1, (0.8 * image_alpha))
-draw_background_ext(bg_SubScrFX, (view_xview[0] + 320), view_yview[0], -1, 1, 0, -1, (0.8 * image_alpha))
-draw_background_ext(bg_SubScrFX, view_xview[0], (view_yview[0] + 240), 1, -1, 0, -1, (0.8 * image_alpha))
-draw_background_ext(bg_SubScrFX, (view_xview[0] + 320), (view_yview[0] + 240), -1, -1, 0, -1, (0.8 * image_alpha))

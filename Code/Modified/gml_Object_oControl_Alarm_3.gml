@@ -1,1 +1,0 @@
-global.acceptPacket = 1
