@@ -1,2 +1,0 @@
-targetx = x
-targety = y

@@ -1,1 +1,0 @@
-global.movingobj = 0
