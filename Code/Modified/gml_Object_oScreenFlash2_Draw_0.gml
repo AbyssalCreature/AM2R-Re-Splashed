@@ -1,5 +1,0 @@
-draw_set_blend_mode(bm_add)
-draw_set_color(c_white)
-draw_set_alpha(alpha)
-draw_rectangle(view_xview[oControl.widescreen], view_yview[0], ((view_xview[oControl.widescreen] + 325) + oControl.widescreen_space), (view_yview[0] + 245), false)
-draw_set_blend_mode(bm_normal)

@@ -1,1 +1,0 @@
-canSpawnX = 1

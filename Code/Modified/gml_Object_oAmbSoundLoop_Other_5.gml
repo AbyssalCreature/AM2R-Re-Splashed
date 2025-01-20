@@ -1,1 +1,0 @@
-sfx_stop(sound)
