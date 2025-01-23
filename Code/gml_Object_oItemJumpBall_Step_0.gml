@@ -1,4 +1,5 @@
 var itemfusion, suit, TwoD;
+event_inherited()
 itemfusion = ""
 suit = ""
 TwoD = ""

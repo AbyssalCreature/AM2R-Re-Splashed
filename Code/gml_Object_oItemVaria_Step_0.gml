@@ -1,4 +1,5 @@
 var itemfusion, TwoD;
+event_inherited()
 itemfusion = ""
 TwoD = ""
 if (oControl.mod_fusion == 1)
