@@ -24,9 +24,9 @@ if (os_type == os_linux)
     lin = "/assets"
 if (os_type == os_android)
     exit
-if directory_exists((working_directory + "/lang/headers"))
+if directory_exists(working_directory + "/lang/headers")
 {
-    for (filename = file_find_first(((working_directory + "/lang/headers/") + "*.png"), 0); filename != ""; filename = file_find_next())
+    for (filename = file_find_first((working_directory + "/lang/headers/" + "*.png"), 0); filename != ""; filename = file_find_next())
     {
         if (string_pos(string_lower(string_replace(get_text("Header", "Language"), " (16:9)", "")), string_lower(filename)) != 0)
         {
@@ -41,28 +41,28 @@ if directory_exists((working_directory + "/lang/headers"))
                 harea = real(string_digits(string_char_at(filename, (harea + 2))))
                 if (hframes != 0)
                 {
-                    hframes = real(string_digits((string_char_at(filename, (hframes + 2)) + string_char_at(filename, (hframes + 3)))))
+                    hframes = real(string_digits((string_char_at(filename, (hframes + 2))) + (string_char_at(filename, (hframes + 3)))))
                     oControl.mod_header[harea, 0] = hframes
                 }
                 if (hd1 != 0)
-                    oControl.mod_header[harea, 1] = real(string_digits((string_char_at(filename, (hd1 + 2)) + string_char_at(filename, (hd1 + 3)))))
+                    oControl.mod_header[harea, 1] = real(string_digits((string_char_at(filename, (hd1 + 2))) + (string_char_at(filename, (hd1 + 3)))))
                 if (hd2 != 0)
-                    oControl.mod_header[harea, 2] = real(string_digits((string_char_at(filename, (hd2 + 2)) + string_char_at(filename, (hd2 + 3)))))
+                    oControl.mod_header[harea, 2] = real(string_digits((string_char_at(filename, (hd2 + 2))) + (string_char_at(filename, (hd2 + 3)))))
                 if (hd3 != 0)
-                    oControl.mod_header[harea, 3] = real(string_digits((string_char_at(filename, (hd3 + 2)) + string_char_at(filename, (hd3 + 3)))))
+                    oControl.mod_header[harea, 3] = real(string_digits((string_char_at(filename, (hd3 + 2))) + (string_char_at(filename, (hd3 + 3)))))
                 if (hd4 != 0)
-                    oControl.mod_header[harea, 4] = real(string_digits((string_char_at(filename, (hd4 + 2)) + string_char_at(filename, (hd4 + 3)))))
-                spr = sprite_add(((working_directory + "/lang/headers/") + filename), hframes, false, false, 0, 0)
-                sprite_assign(asset_get_index(("sIntro_A" + string(harea))), spr)
+                    oControl.mod_header[harea, 4] = real(string_digits((string_char_at(filename, (hd4 + 2))) + (string_char_at(filename, (hd4 + 3)))))
+                spr = sprite_add((working_directory + "/lang/headers/" + filename), hframes, false, false, 0, 0)
+                sprite_assign(asset_get_index("sIntro_A" + string(harea)), spr)
                 sprite_delete(spr)
             }
         }
     }
     file_find_close()
 }
-if directory_exists(((program_directory + lin) + "/lang/titles"))
+if directory_exists(program_directory + lin + "/lang/titles")
 {
-    for (filename = file_find_first((((program_directory + lin) + "/lang/titles/") + "*.png"), 0); filename != ""; filename = file_find_next())
+    for (filename = file_find_first((program_directory + lin + "/lang/titles/" + "*.png"), 0); filename != ""; filename = file_find_next())
     {
         if (string_pos(string_lower(string_replace(get_text("Header", "Language"), " (16:9)", "")), string_lower(filename)) != 0)
         {
@@ -70,12 +70,12 @@ if directory_exists(((program_directory + lin) + "/lang/titles"))
             titley = string_pos("y", string_lower(filename))
             xnegative = string_pos("-x", string_lower(filename))
             if (titlex != 0)
-                oControl.mod_xcoordinate = real(string_digits(((string_char_at(filename, (titlex + 1)) + string_char_at(filename, (titlex + 2))) + string_char_at(filename, (titlex + 3)))))
+                oControl.mod_xcoordinate = real(string_digits((string_char_at(filename, (titlex + 1))) + (string_char_at(filename, (titlex + 2))) + (string_char_at(filename, (titlex + 3)))))
             if (titley != 0)
-                oControl.mod_ycoordinate = real(string_digits(((string_char_at(filename, (titley + 1)) + string_char_at(filename, (titley + 2))) + string_char_at(filename, (titley + 3)))))
+                oControl.mod_ycoordinate = real(string_digits((string_char_at(filename, (titley + 1))) + (string_char_at(filename, (titley + 2))) + (string_char_at(filename, (titley + 3)))))
             if (xnegative != 0)
                 oControl.mod_xcoordinate = (-oControl.mod_xcoordinate)
-            bck = background_add((((program_directory + lin) + "/lang/titles/") + filename), 0, 0)
+            bck = background_add((program_directory + lin + "/lang/titles/" + filename), 0, 0)
             background_assign(bgAM2RTitle, bck)
             background_delete(bck)
         }
@@ -93,9 +93,9 @@ if directory_exists(program_directory)
             bgframes = string_pos("f", string_lower(filename))
             bgspeed = string_pos("s", string_lower(filename))
             if (bgframes != 0)
-                oControl.mod_backgroundframes = real(string_digits((string_char_at(filename, (bgframes + 1)) + string_char_at(filename, (bgframes + 2)))))
+                oControl.mod_backgroundframes = real(string_digits((string_char_at(filename, (bgframes + 1))) + (string_char_at(filename, (bgframes + 2)))))
             if (bgspeed != 0)
-                oControl.mod_backgroundspeed = real(string_digits((string_char_at(filename, (bgspeed + 1)) + string_char_at(filename, (bgspeed + 2)))))
+                oControl.mod_backgroundspeed = real(string_digits((string_char_at(filename, (bgspeed + 1))) + (string_char_at(filename, (bgspeed + 2)))))
             spr = sprite_add((program_directory + filename), oControl.mod_backgroundframes, false, false, 0, 0)
             sprite_assign(sTitleAnimated, spr)
             sprite_delete(spr)
@@ -106,6 +106,13 @@ if directory_exists(program_directory)
 oControl.PowerPalette = -1
 oControl.VariaPalette = -1
 oControl.GravityPalette = -1
+oControl.PowerPalette2 = -1
+oControl.VariaPalette2 = -1
+oControl.GravityPalette2 = -1
+oControl.PowerPalette2f = -1
+oControl.VariaPalette2f = -1
+oControl.GravityPalette2f = -1
+oControl.OmegaPallete2f = -1
 if file_exists("mods/palettes/suits/power.png")
     oControl.PowerPalette = sprite_add("mods/palettes/suits/power.png", 1, false, false, 0, 0)
 if file_exists("mods/palettes/suits/varia.png")
@@ -159,9 +166,9 @@ if file_exists("mods/palettes/suits/MorphTrailColors/power.png")
     draw_clear_alpha(c_black, 0)
     draw_sprite(color, 0, 0, 0)
     col = surface_getpixel_ext(surf, 0, 0)
-    Trail_P_R = (col & 255)
-    Trail_P_G = ((col >> 8) & 255)
-    Trail_P_B = ((col >> 16) & 255)
+    Trail_P_R = col & 255
+    Trail_P_G = (col >> 8) & 255
+    Trail_P_B = (col >> 16) & 255
 }
 if file_exists("mods/palettes/suits/MorphTrailColors/varia.png")
 {
@@ -169,9 +176,9 @@ if file_exists("mods/palettes/suits/MorphTrailColors/varia.png")
     draw_clear_alpha(c_black, 0)
     draw_sprite(color, 0, 0, 0)
     col = surface_getpixel_ext(surf, 0, 0)
-    Trail_V_R = (col & 255)
-    Trail_V_G = ((col >> 8) & 255)
-    Trail_V_B = ((col >> 16) & 255)
+    Trail_V_R = col & 255
+    Trail_V_G = (col >> 8) & 255
+    Trail_V_B = (col >> 16) & 255
 }
 if file_exists("mods/palettes/suits/MorphTrailColors/gravity.png")
 {
@@ -179,9 +186,9 @@ if file_exists("mods/palettes/suits/MorphTrailColors/gravity.png")
     draw_clear_alpha(c_black, 0)
     draw_sprite(color, 0, 0, 0)
     col = surface_getpixel_ext(surf, 0, 0)
-    Trail_G_R = (col & 255)
-    Trail_G_G = ((col >> 8) & 255)
-    Trail_G_B = ((col >> 16) & 255)
+    Trail_G_R = col & 255
+    Trail_G_G = (col >> 8) & 255
+    Trail_G_B = (col >> 16) & 255
 }
 if file_exists("mods/palettes/suits/MorphTrailColors/fusion_power.png")
 {
@@ -189,9 +196,9 @@ if file_exists("mods/palettes/suits/MorphTrailColors/fusion_power.png")
     draw_clear_alpha(c_black, 0)
     draw_sprite(color, 0, 0, 0)
     col = surface_getpixel_ext(surf, 0, 0)
-    Trail_P_R_F = (col & 255)
-    Trail_P_G_F = ((col >> 8) & 255)
-    Trail_P_B_F = ((col >> 16) & 255)
+    Trail_P_R_F = col & 255
+    Trail_P_G_F = (col >> 8) & 255
+    Trail_P_B_F = (col >> 16) & 255
 }
 if file_exists("mods/palettes/suits/MorphTrailColors/fusion_varia.png")
 {
@@ -199,9 +206,9 @@ if file_exists("mods/palettes/suits/MorphTrailColors/fusion_varia.png")
     draw_clear_alpha(c_black, 0)
     draw_sprite(color, 0, 0, 0)
     col = surface_getpixel_ext(surf, 0, 0)
-    Trail_V_R_F = (col & 255)
-    Trail_V_G_F = ((col >> 8) & 255)
-    Trail_V_B_F = ((col >> 16) & 255)
+    Trail_V_R_F = col & 255
+    Trail_V_G_F = (col >> 8) & 255
+    Trail_V_B_F = (col >> 16) & 255
 }
 if file_exists("mods/palettes/suits/MorphTrailColors/fusion_gravity.png")
 {
@@ -209,9 +216,9 @@ if file_exists("mods/palettes/suits/MorphTrailColors/fusion_gravity.png")
     draw_clear_alpha(c_black, 0)
     draw_sprite(color, 0, 0, 0)
     col = surface_getpixel_ext(surf, 0, 0)
-    Trail_G_R_F = (col & 255)
-    Trail_G_G_F = ((col >> 8) & 255)
-    Trail_G_B_F = ((col >> 16) & 255)
+    Trail_G_R_F = col & 255
+    Trail_G_G_F = (col >> 8) & 255
+    Trail_G_B_F = (col >> 16) & 255
 }
 if file_exists("mods/palettes/suits/MorphTrailColors/fusion_omega.png")
 {
@@ -219,9 +226,9 @@ if file_exists("mods/palettes/suits/MorphTrailColors/fusion_omega.png")
     draw_clear_alpha(c_black, 0)
     draw_sprite(color, 0, 0, 0)
     col = surface_getpixel_ext(surf, 0, 0)
-    Trail_O_R_F = (col & 255)
-    Trail_O_G_F = ((col >> 8) & 255)
-    Trail_O_B_F = ((col >> 16) & 255)
+    Trail_O_R_F = col & 255
+    Trail_O_G_F = (col >> 8) & 255
+    Trail_O_B_F = (col >> 16) & 255
 }
 if file_exists("mods/palettes/suits/power2D.png")
     oControl.PowerPalette2 = sprite_add("mods/palettes/suits/power2D.png", 1, false, false, 0, 0)
@@ -276,9 +283,9 @@ if file_exists("mods/palettes/suits/MorphTrailColors/power2D.png")
     draw_clear_alpha(c_black, 0)
     draw_sprite(color, 0, 0, 0)
     col = surface_getpixel_ext(surf, 0, 0)
-    Trail_P_R = (col & 255)
-    Trail_P_G = ((col >> 8) & 255)
-    Trail_P_B = ((col >> 16) & 255)
+    Trail_P_R = col & 255
+    Trail_P_G = (col >> 8) & 255
+    Trail_P_B = (col >> 16) & 255
 }
 if file_exists("mods/palettes/suits/MorphTrailColors/varia2D.png")
 {
@@ -286,9 +293,9 @@ if file_exists("mods/palettes/suits/MorphTrailColors/varia2D.png")
     draw_clear_alpha(c_black, 0)
     draw_sprite(color, 0, 0, 0)
     col = surface_getpixel_ext(surf, 0, 0)
-    Trail_V_R = (col & 255)
-    Trail_V_G = ((col >> 8) & 255)
-    Trail_V_B = ((col >> 16) & 255)
+    Trail_V_R = col & 255
+    Trail_V_G = (col >> 8) & 255
+    Trail_V_B = (col >> 16) & 255
 }
 if file_exists("mods/palettes/suits/MorphTrailColors/gravity2D.png")
 {
@@ -296,9 +303,9 @@ if file_exists("mods/palettes/suits/MorphTrailColors/gravity2D.png")
     draw_clear_alpha(c_black, 0)
     draw_sprite(color, 0, 0, 0)
     col = surface_getpixel_ext(surf, 0, 0)
-    Trail_G_R = (col & 255)
-    Trail_G_G = ((col >> 8) & 255)
-    Trail_G_B = ((col >> 16) & 255)
+    Trail_G_R = col & 255
+    Trail_G_G = (col >> 8) & 255
+    Trail_G_B = (col >> 16) & 255
 }
 if file_exists("mods/palettes/suits/MorphTrailColors/fusion_power2D.png")
 {
@@ -306,9 +313,9 @@ if file_exists("mods/palettes/suits/MorphTrailColors/fusion_power2D.png")
     draw_clear_alpha(c_black, 0)
     draw_sprite(color, 0, 0, 0)
     col = surface_getpixel_ext(surf, 0, 0)
-    Trail_P_R_F = (col & 255)
-    Trail_P_G_F = ((col >> 8) & 255)
-    Trail_P_B_F = ((col >> 16) & 255)
+    Trail_P_R_F = col & 255
+    Trail_P_G_F = (col >> 8) & 255
+    Trail_P_B_F = (col >> 16) & 255
 }
 if file_exists("mods/palettes/suits/MorphTrailColors/fusion_varia2D.png")
 {
@@ -316,9 +323,9 @@ if file_exists("mods/palettes/suits/MorphTrailColors/fusion_varia2D.png")
     draw_clear_alpha(c_black, 0)
     draw_sprite(color, 0, 0, 0)
     col = surface_getpixel_ext(surf, 0, 0)
-    Trail_V_R_F = (col & 255)
-    Trail_V_G_F = ((col >> 8) & 255)
-    Trail_V_B_F = ((col >> 16) & 255)
+    Trail_V_R_F = col & 255
+    Trail_V_G_F = (col >> 8) & 255
+    Trail_V_B_F = (col >> 16) & 255
 }
 if file_exists("mods/palettes/suits/MorphTrailColors/fusion_gravity2D.png")
 {
@@ -326,9 +333,9 @@ if file_exists("mods/palettes/suits/MorphTrailColors/fusion_gravity2D.png")
     draw_clear_alpha(c_black, 0)
     draw_sprite(color, 0, 0, 0)
     col = surface_getpixel_ext(surf, 0, 0)
-    Trail_G_R_F = (col & 255)
-    Trail_G_G_F = ((col >> 8) & 255)
-    Trail_G_B_F = ((col >> 16) & 255)
+    Trail_G_R_F = col & 255
+    Trail_G_G_F = (col >> 8) & 255
+    Trail_G_B_F = (col >> 16) & 255
 }
 if file_exists("mods/palettes/suits/MorphTrailColors/fusion_omega2D.png")
 {
@@ -336,28 +343,28 @@ if file_exists("mods/palettes/suits/MorphTrailColors/fusion_omega2D.png")
     draw_clear_alpha(c_black, 0)
     draw_sprite(color, 0, 0, 0)
     col = surface_getpixel_ext(surf, 0, 0)
-    Trail_O_R_F = (col & 255)
-    Trail_O_G_F = ((col >> 8) & 255)
-    Trail_O_B_F = ((col >> 16) & 255)
+    Trail_O_R_F = col & 255
+    Trail_O_G_F = (col >> 8) & 255
+    Trail_O_B_F = (col >> 16) & 255
 }
 draw_clear_alpha(c_black, 0)
 draw_sprite(sMorphTrailPower_msr, 0, 0, 0)
 col = surface_getpixel_ext(surf, 0, 0)
-Trail_P_R_F_SR = (col & 255)
-Trail_P_G_F_SR = ((col >> 8) & 255)
-Trail_P_B_F_SR = ((col >> 16) & 255)
+Trail_P_R_F_SR = col & 255
+Trail_P_G_F_SR = (col >> 8) & 255
+Trail_P_B_F_SR = (col >> 16) & 255
 draw_clear_alpha(c_black, 0)
 draw_sprite(sMorphTrailVaria_msr, 0, 0, 0)
 col = surface_getpixel_ext(surf, 0, 0)
-Trail_V_R_F_SR = (col & 255)
-Trail_V_G_F_SR = ((col >> 8) & 255)
-Trail_V_B_F_SR = ((col >> 16) & 255)
+Trail_V_R_F_SR = col & 255
+Trail_V_G_F_SR = (col >> 8) & 255
+Trail_V_B_F_SR = (col >> 16) & 255
 draw_clear_alpha(c_black, 0)
 draw_sprite(sMorphTrailGravity_msr, 0, 0, 0)
 col = surface_getpixel_ext(surf, 0, 0)
-Trail_G_R_F_SR = (col & 255)
-Trail_G_G_F_SR = ((col >> 8) & 255)
-Trail_G_B_F_SR = ((col >> 16) & 255)
+Trail_G_R_F_SR = col & 255
+Trail_G_G_F_SR = (col >> 8) & 255
+Trail_G_B_F_SR = (col >> 16) & 255
 surface_reset_target()
 surface_reset_target()
 surface_free(surf)

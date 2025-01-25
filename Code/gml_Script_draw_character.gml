@@ -25,20 +25,20 @@ if (!oControl.useselfpalette)
     {
         if oControl.mod_fusion
         {
-            if global.ibeam
+            if (global.ibeam && os_type != os_android && oControl.OmegaPallete2f != -1)
                 pal_swap_set(oControl.OmegaPallete2f, 1, 0)
-            else if (global.currentsuit == 0)
+            else if (global.currentsuit == 0 && os_type != os_android && oControl.PowerPalette2f != -1)
                 pal_swap_set(oControl.PowerPalette2f, 1, 0)
-            else if (global.currentsuit == 1)
+            else if (global.currentsuit == 1 && os_type != os_android && oControl.VariaPalette2f != -1)
                 pal_swap_set(oControl.VariaPalette2f, 1, 0)
-            else if (global.currentsuit == 2)
+            else if (global.currentsuit == 2 && os_type != os_android && oControl.GravityPalette2f != -1)
                 pal_swap_set(oControl.GravityPalette2f, 1, 0)
         }
-        else if (global.currentsuit == 0 && os_type != os_android && oControl.PowerPalette != -1)
+        else if (global.currentsuit == 0 && os_type != os_android && oControl.PowerPalette2 != -1)
             pal_swap_set(oControl.PowerPalette2, 1, 0)
-        else if (global.currentsuit == 1 && os_type != os_android && oControl.VariaPalette != -1)
+        else if (global.currentsuit == 1 && os_type != os_android && oControl.VariaPalette2 != -1)
             pal_swap_set(oControl.VariaPalette2, 1, 0)
-        else if (global.currentsuit == 2 && os_type != os_android && oControl.GravityPalette != -1)
+        else if (global.currentsuit == 2 && os_type != os_android && oControl.GravityPalette2 != -1)
             pal_swap_set(oControl.GravityPalette2, 1, 0)
     }
 }
@@ -105,7 +105,7 @@ if (global.playerFreeze > 0)
     if (global.playerFreeze > 0 && global.playerFreeze <= 36)
     {
         draw_set_blend_mode(bm_add)
-        draw_sprite_ext(oCharacter.sprite_index, argument14, argument1, argument2, argument10, 1, 0, argument11, (1 - (global.fxtimer * 0.25)))
+        draw_sprite_ext(oCharacter.sprite_index, argument14, argument1, argument2, argument10, 1, 0, argument11, (1 - global.fxtimer * 0.25))
         draw_set_blend_mode(bm_normal)
     }
 }
