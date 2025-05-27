@@ -58,4 +58,4 @@ if (global.ibeam && oControl.mod_fusion)
     suit = "O"
 cannon = asset_get_index(((((((("s" + fusion) + suit) + "Cannon") + spazer) + wave) + plasma) + ice))
 draw_sprite_ext(sSubScrPlayer, suitframe, x, y, 1, 1, 0, -1, oSubscreenMenu.ealpha)
-draw_sprite_ext(cannon, 0, (x + drawX), (y + drawY), 1, 1, 0, -1, oSubscreenMenu.ealpha)
+draw_sprite_ext(cannon, 0, (x + drawX - 51), (y + drawY), 1, 1, 0, -1, oSubscreenMenu.ealpha)
