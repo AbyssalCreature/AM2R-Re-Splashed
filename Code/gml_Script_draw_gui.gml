@@ -592,9 +592,10 @@ if (global.classicmode == 0 && global.opshowhud)
         if (global.saxmode && (global.MetCount - metcount) > 0)
         {
             draw_background(bgGUIMetCountBG3, (xoff + 4 + widescreen_space), 4)
-            // TODO: replace font with sGUIFont2 with sGUTFont3 which has the RGB color FDEC08 baked into it
+            draw_set_font(global.guifont3)
             draw_set_color(c_white)
             draw_text((xoff + 6 + widescreen_space), 21, to_string_lz(global.MetCount - metcount))
+            draw_set_font(global.guifont2)
         }
         else if (global.ophudshowmetrcount == 1)
         {
@@ -629,8 +630,7 @@ if (global.classicmode == 0 && global.opshowhud)
                     if (!sax)
                     {
                         if (spectator && global.sax)
-                        {
-                        }
+                            exit
                         if (spectator && (!global.sax))
                         {
                             if (abs(xDiff) <= 2 && abs(yDiff) <= 1)
