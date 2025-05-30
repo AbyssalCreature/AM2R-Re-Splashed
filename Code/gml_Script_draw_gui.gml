@@ -98,208 +98,208 @@ if (global.classicmode == 0 && global.opshowhud)
     }
     if (global.etanks >= 2)
     {
-        if (global.playerhealth > (99.9 + (100 * oControl.mod_etankhealthmult)))
+        if (global.playerhealth > (99.9 + 100 * oControl.mod_etankhealthmult))
             draw_sprite(sGUIETank, 1, (0 + etankxoff), 10)
-        if (global.playerhealth <= (99.9 + (100 * oControl.mod_etankhealthmult)))
+        if (global.playerhealth <= (99.9 + 100 * oControl.mod_etankhealthmult))
             draw_sprite(sGUIETank, 0, (0 + etankxoff), 10)
     }
     if (global.etanks >= 3)
     {
-        if (global.playerhealth > (99.9 + (200 * oControl.mod_etankhealthmult)))
-            draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 6), 4)
-        if (global.playerhealth <= (99.9 + (200 * oControl.mod_etankhealthmult)))
-            draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 6), 4)
+        if (global.playerhealth > (99.9 + 200 * oControl.mod_etankhealthmult))
+            draw_sprite(sGUIETank, 1, (0 + etankxoff + 6), 4)
+        if (global.playerhealth <= (99.9 + 200 * oControl.mod_etankhealthmult))
+            draw_sprite(sGUIETank, 0, (0 + etankxoff + 6), 4)
     }
     if (global.etanks >= 4)
     {
-        if (global.playerhealth > (99.9 + (300 * oControl.mod_etankhealthmult)))
-            draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 6), 10)
-        if (global.playerhealth <= (99.9 + (300 * oControl.mod_etankhealthmult)))
-            draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 6), 10)
+        if (global.playerhealth > (99.9 + 300 * oControl.mod_etankhealthmult))
+            draw_sprite(sGUIETank, 1, (0 + etankxoff + 6), 10)
+        if (global.playerhealth <= (99.9 + 300 * oControl.mod_etankhealthmult))
+            draw_sprite(sGUIETank, 0, (0 + etankxoff + 6), 10)
     }
     if (global.etanks >= 5)
     {
-        if (global.playerhealth > (99.9 + (400 * oControl.mod_etankhealthmult)))
-            draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 12), 4)
-        if (global.playerhealth <= (99.9 + (400 * oControl.mod_etankhealthmult)))
-            draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 12), 4)
+        if (global.playerhealth > (99.9 + 400 * oControl.mod_etankhealthmult))
+            draw_sprite(sGUIETank, 1, (0 + etankxoff + 12), 4)
+        if (global.playerhealth <= (99.9 + 400 * oControl.mod_etankhealthmult))
+            draw_sprite(sGUIETank, 0, (0 + etankxoff + 12), 4)
     }
     if (global.etanks >= 6)
     {
-        if (global.playerhealth > (99.9 + (500 * oControl.mod_etankhealthmult)))
-            draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 12), 10)
-        if (global.playerhealth <= (99.9 + (500 * oControl.mod_etankhealthmult)))
-            draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 12), 10)
+        if (global.playerhealth > (99.9 + 500 * oControl.mod_etankhealthmult))
+            draw_sprite(sGUIETank, 1, (0 + etankxoff + 12), 10)
+        if (global.playerhealth <= (99.9 + 500 * oControl.mod_etankhealthmult))
+            draw_sprite(sGUIETank, 0, (0 + etankxoff + 12), 10)
     }
     if (global.etanks >= 7)
     {
-        if (global.playerhealth > (99.9 + (600 * oControl.mod_etankhealthmult)))
-            draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 18), 4)
-        if (global.playerhealth <= (99.9 + (600 * oControl.mod_etankhealthmult)))
-            draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 18), 4)
+        if (global.playerhealth > (99.9 + 600 * oControl.mod_etankhealthmult))
+            draw_sprite(sGUIETank, 1, (0 + etankxoff + 18), 4)
+        if (global.playerhealth <= (99.9 + 600 * oControl.mod_etankhealthmult))
+            draw_sprite(sGUIETank, 0, (0 + etankxoff + 18), 4)
     }
     if (global.etanks >= 8)
     {
-        if (global.playerhealth > (99.9 + (700 * oControl.mod_etankhealthmult)))
-            draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 18), 10)
-        if (global.playerhealth <= (99.9 + (700 * oControl.mod_etankhealthmult)))
-            draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 18), 10)
+        if (global.playerhealth > (99.9 + 700 * oControl.mod_etankhealthmult))
+            draw_sprite(sGUIETank, 1, (0 + etankxoff + 18), 10)
+        if (global.playerhealth <= (99.9 + 700 * oControl.mod_etankhealthmult))
+            draw_sprite(sGUIETank, 0, (0 + etankxoff + 18), 10)
     }
     if (global.etanks >= 9)
     {
-        if (global.playerhealth > (99.9 + (800 * oControl.mod_etankhealthmult)))
-            draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 24), 4)
-        if (global.playerhealth <= (99.9 + (800 * oControl.mod_etankhealthmult)))
-            draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 24), 4)
+        if (global.playerhealth > (99.9 + 800 * oControl.mod_etankhealthmult))
+            draw_sprite(sGUIETank, 1, (0 + etankxoff + 24), 4)
+        if (global.playerhealth <= (99.9 + 800 * oControl.mod_etankhealthmult))
+            draw_sprite(sGUIETank, 0, (0 + etankxoff + 24), 4)
     }
     if (global.etanks >= 10)
     {
-        if (global.playerhealth > (99.9 + (900 * oControl.mod_etankhealthmult)))
-            draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 24), 10)
-        if (global.playerhealth <= (99.9 + (900 * oControl.mod_etankhealthmult)))
-            draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 24), 10)
+        if (global.playerhealth > (99.9 + 900 * oControl.mod_etankhealthmult))
+            draw_sprite(sGUIETank, 1, (0 + etankxoff + 24), 10)
+        if (global.playerhealth <= (99.9 + 900 * oControl.mod_etankhealthmult))
+            draw_sprite(sGUIETank, 0, (0 + etankxoff + 24), 10)
     }
     if (global.etanks > 10)
     {
         if (global.etanks >= 11)
         {
-            if (global.playerhealth > (99.9 + (1000 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 33), 4)
-            if (global.playerhealth <= (99.9 + (1000 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 33), 4)
+            if (global.playerhealth > (99.9 + 1000 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 1, (0 + etankxoff + 33), 4)
+            if (global.playerhealth <= (99.9 + 1000 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 0, (0 + etankxoff + 33), 4)
         }
         if (global.etanks >= 12)
         {
-            if (global.playerhealth > (99.9 + (1100 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 33), 10)
-            if (global.playerhealth <= (99.9 + (1100 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 33), 10)
+            if (global.playerhealth > (99.9 + 1100 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 1, (0 + etankxoff + 33), 10)
+            if (global.playerhealth <= (99.9 + 1100 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 0, (0 + etankxoff + 33), 10)
         }
         if (global.etanks >= 13)
         {
-            if (global.playerhealth > (99.9 + (1200 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 39), 4)
-            if (global.playerhealth <= (99.9 + (1200 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 39), 4)
+            if (global.playerhealth > (99.9 + 1200 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 1, (0 + etankxoff + 39), 4)
+            if (global.playerhealth <= (99.9 + 1200 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 0, (0 + etankxoff + 39), 4)
         }
         if (global.etanks >= 14)
         {
-            if (global.playerhealth > (99.9 + (1300 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 39), 10)
-            if (global.playerhealth <= (99.9 + (1300 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 39), 10)
+            if (global.playerhealth > (99.9 + 1300 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 1, (0 + etankxoff + 39), 10)
+            if (global.playerhealth <= (99.9 + 1300 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 0, (0 + etankxoff + 39), 10)
         }
         if (global.etanks >= 15)
         {
-            if (global.playerhealth > (99.9 + (1400 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 45), 4)
-            if (global.playerhealth <= (99.9 + (1400 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 45), 4)
+            if (global.playerhealth > (99.9 + 1400 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 1, (0 + etankxoff + 45), 4)
+            if (global.playerhealth <= (99.9 + 1400 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 0, (0 + etankxoff + 45), 4)
         }
         if (global.etanks >= 16)
         {
-            if (global.playerhealth > (99.9 + (1500 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 45), 10)
-            if (global.playerhealth <= (99.9 + (1500 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 45), 10)
+            if (global.playerhealth > (99.9 + 1500 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 1, (0 + etankxoff + 45), 10)
+            if (global.playerhealth <= (99.9 + 1500 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 0, (0 + etankxoff + 45), 10)
         }
         if (global.etanks >= 17)
         {
-            if (global.playerhealth > (99.9 + (1600 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 51), 4)
-            if (global.playerhealth <= (99.9 + (1600 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 51), 4)
+            if (global.playerhealth > (99.9 + 1600 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 1, (0 + etankxoff + 51), 4)
+            if (global.playerhealth <= (99.9 + 1600 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 0, (0 + etankxoff + 51), 4)
         }
         if (global.etanks >= 18)
         {
-            if (global.playerhealth > (99.9 + (1700 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 51), 10)
-            if (global.playerhealth <= (99.9 + (1700 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 51), 10)
+            if (global.playerhealth > (99.9 + 1700 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 1, (0 + etankxoff + 51), 10)
+            if (global.playerhealth <= (99.9 + 1700 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 0, (0 + etankxoff + 51), 10)
         }
         if (global.etanks >= 19)
         {
-            if (global.playerhealth > (99.9 + (1800 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 57), 4)
-            if (global.playerhealth <= (99.9 + (1800 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 57), 4)
+            if (global.playerhealth > (99.9 + 1800 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 1, (0 + etankxoff + 57), 4)
+            if (global.playerhealth <= (99.9 + 1800 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 0, (0 + etankxoff + 57), 4)
         }
         if (global.etanks >= 20)
         {
-            if (global.playerhealth > (99.9 + (1900 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 57), 10)
-            if (global.playerhealth <= (99.9 + (1900 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 57), 10)
+            if (global.playerhealth > (99.9 + 1900 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 1, (0 + etankxoff + 57), 10)
+            if (global.playerhealth <= (99.9 + 1900 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 0, (0 + etankxoff + 57), 10)
         }
         if (global.etanks >= 21)
         {
-            if (global.playerhealth > (99.9 + (2000 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 66), 4)
-            if (global.playerhealth <= (99.9 + (2000 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 66), 4)
+            if (global.playerhealth > (99.9 + 2000 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 1, (0 + etankxoff + 66), 4)
+            if (global.playerhealth <= (99.9 + 2000 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 0, (0 + etankxoff + 66), 4)
         }
         if (global.etanks >= 22)
         {
-            if (global.playerhealth > (99.9 + (2100 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 66), 10)
-            if (global.playerhealth <= (99.9 + (2100 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 66), 10)
+            if (global.playerhealth > (99.9 + 2100 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 1, (0 + etankxoff + 66), 10)
+            if (global.playerhealth <= (99.9 + 2100 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 0, (0 + etankxoff + 66), 10)
         }
         if (global.etanks >= 23)
         {
-            if (global.playerhealth > (99.9 + (2200 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 72), 4)
-            if (global.playerhealth <= (99.9 + (2200 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 72), 4)
+            if (global.playerhealth > (99.9 + 2200 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 1, (0 + etankxoff + 72), 4)
+            if (global.playerhealth <= (99.9 + 2200 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 0, (0 + etankxoff + 72), 4)
         }
         if (global.etanks >= 24)
         {
-            if (global.playerhealth > (99.9 + (2300 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 72), 10)
-            if (global.playerhealth <= (99.9 + (2300 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 72), 10)
+            if (global.playerhealth > (99.9 + 2300 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 1, (0 + etankxoff + 72), 10)
+            if (global.playerhealth <= (99.9 + 2300 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 0, (0 + etankxoff + 72), 10)
         }
         if (global.etanks >= 25)
         {
-            if (global.playerhealth > (99.9 + (2400 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 78), 4)
-            if (global.playerhealth <= (99.9 + (2400 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 78), 4)
+            if (global.playerhealth > (99.9 + 2400 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 1, (0 + etankxoff + 78), 4)
+            if (global.playerhealth <= (99.9 + 2400 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 0, (0 + etankxoff + 78), 4)
         }
         if (global.etanks >= 26)
         {
-            if (global.playerhealth > (99.9 + (2500 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 78), 10)
-            if (global.playerhealth <= (99.9 + (2500 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 78), 10)
+            if (global.playerhealth > (99.9 + 2500 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 1, (0 + etankxoff + 78), 10)
+            if (global.playerhealth <= (99.9 + 2500 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 0, (0 + etankxoff + 78), 10)
         }
         if (global.etanks >= 27)
         {
-            if (global.playerhealth > (99.9 + (2600 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 84), 4)
-            if (global.playerhealth <= (99.9 + (2600 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 84), 4)
+            if (global.playerhealth > (99.9 + 2600 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 1, (0 + etankxoff + 84), 4)
+            if (global.playerhealth <= (99.9 + 2600 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 0, (0 + etankxoff + 84), 4)
         }
         if (global.etanks >= 28)
         {
-            if (global.playerhealth > (99.9 + (2700 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 84), 10)
-            if (global.playerhealth <= (99.9 + (2700 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 84), 10)
+            if (global.playerhealth > (99.9 + 2700 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 1, (0 + etankxoff + 84), 10)
+            if (global.playerhealth <= (99.9 + 2700 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 0, (0 + etankxoff + 84), 10)
         }
         if (global.etanks >= 29)
         {
-            if (global.playerhealth > (99.9 + (2800 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 90), 4)
-            if (global.playerhealth <= (99.9 + (2800 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 90), 4)
+            if (global.playerhealth > (99.9 + 2800 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 1, (0 + etankxoff + 90), 4)
+            if (global.playerhealth <= (99.9 + 2800 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 0, (0 + etankxoff + 90), 4)
         }
         if (global.etanks >= 30)
         {
-            if (global.playerhealth > (99.9 + (2900 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 1, ((0 + etankxoff) + 90), 10)
-            if (global.playerhealth <= (99.9 + (2900 * oControl.mod_etankhealthmult)))
-                draw_sprite(sGUIETank, 0, ((0 + etankxoff) + 90), 10)
+            if (global.playerhealth > (99.9 + 2900 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 1, (0 + etankxoff + 90), 10)
+            if (global.playerhealth <= (99.9 + 2900 * oControl.mod_etankhealthmult))
+                draw_sprite(sGUIETank, 0, (0 + etankxoff + 90), 10)
         }
     }
     draw_set_font(global.guifont2)
@@ -309,39 +309,39 @@ if (global.classicmode == 0 && global.opshowhud)
             draw_background(bgGUIMsl, xoff, 0)
         else
             draw_background(bgGUISmsl, xoff, 0)
-        draw_text(((0 + xoff) + 19), 7, string(global.missiles))
+        draw_text((0 + xoff + 19), 7, string(global.missiles))
         mslspr = sGUIMissile
         if global.icemissiles
             mslspr = sGUIIceMissile
         if (global.opmslstyle == 0)
         {
             if (global.currentweapon != 1 || oCharacter.state == 23 || oCharacter.state == 24 || oCharacter.state == 27 || oCharacter.state == 54 || oCharacter.state == 55 || oCharacter.sjball)
-                draw_sprite(mslspr, 0, ((0 + xoff) + 1), 4)
+                draw_sprite(mslspr, 0, (0 + xoff + 1), 4)
             if (global.currentweapon == 1 && oCharacter.state != 23 && oCharacter.state != 24 && oCharacter.state != 27 && oCharacter.state != 54 && oCharacter.state != 55 && oCharacter.sjball == 0)
             {
                 if (oCharacter.armmsl == 0)
-                    draw_sprite(mslspr, 1, ((0 + xoff) + 1), 4)
+                    draw_sprite(mslspr, 1, (0 + xoff + 1), 4)
                 if (oCharacter.armmsl == 1)
-                    draw_sprite(mslspr, 2, ((0 + xoff) + 1), 4)
+                    draw_sprite(mslspr, 2, (0 + xoff + 1), 4)
             }
         }
         if (global.opmslstyle == 1)
         {
             if (global.currentweapon == 1)
-                draw_sprite(mslspr, 1, ((0 + xoff) + 1), 4)
+                draw_sprite(mslspr, 1, (0 + xoff + 1), 4)
             else
-                draw_sprite(mslspr, 0, ((0 + xoff) + 1), 4)
+                draw_sprite(mslspr, 0, (0 + xoff + 1), 4)
         }
         if (global.opmslstyle == 2)
         {
             if (global.currentweapon != 1 || oCharacter.state == 23 || oCharacter.state == 24 || oCharacter.state == 27 || oCharacter.state == 54 || oCharacter.state == 55 || oCharacter.sjball)
-                draw_sprite(mslspr, 0, ((0 + xoff) + 1), 4)
+                draw_sprite(mslspr, 0, (0 + xoff + 1), 4)
             if (global.currentweapon == 1 && oCharacter.state != 23 && oCharacter.state != 24 && oCharacter.state != 27 && oCharacter.state != 54 && oCharacter.state != 55 && oCharacter.sjball == 0)
             {
                 if (oCharacter.armmsl == 0)
-                    draw_sprite(mslspr, 1, ((0 + xoff) + 1), 4)
+                    draw_sprite(mslspr, 1, (0 + xoff + 1), 4)
                 if (oCharacter.armmsl == 1)
-                    draw_sprite(mslspr, 2, ((0 + xoff) + 1), 4)
+                    draw_sprite(mslspr, 2, (0 + xoff + 1), 4)
             }
         }
         if (global.maxmissiles >= 100)
@@ -424,7 +424,7 @@ if (global.classicmode == 0 && global.opshowhud)
         if global.saxmode
         {
             draw_sprite(sPBombCooldownOverlay, 0, (xoff + 2), 17)
-            scaleMult = (global.pbombCooldown / global.pbombCooldownMax)
+            scaleMult = global.pbombCooldown / global.pbombCooldownMax
             if (global.pbombs != 0)
                 draw_sprite_ext(sPBombCooldownFull, 0, (xoff + 2), 17, min(scaleMult, 1), 1, 0, c_white, 1)
         }
@@ -439,12 +439,12 @@ if (global.classicmode == 0 && global.opshowhud)
                 {
                     arrList = ds_list_find_value(global.idList, f)
                     ID = arrList[0, 0]
-                    _x = (10 * floor((f / 2)))
-                    _y = (10 * (f % 2))
+                    _x = 10 * (floor(f / 2))
+                    _y = 10 * (f % 2)
                     if (ID == global.clientID)
-                        draw_sprite(oControl.MultitroidIcon, (ID - 1), ((240 - _x) + widescreen_space), (5 + _y))
+                        draw_sprite(oControl.MultitroidIcon, (ID - 1), (240 - _x + widescreen_space), (5 + _y))
                     else
-                        draw_sprite(oControl.MultitroidIconDark, (ID - 1), ((240 - _x) + widescreen_space), (5 + _y))
+                        draw_sprite(oControl.MultitroidIconDark, (ID - 1), (240 - _x + widescreen_space), (5 + _y))
                 }
             }
             else if (ds_list_size(global.idList) == 1 || ds_list_size(global.idList) == 0)
@@ -468,30 +468,30 @@ if (global.classicmode == 0 && global.opshowhud)
         draw_set_halign(fa_right)
         draw_set_alpha(0.39215686274509803)
         draw_set_color(c_black)
-        xoffNew = (xoff - 45)
-        draw_rectangle((xoffNew + oControl.widescreen_space), 0, ((xoff - 1) + oControl.widescreen_space), 31, false)
+        xoffNew = xoff - 45
+        draw_rectangle((xoffNew + oControl.widescreen_space), 0, (xoff - 1 + oControl.widescreen_space), 31, false)
         draw_set_alpha(0.7843137254901961)
-        draw_rectangle(((xoffNew + 3) + oControl.widescreen_space), 3, ((xoff - 3) + oControl.widescreen_space), 28, false)
+        draw_rectangle((xoffNew + 3 + oControl.widescreen_space), 3, (xoff - 3 + oControl.widescreen_space), 28, false)
         draw_set_alpha(1)
         draw_set_color(c_white)
         draw_set_halign(fa_left)
-        draw_sprite(global.scannerSprite, global.scannerIndex, ((xoffNew + 4) + oControl.widescreen_space), 4)
+        draw_sprite(global.scannerSprite, global.scannerIndex, (xoffNew + 4 + oControl.widescreen_space), 4)
         if (!global.juggActive)
         {
-            draw_sprite(sXPowerBar, 0, ((xoffNew - 4) + oControl.widescreen_space), 32)
-            draw_sprite(sXPowerTanks, global.damageMult, ((xoffNew + 75) + oControl.widescreen_space), 40)
+            draw_sprite(sXPowerBar, 0, (xoffNew - 4 + oControl.widescreen_space), 32)
+            draw_sprite(sXPowerTanks, global.damageMult, (xoffNew + 75 + oControl.widescreen_space), 40)
             if (global.damageMult == 4)
-                draw_sprite_ext(sXPowerMeter, 3, ((xoffNew + 97) + oControl.widescreen_space), 33, -99, 1, 0, c_white, 1)
+                draw_sprite_ext(sXPowerMeter, 3, (xoffNew + 97 + oControl.widescreen_space), 33, -99, 1, 0, c_white, 1)
             else
-                draw_sprite_ext(sXPowerMeter, global.damageMult, ((xoffNew + 97) + oControl.widescreen_space), 33, (-(((global.damageMult * 100) % 100))), 1, 0, c_white, 1)
+                draw_sprite_ext(sXPowerMeter, global.damageMult, (xoffNew + 97 + oControl.widescreen_space), 33, (-(((global.damageMult * 100) % 100))), 1, 0, c_white, 1)
         }
         else
         {
             shakeX = irandom_range(-1, 1)
             shakeY = irandom_range(0, 1)
-            draw_sprite(sXPowerBar, 1, (((xoffNew - 4) + oControl.widescreen_space) + shakeX), (30 + shakeY))
-            draw_sprite(sXPowerTanks, 5, (((xoffNew + 75) + oControl.widescreen_space) + shakeX), (38 + shakeY))
-            draw_sprite_ext(sXPowerMeter, 3, (((xoffNew + 97) + oControl.widescreen_space) + shakeX), (31 + shakeY), -99, 1, 0, c_white, 1)
+            draw_sprite(sXPowerBar, 1, (xoffNew - 4 + oControl.widescreen_space + shakeX), (30 + shakeY))
+            draw_sprite(sXPowerTanks, 5, (xoffNew + 75 + oControl.widescreen_space + shakeX), (38 + shakeY))
+            draw_sprite_ext(sXPowerMeter, 3, (xoffNew + 97 + oControl.widescreen_space + shakeX), (31 + shakeY), -99, 1, 0, c_white, 1)
         }
         lowestDist = 1000
         enemyCount = 0
@@ -499,8 +499,8 @@ if (global.classicmode == 0 && global.opshowhud)
         {
             arrData = ds_list_find_value(oClient.posData, i)
             ID = arrData[0]
-            xDiff = (oClient.posX - arrData[1])
-            yDiff = (oClient.posY - arrData[2])
+            xDiff = oClient.posX - arrData[1]
+            yDiff = oClient.posY - arrData[2]
             sax = arrData[3]
             spectator = arrData[5]
             playerState = arrData[6]
@@ -582,30 +582,31 @@ if (global.classicmode == 0 && global.opshowhud)
                 if (global.metdead[i] == 1)
                     metcount += 1
             }
-            draw_background(bgSamCount, ((xoff - 20) + widescreen_space), 4)
+            draw_background(bgSamCount, (xoff - 20 + widescreen_space), 4)
             if (global.samCount < global.samsAlive)
                 global.samsAlpha = 1
-            draw_background_ext(bgSamCountRed, ((xoff - 20) + widescreen_space), 4, 1, 1, 0, c_white, global.samsAlpha)
-            draw_text(((xoff - 18) + widescreen_space), 21, to_string_lz(global.samCount))
+            draw_background_ext(bgSamCountRed, (xoff - 20 + widescreen_space), 4, 1, 1, 0, c_white, global.samsAlpha)
+            draw_text((xoff - 18 + widescreen_space), 21, to_string_lz(global.samCount))
             global.samsAlpha -= 0.016
         }
         if (global.saxmode && (global.MetCount - metcount) > 0)
         {
-            draw_background(bgGUIMetCountBG3, ((xoff + 4) + widescreen_space), 4)
+            draw_background(bgGUIMetCountBG3, (xoff + 4 + widescreen_space), 4)
+            // TODO: replace font with sGUIFont2 with sGUTFont3 which has the RGB color FDEC08 baked into it
             draw_set_color(c_white)
-            draw_text(((xoff + 6) + widescreen_space), 21, to_string_lz((global.MetCount - metcount)))
+            draw_text((xoff + 6 + widescreen_space), 21, to_string_lz(global.MetCount - metcount))
         }
         else if (global.ophudshowmetrcount == 1)
         {
             draw_set_color(c_white)
-            draw_background(bgGUIMetCountBG1, ((xoff + 4) + widescreen_space), 4)
-            draw_text(((xoff + 6) + widescreen_space), 21, to_string_lz(global.monstersarea))
+            draw_background(bgGUIMetCountBG1, (xoff + 4 + widescreen_space), 4)
+            draw_text((xoff + 6 + widescreen_space), 21, to_string_lz(global.monstersarea))
         }
         else if (global.ophudshowmetrcount == 2)
         {
             draw_set_color(c_white)
-            draw_background(bgGUIMetCountBG2, ((xoff + 4) + widescreen_space), 4)
-            draw_text(((xoff + 6) + widescreen_space), 21, to_string_lz(global.monstersleft))
+            draw_background(bgGUIMetCountBG2, (xoff + 4 + widescreen_space), 4)
+            draw_text((xoff + 6 + widescreen_space), 21, to_string_lz(global.monstersleft))
         }
         draw_set_color(c_white)
     }
@@ -617,8 +618,8 @@ if (global.classicmode == 0 && global.opshowhud)
             for (i = 0; i < ds_list_size(oClient.posData); i++)
             {
                 arrData = ds_list_find_value(oClient.posData, i)
-                xDiff = (oClient.posX - arrData[1])
-                yDiff = (oClient.posY - arrData[2])
+                xDiff = oClient.posX - arrData[1]
+                yDiff = oClient.posY - arrData[2]
                 sax = arrData[3]
                 spectator = arrData[5]
                 playerState = arrData[6]
@@ -628,17 +629,18 @@ if (global.classicmode == 0 && global.opshowhud)
                     if (!sax)
                     {
                         if (spectator && global.sax)
-                            exit
+                        {
+                        }
                         if (spectator && (!global.sax))
                         {
                             if (abs(xDiff) <= 2 && abs(yDiff) <= 1)
-                                draw_sprite_ext(sSpectatorIcon, 0, (((276 + widescreen_space) + 16) - (xDiff * 8)), (12 - (yDiff * 8)), 1, 1, direction, c_white, oControl.malpha)
+                                draw_sprite_ext(sSpectatorIcon, 0, (276 + widescreen_space + 16 - xDiff * 8), (12 - yDiff * 8), 1, 1, direction, c_white, oControl.malpha)
                         }
                         else if (abs(xDiff) <= 2 && abs(yDiff) <= 1)
-                            draw_sprite_ext(sFusionIcon, 0, (((276 + widescreen_space) + 16) - (xDiff * 8)), (12 - (yDiff * 8)), 1, 1, direction, c_white, oControl.malpha)
+                            draw_sprite_ext(sFusionIcon, 0, (276 + widescreen_space + 16 - xDiff * 8), (12 - yDiff * 8), 1, 1, direction, c_white, oControl.malpha)
                     }
                     else if (abs(xDiff) <= 2 && abs(yDiff) <= 1)
-                        draw_sprite_ext(sMultitroidMapIconMiepee, 0, (((276 + widescreen_space) + 16) - (xDiff * 8)), (12 - (yDiff * 8)), 1, 1, direction, c_white, oControl.malpha)
+                        draw_sprite_ext(sMultitroidMapIconMiepee, 0, (276 + widescreen_space + 16 - xDiff * 8), (12 - yDiff * 8), 1, 1, direction, c_white, oControl.malpha)
                 }
                 else if (abs(xDiff) <= 2 && abs(yDiff) <= 1)
                 {
@@ -649,12 +651,12 @@ if (global.classicmode == 0 && global.opshowhud)
                         {
                             if combatState
                             {
-                                draw_sprite_ext(oControl.MultitroidMapIcon, (arrData[0] - 1), (((276 + widescreen_space) + 16) - (xDiff * 8)), (12 - (yDiff * 8)), 1, 1, direction, c_white, oControl.malpha)
+                                draw_sprite_ext(oControl.MultitroidMapIcon, (arrData[0] - 1), (276 + widescreen_space + 16 - xDiff * 8), (12 - yDiff * 8), 1, 1, direction, c_white, oControl.malpha)
                                 playerVisible = 1
                             }
                         }
                         if ((!playerVisible) && global.sax == sax)
-                            draw_sprite_ext(oControl.MultitroidMapIcon, (arrData[0] - 1), (((276 + widescreen_space) + 16) - (xDiff * 8)), (12 - (yDiff * 8)), 1, 1, direction, c_white, oControl.malpha)
+                            draw_sprite_ext(oControl.MultitroidMapIcon, (arrData[0] - 1), (276 + widescreen_space + 16 - xDiff * 8), (12 - yDiff * 8), 1, 1, direction, c_white, oControl.malpha)
                     }
                 }
             }
