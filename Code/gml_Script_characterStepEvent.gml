@@ -1667,11 +1667,19 @@ if (state == GFELEVATOR)
     if (statetime == 20)
     {
         ele_fx = instance_create(x, y, oGFElevatorFX)
+        elev_dir = oGFElevator.elev_dir
         with (oGFElevator)
             event_user(0)
     }
     if (statetime > 20)
     {
+        if (yVel == 0)
+        {
+            if (elev_dir == 0)
+                oCharacter.yVel = 1
+            else
+                oCharacter.yVel = -1
+        }
         if (!instance_exists(oGFElevatorFX))
             ele_fx = instance_create(x, y, oGFElevatorFX)
         ele_fx.x = x
