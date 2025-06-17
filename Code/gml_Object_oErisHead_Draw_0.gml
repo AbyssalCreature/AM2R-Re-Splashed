@@ -1,6 +1,9 @@
 var jawdir;
-if (oControl.mod_fusion == 1)
-    pal_swap_set(oControl.ErisPalette, 1, 0)
+if (oControl.mod_fusion == 1 && global.shaders_compiled && os_type != os_android)
+{
+    if (oControl.ErisPalette != -1)
+        pal_swap_set(oControl.ErisPalette, 1, 0)
+}
 jawdir = (direction + 270)
 if (sign(image_yscale) == -1)
     jawdir -= 180

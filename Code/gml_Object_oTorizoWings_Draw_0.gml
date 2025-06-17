@@ -1,5 +1,8 @@
-if (oControl.mod_fusion == 1)
-    pal_swap_set(oControl.TorizoPalette, 1, 0)
+if (oControl.mod_fusion == 1 && global.shaders_compiled && os_type != os_android)
+{
+    if (oControl.TorizoPalette != -1)
+        pal_swap_set(oControl.TorizoPalette, 1, 0)
+}
 if (state == 0)
 {
     draw_sprite_ext(sTorizoWingsC, image_index, (x + (offset1 * tf)), y, (1 * oTorizo2.facing), 1, 0, -1, 1)

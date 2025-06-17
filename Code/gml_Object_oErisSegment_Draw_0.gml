@@ -1,5 +1,8 @@
-if (oControl.mod_fusion == 1)
-    pal_swap_set(oControl.ErisPalette, 1, 0)
+if (oControl.mod_fusion == 1 && global.shaders_compiled && os_type != os_android)
+{
+    if (oControl.ErisPalette != -1)
+        pal_swap_set(oControl.ErisPalette, 1, 0)
+}
 draw_self()
 if (flashing > 0 || (state == 1 && statetime > 240))
 {

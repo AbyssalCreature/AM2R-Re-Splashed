@@ -1,5 +1,8 @@
-if (oControl.mod_fusion == 1)
-    pal_swap_set(oControl.GenesisPalette, 1, 0)
+if (oControl.mod_fusion == 1 && global.shaders_compiled && os_type != os_android)
+{
+    if (oControl.GenesisPalette != -1)
+        pal_swap_set(oControl.GenesisPalette, 1, 0)
+}
 if (!flashing)
 {
     if (turning == 0)
