@@ -1,5 +1,8 @@
-if (oControl.mod_fusion == 1)
-    pal_swap_set(oControl.GuardianPalette, 1, 0)
+if (oControl.mod_fusion == 1 && global.shaders_compiled && os_type != os_android)
+{
+    if (oControl.GuardianPalette != -1)
+        pal_swap_set(oControl.GuardianPalette, 1, 0)
+}
 action_inherited()
 if (state != 0 && state != 100)
 {

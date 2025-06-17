@@ -1,16 +1,32 @@
 switch mysprite
 {
     case 1951:
-        pal_swap_set(oControl.ArachnusPalette, 1, 0)
+        if (oControl.mod_fusion == 1 && global.shaders_compiled && os_type != os_android)
+        {
+            if (oControl.ArachnusPalette != -1)
+                pal_swap_set(oControl.ArachnusPalette, 1, 0)
+        }
         break
     case 1961:
-        pal_swap_set(oControl.TorizoPalette, 1, 0)
+        if (oControl.mod_fusion == 1 && global.shaders_compiled && os_type != os_android)
+        {
+            if (oControl.TorizoPalette != -1)
+                pal_swap_set(oControl.TorizoPalette, 1, 0)
+        }
         break
     case 1957:
-        pal_swap_set(oControl.ErisPalette, 1, 0)
+        if (oControl.mod_fusion == 1 && global.shaders_compiled && os_type != os_android)
+        {
+            if (oControl.ErisPalette != -1)
+                pal_swap_set(oControl.ErisPalette, 1, 0)
+        }
         break
     case 1950:
-        pal_swap_set(oControl.GenesisPalette, 1, 0)
+        if (oControl.mod_fusion == 1 && global.shaders_compiled && os_type != os_android)
+        {
+            if (oControl.GenesisPalette != -1)
+                pal_swap_set(oControl.GenesisPalette, 1, 0)
+        }
         break
     default:
 

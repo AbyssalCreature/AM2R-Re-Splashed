@@ -1,5 +1,8 @@
-if (oControl.mod_fusion == 1)
-    pal_swap_set(oControl.ArachnusPalette, 1, 0)
+if (oControl.mod_fusion == 1 && global.shaders_compiled && os_type != os_android)
+{
+    if (oControl.ArachnusPalette != -1)
+        pal_swap_set(oControl.ArachnusPalette, 1, 0)
+}
 if (state == 4 || state == 9)
 {
     draw_sprite_ext(sArachnusBall, -1, x, (y - 16), facing, 1, ((-angle) * facing), make_color_rgb(255, (255 - (angry / 1.5)), (255 - (angry / 1.5))), 1)
