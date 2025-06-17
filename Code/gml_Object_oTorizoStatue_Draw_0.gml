@@ -1,5 +1,8 @@
-if (oControl.mod_fusion == 1)
-    pal_swap_set(oControl.TorizoPalette, 1, 0)
+if (oControl.mod_fusion == 1 && global.shaders_compiled && os_type != os_android)
+{
+    if (oControl.TorizoPalette != -1)
+        pal_swap_set(oControl.TorizoPalette, 1, 0)
+}
 if (state == 3)
     draw_sprite(sTorizoIntro, 0, x, y)
 if (state == 4)
