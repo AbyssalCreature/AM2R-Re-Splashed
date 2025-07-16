@@ -2,7 +2,7 @@ oControl.mod_fusion = 0
 global.curropt = 1
 lastitem = 2
 active = 0
-alarm[0] = 5
+alarm[0] = -1
 h = 0
 targeth = 33
 fadein = 1
@@ -26,7 +26,7 @@ if (global.saveslot == 2)
     y = 148
 }
 draw_set_font(global.fontGUI2)
-w = (max(string_width(d0str), string_width(d1str), string_width(d2str)) + 10)
+w = (max(string_width(d0str), string_width(d1str), string_width(d2str))) + 10
 if oControl.mod_insanitymode
     mycolor = make_color_rgb(255, 36, 36)
 else

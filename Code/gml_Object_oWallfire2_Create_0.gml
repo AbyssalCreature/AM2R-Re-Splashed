@@ -3,7 +3,7 @@ canbeX = 0
 myhealth = 15
 if (oControl.mod_randomgamebool == 1 && (global.wbeam == 0 || global.sbeam == 0 || global.pbeam == 0))
 {
-    freezehp = floor((myhealth * 0.15))
+    freezehp = floor(myhealth * 0.15)
     if (freezehp < 1)
         freezehp = 1
 }

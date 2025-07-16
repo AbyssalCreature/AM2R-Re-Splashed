@@ -49,6 +49,13 @@ else if (global.shaders_compiled && instance_exists(oClient) && oClient.connecte
     else
         pal_swap_set(oControl.MultitroidPalette, global.clientID, 0)
 }
+else if (global.shaders_compiled && oControl.preferredcolor != 17 && oControl.palette != 3)
+{
+    if oControl.mod_fusion
+        pal_swap_set(oControl.MultitroidPaletteFusion, oControl.preferredcolor, 0)
+    else
+        pal_swap_set(oControl.MultitroidPalette, oControl.preferredcolor, 0)
+}
 if (global.mosaic || global.reform)
 {
     draw_sprite_pixelated(oCharacter.sprite_index, oCharacter.image_index, argument1, argument2, argument10, 1, image_angle, c_white, 1, oCharacter.sizeX, oCharacter.sizeY, 64)

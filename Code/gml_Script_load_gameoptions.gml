@@ -8,8 +8,8 @@ global.ophudshowhints = 1
 global.ophudshowmedalmsg = 1
 global.ophudshowlogmsg = 1
 global.oplowhpstyle = 0
-global.opsoundvolume = 100
-global.opmusicvolume = 100
+global.opsoundvolume = 20
+global.opmusicvolume = 20
 global.opsoundfx = 1
 global.opaimstyle = 1
 global.opmslstyle = 1
@@ -23,19 +23,20 @@ global.opexitkeyenable = 0
 global.opdebug = 0
 global.opwritelog = 0
 global.compatibilitymode = 0
-global.sensitivitymode = 0
+global.sensitivitymode = 1
 global.widescreen_enabled = 1
+global.opcorexsensitivity = 1
 oControl.mod_insanitymode = 0
 oControl.touch_scale = 4
 oControl.mod_collecteditemsmap = 0
 set_default_keys()
 set_default_joypad()
 set_default_xjoypad()
-if (!(file_exists(((working_directory + "/multitroid/") + "config.ini"))))
+if (!(file_exists(working_directory + "/multitroid/" + "config.ini")))
     save_gameoptions()
-if file_exists(((working_directory + "/multitroid/") + "config.ini"))
+if file_exists(working_directory + "/multitroid/" + "config.ini")
 {
-    ini_open(((working_directory + "/multitroid/") + "config.ini"))
+    ini_open(working_directory + "/multitroid/" + "config.ini")
     global.opfullscreen = ini_read_real("Screen", "Fullscreen", 0)
     global.opscale = ini_read_real("Screen", "Scale", 0)
     global.opvsync = ini_read_real("Screen", "VSync", 0)
@@ -113,6 +114,9 @@ if file_exists(((working_directory + "/multitroid/") + "config.ini"))
     oControl.mod_earlybaby = ini_read_real("Extras", "EarlyBaby", 0)
     oControl.mod_lowhealthwarning = ini_read_real("Extras", "LowHealthWarning", 1)
     oControl.msr_fusionsuit = ini_read_real("Extras", "FusionSuitMSR", 0)
+    oControl.hudoption = ini_read_real("Extras", "UIStyle", 2)
+    oControl.guicolor = ini_read_real("Extras", "UIColor", 1)
+    oControl.gamehud = ini_read_real("Extras", "UIGame", 1)
     oControl.mod_monstersextremecheck = ini_read_real("Extras", "ExtremeLabMonsters", 0)
     oControl.mod_IGT = ini_read_real("Extras", "DisplayIGT", 0)
     global.opjoybtn_padu = ini_read_real("Control", "JoystickDPadUp", 36)
@@ -134,6 +138,7 @@ if file_exists(((working_directory + "/multitroid/") + "config.ini"))
     oControl.widescreen = global.widescreen_enabled
     oControl.mod_insanitymode = ini_read_real("GameplayMenu", "InsanityMode", 0)
     oControl.mod_collecteditemsmap = ini_read_real("Extras", "MapItemsCollected", 0)
+    global.opcorexsensitivity = ini_read_real("Screen", "CoreXItemDisplay", 1)
     if (oControl.mod_insanitymode == 1)
     {
         oControl.mod_septoggs_bombjumps_easy = 0

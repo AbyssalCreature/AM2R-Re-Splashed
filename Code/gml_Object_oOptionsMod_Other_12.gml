@@ -2,6 +2,7 @@ var color, _sequence, _showname;
 color = "random"
 _sequence = "synced"
 _showname = "enabled"
+name = string_replace_all(name, "#", "")
 if oControl.censorip
 {
     if init
@@ -76,7 +77,7 @@ else if (oControl.palette == 2)
     switch oControl.preferredcolor
     {
         case 1:
-            op[num_color].optext = "DodoBirb"
+            op[num_color].optext = "BigBradley"
             break
         case 2:
             op[num_color].optext = "AbyssalCreature"
@@ -97,7 +98,7 @@ else if (oControl.palette == 2)
             op[num_color].optext = "Zed"
             break
         case 8:
-            op[num_color].optext = "Bastion"
+            op[num_color].optext = "Snu"
             break
         case 9:
             op[num_color].optext = "Variable"
@@ -112,7 +113,7 @@ else if (oControl.palette == 2)
             op[num_color].optext = "Mimolette"
             break
         case 13:
-            op[num_color].optext = "Pharaohs Curse"
+            op[num_color].optext = "Nano-Tec_2a"
             break
         case 14:
             op[num_color].optext = "Xander"
@@ -272,7 +273,7 @@ switch global.saxmode
         break
 }
 
-ini_open((working_directory + "/multitroid/mod_settings.ini"))
+ini_open(working_directory + "/resplashed/mod_settings.ini")
 ini_write_string("ModSettings", "ipaddress", ip)
 ini_write_real("ModSettings", "port", real(port))
 ini_write_string("ModSettings", "displayname", name)

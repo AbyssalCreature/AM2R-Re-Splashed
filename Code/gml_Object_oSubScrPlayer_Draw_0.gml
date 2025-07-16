@@ -1,4 +1,4 @@
-var drawX, drawY, suit, hijump, ice, plasma, wave, spazer, fusion, suitframe;
+var drawX, drawY, suit, hijump, ice, plasma, wave, spazer, fusion, suitframe, subscrmultispr;
 draw_set_alpha(1)
 drawX = 7
 drawY = 53
@@ -9,7 +9,12 @@ plasma = ""
 wave = ""
 spazer = ""
 fusion = ""
+subscrmultispr = sSubScrPlayer
 suitframe = 0
+if (global.shaders_compiled && instance_exists(oClient) && oClient.connected && oControl.useselfpalette && oControl.preferredcolor != 17 && oControl.palette != 3 && os_type != os_android)
+    pal_swap_set(oControl.MultitroidSubScr, global.clientID, 0)
+else if (global.shaders_compiled && oControl.useselfpalette && oControl.preferredcolor != 17 && oControl.palette != 3 && os_type != os_android)
+    pal_swap_set(oControl.MultitroidSubScr, oControl.preferredcolor, 0)
 if (oControl.mod_fusion == 0)
 {
     if (global.currentsuit == 0)
@@ -56,6 +61,11 @@ if (global.currentsuit == 2)
     suit = "G"
 if (global.ibeam && oControl.mod_fusion)
     suit = "O"
-cannon = asset_get_index(((((((("s" + fusion) + suit) + "Cannon") + spazer) + wave) + plasma) + ice))
-draw_sprite_ext(sSubScrPlayer, suitframe, x, y, 1, 1, 0, -1, oSubscreenMenu.ealpha)
-draw_sprite_ext(cannon, 0, (x + drawX - 51), (y + drawY), 1, 1, 0, -1, oSubscreenMenu.ealpha)
+if (global.shaders_compiled && instance_exists(oClient) && oClient.connected && oControl.useselfpalette && oControl.preferredcolor != 17 && oControl.palette != 3)
+    subscrmultispr = sSubScrPlayerPal
+else if (global.shaders_compiled && oControl.useselfpalette && oControl.preferredcolor != 17 && oControl.palette != 3)
+    subscrmultispr = 2161
+cannon = asset_get_index("s" + fusion + suit + "Cannon" + spazer + wave + plasma + ice)
+draw_sprite_ext(subscrmultispr, suitframe, x, y, 1, 1, 0, -1, oSubscreenMenu.ealpha)
+draw_sprite_ext(cannon, 0, (x + drawX), (y + drawY), 1, 1, 0, -1, oSubscreenMenu.ealpha)
+shader_reset()

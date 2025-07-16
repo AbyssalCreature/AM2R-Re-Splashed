@@ -16,9 +16,9 @@ if (state == 0)
     image_xscale = lastYscale
     state = 1
     statetime = 0
-    xoffset = (sprite_get_xoffset(lastSprite) - mean(sprite_get_bbox_left(lastSprite), sprite_get_bbox_right(lastSprite)))
+    xoffset = sprite_get_xoffset(lastSprite) - (mean(sprite_get_bbox_left(lastSprite), sprite_get_bbox_right(lastSprite)))
     lastXPos -= xoffset
-    yoffset = (sprite_get_yoffset(lastSprite) - mean(sprite_get_bbox_top(lastSprite), sprite_get_bbox_bottom(lastSprite)))
+    yoffset = sprite_get_yoffset(lastSprite) - (mean(sprite_get_bbox_top(lastSprite), sprite_get_bbox_bottom(lastSprite)))
     lastYPos -= yoffset
     if (frozenAngle != 0)
         drawAngle = frozenAngle
@@ -77,13 +77,13 @@ if (state == 2)
             angle = random(360)
             if (oCharacter.chargebeam == 0)
             {
-                orbitX = (xstart + lengthdir_x(32, angle))
-                orbitY = (ystart + lengthdir_y(32, angle))
+                orbitX = xstart + (lengthdir_x(32, angle))
+                orbitY = ystart + (lengthdir_y(32, angle))
             }
             else if (oCharacter.chargebeam >= 1)
             {
                 orbitX = oCharacter.x
-                orbitY = (oCharacter.y - (oCharacter.sprite_height / 2))
+                orbitY = oCharacter.y - oCharacter.sprite_height / 2
             }
             orbitCounter = irandom_range(15, 25)
         }
@@ -166,14 +166,14 @@ if (state == 5)
             image_xscale = lastFacing
             image_index = 0
             depth = lastDepth
-            lastEnemyX = (x + xoffset)
-            lastEnemyY = (y + yoffset)
+            lastEnemyX = x + xoffset
+            lastEnemyY = y + yoffset
         }
         if (statetime >= 81)
         {
             enemy = instance_create((lastXPos + xoffset), (lastYPos + yoffset), lastEnemy)
             enemy.facing = lastFacing
-            enemy.myhealth = (enemy.myhealth / 2)
+            enemy.myhealth = enemy.myhealth / 2
             enemy.timer = lastEnemyTimer
             enemy.rotspeed = lastEnemyRotspeed
             enemy.myspeed = lastEnemyMyspeed

@@ -413,6 +413,10 @@ if file_exists("mods/palettes/multitroid/map_icons/sFusionIcon.png")
     oControl.MultitroidFusionIcon = sprite_add("mods/palettes/multitroid/map_icons/sFusionIcon.png", 1, false, false, 0, 0)
 if file_exists("mods/palettes/multitroid/map_icons/sSAXIcon.png")
     oControl.MultitroidSAXIcon = sprite_add("mods/palettes/multitroid/map_icons/sSAXIcon.png", 1, false, false, 0, 0)
+if file_exists("mods/palettes/multitroid/subscrmultitroid.png")
+    oControl.MultitroidSubScrSpecial = sprite_add("mods/palettes/multitroid/subscrmultitroid.png", 1, false, false, 0, 0)
+if file_exists("mods/palettes/multitroid/hudguipalette.png")
+    oControl.hudpal = sprite_add("mods/palettes/multitroid/hudguipalette.png", 1, false, false, 0, 0)
 icon_sprite = 0
 icon_merge = sHPickupBig
 icon_merge2 = sMPickup

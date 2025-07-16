@@ -46,8 +46,8 @@ if inwater
         bubble = instance_create(x, y, oLBubble)
         if instance_exists(bubble)
         {
-            bubble.hspeed = (2 - random(4))
-            bubble.vspeed = (-0.1 - random(1))
+            bubble.hspeed = 2 - random(4)
+            bubble.vspeed = -0.1 - random(1)
         }
     }
 }

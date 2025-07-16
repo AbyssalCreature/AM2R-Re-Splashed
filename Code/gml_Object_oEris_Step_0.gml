@@ -80,7 +80,7 @@ if (state == 0)
     }
     if (boosting > 0)
         boosting--
-    if (statetime == (90 - (sign(boosting) * 90)))
+    if (statetime == (90 - sign(boosting) * 90))
     {
         state = nextstate
         statetime = 0
@@ -93,29 +93,29 @@ if (state == 1)
         event_user(1)
         tgt = 0
         y = 240
-        turnspeed = ((2 * speedmult) * 1.2)
+        turnspeed = 2 * speedmult * 1.2
         event_user(4)
     }
     if (statetime > 300)
         turnspeed += 0.1
-    targetx[0] = (startx + (160 * facing))
+    targetx[0] = startx + 160 * facing
     targety[0] = 304
-    targetx[1] = (startx + (320 * facing))
+    targetx[1] = startx + 320 * facing
     targety[1] = 416
-    targetx[2] = (startx + (480 * facing))
+    targetx[2] = startx + 480 * facing
     targety[2] = 304
-    targetx[3] = (startx + (320 * facing))
+    targetx[3] = startx + 320 * facing
     targety[3] = 144
-    targetx[4] = (startx + (160 * facing))
+    targetx[4] = startx + 160 * facing
     targety[4] = 300
-    targetx[5] = (startx + (-60 * facing))
+    targetx[5] = startx + -60 * facing
     targety[5] = 288
     if (tgt < 6)
     {
         if (stun == 0)
-            speed = (4 * speedmult)
+            speed = 4 * speedmult
         else
-            speed = (4 * speedmult)
+            speed = 4 * speedmult
     }
     if (tgt == 6 && (x < 0 || x > 640))
     {
@@ -134,29 +134,29 @@ if (state == 2)
         event_user(1)
         tgt = 0
         y = 144
-        turnspeed = ((2 * speedmult) * 1.2)
+        turnspeed = 2 * speedmult * 1.2
         event_user(4)
     }
-    if (statetime > (300 - (sign(boosting) * 150)))
+    if (statetime > (300 - sign(boosting) * 150))
         turnspeed += 0.1
-    targetx[0] = (startx + (160 * facing))
+    targetx[0] = startx + 160 * facing
     targety[0] = 144
-    targetx[1] = (startx + (448 * facing))
+    targetx[1] = startx + 448 * facing
     targety[1] = 416
-    targetx[2] = (startx + (576 * facing))
+    targetx[2] = startx + 576 * facing
     targety[2] = 368
-    targetx[3] = (startx + (528 * facing))
+    targetx[3] = startx + 528 * facing
     targety[3] = 112
-    targetx[4] = (startx + (160 * facing))
+    targetx[4] = startx + 160 * facing
     targety[4] = 432
-    targetx[5] = (startx + (160 * facing))
+    targetx[5] = startx + 160 * facing
     targety[5] = 416
-    targetx[6] = (startx + (-60 * facing))
+    targetx[6] = startx + -60 * facing
     targety[6] = 416
     if (tgt < 7 && (x < 0 || x > 640))
     {
         if (stun == 0)
-            speed = (4 * speedmult)
+            speed = 4 * speedmult
         else
             speed = 0
     }
@@ -178,31 +178,31 @@ if (state == 3)
         tgt = 0
         tgtx = oCharacter.x
         tgty = oCharacter.y
-        turnspeed = ((4 * speedmult) * 1.2)
+        turnspeed = 4 * speedmult * 1.2
         event_user(4)
     }
     if (statetime > 300)
         turnspeed += 0.1
-    targetx[0] = (startx + (80 * facing))
+    targetx[0] = startx + 80 * facing
     targety[0] = y
-    targetx[1] = (startx + (160 * facing))
-    targety[1] = (tgty - 64)
-    targetx[2] = (startx + (240 * facing))
-    targety[2] = (tgty + 64)
-    targetx[3] = (startx + (320 * facing))
-    targety[3] = (tgty - 64)
-    targetx[4] = (startx + (400 * facing))
-    targety[4] = (tgty + 64)
-    targetx[5] = (startx + (480 * facing))
-    targety[5] = (tgty - 64)
-    targetx[6] = (startx + (560 * facing))
+    targetx[1] = startx + 160 * facing
+    targety[1] = tgty - 64
+    targetx[2] = startx + 240 * facing
+    targety[2] = tgty + 64
+    targetx[3] = startx + 320 * facing
+    targety[3] = tgty - 64
+    targetx[4] = startx + 400 * facing
+    targety[4] = tgty + 64
+    targetx[5] = startx + 480 * facing
+    targety[5] = tgty - 64
+    targetx[6] = startx + 560 * facing
     targety[6] = 144
-    targetx[7] = (startx + (740 * facing))
+    targetx[7] = startx + 740 * facing
     targety[7] = 144
     if (tgt < 8 && (x < 0 || x > 640))
     {
         if (stun == 0)
-            speed = (4 * speedmult)
+            speed = 4 * speedmult
         else
             speed = 0
     }
@@ -223,27 +223,27 @@ if (state == 4)
         event_user(1)
         tgt = 0
         y = 240
-        turnspeed = ((4 * speedmult) * 1.2)
+        turnspeed = 4 * speedmult * 1.2
     }
     if (statetime > 300)
         turnspeed += 0.1
     if (tgt < 2 && point_distance(x, y, oCharacter.x, (oCharacter.y - 16)) > 120)
     {
         tgtx = oCharacter.x
-        tgty = (oCharacter.y - 16)
+        tgty = oCharacter.y - 16
     }
-    targetx[0] = (startx + (96 * facing))
+    targetx[0] = startx + 96 * facing
     targety[0] = 112
     targetx[1] = tgtx
     targety[1] = tgty
-    targetx[2] = (tgtx + lengthdir_x(64, image_angle))
-    targety[2] = (tgty + lengthdir_y(64, image_angle))
-    targetx[3] = (startx + (720 * facing))
+    targetx[2] = tgtx + (lengthdir_x(64, image_angle))
+    targety[2] = tgty + (lengthdir_y(64, image_angle))
+    targetx[3] = startx + 720 * facing
     targety[3] = 288
     if (tgt < 4)
     {
         if (stun == 0)
-            speed = (4 * speedmult)
+            speed = 4 * speedmult
         else
             speed = 0
     }
@@ -283,8 +283,8 @@ if (state == 100)
     {
         repeat (8)
         {
-            expl = instance_create((x + random_range(-16, 16)), (y + random_range(-16, 16)), oFXAnimSpark)
-            expl.image_speed = (0.3 + random(0.5))
+            expl = instance_create((x + (random_range(-16, 16))), (y + (random_range(-16, 16))), oFXAnimSpark)
+            expl.image_speed = 0.3 + random(0.5)
             expl.additive = 0
             expl.sprite_index = sExpl1
         }
