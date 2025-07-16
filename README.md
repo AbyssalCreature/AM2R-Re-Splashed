@@ -16,10 +16,11 @@ It is also meant to be a base "engine" (not really) for whoever wishes to use it
 
 ## Supported Versions
 
+- AM2R Multitroid v1.9.0 (v1.3.0 of Re-Splashed, Current)
+- AM2R Multiworld (Archipelago) v1.1 (v1.0.0 of Re-Splashed, ToBeUpdated)
 - Community Updates v1.5.5 (v1.0.0 of Re-Splashed, End of Life)
 - Unofficial Multitroid v1.6.2 (v1.0.0 of Re-Splashed, End of Life)
-- AM2R Multiworld (Archipelago) v1.1 (v1.0.0 of Re-Splashed, ToBeUpdated)
-- Unofficial Multitroid-U (UM-U) v1.8.1 (v1.2.0 of Re-Splashed)
+- Unofficial Multitroid-U (UM-U) v1.8.1 (v1.2.0 of Re-Splashed, End of Life)
 
 ## Additional Tracks
 #### As of v1.2.0, the following tracks are included in the mod:
