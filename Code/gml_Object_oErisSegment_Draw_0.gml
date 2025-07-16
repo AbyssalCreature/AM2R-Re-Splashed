@@ -15,7 +15,7 @@ if oErisHead.boosting
 {
     draw_set_blend_mode(bm_add)
     if (oErisHead.fxtimer == 0 || oErisHead.fxtimer == 1)
-        draw_sprite_ext(sprite_index, -1, x, y, image_xscale, image_yscale, image_angle, c_green, (1.1 + (oErisHead.fxtimer * 0.2)))
+        draw_sprite_ext(sprite_index, -1, x, y, image_xscale, image_yscale, image_angle, c_green, (1.1 + oErisHead.fxtimer * 0.2))
     if (oErisHead.fxtimer == 2 || oErisHead.fxtimer == 3)
     {
         repeat (2)

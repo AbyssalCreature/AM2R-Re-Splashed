@@ -31,7 +31,7 @@ repeat beams
         beam.depth = -1000
     }
     if global.ibeam
-        beam.alarm[0] = (1 + random(5))
+        beam.alarm[0] = 1 + random(5)
     if global.pbeam
         beam.alarm[1] = 1
     if (chargebeam >= 1)

@@ -1,8 +1,8 @@
 var rgb_green;
 draw_set_font(global.fontGUI2)
 w = string_width(text)
-rgb_green = make_colour_rgb(1, 142, 81)
-draw_rectangle_color((x + 2), (y - 1), ((x - w) - 3), (y + 8), rgb_green, c_black, c_black, rgb_green, 0)
+rgb_green = make_colour_rgb(0, 142, 80)
+draw_rectangle_color((x + 2), (y - 1), (x - w - 3), (y + 8), rgb_green, c_black, c_black, rgb_green, 0)
 draw_set_alpha(1)
 draw_set_halign(fa_right)
 draw_set_color(c_black)

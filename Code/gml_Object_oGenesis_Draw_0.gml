@@ -20,9 +20,9 @@ if flashing
     repeat (3)
     {
         if (turning == 0)
-            draw_sprite_ext(sprite_index, -1, x, y, facing, image_yscale, 0, image_blend, (image_alpha - (fxtimer * 0.25)))
+            draw_sprite_ext(sprite_index, -1, x, y, facing, image_yscale, 0, image_blend, (image_alpha - fxtimer * 0.25))
         else
-            draw_sprite_ext(sGenesisTurn, turnframe, x, y, facing, image_yscale, 0, image_blend, (image_alpha - (fxtimer * 0.25)))
+            draw_sprite_ext(sGenesisTurn, turnframe, x, y, facing, image_yscale, 0, image_blend, (image_alpha - fxtimer * 0.25))
     }
     draw_set_blend_mode(bm_normal)
 }

@@ -1,8 +1,8 @@
 var temp_randitem;
 repeat (8)
 {
-    expl = instance_create(((x - 16) + random(32)), (y - random(32)), oFXAnimSpark)
-    expl.image_speed = (0.3 + random(0.5))
+    expl = instance_create((x - 16 + random(32)), (y - random(32)), oFXAnimSpark)
+    expl.image_speed = 0.3 + random(0.5)
     expl.additive = 0
     expl.sprite_index = sExpl1
 }

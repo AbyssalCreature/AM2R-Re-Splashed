@@ -25,7 +25,7 @@ if (global.saveslot == 2)
     y = 148
 }
 draw_set_font(global.fontGUI2)
-w = (max(string_width(continuestr), string_width(copystr), string_width(erasestr)) + 10)
+w = (max(string_width(continuestr), string_width(copystr), string_width(erasestr))) + 10
 if oControl.mod_insanitymode
     mycolor = make_color_rgb(255, 36, 36)
 else

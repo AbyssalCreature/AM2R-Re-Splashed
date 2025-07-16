@@ -10,7 +10,7 @@ if (global.saxmode && global.countdowncontrol > 0)
     chStepSetSprite()
     exit
 }
-if (global.playerhealth <= 0 && global.sax && oCharacter.sprite_index != sCoreXSAX && oCharacter.sprite_index != sCoreXSAXSpawn)
+if (global.playerhealth <= 0 && global.sax && oCharacter.sprite_index != sCoreXSAX)
     global.playerhealth = 1
 if (global.saxmode && global.sax && global.playerhealth == 1 && (!global.spectator) && global.lobbyLocked)
 {
@@ -112,8 +112,8 @@ if global.spectator
             timer_y++
             if (timer_y > ((2 * pi) / frequency_y))
                 timer_y -= ((2 * pi) / frequency_y)
-            xx = (sin((timer_x * frequency_x)) * amplitude_x)
-            yy = (sin((timer_y * frequency_y)) * amplitude_y)
+            xx = (sin(timer_x * frequency_x)) * amplitude_x
+            yy = (sin(timer_y * frequency_y)) * amplitude_y
             moveTo(xx, yy)
         }
         maxSpectatorLeftSpeed = 0
@@ -200,8 +200,8 @@ if global.spectator
             targetAbsorbX = global.absorbRelativeX
             targetAbsorbY = global.absorbRelativeY
             relativeSpriteHeight = global.absorbSpriteHeight
-            relativeX = (x - global.absorbRelativeX)
-            relativeY = (y - (global.absorbRelativeY - relativeSpriteHeight))
+            relativeX = x - global.absorbRelativeX
+            relativeY = y - (global.absorbRelativeY - relativeSpriteHeight)
             PlaySoundMono(sndAbsorbX)
             with (instance_create(relativeX, (relativeY - relativeSpriteHeight), oAbsorbX))
                 core = 1
@@ -239,7 +239,7 @@ if global.spectator
         }
         if (absorbTime > 2 && global.beingAbsorbed)
         {
-            if ((!global.absorbDone) && (!(approximatelyZero(abs((x - targetAbsorbX))))) && (!(approximatelyZero(abs((y - targetAbsorbY))))))
+            if ((!global.absorbDone) && (!(approximatelyZero(abs(x - targetAbsorbX)))) && (!(approximatelyZero(abs(y - targetAbsorbY)))))
             {
                 x = round(lerp(x, targetAbsorbX, 0.1))
                 y = round(lerp(y, (targetAbsorbY - relativeSpriteHeight), 0.1))
@@ -311,18 +311,18 @@ if global.spectator
                                     gotoRoom = instance_nearest(x, y, oGotoRoom)
                                     if (gotoRoom.direction == 0 || gotoRoom.direction == 180)
                                     {
-                                        global.offsety = (y - gotoRoom.y)
+                                        global.offsety = y - gotoRoom.y
                                         global.offsetx = 0
                                     }
                                     if (gotoRoom.direction == 90 || gotoRoom.direction == 270)
                                     {
-                                        global.offsetx = (x - gotoRoom.x)
+                                        global.offsetx = x - gotoRoom.x
                                         global.offsety = 0
                                     }
                                     global.targetx = gotoRoom.targetx
                                     global.targety = gotoRoom.targety
-                                    global.transitionx = (gotoRoom.transitionx + global.offsetx)
-                                    global.transitiony = (gotoRoom.transitiony + global.offsety)
+                                    global.transitionx = gotoRoom.transitionx + global.offsetx
+                                    global.transitiony = gotoRoom.transitiony + global.offsety
                                     global.camstartx = gotoRoom.camstartx
                                     global.camstarty = gotoRoom.camstarty
                                     oCamera.x = global.camstartx
@@ -403,8 +403,8 @@ if (state == STANDING || state == RUNNING)
                     if instance_exists(bubble)
                     {
                         bubble.hspeed = random_range(-1.5, 1.5)
-                        bubble.vspeed = (-0.1 - random(0.5))
-                        bubble.alarm[0] = (90 + random(120))
+                        bubble.vspeed = -0.1 - random(0.5)
+                        bubble.alarm[0] = 90 + random(120)
                     }
                 }
             }
@@ -443,7 +443,7 @@ if (state == STANDING || state == RUNNING)
             if ((inwater || waterfall > 0) && global.currentsuit != 2)
             {
                 if (statetime <= 90)
-                    xAcc = ((((-runAcc) * statetime) / 90) * 0.7)
+                    xAcc = (-runAcc) * statetime / 90 * 0.7
                 if (statetime > 90)
                     xAcc -= (runAcc * 0.7)
                 if walking
@@ -512,7 +512,7 @@ if (state == STANDING || state == RUNNING)
             if ((inwater || waterfall > 0) && global.currentsuit != 2)
             {
                 if (statetime <= 90)
-                    xAcc = (((runAcc * statetime) / 90) * 0.7)
+                    xAcc = runAcc * statetime / 90 * 0.7
                 if (statetime > 90)
                     xAcc += (runAcc * 0.7)
                 if walking
@@ -612,8 +612,8 @@ if platformCharacterIs(IN_AIR)
                     if instance_exists(bubble)
                     {
                         bubble.hspeed = (-random(2))
-                        bubble.vspeed = (-0.1 - random(1))
-                        bubble.alarm[0] = (90 + random(120))
+                        bubble.vspeed = -0.1 - random(1)
+                        bubble.alarm[0] = 90 + random(120)
                     }
                 }
             }
@@ -661,8 +661,8 @@ if platformCharacterIs(IN_AIR)
                     if instance_exists(bubble)
                     {
                         bubble.hspeed = random(2)
-                        bubble.vspeed = (-0.1 - random(1))
-                        bubble.alarm[0] = (90 + random(120))
+                        bubble.vspeed = -0.1 - random(1)
+                        bubble.alarm[0] = 90 + random(120)
                     }
                 }
             }
@@ -745,13 +745,13 @@ if platformCharacterIs(IN_AIR)
         {
             if (facing == LEFT)
             {
-                xVel = (-0.4 - ((airtime / 240) * 2))
+                xVel = -0.4 - airtime / 240 * 2
                 if (xVel < -2.4)
                     xVel = -2.4
             }
             if (facing == RIGHT)
             {
-                xVel = (0.4 + ((airtime / 240) * 2))
+                xVel = 0.4 + airtime / 240 * 2
                 if (xVel > 2.4)
                     xVel = 2.4
             }
@@ -893,8 +893,8 @@ if ((isCollisionBottom(1) || isCollisionPlatformBottom(1)) && platformCharacterI
                 if instance_exists(bubble)
                 {
                     bubble.hspeed = random_range(-1.5, 1.5)
-                    bubble.vspeed = (-0.1 - random(0.5))
-                    bubble.alarm[0] = (90 + random(120))
+                    bubble.vspeed = -0.1 - random(0.5)
+                    bubble.alarm[0] = 90 + random(120)
                 }
             }
         }
@@ -902,7 +902,7 @@ if ((isCollisionBottom(1) || isCollisionPlatformBottom(1)) && platformCharacterI
 }
 if (isCollisionBottom(1) == 0 && isCollisionPlatformBottom(1) == 0 && platformCharacterIs(ON_GROUND))
 {
-    xAcc = (xVel / 1.2)
+    xAcc = xVel / 1.2
     xVel *= 0.5
     if (state != AIRBALL && state != BALL)
         state = JUMPING
@@ -951,7 +951,7 @@ if (kJump && kJumpPushedSteps == 0 && state != BALL && state != AIRBALL && platf
     else
         vjump = 0
     yAcc += initialJumpAcc
-    xAcc = (xVel / 2)
+    xAcc = xVel / 2
     xVel = 0
     jumpfwd = 1
     hijump = 1
@@ -1028,8 +1028,8 @@ if (state == BALL || state == AIRBALL)
                     if instance_exists(bubble)
                     {
                         bubble.hspeed = random_range(-1.5, 1.5)
-                        bubble.vspeed = (-0.1 - random(0.5))
-                        bubble.alarm[0] = (90 + random(120))
+                        bubble.vspeed = -0.1 - random(0.5)
+                        bubble.alarm[0] = 90 + random(120)
                     }
                 }
             }
@@ -1057,7 +1057,7 @@ if (state == BALL || state == AIRBALL)
             }
             facing = LEFT
             if (state == BALL && dash == 0)
-                xVel = (-6 / (1 + walking))
+                xVel = -6 / (1 + walking)
             if (state == BALL && dash > 0)
                 xVel = -10
             if (state == AIRBALL && dash == 0)
@@ -1078,7 +1078,7 @@ if (state == BALL || state == AIRBALL)
             }
             facing = RIGHT
             if (state == BALL && dash == 0)
-                xVel = (6 / (1 + walking))
+                xVel = 6 / (1 + walking)
             if (state == BALL && dash > 0)
                 xVel = 10
             if (state == AIRBALL && dash == 0)
@@ -1112,21 +1112,21 @@ if (state == BALL || state == AIRBALL)
     if (platformCharacterIs(ON_GROUND) && kJump && kJumpPushedSteps == 0 && global.jumpball == 1 && state == BALL)
     {
         if (global.hijump == 0)
-            jump_vel = (initialJumpAcc * 0.86)
+            jump_vel = initialJumpAcc * 0.86
         if (global.hijump == 1)
             jump_vel = initialJumpAcc
         if (monster_drain > 0)
             jump_vel = -1
-        if (isCollisionTop((abs(jump_vel) + 1)) == 0)
+        if (isCollisionTop(abs(jump_vel) + 1) == 0)
             yVel = jump_vel
         else if (isCollisionTop(abs(jump_vel)) == 0)
-            yVel = (jump_vel + 3)
-        else if (isCollisionTop((abs(jump_vel) - 1)) == 0)
-            yVel = (jump_vel + 4)
-        else if (isCollisionTop((abs(jump_vel) - 2)) == 0)
-            yVel = (jump_vel + 5)
-        else if (isCollisionTop((abs(jump_vel) - 3)) == 0)
-            yVel = (jump_vel + 6)
+            yVel = jump_vel + 3
+        else if (isCollisionTop(abs(jump_vel) - 1) == 0)
+            yVel = jump_vel + 4
+        else if (isCollisionTop(abs(jump_vel) - 2) == 0)
+            yVel = jump_vel + 5
+        else if (isCollisionTop(abs(jump_vel) - 3) == 0)
+            yVel = jump_vel + 6
         state = AIRBALL
         statetime = 0
         sfx_play(sndBallBounce)
@@ -1163,7 +1163,7 @@ if (state == SJSTART)
         unmorphing = 0
         if isCollisionBottom(1)
         {
-            sjtargety = (floor(y) - 8)
+            sjtargety = floor(y) - 8
             sjtype = 0
         }
         else
@@ -1531,8 +1531,23 @@ if (state == SAVINGFX)
             instance_create(x, y, oSaveSparks)
         }
         popup_text(get_text("Notifications", "GameSaved"))
-        save_game(((working_directory + "/multitroid/save") + string((global.saveslot + 1))))
+        save_game(working_directory + "/multitroid/save" + (string(global.saveslot + 1)))
         refill_heath_ammo()
+    }
+    if (statetime == 5)
+    {
+        if (instance_exists(oClient) && global.sax)
+        {
+            global.saveEndChecker = 1
+            global.saveCheckBuffer = buffer_create(1024, buffer_grow, 1)
+            buffer_seek(global.saveCheckBuffer, buffer_seek_start, 0)
+            buffer_write(global.saveCheckBuffer, buffer_s32, 18)
+            buffer_write(global.saveCheckBuffer, buffer_u8, 71)
+            buffer_write(global.saveCheckBuffer, buffer_u8, global.saveEndChecker)
+            buffer_poke(global.saveCheckBuffer, 0, buffer_s32, (buffer_tell(global.saveCheckBuffer) - 4))
+            network_send_packet(oClient.socket, global.saveCheckBuffer, buffer_tell(global.saveCheckBuffer))
+            buffer_delete(global.saveCheckBuffer)
+        }
     }
     if (statetime == 6 && instance_exists(oClient))
         state = IDLE
@@ -1620,7 +1635,7 @@ if (state == SAVINGSHIPFX)
     if (statetime == 1)
     {
         sfx_play(sndSave)
-        save_game(((working_directory + "/multitroid/save") + string((global.saveslot + 1))))
+        save_game(working_directory + "/multitroid/save" + (string(global.saveslot + 1)))
         refill_heath_ammo()
         popup_text(get_text("Notifications", "GameSaved"))
     }
@@ -1667,15 +1682,23 @@ if (state == GFELEVATOR)
     if (statetime == 20)
     {
         ele_fx = instance_create(x, y, oGFElevatorFX)
+        elev_dir = oGFElevator.elev_dir
         with (oGFElevator)
             event_user(0)
     }
     if (statetime > 20)
     {
+        if (yVel == 0)
+        {
+            if (elev_dir == 0)
+                oCharacter.yVel = 1
+            else
+                oCharacter.yVel = -1
+        }
         if (!instance_exists(oGFElevatorFX))
             ele_fx = instance_create(x, y, oGFElevatorFX)
         ele_fx.x = x
-        ele_fx.y = (y + yVel)
+        ele_fx.y = y + yVel
         if (room != elevator_target_room || (room == elevator_target_room && point_distance(x, y, elevator_target_x, elevator_target_y) > 32))
         {
             if (yVel < 0 && yVel > -6)
@@ -1785,8 +1808,8 @@ if (state == KNOCKBACK1_LAND)
                 if instance_exists(bubble)
                 {
                     bubble.hspeed = random_range(-1.5, 1.5)
-                    bubble.vspeed = (-0.1 - random(0.5))
-                    bubble.alarm[0] = (120 + random(120))
+                    bubble.vspeed = -0.1 - random(0.5)
+                    bubble.alarm[0] = 120 + random(120)
                 }
             }
         }
@@ -1885,7 +1908,7 @@ if (state == KNOCKBACK2_LAND)
     }
     if (fxtimer == 0)
     {
-        smk = instance_create(((x - 6) + random(12)), (y - 4), oFXAnimSpark)
+        smk = instance_create((x - 6 + random(12)), (y - 4), oFXAnimSpark)
         smk.image_speed = 0.5
         smk.additive = 0
         smk.sprite_index = sSmoke1
@@ -1938,7 +1961,7 @@ if (state == A4EXPL)
     {
         if (fxtimer == 0)
         {
-            smk = instance_create(((x - 8) + random(16)), (y - 2), oFXAnimSpark)
+            smk = instance_create((x - 8 + random(16)), (y - 2), oFXAnimSpark)
             smk.image_speed = 0.5
             smk.additive = 0
             smk.sprite_index = sSmoke1
@@ -2123,7 +2146,7 @@ if (state == BRAKING)
     dash = 0
     if (isCollisionBottom(1) == 0 && (isCollisionPlatformBottom(1) == 0 || isCollisionPlatform()))
     {
-        xAcc = (xVel / 1.2)
+        xAcc = xVel / 1.2
         xVel *= 0.5
         canturn = 1
         if (sjball == 0)
@@ -2530,8 +2553,8 @@ if (state == GRABBEDGAMMA)
 {
     yVel = 0
     xVel = 0
-    x = round((((oMGamma.x + oMGamma.legba1x) + oMGamma.legba2x) + (8 * oMGamma.facing)))
-    y = round((((oMGamma.y + oMGamma.legba1y) + oMGamma.legba2y) + 24))
+    x = round(oMGamma.x + oMGamma.legba1x + oMGamma.legba2x + 8 * oMGamma.facing)
+    y = round(oMGamma.y + oMGamma.legba1y + oMGamma.legba2y + 24)
     invincible = 5
     canturn = 0
     if (global.currentsuit == 0)
@@ -2595,7 +2618,7 @@ if (state == GRABBEDOMEGA)
         dash = 0
         charge = 0
         yVel = -0.3
-        xVel = (oMOmega.xVel * 1.5)
+        xVel = oMOmega.xVel * 1.5
         unmorphing = 0
         image_index = 0
         image_speed = 0.12
@@ -2729,7 +2752,7 @@ if (state == GRABBEDQUEENBELLY)
 moverobj = 0
 if (global.moverobj && global.currentsuit < 2)
 {
-    if (collision_line(round((x - 5)), round((y - 2)), round((x + 5)), round((y - 2)), oMoverUp, false, true) > 0 && state != CLIMBING)
+    if (collision_line(round(x - 5), round(y - 2), round(x + 5), round(y - 2), oMoverUp, false, true) > 0 && state != CLIMBING)
     {
         if (state != AIRBALL)
         {
@@ -2741,7 +2764,7 @@ if (global.moverobj && global.currentsuit < 2)
         yVel = -5
         moverobj = 1
     }
-    if (collision_line(round((x - 5)), round((y - 2)), round((x + 5)), round((y - 2)), oMoverDown, false, true) > 0 && state != CLIMBING)
+    if (collision_line(round(x - 5), round(y - 2), round(x + 5), round(y - 2), oMoverDown, false, true) > 0 && state != CLIMBING)
     {
         if (state != AIRBALL)
         {
@@ -2753,7 +2776,7 @@ if (global.moverobj && global.currentsuit < 2)
         yVel = 5
         moverobj = 1
     }
-    if (collision_line(round((x - 5)), round((y - 2)), round((x + 5)), round((y - 2)), oMoverLeft, false, true) > 0 && state != CLIMBING)
+    if (collision_line(round(x - 5), round(y - 2), round(x + 5), round(y - 2), oMoverLeft, false, true) > 0 && state != CLIMBING)
     {
         if (state != AIRBALL)
         {
@@ -2767,7 +2790,7 @@ if (global.moverobj && global.currentsuit < 2)
         fixedx = 20
         facing = LEFT
     }
-    if (collision_line(round((x - 5)), round((y - 2)), round((x + 5)), round((y - 2)), oMoverRight, false, true) > 0 && state != CLIMBING)
+    if (collision_line(round(x - 5), round(y - 2), round(x + 5), round(y - 2), oMoverRight, false, true) > 0 && state != CLIMBING)
     {
         if (state != AIRBALL)
         {
@@ -2781,7 +2804,7 @@ if (global.moverobj && global.currentsuit < 2)
         fixedx = 20
         facing = RIGHT
     }
-    if (collision_line(round((x - 5)), round((y - 2)), round((x + 5)), round((y - 2)), oMoverLeftUp, false, true) > 0 && state != CLIMBING)
+    if (collision_line(round(x - 5), round(y - 2), round(x + 5), round(y - 2), oMoverLeftUp, false, true) > 0 && state != CLIMBING)
     {
         if (state != AIRBALL)
         {
@@ -2823,22 +2846,22 @@ if (state == RUNNING)
     if (dash == 0)
         xFric = frictionRunningX
     if (dash > 0 && dash <= 30)
-        xFric = (frictionRunningX + (dash * 0.0075))
+        xFric = frictionRunningX + dash * 0.0075
     if (turning == 1)
         xFric = 0
     if shinespark
         xFric = 1
 }
 if (state == BRAKING)
-    xFric = (frictionRunningX * 2.8)
+    xFric = frictionRunningX * 2.8
 if (state == SUPERJUMP)
     xFric = 1
 if (state == BALL)
 {
     if (dash == 0)
-        xFric = (frictionRunningX * 2)
+        xFric = frictionRunningX * 2
     if (dash > 0 && dash <= 30)
-        xFric = (frictionRunningX + (dash * 0.017))
+        xFric = frictionRunningX + dash * 0.017
     if shinespark
         xFric = 1
 }
@@ -2877,11 +2900,11 @@ if (((inwater == 1 || waterfall > 0) && global.currentsuit != 2) || monster_drai
 if (xAcc > xAccLimit)
     xAcc = xAccLimit
 else if (xAcc < (-1 * xAccLimit))
-    xAcc = (-1 * xAccLimit)
+    xAcc = -1 * xAccLimit
 if (yAcc > yAccLimit)
     yAcc = yAccLimit
 else if (yAcc < (-1 * yAccLimit))
-    yAcc = (-1 * yAccLimit)
+    yAcc = -1 * yAccLimit
 xVel += xAcc
 yVel += yAcc
 xAcc = 0
@@ -2891,11 +2914,11 @@ yVel *= yFric
 if (xVel > xVelLimit)
     xVel = xVelLimit
 else if (xVel < (-1 * xVelLimit))
-    xVel = (-1 * xVelLimit)
+    xVel = -1 * xVelLimit
 if (yVel > yVelLimit && ((inwater == 0 && waterfall == 0) || global.currentsuit >= 2))
     yVel = yVelLimit
 if (yVel > (yVelLimit / 2) && (inwater == 1 || waterfall > 0) && global.currentsuit < 2)
-    yVel = (yVelLimit / 2)
+    yVel = yVelLimit / 2
 else if (yVel < JumpVelLimit)
     yVel = JumpVelLimit
 if approximatelyZero(xVel)
@@ -2909,7 +2932,7 @@ if approximatelyZero(yAcc)
 if ((maxSlope * abs(xVel)) > 0 && (platformCharacterIs(ON_GROUND) || state == BRAKING))
 {
     slopeYPrev = y
-    while (y >= (slopeYPrev - (maxSlope * 2)))
+    while (y >= (slopeYPrev - maxSlope * 2))
     {
         if isCollisionTop(1)
             break
@@ -2919,7 +2942,7 @@ if ((maxSlope * abs(xVel)) > 0 && (platformCharacterIs(ON_GROUND) || state == BR
             continue
         }
     }
-    slopeChangeInY = (slopeYPrev - y)
+    slopeChangeInY = slopeYPrev - y
 }
 else
     slopeChangeInY = 0
@@ -2942,7 +2965,7 @@ else
 if (isCollisionBottom(1) == 0 && (maxDownSlope * abs(xVelInteger)) > 0 && (platformCharacterIs(ON_GROUND) || state == BRAKING))
 {
     upYPrev = y
-    while (y <= (upYPrev + (maxDownSlope * abs(xVelInteger))))
+    while (y <= (upYPrev + maxDownSlope * abs(xVelInteger)))
     {
         if isCollisionBottom(1)
         {
@@ -3488,7 +3511,7 @@ if (y > global.waterlevel && global.waterlevel != 0)
                 if instance_exists(bubble)
                 {
                     bubble.hspeed = random_range(-1.8, 1.8)
-                    bubble.vspeed = (0.3 + random(0.7))
+                    bubble.vspeed = 0.3 + random(0.7)
                 }
             }
             if (global.currentsuit < 2)
@@ -3533,7 +3556,7 @@ if inwater
                 bubble = instance_create(x, (y - 16), oLBubble)
                 if instance_exists(bubble)
                 {
-                    bubble.alarm[0] = (60 + random(200))
+                    bubble.alarm[0] = 60 + random(200)
                     bubble.direction = random(360)
                     bubble.speed = 0.2
                 }
@@ -3546,7 +3569,7 @@ if inwater
                 bubble = instance_create(x, (y - 16), oLBubble)
                 if instance_exists(bubble)
                 {
-                    bubble.alarm[0] = (60 + random(200))
+                    bubble.alarm[0] = 60 + random(200)
                     bubble.direction = random(360)
                     bubble.speed = 0.5
                 }
@@ -3559,7 +3582,7 @@ if inwater
                 bubble = instance_create(x, (y - 16), oLBubble)
                 if instance_exists(bubble)
                 {
-                    bubble.alarm[0] = (60 + random(120))
+                    bubble.alarm[0] = 60 + random(120)
                     bubble.direction = random(360)
                     bubble.speed = 0.5
                 }
@@ -3572,12 +3595,12 @@ if inwater
         {
             repeat (10)
             {
-                bubble = instance_create((x + random_range(-8, 8)), y, oLBubble)
+                bubble = instance_create((x + (random_range(-8, 8))), y, oLBubble)
                 if instance_exists(bubble)
                 {
-                    bubble.alarm[0] = (60 + random(60))
+                    bubble.alarm[0] = 60 + random(60)
                     bubble.direction = 90
-                    bubble.speed = (0.5 + random(1.5))
+                    bubble.speed = 0.5 + random(1.5)
                 }
             }
         }
@@ -3588,9 +3611,9 @@ if inwater
                 bubble = instance_create(x, (y - random(16)), oLBubble)
                 if instance_exists(bubble)
                 {
-                    bubble.alarm[0] = (60 + random(60))
+                    bubble.alarm[0] = 60 + random(60)
                     bubble.direction = 180
-                    bubble.speed = (0.5 + random(1.5))
+                    bubble.speed = 0.5 + random(1.5)
                 }
             }
         }
@@ -3601,9 +3624,9 @@ if inwater
                 bubble = instance_create(x, (y - random(16)), oLBubble)
                 if instance_exists(bubble)
                 {
-                    bubble.alarm[0] = (60 + random(60))
+                    bubble.alarm[0] = 60 + random(60)
                     bubble.direction = 0
-                    bubble.speed = (0.5 + random(1.5))
+                    bubble.speed = 0.5 + random(1.5)
                 }
             }
         }
@@ -3612,9 +3635,9 @@ if inwater
     {
         if (fxtimer == 0)
         {
-            bubble = instance_create((x + random_range(-4, 4)), y, oLBubble)
+            bubble = instance_create((x + (random_range(-4, 4))), y, oLBubble)
             if instance_exists(bubble)
-                bubble.alarm[0] = (60 + random(60))
+                bubble.alarm[0] = 60 + random(60)
         }
     }
 }
@@ -3639,7 +3662,7 @@ if (footstep == 0)
                     {
                         bubble = instance_create(x, y, oLBubble)
                         if instance_exists(bubble)
-                            bubble.alarm[0] = (60 + random(120))
+                            bubble.alarm[0] = 60 + random(120)
                     }
                 }
             }

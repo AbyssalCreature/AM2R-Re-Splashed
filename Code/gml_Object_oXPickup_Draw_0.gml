@@ -28,8 +28,8 @@ with (other.id)
                     draw_sprite_ext(sPBXPickupSpawn, image_index, x, y, image_xscale, 1, image_angle, c_white, 1)
                 if (sprite_index == sSkorpBody)
                 {
-                    draw_sprite_pixelated(sSkorpDiscLunge, 0, (lastEnemyX + lengthdir_x(11, (lastAngle - 24))), (lastEnemyY + lengthdir_y(11, (lastAngle - 24))), -1, 1, 0, c_white, 1, sizeX, sizeY, 32)
-                    draw_sprite_pixelated(sSkorpDiscLunge, 0, (lastEnemyX + lengthdir_x(11, (lastAngle + 24))), (lastEnemyY + lengthdir_y(11, (lastAngle + 24))), 1, 1, 0, c_white, 1, sizeX, sizeY, 32)
+                    draw_sprite_pixelated(sSkorpDiscLunge, 0, (lastEnemyX + (lengthdir_x(11, (lastAngle - 24)))), (lastEnemyY + (lengthdir_y(11, (lastAngle - 24)))), -1, 1, 0, c_white, 1, sizeX, sizeY, 32)
+                    draw_sprite_pixelated(sSkorpDiscLunge, 0, (lastEnemyX + (lengthdir_x(11, (lastAngle + 24)))), (lastEnemyY + (lengthdir_y(11, (lastAngle + 24)))), 1, 1, 0, c_white, 1, sizeX, sizeY, 32)
                 }
                 if drawHalzynShields
                 {
@@ -58,8 +58,8 @@ with (other.id)
                 draw_sprite_pixelated(sprite_index, -1, lastEnemyX, lastEnemyY, lastFacing, 1, drawAngle, c_white, 1, sizeX, sizeY, 128)
                 if (sprite_index == sSkorpBody)
                 {
-                    draw_sprite_pixelated(sSkorpDiscLunge, 0, (lastEnemyX + lengthdir_x(11, (lastAngle - 24))), (lastEnemyY + lengthdir_y(11, (lastAngle - 24))), -1, 1, 0, c_white, 1, sizeX, sizeY, 32)
-                    draw_sprite_pixelated(sSkorpDiscLunge, 0, (lastEnemyX + lengthdir_x(11, (lastAngle + 24))), (lastEnemyY + lengthdir_y(11, (lastAngle + 24))), 1, 1, 0, c_white, 1, sizeX, sizeY, 32)
+                    draw_sprite_pixelated(sSkorpDiscLunge, 0, (lastEnemyX + (lengthdir_x(11, (lastAngle - 24)))), (lastEnemyY + (lengthdir_y(11, (lastAngle - 24)))), -1, 1, 0, c_white, 1, sizeX, sizeY, 32)
+                    draw_sprite_pixelated(sSkorpDiscLunge, 0, (lastEnemyX + (lengthdir_x(11, (lastAngle + 24)))), (lastEnemyY + (lengthdir_y(11, (lastAngle + 24)))), 1, 1, 0, c_white, 1, sizeX, sizeY, 32)
                 }
                 if drawHalzynShields
                 {
@@ -82,7 +82,7 @@ with (other.id)
         draw_sprite_ext(xtype, -1, round(x), round(y), image_xscale, image_yscale, image_angle, make_color_rgb(80, 80, 80), 1)
         draw_set_blend_mode(bm_add)
         repeat (3)
-            draw_sprite_ext(xtype, -1, round(x), round(y), image_xscale, image_yscale, image_angle, -1, (1 - (fxtimer * 0.1)))
+            draw_sprite_ext(xtype, -1, round(x), round(y), image_xscale, image_yscale, image_angle, -1, (1 - fxtimer * 0.1))
         draw_set_blend_mode(bm_normal)
     }
 }

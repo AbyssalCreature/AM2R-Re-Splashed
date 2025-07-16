@@ -22,16 +22,16 @@ if instance_exists(oCharacter)
 if (wbeam && sbeam == 0)
 {
     if (wbeamdir == 1)
-        direction = (maindir + (w_arc * cos(time)))
+        direction = maindir + w_arc * cos(time)
     if (wbeamdir == 0)
-        direction = (maindir - (w_arc * cos(time)))
+        direction = maindir - w_arc * cos(time)
 }
 if (sbeam && wbeam == 0 && beamid == 1)
 {
     if (time < 1 && chargebeam == 0)
-        direction = (maindir + 20)
+        direction = maindir + 20
     if (time < 1 && chargebeam == 1)
-        direction = (maindir + 20)
+        direction = maindir + 20
     if (time >= 1.3 && direction > maindir && chargebeam == 0)
         direction -= 5
     if (time >= 1 && direction > maindir && chargebeam == 1)
@@ -40,9 +40,9 @@ if (sbeam && wbeam == 0 && beamid == 1)
 if (sbeam && wbeam == 0 && beamid == 2)
 {
     if (time < 1 && chargebeam == 0)
-        direction = (maindir - 20)
+        direction = maindir - 20
     if (time < 1 && chargebeam == 1)
-        direction = (maindir - 20)
+        direction = maindir - 20
     if (maindir == 0)
     {
         maindir = 359.5
@@ -63,9 +63,9 @@ if (wbeam && sbeam)
     if (beamid == 0 && chargebeam == 1)
         speed = 9
     if (beamid == 1)
-        direction = (maindir + (60 * cos(time)))
+        direction = maindir + 60 * cos(time)
     if (beamid == 2)
-        direction = (maindir - (60 * cos(time)))
+        direction = maindir - 60 * cos(time)
 }
 if (wbeam && pbeam)
     image_angle = maindir
@@ -95,8 +95,8 @@ if instance_exists(oClient)
         if (x > (room_width + 100) || x < -100 || y > (room_height + 100) || y < -100)
             instance_destroy()
     }
-    else if (x < ((view_xview[0] - 48) - (oControl.widescreen_space / 2)) || x > (((view_xview[0] + view_wview[0]) + 48) + (oControl.widescreen_space / 2)) || y < (view_yview[0] - 48) || y > ((view_yview[0] + view_hview[0]) + 48))
+    else if (x < (view_xview[0] - 48 - oControl.widescreen_space / 2) || x > (view_xview[0] + view_wview[0] + 48 + oControl.widescreen_space / 2) || y < (view_yview[0] - 48) || y > (view_yview[0] + view_hview[0] + 48))
         instance_destroy()
 }
-else if (x < ((view_xview[0] - 48) - (oControl.widescreen_space / 2)) || x > (((view_xview[0] + view_wview[0]) + 48) + (oControl.widescreen_space / 2)) || y < (view_yview[0] - 48) || y > ((view_yview[0] + view_hview[0]) + 48))
+else if (x < (view_xview[0] - 48 - oControl.widescreen_space / 2) || x > (view_xview[0] + view_wview[0] + 48 + oControl.widescreen_space / 2) || y < (view_yview[0] - 48) || y > (view_yview[0] + view_hview[0] + 48))
     instance_destroy()
