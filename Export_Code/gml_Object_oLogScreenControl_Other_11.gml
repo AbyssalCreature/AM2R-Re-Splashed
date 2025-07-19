@@ -1,7 +1,0 @@
-surface_set_target(surf)
-draw_set_font(global.fontMenuSmall2)
-draw_set_color(c_white)
-draw_set_alpha(1)
-draw_clear(c_black)
-draw_text_ext(2, ((-12 * currentline) - 2), logtext, 12, (148 + widescreen_space))
-surface_reset_target()

@@ -1,0 +1,36 @@
+# This file designates any sprites that should have custom margins, sepMasks, flags, or origin positions. This step takes place after sprites are imported and renames have taken place
+# A '#' at the start of a line indicates a comment
+# Correct syntax is '[SpriteName] [MarginLeft] [MarginRight] [MarginBottom] [MarginTop] [Transparent] [Smooth] [Preload] [SepMasks] [OriginX] [OriginY]'
+# e.g sTestSprite 0 31 35 0 false false false AxisAlignedRect 0 0
+sCannon 0 0 0 0 false false false AxisAlignedRect 51 0
+sCannonS 0 0 0 0 false false false AxisAlignedRect 51 0
+sCannonW 0 0 0 0 false false false AxisAlignedRect 51 0
+sCannonSW 0 0 0 0 false false false AxisAlignedRect 51 0
+sCannonP 0 0 0 0 false false false AxisAlignedRect 51 0
+sCannonSP 0 0 0 0 false false false AxisAlignedRect 51 0
+sCannonWP 0 0 0 0 false false false AxisAlignedRect 51 0
+sCannonSWP 0 0 0 0 false false false AxisAlignedRect 51 0
+sCannonI 0 0 0 0 false false false AxisAlignedRect 51 0
+sCannonSI 0 0 0 0 false false false AxisAlignedRect 51 0
+sCannonWI 0 0 0 0 false false false AxisAlignedRect 51 0
+sCannonSWI 0 0 0 0 false false false AxisAlignedRect 51 0
+sCannonPI 0 0 0 0 false false false AxisAlignedRect 51 0
+sCannonWPI 0 0 0 0 false false false AxisAlignedRect 51 0
+sCannonSWPI 0 0 0 0 false false false AxisAlignedRect 51 0
+sFCannon 0 0 0 0 false false false AxisAlignedRect 51 0
+sFCannonS 0 0 0 0 false false false AxisAlignedRect 51 0
+sFCannonW 0 0 0 0 false false false AxisAlignedRect 51 0
+sFCannonSW 0 0 0 0 false false false AxisAlignedRect 51 0
+sFCannonP 0 0 0 0 false false false AxisAlignedRect 51 0
+sFCannonSP 0 0 0 0 false false false AxisAlignedRect 51 0
+sFCannonWP 0 0 0 0 false false false AxisAlignedRect 51 0
+sFCannonSWP 0 0 0 0 false false false AxisAlignedRect 51 0
+sFCannonI 0 0 0 0 false false false AxisAlignedRect 51 0
+sFCannonSI 0 0 0 0 false false false AxisAlignedRect 51 0
+sFCannonWI 0 0 0 0 false false false AxisAlignedRect 51 0
+sFCannonSWI 0 0 0 0 false false false AxisAlignedRect 51 0
+sFCannonPI 0 0 0 0 false false false AxisAlignedRect 51 0
+sFCannonWPI 0 0 0 0 false false false AxisAlignedRect 51 0
+sFCannonSWPI 0 0 0 0 false false false AxisAlignedRect 51 0
+sWallfire2Frozen 0 12 24 3 false false false AxisAlignedRect 8 16
+sWallfire2Disabled -3 11 24 3 false false false AxisAlignedRect 8 16

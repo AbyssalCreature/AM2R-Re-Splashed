@@ -1,1 +1,0 @@
-material = 3
