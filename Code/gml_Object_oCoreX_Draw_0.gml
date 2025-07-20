@@ -1,6 +1,6 @@
-switch mysprite
+switch sprite_index
 {
-    case 1951:
+    case sCoreX_ArachnusSpawn:
         if (oControl.mod_fusion == 1 && global.shaders_compiled && os_type != os_android)
         {
             if (oControl.ArachnusPalette != -1)
@@ -62,6 +62,6 @@ if (!instance_exists(oCoreXShell))
         drawaura = (!drawaura)
     }
 }
-else if (shell.state != 0)
+else
     draw_self()
 shader_reset()

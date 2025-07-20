@@ -33,6 +33,7 @@ switch room
     case 387:
         sprite_index = sCoreX_GenesisSpawn
         mysprite = chooseCoreX(oControl.mod_50)
+        y -= 5
         break
 }
 
