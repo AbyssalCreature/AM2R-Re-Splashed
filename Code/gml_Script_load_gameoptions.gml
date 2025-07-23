@@ -28,6 +28,11 @@ global.widescreen_enabled = 1
 oControl.mod_insanitymode = 0
 oControl.touch_scale = 4
 oControl.mod_collecteditemsmap = 0
+oControl.hudoption = 2
+oControl.guicolor = 1
+oControl.gamehud = 1
+oControl.palette = 0
+oControl.preferredcolor = 17
 set_default_keys()
 set_default_joypad()
 set_default_xjoypad()
