@@ -33,6 +33,8 @@ oControl.guicolor = 1
 oControl.gamehud = 1
 oControl.palette = 0
 oControl.preferredcolor = 17
+global.slotName = "SlotName"
+global.slotPass = "SlotPass"
 set_default_keys()
 set_default_joypad()
 set_default_xjoypad()
