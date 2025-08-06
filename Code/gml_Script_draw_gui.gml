@@ -7,21 +7,31 @@ if ((!oControl.useselfpalette) && os_type != os_android)
     if (oControl.mod_fusion && (!global.ibeam) && oControl.hudoption < 2)
         hudpal = 1
 }
-else if (oControl.useselfpalette && oControl.preferredcolor != 17 && os_type != os_android)
+else if (oControl.useselfpalette && os_type != os_android)
 {
-    if (oControl.palette == 0 || oControl.palette == 1)
-        hudpal = oControl.preferredcolor + 1
-    if (oControl.palette == 2)
-        hudpal = oControl.preferredcolor + 17
+    if (oControl.preferredcolor != 17)
+    {
+        if (oControl.palette == 0 || oControl.palette == 1)
+            hudpal = oControl.preferredcolor + 1
+        if (oControl.palette == 2)
+            hudpal = oControl.preferredcolor + 17
+    }
+    if (instance_exists(oClient) && oClient.connected)
+    {
+        if (oControl.palette == 0 || oControl.palette == 1)
+            hudpal = global.clientID + 1
+        if (oControl.palette == 2)
+            hudpal = global.clientID + 17
+    }
 }
 if (oControl.hudoption == 1 && oControl.palette != 3 && os_type != os_android)
     hudpal = oControl.guicolor + 33
 if (global.shaders_compiled && os_type != os_android)
 {
-    if (oControl.preferredcolor != 17 || oControl.hudoption == 1)
+    if (oControl.preferredcolor != 17 || (instance_exists(oClient) && oClient.connected) || oControl.hudoption == 1)
     {
-        if (oControl.hudoption != 2)
-            pal_swap_set(oControl.hudpal, hudpal, 0)
+        if (oControl.hudoption != 2 && oControl.hudpalette != -1)
+            pal_swap_set(oControl.hudpalette, hudpal, 0)
     }
 }
 if (global.classicmode == 0 && global.opshowhud)
@@ -504,10 +514,10 @@ if (global.classicmode == 0 && global.opshowhud)
         draw_sprite(global.scannerSprite, global.scannerIndex, (xoffNew + 4 + oControl.widescreen_space), 4)
         if (global.shaders_compiled && os_type != os_android)
         {
-            if (oControl.preferredcolor != 17 || oControl.hudoption == 1)
+            if (oControl.preferredcolor != 17 || (instance_exists(oClient) && oClient.connected) || oControl.hudoption == 1)
             {
-                if (oControl.hudoption != 2)
-                    pal_swap_set(oControl.hudpal, hudpal, 0)
+                if (oControl.hudoption != 2 && oControl.hudpalette != -1)
+                    pal_swap_set(oControl.hudpalette, hudpal, 0)
             }
         }
         if (!global.juggActive)
@@ -531,10 +541,10 @@ if (global.classicmode == 0 && global.opshowhud)
         }
         if (global.shaders_compiled && os_type != os_android)
         {
-            if (oControl.preferredcolor != 17 || oControl.hudoption == 1)
+            if (oControl.preferredcolor != 17 || (instance_exists(oClient) && oClient.connected) || oControl.hudoption == 1)
             {
-                if (oControl.hudoption != 2)
-                    pal_swap_set(oControl.hudpal, hudpal, 0)
+                if (oControl.hudoption != 2 && oControl.hudpalette != -1)
+                    pal_swap_set(oControl.hudpalette, hudpal, 0)
             }
         }
         lowestDist = 1000

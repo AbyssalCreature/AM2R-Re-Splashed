@@ -1,5 +1,5 @@
 var sprHeight;
-if (!oControl.useselfpalette)
+if ((!oControl.useselfpalette) || (oControl.preferredcolor == 17 && (!instance_exists(oClient))))
 {
     if (global.shaders_compiled && (!oControl.msr_fusionsuit))
     {
