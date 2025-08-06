@@ -15,12 +15,12 @@ if (global.creditsmenuopt == 1 || instance_exists(oClient))
 {
     alarm[2] = 300
     statetime = 500
-    alarm[1] = 7500
+    alarm[1] = 5800
 }
 else
 {
     statetime = 0
-    alarm[1] = 8000
+    alarm[1] = 6300
 }
 if (os_type == os_android)
     os_powersave_enable(0)

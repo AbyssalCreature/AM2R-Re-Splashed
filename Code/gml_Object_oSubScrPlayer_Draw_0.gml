@@ -1,4 +1,4 @@
-var drawX, drawY, suit, hijump, ice, plasma, wave, spazer, fusion, suitframe, subscrmultispr;
+var drawX, drawY, suit, hijump, ice, plasma, wave, spazer, fusion, suitframe, subscrmultispr, multitroidcannon;
 draw_set_alpha(1)
 drawX = 7
 drawY = 53
@@ -9,12 +9,33 @@ plasma = ""
 wave = ""
 spazer = ""
 fusion = ""
+multitroidcannon = ""
 subscrmultispr = sSubScrPlayer
 suitframe = 0
-if (global.shaders_compiled && instance_exists(oClient) && oClient.connected && oControl.useselfpalette && oControl.preferredcolor != 17 && oControl.palette != 3 && os_type != os_android)
-    pal_swap_set(oControl.MultitroidSubScr, global.clientID, 0)
-else if (global.shaders_compiled && oControl.useselfpalette && oControl.preferredcolor != 17 && oControl.palette != 3 && os_type != os_android)
-    pal_swap_set(oControl.MultitroidSubScr, oControl.preferredcolor, 0)
+if (global.shaders_compiled && oControl.useselfpalette && oControl.palette != 3 && os_type != os_android && oControl.MultitroidSubScr != -1)
+{
+    subscrmultispr = sSubScrPlayerPal
+    if (instance_exists(oClient) && oClient.connected)
+    {
+        pal_swap_set(oControl.MultitroidSubScr, global.clientID, 0)
+        if oControl.mod_fusion
+        {
+            multitroidcannon = "M"
+            drawX -= 51
+        }
+    }
+    else if (oControl.preferredcolor != 17)
+    {
+        pal_swap_set(oControl.MultitroidSubScr, oControl.preferredcolor, 0)
+        if oControl.mod_fusion
+        {
+            multitroidcannon = "M"
+            drawX -= 51
+        }
+    }
+    else
+        subscrmultispr = sSubScrPlayer
+}
 if (oControl.mod_fusion == 0)
 {
     if (global.currentsuit == 0)
@@ -45,7 +66,11 @@ if (oControl.mod_fusion == 1)
         suitframe += 2
 }
 if global.sbeam
+{
     spazer = "S"
+    if ((!global.wbeam) && oControl.mod_fusion && oControl.preferredcolor != 17 && oControl.useselfpalette && oControl.palette != 3)
+        drawX -= 1
+}
 if global.wbeam
 {
     drawX -= 1
@@ -61,11 +86,7 @@ if (global.currentsuit == 2)
     suit = "G"
 if (global.ibeam && oControl.mod_fusion)
     suit = "O"
-if (global.shaders_compiled && instance_exists(oClient) && oClient.connected && oControl.useselfpalette && oControl.preferredcolor != 17 && oControl.palette != 3)
-    subscrmultispr = sSubScrPlayerPal
-else if (global.shaders_compiled && oControl.useselfpalette && oControl.preferredcolor != 17 && oControl.palette != 3)
-    subscrmultispr = 2161
-cannon = asset_get_index("s" + fusion + suit + "Cannon" + spazer + wave + plasma + ice)
+cannon = asset_get_index("s" + fusion + multitroidcannon + suit + "Cannon" + spazer + wave + plasma + ice)
 draw_sprite_ext(subscrmultispr, suitframe, x, y, 1, 1, 0, -1, oSubscreenMenu.ealpha)
 draw_sprite_ext(cannon, 0, (x + drawX), (y + drawY), 1, 1, 0, -1, oSubscreenMenu.ealpha)
 shader_reset()
