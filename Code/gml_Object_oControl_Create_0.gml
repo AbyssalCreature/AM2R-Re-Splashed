@@ -184,6 +184,24 @@ Trail_V_B_F = 135
 Trail_G_R_F = 239
 Trail_G_G_F = 183
 Trail_G_B_F = 255
+Trail_P_R_2D = 255
+Trail_P_G_2D = 255
+Trail_P_B_2D = 0
+Trail_V_R_2D = 0
+Trail_V_G_2D = 255
+Trail_V_B_2D = 0
+Trail_G_R_2D = 0
+Trail_G_G_2D = 255
+Trail_G_B_2D = 255
+Trail_P_R_F_2D = 0
+Trail_P_G_F_2D = 160
+Trail_P_B_F_2D = 240
+Trail_V_R_F_2D = 237
+Trail_V_G_F_2D = 255
+Trail_V_B_F_2D = 135
+Trail_G_R_F_2D = 239
+Trail_G_G_F_2D = 183
+Trail_G_B_F_2D = 255
 Trail_P_R_F_SR = 0
 Trail_P_G_F_SR = 160
 Trail_P_B_F_SR = 240
@@ -270,7 +288,7 @@ if file_exists("lang/fonts/Glasstown_NBP.ttf")
 ini_close()
 global.fontVersion = font_add_sprite_ext(sVersionFont, "V.0123456789", 1, 1)
 global.am2r_version = "V1.5.2"
-global.multitroid_version = "V1.9.0"
+global.multitroid_version = "V1.9.1"
 global.countdowncontrol = 0
 global.TryConnect = 0
 global.gamestarted = 0
@@ -305,7 +323,7 @@ if (!(file_exists(working_directory + "/resplashed/mod_settings.ini")))
 {
     ini_open(working_directory + "/resplashed/mod_settings.ini")
     ini_write_string("ModSettings", "ipaddress", "127.0.0.1")
-    ini_write_string("ModSettings", "displayname", "name")
+    ini_write_string("ModSettings", "displayname", "")
     ini_write_real("ModSettings", "port", 64198)
     ini_write_string("ModSettings", "reactorsequence", "synced")
     ini_write_string("ModSettings", "preferredcolor", "random")
@@ -318,7 +336,7 @@ if (!(file_exists(working_directory + "/resplashed/mod_settings.ini")))
 }
 ini_open(working_directory + "/resplashed/mod_settings.ini")
 ipaddress = ini_read_string("ModSettings", "ipaddress", "127.0.0.1")
-name = ini_read_string("ModSettings", "displayname", "name")
+name = ini_read_string("ModSettings", "displayname", "")
 port = ini_read_real("ModSettings", "port", 64198)
 reactorsequence = string_lower(ini_read_string("ModSettings", "reactorsequence", "synced"))
 preferredcolor = string_lower(ini_read_string("ModSettings", "preferredcolor", "random"))
@@ -524,3 +542,5 @@ global.canScrewMulti = 0
 global.awaitsyncs = 0
 global.saveEndChecker = 0
 global.revived = 0
+file_delete("multitroid_log.txt")
+global.ssmode = 0

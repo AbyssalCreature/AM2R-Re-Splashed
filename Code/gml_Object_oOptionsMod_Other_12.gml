@@ -2,7 +2,6 @@ var color, _sequence, _showname;
 color = "random"
 _sequence = "synced"
 _showname = "enabled"
-name = string_replace_all(name, "#", "")
 if oControl.censorip
 {
     if init

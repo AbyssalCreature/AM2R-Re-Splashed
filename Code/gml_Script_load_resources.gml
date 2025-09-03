@@ -283,9 +283,9 @@ if file_exists("mods/palettes/suits/MorphTrailColors/power2d.png")
     draw_clear_alpha(c_black, 0)
     draw_sprite(color, 0, 0, 0)
     col = surface_getpixel_ext(surf, 0, 0)
-    Trail_P_R = col & 255
-    Trail_P_G = (col >> 8) & 255
-    Trail_P_B = (col >> 16) & 255
+    Trail_P_R_2D = col & 255
+    Trail_P_G_2D = (col >> 8) & 255
+    Trail_P_B_2D = (col >> 16) & 255
 }
 if file_exists("mods/palettes/suits/MorphTrailColors/varia2d.png")
 {
@@ -293,9 +293,9 @@ if file_exists("mods/palettes/suits/MorphTrailColors/varia2d.png")
     draw_clear_alpha(c_black, 0)
     draw_sprite(color, 0, 0, 0)
     col = surface_getpixel_ext(surf, 0, 0)
-    Trail_V_R = col & 255
-    Trail_V_G = (col >> 8) & 255
-    Trail_V_B = (col >> 16) & 255
+    Trail_V_R_2D = col & 255
+    Trail_V_G_2D = (col >> 8) & 255
+    Trail_V_B_2D = (col >> 16) & 255
 }
 if file_exists("mods/palettes/suits/MorphTrailColors/gravity2d.png")
 {
@@ -303,9 +303,9 @@ if file_exists("mods/palettes/suits/MorphTrailColors/gravity2d.png")
     draw_clear_alpha(c_black, 0)
     draw_sprite(color, 0, 0, 0)
     col = surface_getpixel_ext(surf, 0, 0)
-    Trail_G_R = col & 255
-    Trail_G_G = (col >> 8) & 255
-    Trail_G_B = (col >> 16) & 255
+    Trail_G_R_2D = col & 255
+    Trail_G_G_2D = (col >> 8) & 255
+    Trail_G_B_2D = (col >> 16) & 255
 }
 if file_exists("mods/palettes/suits/MorphTrailColors/fusion_power2d.png")
 {
@@ -313,9 +313,9 @@ if file_exists("mods/palettes/suits/MorphTrailColors/fusion_power2d.png")
     draw_clear_alpha(c_black, 0)
     draw_sprite(color, 0, 0, 0)
     col = surface_getpixel_ext(surf, 0, 0)
-    Trail_P_R_F = col & 255
-    Trail_P_G_F = (col >> 8) & 255
-    Trail_P_B_F = (col >> 16) & 255
+    Trail_P_R_F_2D = col & 255
+    Trail_P_G_F_2D = (col >> 8) & 255
+    Trail_P_B_F_2D = (col >> 16) & 255
 }
 if file_exists("mods/palettes/suits/MorphTrailColors/fusion_varia2d.png")
 {
@@ -323,9 +323,9 @@ if file_exists("mods/palettes/suits/MorphTrailColors/fusion_varia2d.png")
     draw_clear_alpha(c_black, 0)
     draw_sprite(color, 0, 0, 0)
     col = surface_getpixel_ext(surf, 0, 0)
-    Trail_V_R_F = col & 255
-    Trail_V_G_F = (col >> 8) & 255
-    Trail_V_B_F = (col >> 16) & 255
+    Trail_V_R_F_2D = col & 255
+    Trail_V_G_F_2D = (col >> 8) & 255
+    Trail_V_B_F_2D = (col >> 16) & 255
 }
 if file_exists("mods/palettes/suits/MorphTrailColors/fusion_gravity2d.png")
 {
@@ -333,9 +333,9 @@ if file_exists("mods/palettes/suits/MorphTrailColors/fusion_gravity2d.png")
     draw_clear_alpha(c_black, 0)
     draw_sprite(color, 0, 0, 0)
     col = surface_getpixel_ext(surf, 0, 0)
-    Trail_G_R_F = col & 255
-    Trail_G_G_F = (col >> 8) & 255
-    Trail_G_B_F = (col >> 16) & 255
+    Trail_G_R_F_2D = col & 255
+    Trail_G_G_F_2D = (col >> 8) & 255
+    Trail_G_B_F_2D = (col >> 16) & 255
 }
 if file_exists("mods/palettes/suits/MorphTrailColors/fusion_omega2d.png")
 {
@@ -343,9 +343,9 @@ if file_exists("mods/palettes/suits/MorphTrailColors/fusion_omega2d.png")
     draw_clear_alpha(c_black, 0)
     draw_sprite(color, 0, 0, 0)
     col = surface_getpixel_ext(surf, 0, 0)
-    Trail_O_R_F = col & 255
-    Trail_O_G_F = (col >> 8) & 255
-    Trail_O_B_F = (col >> 16) & 255
+    Trail_O_R_F_2D = col & 255
+    Trail_O_G_F_2D = (col >> 8) & 255
+    Trail_O_B_F_2D = (col >> 16) & 255
 }
 draw_clear_alpha(c_black, 0)
 draw_sprite(sMorphTrailPower_msr, 0, 0, 0)

@@ -1,4 +1,4 @@
-var scaleMult, f, arrList, ID, _x, _y, xoffNew, lowestPosX, lowestPosY, enemyCount, i, arrData, xDiff, yDiff, sax, spectator, playerState, lowestDist, dist, combatState, playerVisible, yoff, shakeX, shakeY, metcount, hudpal;
+var scaleMult, f, arrList, ID, _x, _y, xoffNew, enemyCount, i, arrData, xDiff, yDiff, sax, spectator, playerState, lowestDist, dist, combatState, playerVisible, shakeX, shakeY, color;
 hudpal = 0
 if ((!oControl.useselfpalette) && os_type != os_android)
 {
@@ -19,9 +19,9 @@ else if (oControl.useselfpalette && os_type != os_android)
     if (instance_exists(oClient) && oClient.connected)
     {
         if (oControl.palette == 0 || oControl.palette == 1)
-            hudpal = global.clientID + 1
+            hudpal = oClient.preferredcolor + 1
         if (oControl.palette == 2)
-            hudpal = global.clientID + 17
+            hudpal = oClient.preferredcolor + 17
     }
 }
 if (oControl.hudoption == 1 && oControl.palette != 3 && os_type != os_android)
@@ -474,16 +474,17 @@ if (global.classicmode == 0 && global.opshowhud)
                 {
                     arrList = ds_list_find_value(global.idList, f)
                     ID = arrList[0, 0]
+                    color = arrList[0, 4]
                     _x = 10 * (floor(f / 2))
                     _y = 10 * (f % 2)
                     if (ID == global.clientID)
-                        draw_sprite(oControl.MultitroidIcon, (ID - 1), (240 - _x + widescreen_space), (5 + _y))
+                        draw_sprite(oControl.MultitroidIcon, (color - 1), (240 - _x + widescreen_space), (5 + _y))
                     else
-                        draw_sprite(oControl.MultitroidIconDark, (ID - 1), (240 - _x + widescreen_space), (5 + _y))
+                        draw_sprite(oControl.MultitroidIconDark, (color - 1), (240 - _x + widescreen_space), (5 + _y))
                 }
             }
             else if (ds_list_size(global.idList) == 1 || ds_list_size(global.idList) == 0)
-                draw_sprite(oControl.MultitroidIcon, clamp((global.clientID - 1), 0, 8), (240 + widescreen_space), 5)
+                draw_sprite(oControl.MultitroidIcon, oClient.preferredcolor, (240 + widescreen_space), 5)
         }
     }
     if (global.ophudshowmap && global.ophudshowmetrcount)
@@ -522,13 +523,13 @@ if (global.classicmode == 0 && global.opshowhud)
         }
         if (!global.juggActive)
         {
-            draw_sprite(sXPowerBar, 0, (xoffNew - 4 + oControl.widescreen_space), 32)
+            draw_sprite(sXPowerBar, 0, (xoffNew - 4 + oControl.widescreen_space), 30)
             shader_reset()
-            draw_sprite(sXPowerTanks, global.damageMult, (xoffNew + 75 + oControl.widescreen_space), 40)
+            draw_sprite(sXPowerTanks, global.damageMult, (xoffNew + 75 + oControl.widescreen_space), 38)
             if (global.damageMult == 4)
-                draw_sprite_ext(sXPowerMeter, 3, (xoffNew + 97 + oControl.widescreen_space), 33, -99, 1, 0, c_white, 1)
+                draw_sprite_ext(sXPowerMeter, 3, (xoffNew + 97 + oControl.widescreen_space), 31, -99, 1, 0, c_white, 1)
             else
-                draw_sprite_ext(sXPowerMeter, global.damageMult, (xoffNew + 97 + oControl.widescreen_space), 33, (-(((global.damageMult * 100) % 100))), 1, 0, c_white, 1)
+                draw_sprite_ext(sXPowerMeter, global.damageMult, (xoffNew + 97 + oControl.widescreen_space), 31, (-(((global.damageMult * 100) % 100))), 1, 0, c_white, 1)
         }
         else
         {
@@ -673,6 +674,22 @@ if (global.classicmode == 0 && global.opshowhud)
             for (i = 0; i < ds_list_size(oClient.posData); i++)
             {
                 arrData = ds_list_find_value(oClient.posData, i)
+                color = 1
+                f = 0
+                while (f < ds_list_size(global.idList))
+                {
+                    arrList = ds_list_find_value(global.idList, f)
+                    if (arrList[0, 0] == arrData[0])
+                    {
+                        color = arrList[0, 4]
+                        break
+                    }
+                    else
+                    {
+                        f++
+                        continue
+                    }
+                }
                 xDiff = oClient.posX - arrData[1]
                 yDiff = oClient.posY - arrData[2]
                 sax = arrData[3]
@@ -706,12 +723,12 @@ if (global.classicmode == 0 && global.opshowhud)
                         {
                             if combatState
                             {
-                                draw_sprite_ext(oControl.MultitroidMapIcon, (arrData[0] - 1), (276 + widescreen_space + 16 - xDiff * 8), (12 - yDiff * 8), 1, 1, direction, c_white, oControl.malpha)
+                                draw_sprite_ext(oControl.MultitroidMapIcon, (color - 1), (276 + widescreen_space + 16 - xDiff * 8), (12 - yDiff * 8), 1, 1, direction, c_white, oControl.malpha)
                                 playerVisible = 1
                             }
                         }
                         if ((!playerVisible) && global.sax == sax)
-                            draw_sprite_ext(oControl.MultitroidMapIcon, (arrData[0] - 1), (276 + widescreen_space + 16 - xDiff * 8), (12 - yDiff * 8), 1, 1, direction, c_white, oControl.malpha)
+                            draw_sprite_ext(oControl.MultitroidMapIcon, (color - 1), (276 + widescreen_space + 16 - xDiff * 8), (12 - yDiff * 8), 1, 1, direction, c_white, oControl.malpha)
                     }
                 }
             }

@@ -45,9 +45,9 @@ if ((!oControl.useselfpalette) || (oControl.preferredcolor == 17 && (!instance_e
 else if (global.shaders_compiled && instance_exists(oClient) && oClient.connected)
 {
     if oControl.mod_fusion
-        pal_swap_set(oControl.MultitroidPaletteFusion, global.clientID, 0)
+        pal_swap_set(oControl.MultitroidPaletteFusion, oClient.preferredcolor, 0)
     else
-        pal_swap_set(oControl.MultitroidPalette, global.clientID, 0)
+        pal_swap_set(oControl.MultitroidPalette, oClient.preferredcolor, 0)
 }
 else if (global.shaders_compiled && oControl.preferredcolor != 17 && oControl.palette != 3)
 {

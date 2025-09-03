@@ -17,7 +17,7 @@ if (global.shaders_compiled && oControl.useselfpalette && oControl.palette != 3 
     subscrmultispr = sSubScrPlayerPal
     if (instance_exists(oClient) && oClient.connected)
     {
-        pal_swap_set(oControl.MultitroidSubScr, global.clientID, 0)
+        pal_swap_set(oControl.MultitroidSubScr, oClient.preferredcolor, 0)
         if oControl.mod_fusion
         {
             multitroidcannon = "M"
