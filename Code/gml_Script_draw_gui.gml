@@ -523,22 +523,22 @@ if (global.classicmode == 0 && global.opshowhud)
         }
         if (!global.juggActive)
         {
-            draw_sprite(sXPowerBar, 0, (xoffNew - 4 + oControl.widescreen_space), 30)
+            draw_sprite(sXPowerBar, 0, (xoffNew - 4 + oControl.widescreen_space), 32)
             shader_reset()
-            draw_sprite(sXPowerTanks, global.damageMult, (xoffNew + 75 + oControl.widescreen_space), 38)
+            draw_sprite(sXPowerTanks, global.damageMult, (xoffNew + 75 + oControl.widescreen_space), 40)
             if (global.damageMult == 4)
-                draw_sprite_ext(sXPowerMeter, 3, (xoffNew + 97 + oControl.widescreen_space), 31, -99, 1, 0, c_white, 1)
+                draw_sprite_ext(sXPowerMeter, 3, (xoffNew + 97 + oControl.widescreen_space), 33, -99, 1, 0, c_white, 1)
             else
-                draw_sprite_ext(sXPowerMeter, global.damageMult, (xoffNew + 97 + oControl.widescreen_space), 31, (-(((global.damageMult * 100) % 100))), 1, 0, c_white, 1)
+                draw_sprite_ext(sXPowerMeter, global.damageMult, (xoffNew + 97 + oControl.widescreen_space), 33, (-(((global.damageMult * 100) % 100))), 1, 0, c_white, 1)
         }
         else
         {
             shakeX = irandom_range(-1, 1)
             shakeY = irandom_range(0, 1)
-            draw_sprite(sXPowerBar, 1, (xoffNew - 4 + oControl.widescreen_space + shakeX), (30 + shakeY))
+            draw_sprite(sXPowerBar, 1, (xoffNew - 4 + oControl.widescreen_space + shakeX), (32 + shakeY))
             shader_reset()
-            draw_sprite(sXPowerTanks, 5, (xoffNew + 75 + oControl.widescreen_space + shakeX), (38 + shakeY))
-            draw_sprite_ext(sXPowerMeter, 3, (xoffNew + 97 + oControl.widescreen_space + shakeX), (31 + shakeY), -99, 1, 0, c_white, 1)
+            draw_sprite(sXPowerTanks, 5, (xoffNew + 75 + oControl.widescreen_space + shakeX), (40 + shakeY))
+            draw_sprite_ext(sXPowerMeter, 3, (xoffNew + 97 + oControl.widescreen_space + shakeX), (33 + shakeY), -99, 1, 0, c_white, 1)
         }
         if (global.shaders_compiled && os_type != os_android)
         {
