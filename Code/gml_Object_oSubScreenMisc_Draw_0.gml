@@ -1,39 +1,6 @@
 var hudpal;
 hudpal = 0
-if ((!oControl.useselfpalette) && os_type != os_android)
-{
-    if ((!oControl.mod_fusion) && global.currentsuit == 2 && oControl.hudoption != 2)
-        hudpal = 1
-    if (oControl.mod_fusion && (!global.ibeam) && oControl.hudoption < 2)
-        hudpal = 1
-}
-else if (oControl.useselfpalette && os_type != os_android)
-{
-    if (oControl.preferredcolor != 17)
-    {
-        if (oControl.palette == 0 || oControl.palette == 1)
-            hudpal = oControl.preferredcolor + 1
-        if (oControl.palette == 2)
-            hudpal = oControl.preferredcolor + 17
-    }
-    if (instance_exists(oClient) && oClient.connected)
-    {
-        if (oControl.palette == 0 || oControl.palette == 1)
-            hudpal = global.clientID + 1
-        if (oControl.palette == 2)
-            hudpal = global.clientID + 17
-    }
-}
-if (oControl.hudoption == 1 && oControl.palette != 3 && os_type != os_android)
-    hudpal = oControl.guicolor + 33
-if (global.shaders_compiled && os_type != os_android)
-{
-    if (oControl.preferredcolor != 17 || (instance_exists(oClient) && oClient.connected) || oControl.hudoption == 1)
-    {
-        if (oControl.hudoption != 2 && (!oControl.gamehud) && oControl.hudpalette != -1)
-            pal_swap_set(oControl.hudpalette, hudpal, 0)
-    }
-}
+Hud_Palette()
 draw_sprite(sprite_index, -1, x, y)
 draw_set_color(c_white)
 draw_set_font(global.fontMenuTiny)
@@ -117,4 +84,3 @@ draw_set_color(c_black)
 draw_text((x + 1 - 30), (y + 4 - 1 + oControl.subScrHeaderOffset), misc)
 draw_set_color(c_white)
 draw_text((x - 30), (y + 3 - 1 + oControl.subScrHeaderOffset), misc)
-shader_reset()

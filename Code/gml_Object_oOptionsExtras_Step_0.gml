@@ -57,6 +57,22 @@ if active
                 sfx_play(sndMenuMove)
                 event_user(2)
             }
+            if (global.curropt == num_palette)
+            {
+                oControl.palette--
+                if (oControl.palette < 0)
+                    oControl.palette = 1
+                sfx_play(sndMenuMove)
+                event_user(2)
+            }
+            if (global.curropt == num_suit)
+            {
+                oControl.preferredcolor--
+                if (oControl.preferredcolor < 1)
+                    oControl.preferredcolor = 17
+                sfx_play(sndMenuMove)
+                event_user(2)
+            }
         }
     }
     if (oControl.kRight > 0 && oControl.kRightPushedSteps == 0 && oControl.kDown == 0 && oControl.kUp == 0)
@@ -81,6 +97,22 @@ if active
                 oControl.guicolor++
                 if (oControl.guicolor > 16)
                     oControl.guicolor = 1
+                sfx_play(sndMenuMove)
+                event_user(2)
+            }
+            if (global.curropt == num_palette)
+            {
+                oControl.palette++
+                if (oControl.palette > 1)
+                    oControl.palette = 0
+                sfx_play(sndMenuMove)
+                event_user(2)
+            }
+            if (global.curropt == num_suit)
+            {
+                oControl.preferredcolor++
+                if (oControl.preferredcolor > 17)
+                    oControl.preferredcolor = 1
                 sfx_play(sndMenuMove)
                 event_user(2)
             }

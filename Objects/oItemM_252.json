@@ -1,0 +1,99 @@
+{
+  "name": "oItemM_252",
+  "sprite": "sItemMissile",
+  "visible": true,
+  "solid": false,
+  "depth": -1,
+  "persistent": false,
+  "parent_id": "oItem",
+  "texture_mask_id": null,
+  "uses_physics": false,
+  "is_sensor": false,
+  "collision_shape": 0,
+  "density": 0.5,
+  "restitution": 0.1,
+  "group": 0,
+  "linear_damping": 0.1,
+  "angular_damping": 0.1,
+  "friction": 0.2,
+  "awake": true,
+  "kinematic": true,
+  "physics_vertices": [],
+  "events": [
+    [
+      {
+        "event_subtype": 0,
+        "actions": [
+          {
+            "lib_id": 1,
+            "id": 603,
+            "kind": 7,
+            "use_relative": false,
+            "is_question": false,
+            "use_apply_to": true,
+            "exe_type": 2,
+            "action_name": null,
+            "code_id": "gml_Object_oItemM_252_Create_0",
+            "argument_count": 1,
+            "who": -1,
+            "relative": false,
+            "is_not": false
+          }
+        ]
+      }
+    ],
+    [],
+    [],
+    [
+      {
+        "event_subtype": 0,
+        "actions": [
+          {
+            "lib_id": 0,
+            "id": 0,
+            "kind": 0,
+            "use_relative": false,
+            "is_question": false,
+            "use_apply_to": false,
+            "exe_type": 0,
+            "action_name": null,
+            "code_id": "gml_Object_oItemMissileTank_Step_0",
+            "argument_count": 0,
+            "who": 0,
+            "relative": false,
+            "is_not": false
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "event_subtype": "oCharacter",
+        "actions": [
+          {
+            "lib_id": 1,
+            "id": 603,
+            "kind": 7,
+            "use_relative": false,
+            "is_question": false,
+            "use_apply_to": true,
+            "exe_type": 2,
+            "action_name": null,
+            "code_id": "gml_Object_oItemM_252_Collision_267",
+            "argument_count": 1,
+            "who": -1,
+            "relative": false,
+            "is_not": false
+          }
+        ]
+      }
+    ],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    []
+  ]
+}

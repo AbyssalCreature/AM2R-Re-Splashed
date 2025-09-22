@@ -12,6 +12,8 @@ if global.shaders_compiled
     num_hud = tempnumcounter++
     num_color = tempnumcounter++
     num_gamehud = tempnumcounter++
+    num_palette = tempnumcounter++
+    num_suit = tempnumcounter++
 }
 num_IGT = tempnumcounter++
 lastitem = tempnumcounter
@@ -42,6 +44,8 @@ if global.shaders_compiled
     tip[num_hud] = "Sets whether you want GUI to be palette swapped."
     tip[num_color] = "Sets your GUI color when 'Select Color' is chosen above."
     tip[num_gamehud] = "Sets whether only the In-Game hud gets palette swapped."
+    tip[num_palette] = "Switches between Color Multitroid Suits and Special Multitroid Suits."
+    tip[num_suit] = "Pick your player color! Based on Resplashed Multitroid!"
 }
 tip[num_IGT] = get_text("ExtrasMenu", "IGT_Tip")
 tip[lastitem] = get_text("GlobalOptions", "ExitMain_Tip")

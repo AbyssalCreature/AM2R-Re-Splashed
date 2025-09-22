@@ -19,21 +19,21 @@ switch room
 {
     case rm_a2a04:
         sprite_index = sCoreX_ArachnusSpawn
-        mysprite = chooseCoreX(oControl.mod_jumpball)
+        mysprite = 1595
         break
     case 128:
         sprite_index = sCoreX_TorizoSpawn
-        mysprite = chooseCoreX(oControl.mod_spacejump)
+        mysprite = 1596
         roomoffsety = -100
         break
     case 281:
         sprite_index = sCoreX_ErisSpawn
-        mysprite = chooseCoreX(oControl.mod_ice)
+        mysprite = 1597
         break
     case 387:
         sprite_index = sCoreX_GenesisSpawn
-        mysprite = chooseCoreX(oControl.mod_50)
-        y -= 5
+        mysprite = 1598
+        y -= 20
         break
 }
 

@@ -1,9 +1,6 @@
-var beamX, beamY, size, type, alignment, bufferSize, result;
 if (chargebeam < 1)
     chargebeam = 0
 instance_create((x + aspr2x), (y + aspr2y), oMflash)
-beamX = oMflash.x
-beamY = oMflash.y
 beams = 1
 if (global.wbeam && (!global.sbeam) && chargebeam >= 1)
     beams = 2
@@ -13,7 +10,6 @@ i = 0
 repeat beams
 {
     beam = instance_create((x + aspr2x), (y + aspr2y), oBeam)
-    beam.sax = global.sax
     beam.ibeam = global.ibeam
     beam.wbeam = global.wbeam
     beam.pbeam = global.pbeam
@@ -37,13 +33,13 @@ repeat beams
     if (chargebeam >= 1)
         beam.speed = 12
     beam.image_angle = argument0
-    beam.fcolor = make_color_rgb(254, 177, 62)
+    beam.fcolor = make_color_rgb(180, 180, 45)
     if global.wbeam
-        beam.fcolor = make_color_rgb(254, 88, 243)
+        beam.fcolor = make_color_rgb(240, 150, 210)
     if global.pbeam
-        beam.fcolor = make_color_rgb(63, 189, 0)
+        beam.fcolor = make_color_rgb(120, 250, 210)
     if global.ibeam
-        beam.fcolor = make_color_rgb(66, 195, 255)
+        beam.fcolor = make_color_rgb(75, 220, 255)
     beam.falpha = 0.4
     beam.fxscale = 0.6
     beam.fyscale = 0.6
@@ -367,34 +363,4 @@ if (global.ibeam == 1 && global.wbeam == 1 && global.pbeam == 1 && global.sbeam 
         PlaySoundMono(sndFireBeamSWIP)
     if (chargebeam >= 1)
         PlaySoundMono(sndFireBeamCSWIP)
-}
-if instance_exists(oClient)
-{
-    if (ds_list_size(oClient.roomListData) > 0)
-    {
-        size = 1024
-        type = buffer_grow
-        alignment = 1
-        beamBuffer = buffer_create(size, type, alignment)
-        buffer_seek(beamBuffer, buffer_seek_start, 0)
-        buffer_write(beamBuffer, buffer_u8, 21)
-        buffer_write(beamBuffer, buffer_u8, global.clientID)
-        buffer_write(beamBuffer, buffer_s16, argument0)
-        buffer_write(beamBuffer, buffer_s16, beamX)
-        buffer_write(beamBuffer, buffer_s16, beamY)
-        buffer_write(beamBuffer, buffer_u8, chargebeam)
-        buffer_write(beamBuffer, buffer_u8, global.sax)
-        bufferSize = buffer_tell(beamBuffer)
-        buffer_seek(beamBuffer, buffer_seek_start, 0)
-        buffer_write(beamBuffer, buffer_s32, bufferSize)
-        buffer_write(beamBuffer, buffer_u8, 21)
-        buffer_write(beamBuffer, buffer_u8, global.clientID)
-        buffer_write(beamBuffer, buffer_s16, argument0)
-        buffer_write(beamBuffer, buffer_s16, beamX)
-        buffer_write(beamBuffer, buffer_s16, beamY)
-        buffer_write(beamBuffer, buffer_u8, chargebeam)
-        buffer_write(beamBuffer, buffer_u8, global.sax)
-        result = network_send_packet(oClient.socket, beamBuffer, buffer_tell(beamBuffer))
-        buffer_delete(beamBuffer)
-    }
 }

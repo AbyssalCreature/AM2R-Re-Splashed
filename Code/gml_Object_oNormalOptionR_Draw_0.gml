@@ -25,7 +25,7 @@ else
     draw_set_alpha(1)
 }
 if (global.curropt != optionid)
-    draw_set_color(c_gray)
+    draw_set_color(rgb_gray)
 draw_text(x, (y - 4), label)
 draw_set_halign(fa_left)
 draw_set_alpha(1)

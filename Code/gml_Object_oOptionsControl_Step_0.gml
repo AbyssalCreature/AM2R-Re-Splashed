@@ -7,7 +7,7 @@ if active
             global.curropt = 0
         while (canedit[global.curropt] == 0)
             global.curropt += 1
-        targety = ((op[global.curropt].y + 8) + 8)
+        targety = op[global.curropt].y + 8 + 8
         if (targety > 192)
             targety = 192
         sfx_play(sndMenuMove)
@@ -20,7 +20,7 @@ if active
             global.curropt = lastitem
         while (canedit[global.curropt] == 0)
             global.curropt -= 1
-        targety = ((op[global.curropt].y + 8) + 8)
+        targety = op[global.curropt].y + 8 + 8
         if (targety > 192)
             targety = 192
         sfx_play(sndMenuMove)

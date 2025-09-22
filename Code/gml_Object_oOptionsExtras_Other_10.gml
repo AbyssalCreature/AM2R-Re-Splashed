@@ -31,6 +31,12 @@ if global.shaders_compiled
     op[num_gamehud] = instance_create(x, (y + sep * tempcount++), oOptionLR)
     op[num_gamehud].label = "HUD Only In-Game"
     op[num_gamehud].optionid = num_gamehud
+    op[num_palette] = instance_create(x, (y + sep * tempcount++), oOptionLR)
+    op[num_palette].label = "Multitroid Palette"
+    op[num_palette].optionid = num_palette
+    op[num_suit] = instance_create(x, (y + sep * tempcount++), oOptionLR)
+    op[num_suit].label = "Multitroid Suit"
+    op[num_suit].optionid = num_suit
 }
 op[num_IGT] = instance_create(x, (y + sep * tempcount++), oOptionLR)
 op[num_IGT].label = get_text("ExtrasMenu", "IGT")

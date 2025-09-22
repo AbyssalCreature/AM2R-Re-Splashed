@@ -1,4 +1,4 @@
-var drawX, drawY, suit, hijump, ice, plasma, wave, spazer, fusion, suitframe, subscrmultispr, multitroidcannon;
+var drawX, drawY, suit, hijump, ice, plasma, wave, spazer, fusion, multitroidcannon, subscrmultispr, suitframe;
 draw_set_alpha(1)
 drawX = 7
 drawY = 53
@@ -12,29 +12,10 @@ fusion = ""
 multitroidcannon = ""
 subscrmultispr = sSubScrPlayer
 suitframe = 0
-if (global.shaders_compiled && oControl.useselfpalette && oControl.palette != 3 && os_type != os_android && oControl.MultitroidSubScr != -1)
+if (global.shaders_compiled && oControl.preferredcolor != 17 && os_type != os_android)
 {
     subscrmultispr = sSubScrPlayerPal
-    if (instance_exists(oClient) && oClient.connected)
-    {
-        pal_swap_set(oControl.MultitroidSubScr, global.clientID, 0)
-        if oControl.mod_fusion
-        {
-            multitroidcannon = "M"
-            drawX -= 51
-        }
-    }
-    else if (oControl.preferredcolor != 17)
-    {
-        pal_swap_set(oControl.MultitroidSubScr, oControl.preferredcolor, 0)
-        if oControl.mod_fusion
-        {
-            multitroidcannon = "M"
-            drawX -= 51
-        }
-    }
-    else
-        subscrmultispr = sSubScrPlayer
+    pal_swap_set(oControl.MultitroidSubScr, oControl.preferredcolor, 0)
 }
 if (oControl.mod_fusion == 0)
 {
@@ -60,15 +41,13 @@ if (oControl.mod_fusion == 1)
         suitframe = 7
     if (global.currentsuit == 2)
         suitframe = 10
-    if global.ibeam
-        suitframe = 11
     if (oControl.msr_fusionsuit == 0)
         suitframe += 2
 }
 if global.sbeam
 {
     spazer = "S"
-    if ((!global.wbeam) && oControl.mod_fusion && oControl.preferredcolor != 17 && oControl.useselfpalette && oControl.palette != 3)
+    if ((!global.wbeam) && oControl.mod_fusion)
         drawX -= 1
 }
 if global.wbeam
@@ -84,9 +63,9 @@ if (global.currentsuit == 1)
     suit = "V"
 if (global.currentsuit == 2)
     suit = "G"
-if (global.ibeam && oControl.mod_fusion)
-    suit = "O"
+if (oControl.mod_fusion && oControl.preferredcolor != 17)
+    multitroidcannon = "M"
 cannon = asset_get_index("s" + fusion + multitroidcannon + suit + "Cannon" + spazer + wave + plasma + ice)
 draw_sprite_ext(subscrmultispr, suitframe, x, y, 1, 1, 0, -1, oSubscreenMenu.ealpha)
-draw_sprite_ext(cannon, 0, (x + drawX), (y + drawY), 1, 1, 0, -1, oSubscreenMenu.ealpha)
+draw_sprite_ext(cannon, 0, (x + drawX - 51), (y + drawY), 1, 1, 0, -1, oSubscreenMenu.ealpha)
 shader_reset()

@@ -69,7 +69,7 @@ if (global.curropt == 3)
     if (global.opspdstyle == 2)
         global.tiptext = get_text("OptionsControl", "SpiderballActivation_Hold_Tip")
 }
-op[9].optext = string(abs((oControl.touch_scale - 9)))
+op[9].optext = string(abs(oControl.touch_scale - 9))
 if instance_exists(oTouchControls)
 {
     with (oTouchControls)

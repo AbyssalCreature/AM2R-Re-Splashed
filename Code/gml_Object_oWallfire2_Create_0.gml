@@ -11,7 +11,7 @@ damage = 4
 hitsound = 77
 deathsound = 80
 platyoffset = -6
-frozenspr = 2015
+frozenspr = 1800
 target = 0
 canattack = 1
 state = 1
@@ -23,5 +23,5 @@ if (global.difficulty == 1)
 if (global.difficulty == 2)
     alarm[0] = 60
 hitemp = 1
-empspr = 2014
+empspr = 1795
 freezefall = 0
