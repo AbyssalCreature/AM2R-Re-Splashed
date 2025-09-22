@@ -18,8 +18,8 @@ It is also meant to be a base "engine" (not really) for whoever wishes to use it
 
 - AM2R Multitroid v1.9.1 (v1.3.6 of Re-Splashed, Current)
 - AM2R Multi(²) (Multitroid Co-op + Archipelago Multiworld) v1.2.1.2 (v1.3.6 of Re-Splashed, Current)
-- AM2R Multiworld (Archipelago) v1.2 (v1.3.4 of Re-Splashed, End of Life)
 - Community Updates v1.5.5 (Compatible with Randovania) (v1.3.6 of Re-Splashed, Current)
+- AM2R Multiworld (Archipelago) v1.2 (v1.3.4 of Re-Splashed, End of Life)
 - Unofficial Multitroid v1.6.2 (v1.0.0 of Re-Splashed, End of Life)
 - Unofficial Multitroid-U (UM-U) v1.8.1 (v1.2.0 of Re-Splashed, End of Life)
 
