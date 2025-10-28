@@ -15,7 +15,7 @@ if (hide == 0)
     if (can_highlight == 0)
         draw_set_color(rgb_gray)
     if (enabled == 0)
-        draw_set_color(make_colour_rgb(42, 49, 62))
+        draw_set_alpha(0.6)
     else
         draw_set_alpha(1)
 }
@@ -24,7 +24,7 @@ else
     draw_set_color(rgb_gray)
     draw_set_alpha(1)
 }
-if (global.curropt != optionid && enabled)
+if (global.curropt != optionid)
     draw_set_color(rgb_gray)
 draw_text(x, (y - 4), label)
 draw_set_halign(fa_left)

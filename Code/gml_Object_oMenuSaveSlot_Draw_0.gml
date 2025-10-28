@@ -1,4 +1,4 @@
-var hudpal, rgb_gray;
+var hudpal, rgb_gray, rgb_green, rgb_darkgreen, rgb_medgreen;
 hudpal = 0
 Hud_Palette()
 if (global.saveslot == slot)
@@ -76,13 +76,17 @@ else
     draw_text((x + tioffset), (y + 3), newgamestr)
     draw_set_halign(fa_left)
 }
+rgb_green = make_color_rgb(8, 253, 142)
+rgb_darkgreen = make_color_rgb(1, 24, 25)
+rgb_medgreen = make_color_rgb(1, 142, 81)
+rgb_gray = make_colour_rgb(82, 89, 102)
 if (global.saveslot != slot && saveexists)
 {
     if (smode == 3 || smode == 4 || smode == 5)
-        draw_cool_text((x + 4), (y + 20), (string(modeindex) + sseed), c_black, c_gray, c_dkgray, 1)
+        draw_cool_text((x + 4), (y + 20), (string(modeindex) + sseed), rgb_darkgreen, rgb_medgreen, rgb_medgreen, 1)
 }
 else if (global.saveslot == slot && saveexists)
 {
     if (smode == 3 || smode == 4 || smode == 5)
-        draw_cool_text((x + 4), (y + 20), (string(modeindex) + sseed), c_black, c_white, c_silver, 1)
+        draw_cool_text((x + 4), (y + 20), (string(modeindex) + sseed), rgb_darkgreen, rgb_green, rgb_green, 1)
 }

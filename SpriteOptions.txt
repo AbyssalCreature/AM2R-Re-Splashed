@@ -2335,7 +2335,7 @@ sHornoadShakeFrozen_Fusion 0 25 21 0 false false false AxisAlignedRect 14 22
 sHornoadShake_Fusion 0 25 21 0 false false false AxisAlignedRect 14 22
 sCavedropperNest1_Fusion 0 21 24 0 false false false AxisAlignedRect 11 12
 sAutrackDisabled_Fusion 0 20 25 0 false false false AxisAlignedRect 10 25
-sShielderShieldFrozen_Fusion 0 20 25 0 false false false AxisAlignedRect -13 13
+sShielderShieldFrozen_Fusion 0 20 25 0 false false false AxisAlignedRect -6 13
 sChuteLeechFrozen_Fusion 0 31 16 0 false false false AxisAlignedRect 15 14
 sShielderShield_Fusion 0 20 25 0 false false false AxisAlignedRect -6 13
 sChuteLeech_Fusion 0 31 16 0 false false false AxisAlignedRect 15 14
