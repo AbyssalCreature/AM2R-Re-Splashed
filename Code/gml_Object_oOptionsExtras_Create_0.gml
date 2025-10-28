@@ -6,13 +6,6 @@ tempnumcounter = 0
 if global.shaders_compiled
     num_bwfilter = tempnumcounter++
 num_baby = tempnumcounter++
-if global.shaders_compiled
-{
-    num_MSRfusion = tempnumcounter++
-    num_hud = tempnumcounter++
-    num_color = tempnumcounter++
-    num_gamehud = tempnumcounter++
-}
 num_IGT = tempnumcounter++
 lastitem = tempnumcounter
 vTargetY = 18 * lastitem + 30
@@ -33,17 +26,9 @@ with (oSS_Control)
 with (oSS_Fg)
     active = 1
 tip[num_baby] = get_text("ExtrasMenu", "EarlyBaby_Tip")
-if global.shaders_compiled
-    tip[num_MSRfusion] = get_text("ExtrasMenu", "FusionMSRsuit_Tip")
+tip[num_IGT] = get_text("ExtrasMenu", "IGT_Tip")
 if global.shaders_compiled
     tip[num_bwfilter] = get_text("ExtrasMenu", "GBFilter_Tip")
-if global.shaders_compiled
-{
-    tip[num_hud] = "Sets whether you want GUI to be palette swapped."
-    tip[num_color] = "Sets your GUI color when 'Select Color' is chosen above."
-    tip[num_gamehud] = "Sets whether only the In-Game hud gets palette swapped."
-}
-tip[num_IGT] = get_text("ExtrasMenu", "IGT_Tip")
 tip[lastitem] = get_text("GlobalOptions", "ExitMain_Tip")
 global.tiptext = tip[global.curropt]
 alarm[1] = 1

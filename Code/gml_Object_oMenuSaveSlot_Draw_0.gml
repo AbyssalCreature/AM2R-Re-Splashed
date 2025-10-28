@@ -1,4 +1,4 @@
-var hudpal;
+var hudpal, rgb_gray;
 hudpal = 0
 Hud_Palette()
 if (global.saveslot == slot)
@@ -9,10 +9,11 @@ etankxoff = 4
 tioffset = 93
 proffset = 186
 titleoffset = 4
+rgb_gray = make_colour_rgb(82, 89, 102)
 if hilight
     fontcolor = c_white
 else
-    fontcolor = c_dkgray
+    fontcolor = rgb_gray
 draw_background(myslotbg, x, (y - 7))
 if saveexists
     draw_background_ext(meticon, (x + 190), (y - 6), 1, 1, 0, fontcolor, 1)

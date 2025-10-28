@@ -41,22 +41,6 @@ if active
                 oControl.palette_number--
                 scr_shader_control()
             }
-            if (global.curropt == num_hud)
-            {
-                oControl.hudoption--
-                if (oControl.hudoption < 0)
-                    oControl.hudoption = 2
-                sfx_play(sndMenuMove)
-                event_user(2)
-            }
-            if (global.curropt == num_color)
-            {
-                oControl.guicolor--
-                if (oControl.guicolor < 1)
-                    oControl.guicolor = 16
-                sfx_play(sndMenuMove)
-                event_user(2)
-            }
         }
     }
     if (oControl.kRight > 0 && oControl.kRightPushedSteps == 0 && oControl.kDown == 0 && oControl.kUp == 0)
@@ -68,35 +52,12 @@ if active
                 oControl.palette_number++
                 scr_shader_control()
             }
-            if (global.curropt == num_hud)
-            {
-                oControl.hudoption++
-                if (oControl.hudoption > 2)
-                    oControl.hudoption = 0
-                sfx_play(sndMenuMove)
-                event_user(2)
-            }
-            if (global.curropt == num_color)
-            {
-                oControl.guicolor++
-                if (oControl.guicolor > 16)
-                    oControl.guicolor = 1
-                sfx_play(sndMenuMove)
-                event_user(2)
-            }
         }
     }
     if ((oControl.kLeft > 0 && oControl.kLeftPushedSteps == 0) || (oControl.kRight > 0 && oControl.kRightPushedSteps == 0 && global.curropt < lastitem && oControl.kDown == 0 && oControl.kUp == 0))
     {
         if (global.curropt == num_baby)
             oControl.mod_earlybaby = (!oControl.mod_earlybaby)
-        if global.shaders_compiled
-        {
-            if (global.curropt == num_MSRfusion)
-                oControl.msr_fusionsuit = (!oControl.msr_fusionsuit)
-            if (global.curropt == num_gamehud)
-                oControl.gamehud = (!oControl.gamehud)
-        }
         if (global.curropt == num_IGT)
             oControl.mod_IGT = (!oControl.mod_IGT)
         sfx_play(sndMenuMove)
