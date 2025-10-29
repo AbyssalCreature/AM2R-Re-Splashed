@@ -8,7 +8,7 @@ deathsound = 60
 platyoffset = -5
 frozenspr = 318
 if oControl.mod_fusion
-    frozenspr = 2297
+    frozenspr = sMumboFrozen_Fusion
 target = 0
 canattack = 1
 flipx = 0

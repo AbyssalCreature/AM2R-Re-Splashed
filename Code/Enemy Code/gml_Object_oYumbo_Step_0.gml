@@ -2,7 +2,7 @@ action_inherited()
 enemy_active_check(20)
 enemy_target_check(180, 0)
 if oControl.mod_fusion
-    frozenspr = 2349
+    frozenspr = sYumboFrozen_Fusion
 else
     frozenspr = 310
 if (frozen == 0)

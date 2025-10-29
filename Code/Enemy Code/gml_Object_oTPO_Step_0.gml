@@ -5,8 +5,8 @@ enemy_target_check(120, 0)
 if oControl.mod_fusion
 {
     sprite_index = sTPO_Fusion
-    frozenspr = 2315
-    empspr = 2342
+    frozenspr = sTPOFrozen_Fusion
+    empspr = sTPO2Disabled_Fusion
 }
 else
 {

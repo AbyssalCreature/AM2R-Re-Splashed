@@ -1,7 +1,7 @@
 if oControl.mod_fusion
 {
     sprite_index = sPincherFly_Fusion
-    frozenspr = 2377
+    frozenspr = sPincherFlyFrozen_Fusion
 }
 else
 {

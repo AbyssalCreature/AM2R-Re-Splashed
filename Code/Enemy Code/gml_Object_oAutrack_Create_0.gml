@@ -8,7 +8,7 @@ deathsound = 80
 platyoffset = -6
 frozenspr = 398
 if oControl.mod_fusion
-    frozenspr = 2308
+    frozenspr = sAutrackFrozen_Fusion
 canfreeze = 1
 hitmissileexpl = 0
 target = 0
@@ -19,7 +19,7 @@ hitemp = 1
 empspr = 401
 if oControl.mod_fusion
 {
-    frozenspr = 2308
-    empspr = 2337
+    frozenspr = sAutrackFrozen_Fusion
+    empspr = sAutrackDisabled_Fusion
 }
 freezefall = 0

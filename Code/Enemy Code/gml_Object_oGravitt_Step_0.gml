@@ -2,7 +2,7 @@ event_inherited()
 if oControl.mod_fusion
 {
     sprite_index = sGravitt_Fusion
-    frozenspr = 2299
+    frozenspr = sGravittFrozen_Fusion
 }
 else
 {

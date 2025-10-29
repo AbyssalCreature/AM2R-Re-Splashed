@@ -36,6 +36,6 @@ disc1.frozenspr = 421
 disc2.frozenspr = 421
 if oControl.mod_fusion
 {
-    disc1.frozenspr = 2394
-    disc2.frozenspr = 2394
+    disc1.frozenspr = sSkorpDiscFrozen_Fusion
+    disc2.frozenspr = sSkorpDiscFrozen_Fusion
 }

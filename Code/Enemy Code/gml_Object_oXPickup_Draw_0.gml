@@ -101,13 +101,13 @@ with (other.id)
                     {
                         shield = 1701
                         if oControl.mod_fusion
-                            shield = 2361
+                            shield = sHalzynShieldA4_2_Fusion
                     }
                     else
                     {
                         shield = 428
                         if oControl.mod_fusion
-                            shield = 2365
+                            shield = sHalzynShield_Fusion
                     }
                     draw_sprite_pixelated(shield, 0, (lastEnemyX + 8), (lastEnemyY - 3), 1, 1, 0, c_white, 1, sizeX, sizeY, 32)
                     draw_sprite_pixelated(shield, 0, (lastEnemyX - 8), (lastEnemyY - 3), -1, 1, 0, c_white, 1, sizeX, sizeY, 32)

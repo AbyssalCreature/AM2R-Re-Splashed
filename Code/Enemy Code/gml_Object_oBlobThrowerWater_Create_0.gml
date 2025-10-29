@@ -4,7 +4,7 @@ freezehp = 220
 damage = 75
 hitsound = 61
 deathsound = 60
-frozenspr = 1491
+frozenspr = sBlobThrowerWaterFrozen
 canfreeze = 1
 hitmissileexpl = 0
 target = 0
@@ -14,7 +14,7 @@ image_speed = 0
 sprite_index = sBlobThrowerWaterClosed
 if oControl.mod_fusion
 {
-    frozenspr = 1491
+    frozenspr = sBlobThrowerWaterFrozen_Fusion
     sprite_index = sBlobThrowerWaterClosed_Fusion
 }
 freezefall = 0

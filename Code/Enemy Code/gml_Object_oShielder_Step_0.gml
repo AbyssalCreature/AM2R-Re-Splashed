@@ -4,8 +4,8 @@ enemy_target_check(firerange, 1)
 if oControl.mod_fusion
 {
     sprite_index = sShielder_Fusion
-    frozenspr = 2367
-    empspr = 2366
+    frozenspr = sShielderFrozen_Fusion
+    empspr = sShielderDisabled_Fusion
 }
 else
 {

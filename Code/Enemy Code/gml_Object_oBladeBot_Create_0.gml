@@ -28,7 +28,7 @@ ispeed = image_speed
 bladeboteye = 440
 if oControl.mod_fusion
 {
-    frozenspr = 2331
-    empspr = 2332
-    bladeboteye = 2355
+    frozenspr = sBladeBotFrozen_Fusion
+    empspr = sBladeBot_Fusion
+    bladeboteye = sBladeBotEye_Fusion
 }

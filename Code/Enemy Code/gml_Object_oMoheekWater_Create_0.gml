@@ -8,7 +8,7 @@ deathsound = 60
 platyoffset = -4
 frozenspr = 1464
 if oControl.mod_fusion
-    frozenspr = 2279
+    frozenspr = sMoheekSwimming_Frozen_Fusion
 target = 0
 canattack = 1
 flipx = 1

@@ -1,7 +1,7 @@
 if oControl.mod_fusion
 {
     sprite_index = sChuteLeech_Fusion
-    frozenspr = 2339
+    frozenspr = sChuteLeechFrozen_Fusion
 }
 else
 {

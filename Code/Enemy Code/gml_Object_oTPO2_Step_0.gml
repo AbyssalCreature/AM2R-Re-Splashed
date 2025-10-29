@@ -2,8 +2,8 @@ action_inherited()
 if oControl.mod_fusion
 {
     sprite_index = sTPO2_Fusion
-    frozenspr = 2343
-    empspr = 2342
+    frozenspr = sTPO2Frozen_Fusion
+    empspr = sTPO2Disabled_Fusion
 }
 else
 {

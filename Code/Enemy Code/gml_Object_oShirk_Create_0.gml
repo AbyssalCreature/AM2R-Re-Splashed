@@ -32,6 +32,6 @@ hitemp = 1
 empspr = 352
 if oControl.mod_fusion
 {
-    frozenspr = 2284
-    empspr = 2293
+    frozenspr = sShirkFrozen_Fusion
+    empspr = sShirkDisabled_Fusion
 }

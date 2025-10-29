@@ -21,6 +21,6 @@ empspr = 324
 freezefall = 0
 if oControl.mod_fusion
 {
-    frozenspr = 2303
-    empspr = 2300
+    frozenspr = sWallfireFrozen_Fusion
+    empspr = sWallfireDisabled_Fusion
 }

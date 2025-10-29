@@ -1,7 +1,7 @@
 enemy_active_check(30)
 enemy_target_check(140, 0)
 if oControl.mod_fusion
-    frozenspr = 2261
+    frozenspr = sMotoFrozen_Fusion
 else
     frozenspr = 423
 if (active == 1 && frozen == 0)

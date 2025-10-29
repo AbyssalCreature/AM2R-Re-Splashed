@@ -4,7 +4,7 @@ enemy_target_check(90, 1)
 if oControl.mod_fusion
 {
     sprite_index = sGullugg_Fusion
-    frozenspr = 2278
+    frozenspr = sGulluggFrozen_Fusion
 }
 else
 {

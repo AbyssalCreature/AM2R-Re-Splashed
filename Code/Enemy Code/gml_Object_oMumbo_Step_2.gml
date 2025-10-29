@@ -1,7 +1,7 @@
 if oControl.mod_fusion
 {
     sprite_index = sMumbo_Fusion
-    frozenspr = 2297
+    frozenspr = sMumboFrozen_Fusion
 }
 else
 {

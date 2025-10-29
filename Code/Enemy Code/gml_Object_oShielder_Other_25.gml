@@ -11,7 +11,7 @@ if shield_present
 {
     frz.spr1 = 416
     if oControl.mod_fusion
-        frz.spr1 = 2338
+        frz.spr1 = sShielderShieldFrozen_Fusion
     frz.spr1xoff = 0
     frz.spr1yoff = 0
     frz.spr1a = shield_angle

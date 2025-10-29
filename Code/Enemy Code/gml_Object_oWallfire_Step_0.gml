@@ -4,8 +4,8 @@ enemy_target_check(90, 1)
 if oControl.mod_fusion
 {
     sprite_index = sWallfire_Fusion
-    frozenspr = 2303
-    empspr = 2300
+    frozenspr = sWallfireFrozen_Fusion
+    empspr = sWallfireDisabled_Fusion
 }
 else
 {

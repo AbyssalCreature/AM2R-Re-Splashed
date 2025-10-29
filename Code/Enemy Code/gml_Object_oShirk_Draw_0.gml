@@ -12,13 +12,13 @@ if oControl.mod_fusion
     armor1turn = sShirkTurnArmor1_Fusion
     armor2turn = sShirkTurnArmor2_Fusion
     frozenspr = sShirkFrozen_Fusion
-    empspr = 2293
+    empspr = sShirkDisabled_Fusion
 }
 else
 {
     sprite_index = sShirk
     frozenspr = sShirkFrozen
-    empspr = 352
+    empspr = sShirkDisabled
 }
 if frozen
 {

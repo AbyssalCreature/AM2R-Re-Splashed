@@ -16,7 +16,7 @@ deathsound = 59
 platyoffset = -8
 frozenspr = 332
 if oControl.mod_fusion
-    frozenspr = 2339
+    frozenspr = sChuteLeechFrozen_Fusion
 target = 0
 canattack = 1
 state = 1

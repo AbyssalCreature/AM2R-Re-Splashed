@@ -2,7 +2,7 @@ shield1.frozen = frozen
 if oControl.mod_fusion
 {
     sprite_index = sRamulken_Fusion
-    frozenspr = 2385
+    frozenspr = sRamulkenFrozen_Fusion
     shield1.sprite_index = sRamulkenShield_Fusion
 }
 else

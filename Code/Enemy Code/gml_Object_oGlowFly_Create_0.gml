@@ -6,7 +6,7 @@ deathsound = 60
 platyoffset = -6
 frozenspr = 444
 if oControl.mod_fusion
-    frozenspr = 2397
+    frozenspr = sGlowFlyFrozen_Fusion
 flipx = 0
 facing = 1
 state = 0

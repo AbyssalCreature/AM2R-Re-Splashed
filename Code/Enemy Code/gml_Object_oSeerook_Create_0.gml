@@ -14,7 +14,7 @@ deathsound = 59
 platyoffset = -6
 frozenspr = 320
 if oControl.mod_fusion
-    frozenspr = 2268
+    frozenspr = sSeerookFrozen_Fusion
 target = 0
 canattack = 1
 flipx = 0

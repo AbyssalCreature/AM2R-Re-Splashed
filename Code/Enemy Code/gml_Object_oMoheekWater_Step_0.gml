@@ -4,7 +4,7 @@ frozenspr = 1464
 if oControl.mod_fusion
 {
     sprite_index = sMoheekSwimming_Fusion
-    frozenspr = 2279
+    frozenspr = sMoheekSwimming_Frozen_Fusion
 }
 if (active == 1 && frozen == 0)
 {

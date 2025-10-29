@@ -6,7 +6,7 @@ deathsound = 60
 platyoffset = -14
 frozenspr = 390
 if oControl.mod_fusion
-    frozenspr = 2323
+    frozenspr = sCavedropperFrozen_Fusion
 facing = 1
 state = 1
 statetime = 0

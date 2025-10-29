@@ -1,7 +1,7 @@
 if oControl.mod_fusion
 {
     sprite_index = sShielderShield_Fusion
-    frozenspr = 2338
+    frozenspr = sShielderShieldFrozen_Fusion
 }
 else
 {

@@ -3,7 +3,7 @@ frozenspr = 314
 if oControl.mod_fusion
 {
     sprite_index = sMoheek_Fusion
-    frozenspr = 2324
+    frozenspr = sMoheekFrozen_Fusion
 }
 else
 {

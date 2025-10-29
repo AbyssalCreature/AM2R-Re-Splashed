@@ -26,7 +26,7 @@ hitemp = 1
 empspr = 346
 if oControl.mod_fusion
 {
-    frozenspr = 2301
-    cannonspr = 2376
-    empspr = 2292
+    frozenspr = sAutom_Fusion
+    cannonspr = sAutomCannon_Fusion
+    empspr = sAutomDisabled_Fusion
 }

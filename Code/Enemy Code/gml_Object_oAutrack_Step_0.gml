@@ -3,8 +3,8 @@ enemy_active_check(20)
 enemy_target_check(90, 1)
 if oControl.mod_fusion
 {
-    frozenspr = 2308
-    empspr = 2337
+    frozenspr = sAutrackFrozen_Fusion
+    empspr = sAutrackDisabled_Fusion
 }
 else
 {

@@ -36,8 +36,8 @@ event_inherited()
 if oControl.mod_fusion
 {
     sprite_index = sRobotMine_Fusion
-    frozenspr = 2346
-    empspr = 2345
+    frozenspr = sRobotMineFrozen_Fusion
+    empspr = sRobotMineDisabled_Fusion
 }
 else
 {

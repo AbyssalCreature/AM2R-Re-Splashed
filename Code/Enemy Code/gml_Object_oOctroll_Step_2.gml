@@ -1,7 +1,7 @@
 if oControl.mod_fusion
 {
     sprite_index = sOctroll_Fusion
-    frozenspr = 2263
+    frozenspr = sOctrollFrozen_Fusion
 }
 else
 {

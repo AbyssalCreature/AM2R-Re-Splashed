@@ -12,4 +12,4 @@ center_y = 0
 myspr = sprite_index
 frozenspr = 416
 if oControl.mod_fusion
-    frozenspr = 2338
+    frozenspr = sShielderShieldFrozen_Fusion

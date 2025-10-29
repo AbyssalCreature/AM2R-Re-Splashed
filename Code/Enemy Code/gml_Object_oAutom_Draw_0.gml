@@ -5,9 +5,9 @@ else
 if oControl.mod_fusion
 {
     sprite_index = sAutom_Fusion
-    cannonspr = sAutomCannon_Fusion
     frozenspr = sAutom_Fusion
-    empspr = 2292
+    cannonspr = sAutomCannon_Fusion
+    empspr = sAutomDisabled_Fusion
 }
 else
 {

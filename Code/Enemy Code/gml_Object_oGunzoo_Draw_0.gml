@@ -8,7 +8,7 @@ if oControl.mod_fusion
     armor2 = sGunzooArmor2_Fusion
     turn = sGunzooTurn_Fusion
     frozenspr = sGunzooFrozen_Fusion
-    empspr = 2269
+    empspr = sGunzooDisabled_Fusion
 }
 else
 {
@@ -17,7 +17,7 @@ else
     armor2 = sGunzooArmor2
     turn = sGunzooTurn
     frozenspr = sGunzooFrozen
-    empspr = 335
+    empspr = sGunzooDisabled
 }
 if frozen
 {

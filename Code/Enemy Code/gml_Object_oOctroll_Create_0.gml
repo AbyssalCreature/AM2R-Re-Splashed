@@ -16,7 +16,7 @@ deathsound = 59
 platyoffset = -8
 frozenspr = 451
 if oControl.mod_fusion
-    frozenspr = 2263
+    frozenspr = sOctrollFrozen_Fusion
 target = 0
 canattack = 1
 state = 1

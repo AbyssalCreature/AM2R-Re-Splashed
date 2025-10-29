@@ -3,8 +3,8 @@ if oControl.mod_fusion
 {
     if (frozen == 0)
         sprite_index = sBladeBot_Fusion
-    frozenspr = 2331
-    empspr = 2332
+    frozenspr = sBladeBotFrozen_Fusion
+    empspr = sBladeBot_Fusion
     bladeboteye = sBladeBotEye_Fusion
 }
 else

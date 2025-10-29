@@ -9,7 +9,7 @@ deathsound = 59
 platyoffset = -14
 frozenspr = 423
 if oControl.mod_fusion
-    frozenspr = 2261
+    frozenspr = sMotoFrozen_Fusion
 state = 0
 facing = 1
 mymask = instance_create(x, y, oMotoMask)

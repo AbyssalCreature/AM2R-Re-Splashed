@@ -3,7 +3,7 @@ action_inherited()
 if oControl.mod_fusion
 {
     sprite_index = sTsumuri_Fusion
-    frozenspr = 2348
+    frozenspr = sTsumuriFrozen_Fusion
 }
 else
 {

@@ -11,7 +11,7 @@ damage = 4
 hitsound = 77
 deathsound = 80
 platyoffset = -6
-frozenspr = 2015
+frozenspr = sWallfire2Frozen
 target = 0
 canattack = 1
 state = 1
@@ -23,10 +23,10 @@ if (global.difficulty == 1)
 if (global.difficulty == 2)
     alarm[0] = 60
 hitemp = 1
-empspr = 2014
+empspr = sWallfire2Disabled
 freezefall = 0
 if oControl.mod_fusion
 {
-    frozenspr = 2310
-    empspr = 2309
+    frozenspr = sWallfire2Frozen_Fusion
+    empspr = sWallfire2Disabled_Fusion
 }

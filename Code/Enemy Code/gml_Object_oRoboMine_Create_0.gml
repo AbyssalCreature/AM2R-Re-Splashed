@@ -20,8 +20,8 @@ hitemp = 1
 empspr = 434
 if oControl.mod_fusion
 {
-    frozenspr = 2346
-    empspr = 2345
+    frozenspr = sRobotMineFrozen_Fusion
+    empspr = sRobotMineDisabled_Fusion
 }
 targetx = x
 targety = y

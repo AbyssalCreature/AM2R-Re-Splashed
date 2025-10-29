@@ -12,10 +12,10 @@ if (active == 1 && frozen == 0)
             statetime = 0
             image_index = 0
             sprite_index = sBlobThrowerWater
-            frozenspr = 1491
+            frozenspr = sBlobThrowerWaterFrozen
             if oControl.mod_fusion
             {
-                frozenspr = 2386
+                frozenspr = sBlobThrowerWaterFrozen_Fusion
                 sprite_index = sBlobThrowerWater_Fusion
             }
         }
@@ -29,10 +29,10 @@ if (active == 1 && frozen == 0)
             state = 2
             statetime = 0
             sprite_index = sBlobThrowerWaterIdle
-            frozenspr = 1487
+            frozenspr = sBlobThrowerWaterIdleFrozen
             if oControl.mod_fusion
             {
-                frozenspr = 2388
+                frozenspr = sBlobThrowerWaterIdleFrozen_Fusion
                 sprite_index = sBlobThrowerWaterIdle_Fusion
             }
         }
@@ -53,10 +53,10 @@ if (active == 1 && frozen == 0)
             state = 3
             statetime = 0
             sprite_index = sBlobThrowerWater
-            frozenspr = 1491
+            frozenspr = sBlobThrowerWaterFrozen
             if oControl.mod_fusion
             {
-                frozenspr = 2386
+                frozenspr = sBlobThrowerWaterFrozen_Fusion
                 sprite_index = sBlobThrowerWater_Fusion
             }
             image_index = 6
@@ -71,7 +71,7 @@ if (active == 1 && frozen == 0)
             state = 0
             statetime = 0
             sprite_index = sBlobThrowerWaterClosed
-            frozenspr = 1489
+            frozenspr = sBlobThrowerWaterClosedFrozen
             if oControl.mod_fusion
             {
                 frozenspr = 2383

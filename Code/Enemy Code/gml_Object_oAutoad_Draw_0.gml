@@ -3,7 +3,7 @@ if oControl.mod_fusion
 {
     sprite_index = sAutoad_Fusion
     frozenspr = sAutoadFrozen_Fusion
-    empspr = 2294
+    empspr = sAutoadDisabled_Fusion
 }
 else
 {

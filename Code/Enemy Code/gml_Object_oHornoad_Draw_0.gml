@@ -5,35 +5,35 @@ else
 if (frozen > 0)
 {
     image_speed = 0
-    if (sprite_index == sHornoadIdle || 2327)
+    if (sprite_index == sHornoadIdle || sHornoadIdle_Fusion)
     {
         frozenspr = sHornoadIdleFrozen
         if oControl.mod_fusion
             frozenspr = sHornoadIdleFrozen_Fusion
     }
-    if (sprite_index == sHornoadShake || 2335)
+    if (sprite_index == sHornoadShake || sHornoadShake_Fusion)
     {
         frozenspr = sHornoadShakeFrozen
         if oControl.mod_fusion
             frozenspr = sHornoadShakeFrozen_Fusion
     }
-    if (sprite_index == sHornoadTurn || 2313)
+    if (sprite_index == sHornoadTurn || sHornoadTurn_Fusion)
     {
         frozenspr = sHornoadTurnFrozen
         if oControl.mod_fusion
             frozenspr = sHornoadTurnFrozen_Fusion
     }
-    if (sprite_index == sHornoadJump || 2274)
+    if (sprite_index == sHornoadJump || sHornoadJump_Fusion)
     {
         frozenspr = sHornoadJumpFrozen
         if oControl.mod_fusion
             frozenspr = sHornoadJumpFrozen_Fusion
     }
-    if (sprite_index == sHornoadAttack || 2322)
+    if (sprite_index == sHornoadAttack || sHornoadAttack_Fusion)
     {
-        frozenspr = 1754
+        frozenspr = sHornoadAttackFrozen
         if oControl.mod_fusion
-            frozenspr = 2321
+            frozenspr = sHornoadAttackFrozen_Fusion
     }
     myspr = frozenspr
 }

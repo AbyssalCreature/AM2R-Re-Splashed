@@ -27,8 +27,8 @@ hitemp = 1
 empspr = 417
 if oControl.mod_fusion
 {
-    frozenspr = 2367
-    empspr = 2366
+    frozenspr = sShielderFrozen_Fusion
+    empspr = sShielderDisabled_Fusion
 }
 shield_angle = 0
 shield_img = 0

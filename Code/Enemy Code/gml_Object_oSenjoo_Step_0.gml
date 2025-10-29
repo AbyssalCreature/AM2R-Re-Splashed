@@ -4,7 +4,7 @@ enemy_target_check(90, 1)
 if oControl.mod_fusion
 {
     sprite_index = sSenjoo_Fusion
-    frozenspr = 2266
+    frozenspr = sSenjooFrozen_Fusion
 }
 else
 {

@@ -1,6 +1,6 @@
 action_inherited()
 if oControl.mod_fusion
-    frozenspr = 2323
+    frozenspr = sCavedropperFrozen_Fusion
 if (state == 0)
 {
     speed = 0

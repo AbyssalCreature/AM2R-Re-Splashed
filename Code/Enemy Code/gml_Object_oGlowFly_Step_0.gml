@@ -2,7 +2,7 @@ enemy_active_check(20)
 if oControl.mod_fusion
 {
     sprite_index = sGlowFly_Fusion
-    frozenspr = 2397
+    frozenspr = sGlowFlyFrozen_Fusion
 }
 else
 {

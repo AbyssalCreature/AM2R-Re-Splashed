@@ -35,6 +35,6 @@ hitemp = 1
 empspr = 335
 if oControl.mod_fusion
 {
-    frozenspr = 2270
-    empspr = 2269
+    frozenspr = sGunzooFrozen_Fusion
+    empspr = sGunzooDisabled_Fusion
 }

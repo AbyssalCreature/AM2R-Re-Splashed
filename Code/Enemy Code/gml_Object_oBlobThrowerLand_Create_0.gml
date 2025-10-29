@@ -6,7 +6,7 @@ hitsound = 61
 deathsound = 60
 frozenspr = 1493
 if oControl.mod_fusion
-    frozenspr = 2381
+    frozenspr = sBlobThrowerFrozen_Fusion
 canfreeze = 1
 hitmissileexpl = 0
 target = 0

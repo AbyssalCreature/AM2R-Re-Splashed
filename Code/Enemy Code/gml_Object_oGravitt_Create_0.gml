@@ -8,7 +8,7 @@ deathsound = 59
 platyoffset = -20
 frozenspr = 370
 if oControl.mod_fusion
-    frozenspr = 2299
+    frozenspr = sGravittFrozen_Fusion
 flipx = 0
 yoffset = 0
 state = 1

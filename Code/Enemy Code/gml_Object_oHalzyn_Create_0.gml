@@ -12,7 +12,7 @@ deathsound = 59
 platyoffset = -6
 frozenspr = 427
 if oControl.mod_fusion
-    frozenspr = 2352
+    frozenspr = sHalzynBodyFrozen_Fusion
 flipx = 0
 state = 0
 shield1 = instance_create((x + 8), (y - 3), oHalzynShield)

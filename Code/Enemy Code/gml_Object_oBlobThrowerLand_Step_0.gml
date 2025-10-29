@@ -34,7 +34,7 @@ if (active == 1 && frozen == 0)
                 if oControl.mod_fusion
                 {
                     sprite_index = sBlobThrowerIdle_Fusion
-                    frozenspr = 2379
+                    frozenspr = sBlobThrowerIdleFrozen_Fusion
                 }
             }
         }
@@ -59,7 +59,7 @@ if (active == 1 && frozen == 0)
             if oControl.mod_fusion
             {
                 sprite_index = sBlobThrower_Fusion
-                frozenspr = 2381
+                frozenspr = sBlobThrowerFrozen_Fusion
             }
             statetime = 0
         }

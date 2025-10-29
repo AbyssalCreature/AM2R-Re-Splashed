@@ -8,7 +8,7 @@ deathsound = 60
 platyoffset = -4
 frozenspr = 310
 if oControl.mod_fusion
-    frozenspr = 2349
+    frozenspr = sYumboFrozen_Fusion
 target = 0
 canattack = 1
 freezetime = 400

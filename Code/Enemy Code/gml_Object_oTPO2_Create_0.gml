@@ -20,6 +20,6 @@ hitemp = 1
 empspr = 408
 if oControl.mod_fusion
 {
-    frozenspr = 2343
-    empspr = 2342
+    frozenspr = sTPO2Frozen_Fusion
+    empspr = sTPO2Disabled_Fusion
 }

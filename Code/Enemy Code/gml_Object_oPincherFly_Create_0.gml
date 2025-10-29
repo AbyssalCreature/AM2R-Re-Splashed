@@ -8,7 +8,7 @@ deathsound = 60
 platyoffset = -4
 frozenspr = 316
 if oControl.mod_fusion
-    frozenspr = 2377
+    frozenspr = sPincherFlyFrozen_Fusion
 target = 0
 canattack = 1
 flipx = 0

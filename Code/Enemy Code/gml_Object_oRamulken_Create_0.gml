@@ -12,7 +12,7 @@ deathsound = 59
 platyoffset = -6
 frozenspr = 446
 if oControl.mod_fusion
-    frozenspr = 2385
+    frozenspr = sRamulkenFrozen_Fusion
 flipx = 0
 state = 0
 shield1 = instance_create(x, (y - 8), oRamulkenShield)

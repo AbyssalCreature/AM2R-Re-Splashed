@@ -5,8 +5,8 @@ if attack
     frz.spr2 = 421
     if oControl.mod_fusion
     {
-        frz.spr1 = 2394
-        frz.spr2 = 2394
+        frz.spr1 = sSkorpDiscFrozen_Fusion
+        frz.spr2 = sSkorpDiscFrozen_Fusion
     }
 }
 else
@@ -15,8 +15,8 @@ else
     frz.spr2 = 1691
     if oControl.mod_fusion
     {
-        frz.spr1 = 2395
-        frz.spr2 = 2395
+        frz.spr1 = sSkorpDiscLungeFrozen_Fusion
+        frz.spr2 = sSkorpDiscLungeFrozen_Fusion
     }
 }
 frz.spr1xoff = lengthdir_x(len, dir)
