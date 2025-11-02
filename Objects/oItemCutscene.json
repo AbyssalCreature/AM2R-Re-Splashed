@@ -1,0 +1,161 @@
+{
+  "name": "oItemCutscene",
+  "sprite": "sMslSpark",
+  "visible": true,
+  "solid": false,
+  "depth": 0,
+  "persistent": false,
+  "parent_id": null,
+  "texture_mask_id": null,
+  "uses_physics": false,
+  "is_sensor": false,
+  "collision_shape": 0,
+  "density": 0.5,
+  "restitution": 0.1,
+  "group": 0,
+  "linear_damping": 0.1,
+  "angular_damping": 0.1,
+  "friction": 0.2,
+  "awake": true,
+  "kinematic": true,
+  "physics_vertices": [],
+  "events": [
+    [
+      {
+        "event_subtype": 0,
+        "actions": [
+          {
+            "lib_id": 1,
+            "id": 603,
+            "kind": 7,
+            "use_relative": false,
+            "is_question": false,
+            "use_apply_to": true,
+            "exe_type": 2,
+            "action_name": "",
+            "code_id": "gml_Object_oItemCutscene_Create_0",
+            "argument_count": 1,
+            "who": -1,
+            "relative": false,
+            "is_not": false
+          }
+        ]
+      }
+    ],
+    [],
+    [
+      {
+        "event_subtype": 0,
+        "actions": [
+          {
+            "lib_id": 1,
+            "id": 603,
+            "kind": 7,
+            "use_relative": false,
+            "is_question": false,
+            "use_apply_to": true,
+            "exe_type": 2,
+            "action_name": "",
+            "code_id": "gml_Object_oItemCutscene_Alarm_0",
+            "argument_count": 1,
+            "who": -1,
+            "relative": false,
+            "is_not": false
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "event_subtype": 0,
+        "actions": [
+          {
+            "lib_id": 1,
+            "id": 603,
+            "kind": 7,
+            "use_relative": false,
+            "is_question": false,
+            "use_apply_to": true,
+            "exe_type": 2,
+            "action_name": "",
+            "code_id": "gml_Object_oItemCutscene_Step_0",
+            "argument_count": 1,
+            "who": -1,
+            "relative": false,
+            "is_not": false
+          }
+        ]
+      }
+    ],
+    [],
+    [],
+    [],
+    [
+      {
+        "event_subtype": 10,
+        "actions": [
+          {
+            "lib_id": 1,
+            "id": 603,
+            "kind": 7,
+            "use_relative": false,
+            "is_question": false,
+            "use_apply_to": true,
+            "exe_type": 2,
+            "action_name": "",
+            "code_id": "gml_Object_oItemCutscene_Other_10",
+            "argument_count": 1,
+            "who": -1,
+            "relative": false,
+            "is_not": false
+          }
+        ]
+      },
+      {
+        "event_subtype": 5,
+        "actions": [
+          {
+            "lib_id": 1,
+            "id": 603,
+            "kind": 7,
+            "use_relative": false,
+            "is_question": false,
+            "use_apply_to": true,
+            "exe_type": 2,
+            "action_name": "",
+            "code_id": "gml_Object_oItemCutscene_Other_5",
+            "argument_count": 1,
+            "who": -1,
+            "relative": false,
+            "is_not": false
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "event_subtype": 0,
+        "actions": [
+          {
+            "lib_id": 1,
+            "id": 603,
+            "kind": 7,
+            "use_relative": false,
+            "is_question": false,
+            "use_apply_to": true,
+            "exe_type": 2,
+            "action_name": "",
+            "code_id": "gml_Object_oItemCutscene_Draw_0",
+            "argument_count": 1,
+            "who": -1,
+            "relative": false,
+            "is_not": false
+          }
+        ]
+      }
+    ],
+    [],
+    [],
+    []
+  ]
+}

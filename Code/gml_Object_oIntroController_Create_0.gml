@@ -1,4 +1,4 @@
-alarm[0] = 500
+alarm[0] = 300
 txt = get_text("Title", "ControllerRecommended")
 if (os_type == os_linux && global.opfullscreen)
 {
