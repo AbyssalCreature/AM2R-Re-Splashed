@@ -1,1 +1,1 @@
-oControl.msr_fusionsuit = 0
+oControl.msr_fusionsuit = 0;

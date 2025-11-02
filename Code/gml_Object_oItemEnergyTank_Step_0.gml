@@ -1,2 +1,2 @@
-event_inherited()
-Item_Sprites()
+event_inherited();
+Item_Sprites();

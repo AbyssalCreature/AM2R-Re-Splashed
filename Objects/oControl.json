@@ -65,6 +65,46 @@
         ]
       },
       {
+        "event_subtype": 10,
+        "actions": [
+          {
+            "lib_id": 1,
+            "id": 603,
+            "kind": 7,
+            "use_relative": false,
+            "is_question": false,
+            "use_apply_to": true,
+            "exe_type": 2,
+            "action_name": "",
+            "code_id": "gml_Object_oControl_Alarm_10",
+            "argument_count": 1,
+            "who": -1,
+            "relative": false,
+            "is_not": false
+          }
+        ]
+      },
+      {
+        "event_subtype": 5,
+        "actions": [
+          {
+            "lib_id": 1,
+            "id": 603,
+            "kind": 7,
+            "use_relative": false,
+            "is_question": false,
+            "use_apply_to": true,
+            "exe_type": 2,
+            "action_name": "",
+            "code_id": "gml_Object_oControl_Alarm_5",
+            "argument_count": 1,
+            "who": -1,
+            "relative": false,
+            "is_not": false
+          }
+        ]
+      },
+      {
         "event_subtype": 4,
         "actions": [
           {
@@ -77,6 +117,26 @@
             "exe_type": 2,
             "action_name": "",
             "code_id": "gml_Object_oControl_Alarm_4",
+            "argument_count": 1,
+            "who": -1,
+            "relative": false,
+            "is_not": false
+          }
+        ]
+      },
+      {
+        "event_subtype": 3,
+        "actions": [
+          {
+            "lib_id": 1,
+            "id": 603,
+            "kind": 7,
+            "use_relative": false,
+            "is_question": false,
+            "use_apply_to": true,
+            "exe_type": 2,
+            "action_name": "",
+            "code_id": "gml_Object_oControl_Alarm_3",
             "argument_count": 1,
             "who": -1,
             "relative": false,
@@ -139,6 +199,26 @@
             "code_id": "gml_Object_oControl_Alarm_0",
             "argument_count": 1,
             "who": -1,
+            "relative": false,
+            "is_not": false
+          }
+        ]
+      },
+      {
+        "event_subtype": 6,
+        "actions": [
+          {
+            "lib_id": 0,
+            "id": 0,
+            "kind": 0,
+            "use_relative": false,
+            "is_question": false,
+            "use_apply_to": false,
+            "exe_type": 0,
+            "action_name": null,
+            "code_id": "gml_Object_oControl_Alarm_6",
+            "argument_count": 0,
+            "who": 0,
             "relative": false,
             "is_not": false
           }
@@ -577,6 +657,26 @@
         ]
       },
       {
+        "event_subtype": 112,
+        "actions": [
+          {
+            "lib_id": 1,
+            "id": 603,
+            "kind": 7,
+            "use_relative": false,
+            "is_question": false,
+            "use_apply_to": true,
+            "exe_type": 2,
+            "action_name": "",
+            "code_id": "gml_Object_oControl_KeyPress_112",
+            "argument_count": 1,
+            "who": -1,
+            "relative": false,
+            "is_not": false
+          }
+        ]
+      },
+      {
         "event_subtype": 27,
         "actions": [
           {
@@ -617,6 +717,46 @@
         ]
       },
       {
+        "event_subtype": 0,
+        "actions": [
+          {
+            "lib_id": 0,
+            "id": 0,
+            "kind": 0,
+            "use_relative": false,
+            "is_question": false,
+            "use_apply_to": false,
+            "exe_type": 0,
+            "action_name": null,
+            "code_id": "gml_Object_oControl_KeyPress_118",
+            "argument_count": 0,
+            "who": 0,
+            "relative": false,
+            "is_not": false
+          }
+        ]
+      },
+      {
+        "event_subtype": 0,
+        "actions": [
+          {
+            "lib_id": 0,
+            "id": 0,
+            "kind": 0,
+            "use_relative": false,
+            "is_question": false,
+            "use_apply_to": false,
+            "exe_type": 0,
+            "action_name": null,
+            "code_id": "gml_Object_oControl_KeyPress_119",
+            "argument_count": 0,
+            "who": 0,
+            "relative": false,
+            "is_not": false
+          }
+        ]
+      },
+      {
         "event_subtype": 116,
         "actions": [
           {
@@ -649,6 +789,46 @@
             "exe_type": 0,
             "action_name": null,
             "code_id": "gml_Object_oControl_KeyPress_117",
+            "argument_count": 0,
+            "who": 0,
+            "relative": false,
+            "is_not": false
+          }
+        ]
+      },
+      {
+        "event_subtype": 118,
+        "actions": [
+          {
+            "lib_id": 0,
+            "id": 0,
+            "kind": 0,
+            "use_relative": false,
+            "is_question": false,
+            "use_apply_to": false,
+            "exe_type": 0,
+            "action_name": null,
+            "code_id": "gml_Object_oControl_KeyPress_118",
+            "argument_count": 0,
+            "who": 0,
+            "relative": false,
+            "is_not": false
+          }
+        ]
+      },
+      {
+        "event_subtype": 119,
+        "actions": [
+          {
+            "lib_id": 0,
+            "id": 0,
+            "kind": 0,
+            "use_relative": false,
+            "is_question": false,
+            "use_apply_to": false,
+            "exe_type": 0,
+            "action_name": null,
+            "code_id": "gml_Object_oControl_KeyPress_119",
             "argument_count": 0,
             "who": 0,
             "relative": false,

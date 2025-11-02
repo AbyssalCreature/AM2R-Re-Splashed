@@ -1,1 +1,1 @@
-sprite_index = mysprite
+sprite_index = mysprite;

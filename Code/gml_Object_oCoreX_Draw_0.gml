@@ -1,17 +1,20 @@
-switch room
+switch (room)
 {
     case rm_a2a04:
-        pal_swap_set(oControl.ArachnusPalette, 1, 0)
-        break
-    case 128:
-        pal_swap_set(oControl.TorizoPalette, 1, 0)
-        break
-    case 281:
-        pal_swap_set(oControl.ErisPalette, 1, 0)
-        break
-    case 387:
-        pal_swap_set(oControl.GenesisPalette, 1, 0)
-        break
+        pal_swap_set(oControl.ArachnusPalette, 1, 0);
+        break;
+    
+    case rm_a3a01:
+        pal_swap_set(oControl.TorizoPalette, 1, 0);
+        break;
+    
+    case rm_a5b03a:
+        pal_swap_set(oControl.ErisPalette, 1, 0);
+        break;
+    
+    case rm_a8a11:
+        pal_swap_set(oControl.GenesisPalette, 1, 0);
+        break;
 }
 
 if (state == 6)
@@ -20,30 +23,39 @@ if (state == 6)
     {
         if (global.screwattack == 1 && state == JUMPING && vjump == 0 && walljumping == 0 && (inwater == 0 || global.currentsuit >= 2))
         {
-            draw_set_blend_mode(bm_add)
-            draw_sprite_ext(sScrewAttack, other.screwattackpickupframe, x, (y - 15), 1, 1, other.screwattackpickupangle, c_white, 1)
-            draw_set_blend_mode(bm_normal)
+            draw_set_blend_mode(bm_add);
+            draw_sprite_ext(sScrewAttack, other.screwattackpickupframe, x, y - 15, 1, 1, other.screwattackpickupangle, c_white, 1);
+            draw_set_blend_mode(bm_normal);
         }
     }
 }
+
 if (!instance_exists(oCoreXShell))
 {
-    if flashing
+    if (flashing)
     {
-        draw_sprite_ext(sprite_index, -1, x, y, image_xscale, image_yscale, image_angle, make_color_rgb(80, 80, 80), 1)
-        draw_set_blend_mode(bm_add)
+        draw_sprite_ext(sprite_index, -1, x, y, image_xscale, image_yscale, image_angle, make_color_rgb(80, 80, 80), 1);
+        draw_set_blend_mode(bm_add);
+        
         repeat (3)
-            draw_sprite_ext(sprite_index, -1, x, y, image_xscale, image_yscale, image_angle, -1, (1 - fxtimer * 0.1))
-        draw_set_blend_mode(bm_normal)
+            draw_sprite_ext(sprite_index, -1, x, y, image_xscale, image_yscale, image_angle, -1, 1 - (fxtimer * 0.1));
+        
+        draw_set_blend_mode(bm_normal);
     }
     else
-        draw_self()
-    if ((!instance_exists(oCoreXShell)) && (state == 0 || state == 1))
     {
-        draw_sprite_ext(sCoreXAura, image_index, x, y, 1, 1, 0, c_white, drawaura)
-        drawaura = (!drawaura)
+        draw_self();
+    }
+    
+    if (!instance_exists(oCoreXShell) && (state == 0 || state == 1))
+    {
+        draw_sprite_ext(sCoreXAura, image_index, x, y, 1, 1, 0, c_white, drawaura);
+        drawaura = !drawaura;
     }
 }
 else
-    draw_self()
-shader_reset()
+{
+    draw_self();
+}
+
+shader_reset();
