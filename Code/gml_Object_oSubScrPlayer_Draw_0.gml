@@ -1,92 +1,115 @@
-var drawX, drawY, suit, hijump, ice, plasma, wave, spazer, fusion, suitframe, subscrmultispr, multitroidcannon;
-draw_set_alpha(1)
-drawX = 7
-drawY = 53
-suit = ""
-hijump = ""
-ice = ""
-plasma = ""
-wave = ""
-spazer = ""
-fusion = ""
-multitroidcannon = ""
-subscrmultispr = sSubScrPlayer
-suitframe = 0
+draw_set_alpha(1);
+var drawX = 7;
+var drawY = 53;
+var suit = "";
+var hijump = "";
+var ice = "";
+var plasma = "";
+var wave = "";
+var spazer = "";
+var fusion = "";
+var multitroidcannon = "";
+var subscrmultispr = 483;
+var suitframe = 0;
+
 if (global.shaders_compiled && oControl.useselfpalette && oControl.palette != 3 && os_type != os_android && oControl.MultitroidSubScr != -1)
 {
-    subscrmultispr = sSubScrPlayerPal
+    subscrmultispr = 2161;
+    
     if (instance_exists(oClient) && oClient.connected)
     {
-        pal_swap_set(oControl.MultitroidSubScr, oClient.preferredcolor, 0)
-        if oControl.mod_fusion
+        pal_swap_set(oControl.MultitroidSubScr, oClient.preferredcolor, 0);
+        
+        if (oControl.mod_fusion)
         {
-            multitroidcannon = "M"
-            drawX -= 51
+            multitroidcannon = "M";
+            drawX -= 51;
         }
     }
     else if (oControl.preferredcolor != 17)
     {
-        pal_swap_set(oControl.MultitroidSubScr, oControl.preferredcolor, 0)
-        if oControl.mod_fusion
+        pal_swap_set(oControl.MultitroidSubScr, oControl.preferredcolor, 0);
+        
+        if (oControl.mod_fusion)
         {
-            multitroidcannon = "M"
-            drawX -= 51
+            multitroidcannon = "M";
+            drawX -= 51;
         }
     }
     else
-        subscrmultispr = sSubScrPlayer
+    {
+        subscrmultispr = 483;
+    }
 }
+
 if (oControl.mod_fusion == 0)
 {
     if (global.currentsuit == 0)
-        suitframe = 0
+        suitframe = 0;
     else if (global.currentsuit == 1)
-        suitframe = 2
+        suitframe = 2;
     else if (global.currentsuit == 2)
-        suitframe = 4
+        suitframe = 4;
+    
     if (global.hijump == 1)
-        suitframe += 1
+        suitframe += 1;
+    
     if (oControl.msr_fusionsuit == 0)
-        suitframe += 14
+        suitframe += 14;
 }
+
 if (oControl.mod_fusion == 1)
 {
-    fusion = "F"
-    drawX -= 2
-    drawY += 3
+    fusion = "F";
+    drawX -= 2;
+    drawY += 3;
+    
     if (global.currentsuit == 0)
-        suitframe = 6
+        suitframe = 6;
+    
     if (global.currentsuit == 1)
-        suitframe = 7
+        suitframe = 7;
+    
     if (global.currentsuit == 2)
-        suitframe = 10
-    if global.ibeam
-        suitframe = 11
+        suitframe = 10;
+    
+    if (global.ibeam && oControl.omegaEnabled)
+        suitframe = 11;
+    
     if (oControl.msr_fusionsuit == 0)
-        suitframe += 2
+        suitframe += 2;
 }
-if global.sbeam
+
+if (global.sbeam)
 {
-    spazer = "S"
-    if ((!global.wbeam) && oControl.mod_fusion && oControl.preferredcolor != 17 && oControl.useselfpalette && oControl.palette != 3)
-        drawX -= 1
+    spazer = "S";
+    
+    if (!global.wbeam && oControl.mod_fusion && oControl.preferredcolor != 17 && oControl.useselfpalette && oControl.palette != 3)
+        drawX -= 1;
 }
-if global.wbeam
+
+if (global.wbeam)
 {
-    drawX -= 1
-    wave = "W"
+    drawX -= 1;
+    wave = "W";
 }
-if global.pbeam
-    plasma = "P"
-if global.ibeam
-    ice = "I"
+
+if (global.pbeam)
+    plasma = "P";
+
+if (global.ibeam)
+    ice = "I";
+
 if (global.currentsuit == 1)
-    suit = "V"
+    suit = "V";
+
 if (global.currentsuit == 2)
-    suit = "G"
-if (global.ibeam && oControl.mod_fusion)
-    suit = "O"
-cannon = asset_get_index("s" + fusion + multitroidcannon + suit + "Cannon" + spazer + wave + plasma + ice)
-draw_sprite_ext(subscrmultispr, suitframe, x, y, 1, 1, 0, -1, oSubscreenMenu.ealpha)
-draw_sprite_ext(cannon, 0, (x + drawX), (y + drawY), 1, 1, 0, -1, oSubscreenMenu.ealpha)
-shader_reset()
+    suit = "G";
+
+if (global.ibeam && oControl.mod_fusion && oControl.omegaEnabled)
+    suit = "O";
+
+cannon = asset_get_index("s" + fusion + multitroidcannon + suit + "Cannon" + spazer + wave + plasma + ice);
+draw_sprite_ext(subscrmultispr, suitframe, x, y, 1, 1, 0, -1, oSubscreenMenu.ealpha);
+draw_sprite_ext(cannon, 0, x + drawX, y + drawY, 1, 1, 0, -1, oSubscreenMenu.ealpha);
+shader_reset();

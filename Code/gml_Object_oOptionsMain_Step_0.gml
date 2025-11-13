@@ -1,75 +1,92 @@
-if active
+if (active)
 {
     if (oControl.kDown && oControl.kDownPushedSteps == 0)
     {
-        global.curropt += 1
+        global.curropt += 1;
+        
         if (global.curropt > lastitem)
-            global.curropt = 0
+            global.curropt = 0;
+        
         if (global.curropt == 3 && op4.enabled == 0)
-            global.curropt += 1
-        sfx_play(sndMenuMove)
-        global.tiptext = tip[global.curropt]
+            global.curropt += 1;
+        
+        sfx_play(189);
+        global.tiptext = tip[global.curropt];
     }
+    
     if (oControl.kUp && oControl.kUpPushedSteps == 0)
     {
-        global.curropt -= 1
+        global.curropt -= 1;
+        
         if (global.curropt < 0)
-            global.curropt = lastitem
+            global.curropt = lastitem;
+        
         while (global.curropt == 3 && op4.enabled == 0)
-            global.curropt -= 1
-        sfx_play(sndMenuMove)
-        global.tiptext = tip[global.curropt]
+            global.curropt -= 1;
+        
+        sfx_play(189);
+        global.tiptext = tip[global.curropt];
     }
+    
     if (oControl.kMenu1 && oControl.kMenu1PushedSteps == 0)
     {
-        sfx_play(sndMenuSel)
+        sfx_play(188);
+        
         if (global.curropt == 0)
         {
-            instance_create(50, 92, oOptionsDisplay)
-            instance_destroy()
+            instance_create(50, 92, oOptionsDisplay);
+            instance_destroy();
         }
+        
         if (global.curropt == 1)
         {
-            instance_create(50, 92, oOptionsSound)
-            instance_destroy()
+            instance_create(50, 92, oOptionsSound);
+            instance_destroy();
         }
+        
         if (global.curropt == 2)
         {
-            instance_create(50, 92, oOptionsControl)
-            instance_destroy()
+            instance_create(50, 92, oOptionsControl);
+            instance_destroy();
         }
+        
         if (global.curropt == 3)
         {
-            instance_create(50, 84, oOptionsExtras)
-            instance_destroy()
+            instance_create(50, 84, oOptionsExtras);
+            instance_destroy();
         }
+        
         if (global.curropt == 4)
         {
-            instance_create(50, 68, oOptionsMod)
-            instance_destroy()
+            instance_create(50, 68, oOptionsMod);
+            instance_destroy();
         }
+        
         if (global.curropt == 5)
         {
-            instance_create(50, 92, oOptionsResplashed)
-            instance_destroy()
+            instance_create(50, 84, oOptionsResplashed);
+            instance_destroy();
         }
+        
         if (global.curropt == 6)
         {
             if (instance_exists(oSS_Control) > 0)
             {
-                instance_create(50, 92, oPauseMenuOptions)
-                instance_destroy()
+                instance_create(50, 92, oPauseMenuOptions);
+                instance_destroy();
             }
             else
             {
-                save_gameoptions()
-                global.curropt = 4
-                if global.lobbyLocked
+                save_gameoptions();
+                global.curropt = 4;
+                
+                if (global.lobbyLocked)
                 {
-                    global.spectator = 1
-                    global.spectatorIndex = -1
+                    global.spectator = 1;
+                    global.spectatorIndex = -1;
                 }
-                room_change(1, 0)
+                
+                room_change(1, 0);
             }
         }
     }

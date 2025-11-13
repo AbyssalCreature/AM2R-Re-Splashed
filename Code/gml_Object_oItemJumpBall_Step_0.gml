@@ -1,21 +1,26 @@
-var itemfusion, suit, TwoD;
-event_inherited()
-itemfusion = ""
-suit = ""
-TwoD = ""
+event_inherited();
+var itemfusion = "";
+var suit = "";
+var TwoD = "";
+
 if (!global.sax)
 {
     if (global.currentsuit == 1)
-        suit = "V"
+        suit = "V";
+    
     if (global.currentsuit == 2)
-        suit = "G"
+        suit = "G";
+    
     if (oControl.mod_fusion == 1)
     {
-        itemfusion = "_Fusion"
-        if global.ibeam
-            suit = "O"
+        itemfusion = "_Fusion";
+        
+        if (global.ibeam && oControl.omegaEnabled)
+            suit = "O";
     }
+    
     if (oControl.msr_fusionsuit == 1)
-        TwoD = "2D"
-    sprite_index = asset_get_index("sItemJumpBall" + itemfusion + suit + TwoD)
+        TwoD = "2D";
+    
+    sprite_index = asset_get_index("sItemJumpBall" + itemfusion + suit + TwoD);
 }

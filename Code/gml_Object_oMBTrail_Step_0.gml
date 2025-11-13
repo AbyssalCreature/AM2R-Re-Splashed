@@ -1,83 +1,109 @@
 if (oCharacter.state == 23 || oCharacter.state == 24)
 {
-    sx[10] = sx[9]
-    sx[9] = sx[8]
-    sx[8] = sx[7]
-    sx[7] = sx[6]
-    sx[6] = sx[5]
-    sx[5] = sx[4]
-    sx[4] = sx[3]
-    sx[3] = sx[2]
-    sx[2] = sx[1]
-    sx[1] = sx[0]
-    sx[0] = x
-    sy[10] = sy[9]
-    sy[9] = sy[8]
-    sy[8] = sy[7]
-    sy[7] = sy[6]
-    sy[6] = sy[5]
-    sy[5] = sy[4]
-    sy[4] = sy[3]
-    sy[3] = sy[2]
-    sy[2] = sy[1]
-    sy[1] = sy[0]
-    sy[0] = y
-    x = oCharacter.x
-    y = oCharacter.y
-    if oControl.mod_fusion
+    sx[10] = sx[9];
+    sx[9] = sx[8];
+    sx[8] = sx[7];
+    sx[7] = sx[6];
+    sx[6] = sx[5];
+    sx[5] = sx[4];
+    sx[4] = sx[3];
+    sx[3] = sx[2];
+    sx[2] = sx[1];
+    sx[1] = sx[0];
+    sx[0] = x;
+    sy[10] = sy[9];
+    sy[9] = sy[8];
+    sy[8] = sy[7];
+    sy[7] = sy[6];
+    sy[6] = sy[5];
+    sy[5] = sy[4];
+    sy[4] = sy[3];
+    sy[3] = sy[2];
+    sy[2] = sy[1];
+    sy[1] = sy[0];
+    sy[0] = y;
+    x = oCharacter.x;
+    y = oCharacter.y;
+    
+    if (oControl.mod_fusion)
     {
         if (!global.shaders_compiled)
         {
             if (global.currentsuit == 0)
-                image_blend = make_color_rgb(oControl.Trail_P_R_F_SR, oControl.Trail_P_G_F_SR, oControl.Trail_P_B_F_SR)
+                image_blend = make_color_rgb(oControl.Trail_P_R_F_SR, oControl.Trail_P_G_F_SR, oControl.Trail_P_B_F_SR);
+            
             if (global.currentsuit == 1)
-                image_blend = make_color_rgb(oControl.Trail_V_R_F_SR, oControl.Trail_V_G_F_SR, oControl.Trail_V_B_F_SR)
+                image_blend = make_color_rgb(oControl.Trail_V_R_F_SR, oControl.Trail_V_G_F_SR, oControl.Trail_V_B_F_SR);
+            
             if (global.currentsuit == 2)
-                image_blend = make_color_rgb(oControl.Trail_G_R_F_SR, oControl.Trail_G_G_F_SR, oControl.Trail_G_B_F_SR)
-            if global.ibeam
-                image_blend = make_color_rgb(255, 189, 0)
+                image_blend = make_color_rgb(oControl.Trail_G_R_F_SR, oControl.Trail_G_G_F_SR, oControl.Trail_G_B_F_SR);
+            
+            if (global.ibeam)
+                image_blend = make_color_rgb(255, 189, 0);
         }
-        else if oControl.msr_fusionsuit
+        else if (oControl.msr_fusionsuit)
         {
-            if global.ibeam
-                image_blend = make_color_rgb(oControl.Trail_O_R_F_2D, oControl.Trail_O_G_F_2D, oControl.Trail_O_B_F_2D)
+            if (global.ibeam && oControl.omegaEnabled)
+            {
+                image_blend = make_color_rgb(oControl.Trail_O_R_F_2D, oControl.Trail_O_G_F_2D, oControl.Trail_O_B_F_2D);
+            }
             else if (global.currentsuit == 0)
-                image_blend = make_color_rgb(oControl.Trail_P_R_F_2D, oControl.Trail_P_G_F_2D, oControl.Trail_P_B_F_2D)
+            {
+                image_blend = make_color_rgb(oControl.Trail_P_R_F_2D, oControl.Trail_P_G_F_2D, oControl.Trail_P_B_F_2D);
+            }
             else if (global.currentsuit == 1)
-                image_blend = make_color_rgb(oControl.Trail_V_R_F_2D, oControl.Trail_V_G_F_2D, oControl.Trail_V_B_F_2D)
+            {
+                image_blend = make_color_rgb(oControl.Trail_V_R_F_2D, oControl.Trail_V_G_F_2D, oControl.Trail_V_B_F_2D);
+            }
             else if (global.currentsuit == 2)
-                image_blend = make_color_rgb(oControl.Trail_G_R_F_2D, oControl.Trail_G_G_F_2D, oControl.Trail_G_B_F_2D)
+            {
+                image_blend = make_color_rgb(oControl.Trail_G_R_F_2D, oControl.Trail_G_G_F_2D, oControl.Trail_G_B_F_2D);
+            }
             else
             {
                 if (global.currentsuit == 0)
-                    image_blend = make_color_rgb(oControl.Trail_P_R_2D, oControl.Trail_P_G_2D, oControl.Trail_P_B_2D)
+                    image_blend = make_color_rgb(oControl.Trail_P_R_2D, oControl.Trail_P_G_2D, oControl.Trail_P_B_2D);
+                
                 if (global.currentsuit == 1)
-                    image_blend = make_color_rgb(oControl.Trail_V_R_2D, oControl.Trail_V_G_2D, oControl.Trail_V_B_2D)
+                    image_blend = make_color_rgb(oControl.Trail_V_R_2D, oControl.Trail_V_G_2D, oControl.Trail_V_B_2D);
+                
                 if (global.currentsuit == 2)
-                    image_blend = make_color_rgb(oControl.Trail_G_R_2D, oControl.Trail_G_G_2D, oControl.Trail_G_B_2D)
+                    image_blend = make_color_rgb(oControl.Trail_G_R_2D, oControl.Trail_G_G_2D, oControl.Trail_G_B_2D);
             }
         }
         else if (!oControl.msr_fusionsuit)
         {
-            if global.ibeam
-                image_blend = make_color_rgb(oControl.Trail_O_R_F, oControl.Trail_O_G_F, oControl.Trail_O_B_F)
+            if (global.ibeam && oControl.omegaEnabled)
+            {
+                image_blend = make_color_rgb(oControl.Trail_O_R_F, oControl.Trail_O_G_F, oControl.Trail_O_B_F);
+            }
             else if (global.currentsuit == 0)
-                image_blend = make_color_rgb(oControl.Trail_P_R_F, oControl.Trail_P_G_F, oControl.Trail_P_B_F)
+            {
+                image_blend = make_color_rgb(oControl.Trail_P_R_F, oControl.Trail_P_G_F, oControl.Trail_P_B_F);
+            }
             else if (global.currentsuit == 1)
-                image_blend = make_color_rgb(oControl.Trail_V_R_F, oControl.Trail_V_G_F, oControl.Trail_V_B_F)
+            {
+                image_blend = make_color_rgb(oControl.Trail_V_R_F, oControl.Trail_V_G_F, oControl.Trail_V_B_F);
+            }
             else if (global.currentsuit == 2)
-                image_blend = make_color_rgb(oControl.Trail_G_R_F, oControl.Trail_G_G_F, oControl.Trail_G_B_F)
+            {
+                image_blend = make_color_rgb(oControl.Trail_G_R_F, oControl.Trail_G_G_F, oControl.Trail_G_B_F);
+            }
             else
             {
                 if (global.currentsuit == 0)
-                    image_blend = make_color_rgb(oControl.Trail_P_R, oControl.Trail_P_G, oControl.Trail_P_B)
+                    image_blend = make_color_rgb(oControl.Trail_P_R, oControl.Trail_P_G, oControl.Trail_P_B);
+                
                 if (global.currentsuit == 1)
-                    image_blend = make_color_rgb(oControl.Trail_V_R, oControl.Trail_V_G, oControl.Trail_V_B)
+                    image_blend = make_color_rgb(oControl.Trail_V_R, oControl.Trail_V_G, oControl.Trail_V_B);
+                
                 if (global.currentsuit == 2)
-                    image_blend = make_color_rgb(oControl.Trail_G_R, oControl.Trail_G_G, oControl.Trail_G_B)
+                    image_blend = make_color_rgb(oControl.Trail_G_R, oControl.Trail_G_G, oControl.Trail_G_B);
             }
         }
     }
 }
 else
-    instance_destroy()
+{
+    instance_destroy();
+}
