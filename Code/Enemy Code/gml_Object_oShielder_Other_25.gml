@@ -10,7 +10,7 @@ event_inherited()
 if shield_present
 {
     frz.spr1 = 416
-    if oControl.mod_fusion
+    if oControl.XVariantsEnabled
         frz.spr1 = sShielderShieldFrozen_Fusion
     frz.spr1xoff = 0
     frz.spr1yoff = 0

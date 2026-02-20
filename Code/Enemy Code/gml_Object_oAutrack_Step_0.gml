@@ -1,7 +1,7 @@
 action_inherited()
 enemy_active_check(20)
 enemy_target_check(90, 1)
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     frozenspr = sAutrackFrozen_Fusion
     empspr = sAutrackDisabled_Fusion
@@ -16,7 +16,7 @@ if (active == 1 && stun == 0 && frozen == 0)
     if (state == 0)
     {
         sprite_index = sAutrack
-        if oControl.mod_fusion
+        if oControl.XVariantsEnabled
             sprite_index = sAutrack_Fusion
         image_index = 0
         image_speed = 0
@@ -35,7 +35,7 @@ if (active == 1 && stun == 0 && frozen == 0)
             state = 2
             statetime = 0
             sprite_index = sAutrackAttack
-            if oControl.mod_fusion
+            if oControl.XVariantsEnabled
                 sprite_index = sAutrackAttack_Fusion
             image_index = 0
         }
@@ -51,7 +51,7 @@ if (active == 1 && stun == 0 && frozen == 0)
             state = 3
             statetime = 0
             sprite_index = sAutrack
-            if oControl.mod_fusion
+            if oControl.XVariantsEnabled
                 sprite_index = sAutrack_Fusion
             image_index = 5
         }

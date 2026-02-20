@@ -1,6 +1,6 @@
 enemy_active_check(30)
 enemy_target_check(140, 0)
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
     frozenspr = sMotoFrozen_Fusion
 else
     frozenspr = 423
@@ -12,7 +12,7 @@ if (active == 1 && frozen == 0)
     if (state == 0)
     {
         sprite_index = sMotoRun
-        if oControl.mod_fusion
+        if oControl.XVariantsEnabled
             sprite_index = sMotoRun_Fusion
         image_speed = 0
         image_index = 0
@@ -26,7 +26,7 @@ if (active == 1 && frozen == 0)
     {
         xVel = 3 * facing
         sprite_index = sMotoRun
-        if oControl.mod_fusion
+        if oControl.XVariantsEnabled
             sprite_index = sMotoRun_Fusion
         image_speed = 0.5
         if (statetime == 0)
@@ -71,7 +71,7 @@ if (active == 1 && frozen == 0)
     {
         xVel *= 0.9
         sprite_index = sMotoTurn
-        if oControl.mod_fusion
+        if oControl.XVariantsEnabled
             sprite_index = sMotoTurn_Fusion
         image_speed = 0
         if (statetime < 22)
@@ -93,7 +93,7 @@ if (active == 1 && frozen == 0)
         {
             yVel = -3
             sprite_index = sMotoRun
-            if oControl.mod_fusion
+            if oControl.XVariantsEnabled
                 sprite_index = sMotoRun_Fusion
             image_speed = 0
             image_index = 3

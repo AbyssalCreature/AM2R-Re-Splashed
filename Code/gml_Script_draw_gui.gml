@@ -36,6 +36,8 @@ if (global.shaders_compiled && os_type != os_android)
 {
     if (oControl.preferredcolor != 17 || (instance_exists(oClient) && oClient.connected) || oControl.hudoption == 1)
     {
+        oControl.paletteColor = hudpal;
+        
         if (oControl.hudoption != 2 && oControl.hudpalette != -1)
             pal_swap_set(oControl.hudpalette, hudpal, 0);
     }
@@ -650,23 +652,23 @@ if (global.classicmode == 0 && global.opshowhud)
         
         if (!global.juggActive)
         {
-            draw_sprite(sXPowerBar, 0, (xoffNew - 4) + oControl.widescreen_space, 32);
+            draw_sprite(sXPowerBar, 0, 201 + oControl.widescreen_space, 32);
             shader_reset();
-            draw_sprite(sXPowerTanks, global.damageMult, xoffNew + 75 + oControl.widescreen_space, 40);
+            draw_sprite(sXPowerTanks, global.damageMult, 280 + oControl.widescreen_space, 40);
             
             if (global.damageMult == 4)
-                draw_sprite_ext(sXPowerMeter, 3, xoffNew + 97 + oControl.widescreen_space, 33, -99, 1, 0, c_white, 1);
+                draw_sprite_ext(sXPowerMeter, 3, 302 + oControl.widescreen_space, 33, -99, 1, 0, c_white, 1);
             else
-                draw_sprite_ext(sXPowerMeter, global.damageMult, xoffNew + 97 + oControl.widescreen_space, 33, -((global.damageMult * 100) % 100), 1, 0, c_white, 1);
+                draw_sprite_ext(sXPowerMeter, global.damageMult, 302 + oControl.widescreen_space, 33, -((global.damageMult * 100) % 100), 1, 0, c_white, 1);
         }
         else
         {
             var shakeX = irandom_range(-1, 1);
             var shakeY = irandom_range(0, 1);
-            draw_sprite(sXPowerBar, 1, (xoffNew - 4) + oControl.widescreen_space + shakeX, 32 + shakeY);
+            draw_sprite(sXPowerBar, 1, 201 + oControl.widescreen_space + shakeX, 32 + shakeY);
             shader_reset();
-            draw_sprite(sXPowerTanks, 5, xoffNew + 75 + oControl.widescreen_space + shakeX, 40 + shakeY);
-            draw_sprite_ext(sXPowerMeter, 3, xoffNew + 97 + oControl.widescreen_space + shakeX, 33 + shakeY, -99, 1, 0, c_white, 1);
+            draw_sprite(sXPowerTanks, 5, 280 + oControl.widescreen_space + shakeX, 40 + shakeY);
+            draw_sprite_ext(sXPowerMeter, 3, 302 + oControl.widescreen_space + shakeX, 33 + shakeY, -99, 1, 0, c_white, 1);
         }
         
         if (global.shaders_compiled && os_type != os_android)
@@ -774,6 +776,18 @@ if (global.classicmode == 0 && global.opshowhud)
         }
     }
     
+    if (global.saxmode)
+    {
+        draw_background(bgSamCount, (xoff - 20) + widescreen_space, 4);
+        
+        if (global.samCount < global.samsAlive)
+            global.samsAlpha = 1;
+        
+        draw_background_ext(bgSamCountRed, (xoff - 20) + widescreen_space, 4, 1, 1, 0, c_white, global.samsAlpha);
+        draw_text((xoff - 18) + widescreen_space, 21, to_string_lz(global.samCount));
+        global.samsAlpha -= 0.016;
+    }
+    
     if (global.ophudshowmetrcount)
     {
         if (global.saxmode)
@@ -785,15 +799,6 @@ if (global.classicmode == 0 && global.opshowhud)
                 if (global.metdead[i] == 1)
                     metcount += 1;
             }
-            
-            draw_background(bgSamCount, (xoff - 20) + widescreen_space, 4);
-            
-            if (global.samCount < global.samsAlive)
-                global.samsAlpha = 1;
-            
-            draw_background_ext(bgSamCountRed, (xoff - 20) + widescreen_space, 4, 1, 1, 0, c_white, global.samsAlpha);
-            draw_text((xoff - 18) + widescreen_space, 21, to_string_lz(global.samCount));
-            global.samsAlpha -= 0.016;
         }
         
         if (global.saxmode && (global.MetCount - metcount) > 0)

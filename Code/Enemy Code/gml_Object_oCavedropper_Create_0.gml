@@ -5,7 +5,7 @@ hitsound = 61
 deathsound = 60
 platyoffset = -14
 frozenspr = 390
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
     frozenspr = sCavedropperFrozen_Fusion
 facing = 1
 state = 1

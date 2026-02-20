@@ -71,6 +71,28 @@ if (active)
                 sfx_play(189);
                 event_user(2);
             }
+            
+            if (global.curropt == num_variants)
+            {
+                oControl.XVariantsOption--;
+                
+                if (oControl.XVariantsOption < 0)
+                    oControl.XVariantsOption = 2;
+                
+                sfx_play(189);
+                event_user(2);
+            }
+            
+            if (global.curropt == num_omega)
+            {
+                oControl.omegaSetting--;
+                
+                if (oControl.omegaSetting < 0)
+                    oControl.omegaSetting = 3;
+                
+                sfx_play(189);
+                event_user(2);
+            }
         }
     }
     
@@ -99,6 +121,28 @@ if (active)
                 sfx_play(189);
                 event_user(2);
             }
+            
+            if (global.curropt == num_variants)
+            {
+                oControl.XVariantsOption++;
+                
+                if (oControl.XVariantsOption > 3)
+                    oControl.XVariantsOption = 0;
+                
+                sfx_play(189);
+                event_user(2);
+            }
+            
+            if (global.curropt == num_omega)
+            {
+                oControl.omegaSetting++;
+                
+                if (oControl.omegaSetting > 2)
+                    oControl.omegaSetting = 0;
+                
+                sfx_play(189);
+                event_user(2);
+            }
         }
     }
     
@@ -112,9 +156,6 @@ if (active)
             if (global.curropt == num_gamehud)
                 oControl.gamehud = !oControl.gamehud;
         }
-        
-        if (global.curropt == num_omega)
-            oControl.omegaEnabled = !oControl.omegaEnabled;
         
         sfx_play(189);
         event_user(2);

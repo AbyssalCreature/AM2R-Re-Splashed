@@ -1,5 +1,5 @@
 action_inherited()
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     sprite_index = sTPO2_Fusion
     frozenspr = sTPO2Frozen_Fusion

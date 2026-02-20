@@ -18,7 +18,7 @@ state = 1
 active = 1
 hitemp = 1
 empspr = 408
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     frozenspr = sTPO2Frozen_Fusion
     empspr = sTPO2Disabled_Fusion

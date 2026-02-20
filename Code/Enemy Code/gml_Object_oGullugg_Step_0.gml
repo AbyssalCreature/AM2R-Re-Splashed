@@ -1,7 +1,7 @@
 action_inherited()
 enemy_active_check(20)
 enemy_target_check(90, 1)
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     sprite_index = sGullugg_Fusion
     frozenspr = sGulluggFrozen_Fusion

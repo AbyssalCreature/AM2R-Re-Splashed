@@ -33,7 +33,7 @@ if (frozen == 0)
     }
 }
 event_inherited()
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     sprite_index = sRobotMine_Fusion
     frozenspr = sRobotMineFrozen_Fusion

@@ -2,7 +2,7 @@ if flipx
     image_xscale = facing
 else
     image_xscale = 1
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     sprite_index = sAutom_Fusion
     frozenspr = sAutom_Fusion

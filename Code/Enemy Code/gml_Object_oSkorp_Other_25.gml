@@ -3,7 +3,7 @@ if attack
 {
     frz.spr1 = 421
     frz.spr2 = 421
-    if oControl.mod_fusion
+    if oControl.XVariantsEnabled
     {
         frz.spr1 = sSkorpDiscFrozen_Fusion
         frz.spr2 = sSkorpDiscFrozen_Fusion
@@ -13,7 +13,7 @@ else
 {
     frz.spr1 = 1691
     frz.spr2 = 1691
-    if oControl.mod_fusion
+    if oControl.XVariantsEnabled
     {
         frz.spr1 = sSkorpDiscLungeFrozen_Fusion
         frz.spr2 = sSkorpDiscLungeFrozen_Fusion

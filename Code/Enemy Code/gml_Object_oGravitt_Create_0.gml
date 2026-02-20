@@ -7,7 +7,7 @@ hitsound = 61
 deathsound = 59
 platyoffset = -20
 frozenspr = 370
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
     frozenspr = sGravittFrozen_Fusion
 flipx = 0
 yoffset = 0

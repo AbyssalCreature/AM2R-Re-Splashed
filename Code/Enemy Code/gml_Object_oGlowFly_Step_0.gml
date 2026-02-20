@@ -1,5 +1,5 @@
 enemy_active_check(20)
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     sprite_index = sGlowFly_Fusion
     frozenspr = sGlowFlyFrozen_Fusion

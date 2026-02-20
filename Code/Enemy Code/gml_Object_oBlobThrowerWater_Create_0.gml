@@ -12,7 +12,7 @@ canattack = 1
 state = 0
 image_speed = 0
 sprite_index = sBlobThrowerWaterClosed
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     frozenspr = sBlobThrowerWaterFrozen_Fusion
     sprite_index = sBlobThrowerWaterClosed_Fusion

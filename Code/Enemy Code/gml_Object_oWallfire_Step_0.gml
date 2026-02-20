@@ -1,7 +1,7 @@
 action_inherited()
 enemy_active_check(20)
 enemy_target_check(90, 1)
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     sprite_index = sWallfire_Fusion
     frozenspr = sWallfireFrozen_Fusion
@@ -27,7 +27,7 @@ if (state == 100)
 {
     spark = instance_create(x, y, oFXAnimSpark)
     spark.sprite_index = sWallfireDestr
-    if oControl.mod_fusion
+    if oControl.XVariantsEnabled
         spark.sprite_index = sWallfireDestr_Fusion
     spark.image_speed = 0
     spark.depth = 1

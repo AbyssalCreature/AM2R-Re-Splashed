@@ -5,7 +5,7 @@ if (frozen > 0)
 else
 {
     eyespr = sRamulkenEye
-    if oControl.mod_fusion
+    if oControl.XVariantsEnabled
         eyespr = sRamulkenEye_Fusion
 }
 if (frozen == 0)

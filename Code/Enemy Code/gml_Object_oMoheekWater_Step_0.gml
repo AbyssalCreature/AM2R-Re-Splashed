@@ -1,7 +1,7 @@
 enemy_active_check(30)
 enemy_target_check(120, 1)
 frozenspr = 1464
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     sprite_index = sMoheekSwimming_Fusion
     frozenspr = sMoheekSwimming_Frozen_Fusion

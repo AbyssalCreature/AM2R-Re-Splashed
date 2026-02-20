@@ -2,7 +2,7 @@ action_inherited()
 canbeX = 0
 enemy_active_check(18)
 enemy_target_check(120, 0)
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     sprite_index = sTPO_Fusion
     frozenspr = sTPOFrozen_Fusion

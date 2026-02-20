@@ -5,7 +5,7 @@ hitsound = 62
 deathsound = 60
 platyoffset = -6
 frozenspr = 444
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
     frozenspr = sGlowFlyFrozen_Fusion
 flipx = 0
 facing = 1

@@ -15,7 +15,7 @@ hitsound = 64
 deathsound = 59
 platyoffset = -8
 frozenspr = 332
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
     frozenspr = sChuteLeechFrozen_Fusion
 target = 0
 canattack = 1

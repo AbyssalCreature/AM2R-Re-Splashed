@@ -1,7 +1,7 @@
 action_inherited()
 enemy_active_check(70)
 enemy_target_check(firerange, 1)
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     sprite_index = sShielder_Fusion
     frozenspr = sShielderFrozen_Fusion

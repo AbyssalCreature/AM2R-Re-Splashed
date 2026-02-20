@@ -15,7 +15,7 @@ if (instance_exists(shield1) && instance_exists(shield2))
                 sprite_index = sHalzynBodyA4
                 shield1.sprite_index = sHalzynShieldA4
                 shield2.sprite_index = sHalzynShieldA4
-                if oControl.mod_fusion
+                if oControl.XVariantsEnabled
                 {
                     sprite_index = sHalzynBodyA4_Fusion
                     shield1.sprite_index = sHalzynShieldA4_Fusion
@@ -28,7 +28,7 @@ if (instance_exists(shield1) && instance_exists(shield2))
                 sprite_index = sHalzynBodyA4
                 shield1.sprite_index = sHalzynShieldA4_2
                 shield2.sprite_index = sHalzynShieldA4_2
-                if oControl.mod_fusion
+                if oControl.XVariantsEnabled
                 {
                     sprite_index = sHalzynBodyA4_Fusion
                     shield1.sprite_index = sHalzynShieldA4_2_Fusion
@@ -43,7 +43,7 @@ if (instance_exists(shield1) && instance_exists(shield2))
             sprite_index = sHalzynBody
             shield1.sprite_index = sHalzynShield
             shield2.sprite_index = sHalzynShield
-            if oControl.mod_fusion
+            if oControl.XVariantsEnabled
             {
                 sprite_index = sHalzynBody_Fusion
                 shield1.sprite_index = sHalzynShield_Fusion
@@ -57,7 +57,7 @@ if (instance_exists(shield1) && instance_exists(shield2))
     {
         shield1.sprite_index = sHalzynShieldFrozen
         shield2.sprite_index = sHalzynShieldFrozen
-        if oControl.mod_fusion
+        if oControl.XVariantsEnabled
         {
             shield1.sprite_index = sHalzynShieldFrozen_Fusion
             shield2.sprite_index = sHalzynShieldFrozen_Fusion

@@ -7,7 +7,7 @@ if (active == 1 && frozen == 0)
     if (state == 0)
     {
         sprite_index = sBlobThrower
-        if oControl.mod_fusion
+        if oControl.XVariantsEnabled
             sprite_index = sBlobThrower_Fusion
         image_index = 0
         image_speed = 0
@@ -31,7 +31,7 @@ if (active == 1 && frozen == 0)
                 statetime = 0
                 sprite_index = sBlobThrowerIdle
                 frozenspr = 1495
-                if oControl.mod_fusion
+                if oControl.XVariantsEnabled
                 {
                     sprite_index = sBlobThrowerIdle_Fusion
                     frozenspr = sBlobThrowerIdleFrozen_Fusion
@@ -56,7 +56,7 @@ if (active == 1 && frozen == 0)
             sprite_index = sBlobThrower
             image_index = 7
             frozenspr = 1493
-            if oControl.mod_fusion
+            if oControl.XVariantsEnabled
             {
                 sprite_index = sBlobThrower_Fusion
                 frozenspr = sBlobThrowerFrozen_Fusion

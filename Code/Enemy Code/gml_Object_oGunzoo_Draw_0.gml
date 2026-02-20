@@ -1,7 +1,7 @@
 armor1 = sGunzooArmor1
 armor2 = sGunzooArmor2
 turn = sGunzooTurn
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     sprite_index = sGunzoo_Fusion
     armor1 = sGunzooArmor1_Fusion
@@ -25,7 +25,7 @@ if frozen
     armor1 = sGunzooArmor1Frozen
     armor2 = sGunzooArmor2Frozen
     turn = sGunzooTurnFrozen
-    if oControl.mod_fusion
+    if oControl.XVariantsEnabled
     {
         armor1 = sGunzooArmor1Frozen_Fusion
         armor2 = sGunzooArmor2Frozen_Fusion
@@ -38,7 +38,7 @@ else
     armor1 = sGunzooArmor1
     armor2 = sGunzooArmor2
     turn = sGunzooTurn
-    if oControl.mod_fusion
+    if oControl.XVariantsEnabled
     {
         armor1 = sGunzooArmor1_Fusion
         armor2 = sGunzooArmor2_Fusion

@@ -1,6 +1,6 @@
 var inst1, inst2, inst;
 action_inherited()
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     sprite_index = sTsumuri_Fusion
     frozenspr = sTsumuriFrozen_Fusion

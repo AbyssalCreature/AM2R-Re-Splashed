@@ -70,7 +70,7 @@ if (global.shaders_compiled)
             break;
         
         case 14:
-            op[num_color].optext = "Light Purple";
+            op[num_color].optext = "Dark Purple";
             break;
         
         case 15:
@@ -89,8 +89,30 @@ if (global.shaders_compiled)
         op[num_gamehud].optext = "True";
 }
 
-if (oControl.omegaEnabled == 0)
+switch (oControl.XVariantsOption)
+{
+    case 0:
+        op[num_variants].optext = "Never";
+        break;
+    
+    case 1:
+        op[num_variants].optext = "Fusion Mode";
+        break;
+    
+    case 2:
+        op[num_variants].optext = "SA-X + Fusion";
+        break;
+    
+    case 3:
+        op[num_variants].optext = "Always";
+        break;
+}
+
+if (oControl.omegaSetting == 0)
     op[num_omega].optext = "Disabled";
 
-if (oControl.omegaEnabled == 1)
+if (oControl.omegaSetting == 1)
+    op[num_omega].optext = "SA-X Only";
+
+if (oControl.omegaSetting == 2)
     op[num_omega].optext = "Enabled";

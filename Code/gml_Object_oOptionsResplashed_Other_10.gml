@@ -19,8 +19,11 @@ if (global.shaders_compiled)
     op[num_gamehud].optionid = num_gamehud;
 }
 
+op[num_variants] = instance_create(x, y + (sep * tempcount++), oOptionLR);
+op[num_variants].label = "X Fusion Enemies";
+op[num_variants].optionid = num_variants;
 op[num_omega] = instance_create(x, y + (sep * tempcount++), oOptionLR);
-op[num_omega].label = "Omega Toggle";
+op[num_omega].label = "Omega Suit";
 op[num_omega].optionid = num_omega;
 op[lastitem] = instance_create(x, y + (sep * (lastitem + 1)), oPauseOption);
 op[lastitem].optionid = lastitem;

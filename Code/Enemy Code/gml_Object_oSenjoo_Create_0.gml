@@ -6,7 +6,7 @@ hitsound = 62
 deathsound = 59
 platyoffset = -6
 frozenspr = 403
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
     frozenspr = sSenjooFrozen_Fusion
 flipx = 0
 target = 0

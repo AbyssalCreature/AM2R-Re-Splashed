@@ -30,7 +30,7 @@ turning = 0
 inwater = 0
 hitemp = 1
 empspr = 352
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     frozenspr = sShirkFrozen_Fusion
     empspr = sShirkDisabled_Fusion

@@ -3,7 +3,7 @@ armor2 = sShirkArmor2
 turn = sShirkTurn
 armor1turn = sShirkTurnArmor1
 armor2turn = sShirkTurnArmor2
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     sprite_index = sShirk_Fusion
     armor1 = sShirkArmor1_Fusion
@@ -28,7 +28,7 @@ if frozen
     turn = sShirkTurnFrozen
     armor1turn = sShirkTurnArmor1Frozen
     armor2turn = sShirkTurnArmor2Frozen
-    if oControl.mod_fusion
+    if oControl.XVariantsEnabled
     {
         armor1 = sShirkArmor1Frozen_Fusion
         armor2 = sShirkArmor2Frozen_Fusion
@@ -45,7 +45,7 @@ else
     turn = sShirkTurn
     armor1turn = sShirkTurnArmor1
     armor2turn = sShirkTurnArmor2
-    if oControl.mod_fusion
+    if oControl.XVariantsEnabled
     {
         armor1 = sShirkArmor1_Fusion
         armor2 = sShirkArmor2_Fusion

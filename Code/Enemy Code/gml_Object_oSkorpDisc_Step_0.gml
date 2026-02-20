@@ -8,7 +8,7 @@ if (frozen == 0)
             if (image_index > 2.8)
             {
                 sprite_index = sSkorpDisc
-                if oControl.mod_fusion
+                if oControl.XVariantsEnabled
                     sprite_index = sSkorpDisc_Fusion
             }
         }
@@ -19,7 +19,7 @@ if (frozen == 0)
     {
         image_index = 2
         sprite_index = sSkorpDiscLunge
-        if oControl.mod_fusion
+        if oControl.XVariantsEnabled
             sprite_index = sSkorpDiscLunge_Fusion
     }
     else if ((sprite_index == sSkorpDiscLunge || sprite_index == sSkorpDiscLunge_Fusion) && image_index > 0.2)

@@ -1,7 +1,7 @@
 action_inherited()
 enemy_active_check(20)
 enemy_target_check(180, 0)
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
     frozenspr = sYumboFrozen_Fusion
 else
     frozenspr = 310
@@ -64,28 +64,28 @@ if (frozen == 0)
     if (state == 1)
     {
         sprite_index = sYumbo
-        if oControl.mod_fusion
+        if oControl.XVariantsEnabled
             sprite_index = sYumbo_Fusion
         image_speed = 0.5
     }
     if (state == 2)
     {
         sprite_index = sYumboTurn
-        if oControl.mod_fusion
+        if oControl.XVariantsEnabled
             sprite_index = sYumboTurn_Fusion
         image_speed = 0.2
     }
     if (state == 3)
     {
         sprite_index = sYumbo
-        if oControl.mod_fusion
+        if oControl.XVariantsEnabled
             sprite_index = sYumbo_Fusion
         image_speed = 0.5
     }
     if (state == 4)
     {
         sprite_index = sYumbo
-        if oControl.mod_fusion
+        if oControl.XVariantsEnabled
             sprite_index = sYumbo_Fusion
         image_speed = 1
     }

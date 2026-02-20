@@ -18,7 +18,7 @@ statetime = 0
 alarm[0] = 60 + random(60)
 hitemp = 1
 empspr = 434
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     frozenspr = sRobotMineFrozen_Fusion
     empspr = sRobotMineDisabled_Fusion

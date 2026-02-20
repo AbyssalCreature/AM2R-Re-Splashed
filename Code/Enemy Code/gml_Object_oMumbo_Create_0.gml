@@ -7,7 +7,7 @@ hitsound = 63
 deathsound = 60
 platyoffset = -5
 frozenspr = 318
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
     frozenspr = sMumboFrozen_Fusion
 target = 0
 canattack = 1

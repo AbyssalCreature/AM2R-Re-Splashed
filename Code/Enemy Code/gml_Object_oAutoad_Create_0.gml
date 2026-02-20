@@ -24,7 +24,7 @@ clawy = -1
 fangy = 8
 hitemp = 1
 empspr = 367
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     frozenspr = sAutoadFrozen_Fusion
     empspr = sAutoadDisabled_Fusion

@@ -14,7 +14,7 @@ hitsound = 61
 deathsound = 59
 platyoffset = -14
 frozenspr = 305
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
     frozenspr = sHornoadFrozen_Fusion
 canattack = 1
 jumpheight = -2

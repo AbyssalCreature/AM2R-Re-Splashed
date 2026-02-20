@@ -13,6 +13,7 @@ if (global.shaders_compiled)
     num_gamehud = tempnumcounter++;
 }
 
+num_variants = tempnumcounter++;
 num_omega = tempnumcounter++;
 lastitem = tempnumcounter;
 vTargetY = (18 * lastitem) + 30;
@@ -45,7 +46,8 @@ if (global.shaders_compiled)
     tip[num_gamehud] = "Sets whether only the In-Game hud gets palette swapped.";
 }
 
-tip[num_omega] = "Toggles Omega Suit, when you have Ice Beam as a Fusion.";
+tip[num_variants] = "Sets the requirements for the enemy X Variants to appear.";
+tip[num_omega] = "Sets the requirements for Omega Suit appearing.";
 tip[lastitem] = get_text("GlobalOptions", "ExitMain_Tip");
 global.tiptext = tip[global.curropt];
 alarm[1] = 1;

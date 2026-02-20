@@ -19,7 +19,7 @@ if (global.difficulty == 2)
 hitemp = 1
 empspr = 324
 freezefall = 0
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     frozenspr = sWallfireFrozen_Fusion
     empspr = sWallfireDisabled_Fusion

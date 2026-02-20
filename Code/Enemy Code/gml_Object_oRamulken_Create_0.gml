@@ -11,7 +11,7 @@ hitsound = 62
 deathsound = 59
 platyoffset = -6
 frozenspr = 446
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
     frozenspr = sRamulkenFrozen_Fusion
 flipx = 0
 state = 0

@@ -19,7 +19,7 @@ disc1 = instance_create((x + (lengthdir_x(len, (image_angle + dir)))), (y + (len
 disc2 = instance_create((x + (lengthdir_x(len, (image_angle - dir)))), (y + (lengthdir_y(len, (image_angle - dir)))), oSkorpDisc)
 lure = "OPTIMIZE *THIS*"
 disc2.image_xscale = -1
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     disc1.sprite_index = sSkorpDiscLunge_Fusion
     disc2.sprite_index = sSkorpDiscLunge_Fusion
@@ -34,7 +34,7 @@ disc1.myspr = disc1.sprite_index
 disc2.myspr = disc2.sprite_index
 disc1.frozenspr = 421
 disc2.frozenspr = 421
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     disc1.frozenspr = sSkorpDiscFrozen_Fusion
     disc2.frozenspr = sSkorpDiscFrozen_Fusion

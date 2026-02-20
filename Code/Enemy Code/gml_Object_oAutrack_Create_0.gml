@@ -7,7 +7,7 @@ hitsound = 77
 deathsound = 80
 platyoffset = -6
 frozenspr = 398
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
     frozenspr = sAutrackFrozen_Fusion
 canfreeze = 1
 hitmissileexpl = 0
@@ -17,7 +17,7 @@ state = 0
 image_speed = 0
 hitemp = 1
 empspr = 401
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     frozenspr = sAutrackFrozen_Fusion
     empspr = sAutrackDisabled_Fusion

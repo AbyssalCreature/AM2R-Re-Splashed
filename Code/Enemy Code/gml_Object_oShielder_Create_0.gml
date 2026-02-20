@@ -25,7 +25,7 @@ firedelay = 200 + random(100)
 firerange = 200
 hitemp = 1
 empspr = 417
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     frozenspr = sShielderFrozen_Fusion
     empspr = sShielderDisabled_Fusion

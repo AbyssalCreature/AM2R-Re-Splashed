@@ -57,31 +57,31 @@ if (frozen == 0)
     if (state == 1)
     {
         sprite_index = sHornoadIdle
-        if oControl.mod_fusion
+        if oControl.XVariantsEnabled
             sprite_index = sHornoadIdle_Fusion
     }
     if (state == 2)
     {
         sprite_index = sHornoadShake
-        if oControl.mod_fusion
+        if oControl.XVariantsEnabled
             sprite_index = sHornoadShake_Fusion
     }
     if (state == 3)
     {
         sprite_index = sHornoadTurn
-        if oControl.mod_fusion
+        if oControl.XVariantsEnabled
             sprite_index = sHornoadTurn_Fusion
     }
     if (state == 4)
     {
         sprite_index = sHornoadJump
-        if oControl.mod_fusion
+        if oControl.XVariantsEnabled
             sprite_index = sHornoadJump_Fusion
     }
     if (state == 5)
     {
         sprite_index = sHornoadAttack
-        if oControl.mod_fusion
+        if oControl.XVariantsEnabled
             sprite_index = sHornoadAttack_Fusion
     }
 }

@@ -23,7 +23,7 @@ alarm[0] = 60 + random(60)
 image_speed = 0.5
 hitemp = 1
 empspr = 408
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     frozenspr = sTPOFrozen_Fusion
     empspr = sTPO2Disabled_Fusion

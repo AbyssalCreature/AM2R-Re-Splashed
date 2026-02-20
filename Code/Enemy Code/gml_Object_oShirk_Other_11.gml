@@ -9,7 +9,7 @@ if (myhealth <= shell1hp && prevhealth > shell1hp)
         instance_create(x, y, oDebris)
     deb = instance_create(x, y, oDebris)
     deb.sprite_index = sShirkArmor1
-    if oControl.mod_fusion
+    if oControl.XVariantsEnabled
         deb.sprite_index = sShirkArmor1_Fusion
     if (frozen > 0)
         deb.sprite_index = sShirkArmor1Frozen
@@ -26,7 +26,7 @@ if (myhealth <= shell2hp && prevhealth > shell2hp)
         instance_create(x, y, oDebris)
     deb = instance_create(x, y, oDebris)
     deb.sprite_index = sShirkArmor2
-    if oControl.mod_fusion
+    if oControl.XVariantsEnabled
         deb.sprite_index = sShirkArmor2_Fusion
     if (frozen > 0)
         deb.sprite_index = sShirkArmor2Frozen

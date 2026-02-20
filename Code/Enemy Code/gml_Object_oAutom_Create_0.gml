@@ -24,7 +24,7 @@ alarm[0] = 1
 alarm[1] = 120
 hitemp = 1
 empspr = 346
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     frozenspr = sAutom_Fusion
     cannonspr = sAutomCannon_Fusion

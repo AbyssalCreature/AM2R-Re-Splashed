@@ -33,6 +33,8 @@ oControl.hudoption = 2;
 oControl.guicolor = 1;
 oControl.gamehud = 1;
 oControl.omegaEnabled = 1;
+oControl.omegaSetting = 1;
+oControl.XVariantsOption = 1;
 set_default_keys();
 set_default_joypad();
 set_default_xjoypad();
@@ -123,7 +125,8 @@ if (file_exists(working_directory + "/multitroid/" + "config.ini"))
     oControl.hudoption = ini_read_real("Extras", "UIStyle", 2);
     oControl.guicolor = ini_read_real("Extras", "UIColor", 1);
     oControl.gamehud = ini_read_real("Extras", "UIGame", 1);
-    oControl.omegaEnabled = ini_read_real("Extras", "OmegaEnabled", 1);
+    oControl.XVariantsOption = ini_read_real("Extras", "XVariants", 1);
+    oControl.omegaSetting = ini_read_real("Extras", "OmegaEnabled", 1);
     oControl.mod_monstersextremecheck = ini_read_real("Extras", "ExtremeLabMonsters", 0);
     oControl.mod_IGT = ini_read_real("Extras", "DisplayIGT", 0);
     global.opjoybtn_padu = ini_read_real("Control", "JoystickDPadUp", 36);

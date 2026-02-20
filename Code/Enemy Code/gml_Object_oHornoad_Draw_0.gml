@@ -8,31 +8,31 @@ if (frozen > 0)
     if (sprite_index == sHornoadIdle || sHornoadIdle_Fusion)
     {
         frozenspr = sHornoadIdleFrozen
-        if oControl.mod_fusion
+        if oControl.XVariantsEnabled
             frozenspr = sHornoadIdleFrozen_Fusion
     }
     if (sprite_index == sHornoadShake || sHornoadShake_Fusion)
     {
         frozenspr = sHornoadShakeFrozen
-        if oControl.mod_fusion
+        if oControl.XVariantsEnabled
             frozenspr = sHornoadShakeFrozen_Fusion
     }
     if (sprite_index == sHornoadTurn || sHornoadTurn_Fusion)
     {
         frozenspr = sHornoadTurnFrozen
-        if oControl.mod_fusion
+        if oControl.XVariantsEnabled
             frozenspr = sHornoadTurnFrozen_Fusion
     }
     if (sprite_index == sHornoadJump || sHornoadJump_Fusion)
     {
         frozenspr = sHornoadJumpFrozen
-        if oControl.mod_fusion
+        if oControl.XVariantsEnabled
             frozenspr = sHornoadJumpFrozen_Fusion
     }
     if (sprite_index == sHornoadAttack || sHornoadAttack_Fusion)
     {
         frozenspr = sHornoadAttackFrozen
-        if oControl.mod_fusion
+        if oControl.XVariantsEnabled
             frozenspr = sHornoadAttackFrozen_Fusion
     }
     myspr = frozenspr

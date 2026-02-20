@@ -8,7 +8,7 @@ hitsound = 61
 deathsound = 59
 platyoffset = -14
 frozenspr = 423
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
     frozenspr = sMotoFrozen_Fusion
 state = 0
 facing = 1

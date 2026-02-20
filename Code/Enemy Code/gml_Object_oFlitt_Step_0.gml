@@ -12,7 +12,7 @@ if (collision_line((x - 16), (y - 12), (x - 16), (y + 12), oSolid, true, false) 
     facing = 1
     hspeed = 0.1
 }
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
     sprite_index = sFlitt_Fusion
 else
     sprite_index = sFlitt

@@ -13,7 +13,7 @@ hitsound = 61
 deathsound = 59
 platyoffset = -6
 frozenspr = 320
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
     frozenspr = sSeerookFrozen_Fusion
 target = 0
 canattack = 1

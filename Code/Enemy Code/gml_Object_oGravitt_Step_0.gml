@@ -1,5 +1,5 @@
 event_inherited()
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     sprite_index = sGravitt_Fusion
     frozenspr = sGravittFrozen_Fusion

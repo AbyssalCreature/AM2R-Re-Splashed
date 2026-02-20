@@ -1,5 +1,5 @@
 shield1.frozen = frozen
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     sprite_index = sRamulken_Fusion
     frozenspr = sRamulkenFrozen_Fusion
@@ -83,7 +83,7 @@ if (state == 100)
         deb = instance_create(shield1.x, shield1.y, oDebris)
         deb.image_angle = shield1.image_angle
         deb.sprite_index = sRamulkenShield
-        if oControl.mod_fusion
+        if oControl.XVariantsEnabled
             deb.sprite_index = sRamulkenShield_Fusion
         deb.direction = 0 + random(30)
         deb.speed = 0.5 + random(3)

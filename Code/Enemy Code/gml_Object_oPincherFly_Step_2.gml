@@ -1,4 +1,4 @@
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     sprite_index = sPincherFly_Fusion
     frozenspr = sPincherFlyFrozen_Fusion
@@ -11,6 +11,6 @@ else
 if (instance_exists(oLavaSurface) && sprite_index != sPincherFlyA4)
 {
     sprite_index = sPincherFlyA4
-    if oControl.mod_fusion
+    if oControl.XVariantsEnabled
         sprite_index = sPincherFlyA4_Fusion
 }

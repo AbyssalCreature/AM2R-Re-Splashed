@@ -1,5 +1,5 @@
 action_inherited()
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
     frozenspr = sCavedropperFrozen_Fusion
 if (state == 0)
 {
@@ -13,7 +13,7 @@ if (state == 0)
 if (state == 1 && frozen == 0)
 {
     sprite_index = sCavedropperA
-    if oControl.mod_fusion
+    if oControl.XVariantsEnabled
         sprite_index = sCavedropperA_Fusion
     image_speed = 0.5
     y += 0.5
@@ -27,7 +27,7 @@ if (state == 1 && frozen == 0)
 if (state == 2)
 {
     sprite_index = sCavedropper
-    if oControl.mod_fusion
+    if oControl.XVariantsEnabled
         sprite_index = sCavedropper_Fusion
     image_speed = 0.5
     if (frozen == 0)
@@ -48,7 +48,7 @@ if (state == 3)
     vspeed = 0.5
     gravity = 0
     sprite_index = sCavedropper
-    if oControl.mod_fusion
+    if oControl.XVariantsEnabled
         sprite_index = sCavedropper_Fusion
     image_speed = 0.2
     if ((get_ground_tile((x - sprite_xoffset), (y - sprite_yoffset - 8)) != -1 && get_ground_tile((x + sprite_xoffset), (y - sprite_yoffset - 8)) != -1) || get_ground_tile((x - sprite_xoffset), (y + sprite_yoffset + 1)) == -1 || get_ground_tile((x + sprite_xoffset), (y + sprite_yoffset + 1)) == -1)

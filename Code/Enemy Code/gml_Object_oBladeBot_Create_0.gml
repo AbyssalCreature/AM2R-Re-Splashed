@@ -26,7 +26,7 @@ alarm[0] = 1
 col_edge = 0
 ispeed = image_speed
 bladeboteye = 440
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     frozenspr = sBladeBotFrozen_Fusion
     empspr = sBladeBot_Fusion

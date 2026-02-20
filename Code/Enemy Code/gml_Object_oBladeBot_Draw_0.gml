@@ -1,5 +1,5 @@
 event_inherited()
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     if (frozen == 0)
         sprite_index = sBladeBot_Fusion

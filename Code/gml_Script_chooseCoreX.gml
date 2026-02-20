@@ -1,48 +1,63 @@
-var corestr, sensstr;
-switch argument0
+var corestr;
+
+switch (argument0)
 {
     case 0:
-        corestr = "sCoreXBomb"
-        break
+        corestr = "sCoreXBomb";
+        break;
+    
     case 2:
-        corestr = "sCoreXSBall"
-        break
+        corestr = "sCoreXSBall";
+        break;
+    
     case 3:
-        corestr = "sCoreXJBall"
-        break
+        corestr = "sCoreXJBall";
+        break;
+    
     case 4:
-        corestr = "sCoreXHJBoots"
-        break
+        corestr = "sCoreXHJBoots";
+        break;
+    
     case 5:
-        corestr = "sCoreXVSuit"
-        break
+        corestr = "sCoreXVSuit";
+        break;
+    
     case 6:
-        corestr = "sCoreXSJump"
-        break
+        corestr = "sCoreXSJump";
+        break;
+    
     case 7:
-        corestr = "sCoreXSBooster"
-        break
+        corestr = "sCoreXSBooster";
+        break;
+    
     case 8:
-        corestr = "sCoreXSAttack"
-        break
-    case 10:
-        corestr = "sCoreXCBeam"
-        break
-    case 11:
-        corestr = "sCoreXIBeam"
-        break
-    case 12:
-        corestr = "sCoreXWBeam"
-        break
-    case 13:
-        corestr = "sCoreXSBeam"
-        break
-    case 14:
-        corestr = "sCoreXPBeam"
-        break
+        corestr = "sCoreXSAttack";
+        break;
+    
     case 9:
-        corestr = "sCoreXGSuit"
-        break
+        corestr = "sCoreXGSuit";
+        break;
+    
+    case 10:
+        corestr = "sCoreXCBeam";
+        break;
+    
+    case 11:
+        corestr = "sCoreXIBeam";
+        break;
+    
+    case 12:
+        corestr = "sCoreXWBeam";
+        break;
+    
+    case 13:
+        corestr = "sCoreXSBeam";
+        break;
+    
+    case 14:
+        corestr = "sCoreXPBeam";
+        break;
+    
     case 52:
     case 53:
     case 54:
@@ -87,8 +102,9 @@ switch argument0
     case 307:
     case 308:
     case 309:
-        corestr = "sCoreXMissile"
-        break
+        corestr = "sCoreXMissile";
+        break;
+    
     case 51:
     case 110:
     case 162:
@@ -99,8 +115,9 @@ switch argument0
     case 256:
     case 300:
     case 305:
-        corestr = "sCoreXSMissile"
-        break
+        corestr = "sCoreXSMissile";
+        break;
+    
     case 50:
     case 103:
     case 108:
@@ -111,8 +128,9 @@ switch argument0
     case 251:
     case 254:
     case 306:
-        corestr = "sCoreXEnergy"
-        break
+        corestr = "sCoreXEnergy";
+        break;
+    
     case 58:
     case 59:
     case 112:
@@ -123,15 +141,15 @@ switch argument0
     case 258:
     case 301:
     case 302:
-        corestr = "sCoreXPBomb"
-        break
+        corestr = "sCoreXPBomb";
+        break;
+    
     default:
-        corestr = "sCoreXJBall"
-        break
+        corestr = "sCoreXJBall";
+        break;
 }
 
-if global.opcorexsensitivity
-    sensstr = "Sens"
-else
-    sensstr = ""
-return asset_get_index(corestr + sensstr);
+if (global.opcorexsensitivity)
+    corestr += "Sens";
+
+return asset_get_index(corestr);

@@ -5,7 +5,7 @@ damage = 40
 hitsound = 61
 deathsound = 60
 frozenspr = 1493
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
     frozenspr = sBlobThrowerFrozen_Fusion
 canfreeze = 1
 hitmissileexpl = 0

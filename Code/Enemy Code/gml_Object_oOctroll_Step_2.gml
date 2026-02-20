@@ -1,4 +1,4 @@
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     sprite_index = sOctroll_Fusion
     frozenspr = sOctrollFrozen_Fusion
@@ -11,6 +11,6 @@ else
 if (room == rm_a0h12 && instance_exists(oLavaSurface) && sprite_index != sOctroll_lava)
 {
     sprite_index = sOctroll_lava
-    if oControl.mod_fusion
+    if oControl.XVariantsEnabled
         sprite_index = sOctroll_lava_Fusion
 }

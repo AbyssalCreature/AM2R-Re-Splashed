@@ -1,4 +1,4 @@
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     sprite_index = sShielderShield_Fusion
     frozenspr = sShielderShieldFrozen_Fusion

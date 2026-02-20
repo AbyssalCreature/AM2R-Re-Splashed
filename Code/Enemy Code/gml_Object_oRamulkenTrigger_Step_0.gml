@@ -1,4 +1,4 @@
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
     sprite_index = sRamulken_Fusion
 else
     sprite_index = sRamulken

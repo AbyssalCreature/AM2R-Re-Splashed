@@ -1,16 +1,19 @@
-var rgb_gray;
-draw_set_font(global.fontGUI2)
+draw_set_font(global.fontGUI2);
+
 if (global.curropt == optionid)
 {
-    w = string_width(label)
-    draw_background_ext(bgOptionLine, (x - 2), (y - 1), (w + 4), 1, 0, make_colour_rgb(82, 89, 102), 0.6)
+    w = string_width(label);
+    draw_background_ext(bgOptionLine, x - 2, y - 1, w + 4, 1, 0, make_colour_rgb(82, 89, 102), 0.6);
 }
-draw_set_color(c_black)
-draw_set_alpha(1)
-draw_text((x + 1), (y - 3), label)
-rgb_gray = make_colour_rgb(82, 89, 102)
+
+draw_set_color(c_black);
+draw_set_alpha(1);
+draw_text(x + 1, y - 3, label);
+var rgb_gray = make_colour_rgb(82, 89, 102);
+
 if (enabled == 0)
-    draw_set_color(rgb_gray)
+    draw_set_color(rgb_gray);
 else
-    draw_set_color(c_white)
-draw_text(x, (y - 4), label)
+    draw_set_color(c_white);
+
+draw_text(x, y - 4, label);

@@ -33,7 +33,7 @@ if (global.difficulty >= 2)
     prefiretime = 20
 hitemp = 1
 empspr = 335
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     frozenspr = sGunzooFrozen_Fusion
     empspr = sGunzooDisabled_Fusion

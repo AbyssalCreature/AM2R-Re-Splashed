@@ -1,5 +1,5 @@
 action_inherited()
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     sprite_index = sAutoad_Fusion
     frozenspr = sAutoadFrozen_Fusion
@@ -13,7 +13,7 @@ else
 }
 fangspr = sAutoadFang
 clawspr = sAutoadClaw
-if oControl.mod_fusion
+if oControl.XVariantsEnabled
 {
     fangspr = sAutoadFang_Fusion
     clawspr = sAutoadClaw_Fusion
@@ -23,7 +23,7 @@ if frozen
     myspr = frozenspr
     fangspr = sAutoadFangFrozen
     clawspr = sAutoadClawFrozen
-    if oControl.mod_fusion
+    if oControl.XVariantsEnabled
     {
         fangspr = sAutoadFangFrozen_Fusion
         clawspr = sAutoadClawFrozen_Fusion
@@ -34,7 +34,7 @@ else
     myspr = sprite_index
     fangspr = sAutoadFang
     clawspr = sAutoadClaw
-    if oControl.mod_fusion
+    if oControl.XVariantsEnabled
     {
         fangspr = sAutoadFang_Fusion
         clawspr = sAutoadClaw_Fusion
