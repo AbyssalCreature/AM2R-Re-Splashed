@@ -57,21 +57,21 @@ if (global.juggActive)
     saxMusicChase = 421;
     saxMusicEnv = 422;
     
-    if (!audio_is_playing(saxMusicAppear) && audio_is_playing(oldSaxMusicAppear))
+    if (!audio_is_playing(saxMusicAppear) && audio_is_playing(oldSaxMusicAppear) && audio_sound_get_gain(oldSaxMusicAppear) > 0)
     {
         audio_play_sound(saxMusicAppear, 1, false);
         audio_sound_gain(saxMusicAppear, 0, 0);
         audio_sound_gain(saxMusicAppear, global.opmusicvolume / 100, 0);
     }
     
-    if (!audio_is_playing(saxMusicChase) && audio_is_playing(oldSaxMusicChase))
+    if (!audio_is_playing(saxMusicChase) && audio_is_playing(oldSaxMusicChase) && audio_sound_get_gain(oldSaxMusicChase) > 0)
     {
         audio_play_sound(saxMusicChase, 1, false);
         audio_sound_gain(saxMusicChase, 0, 0);
         audio_sound_gain(saxMusicChase, global.opmusicvolume / 100, 0);
     }
     
-    if (!audio_is_playing(saxMusicEnv) && audio_is_playing(oldSaxMusicEnv))
+    if (!audio_is_playing(saxMusicEnv) && audio_is_playing(oldSaxMusicEnv) && audio_sound_get_gain(oldSaxMusicEnv) > 0)
     {
         audio_play_sound(saxMusicEnv, 1, false);
         audio_sound_gain(saxMusicEnv, 0, 0);
